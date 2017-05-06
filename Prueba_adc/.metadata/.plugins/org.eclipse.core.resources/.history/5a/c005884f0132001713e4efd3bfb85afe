@@ -1,0 +1,35 @@
+/*
+===============================================================================
+ Name        : adc_test.c
+ Author      : $(author)
+ Version     :
+ Copyright   : $(copyright)
+ Description : main definition
+===============================================================================
+*/
+
+/**
+ * @brief	Handle interrupt from SysTick timer
+ * @return	Nothing
+ */
+volatile bool LED_Time_Flag = false;
+void SysTick_Handler(void)
+{
+	LED_Time_Flag = false;
+}
+
+int main(void) {
+
+
+    SystemCoreClockUpdate();
+    Board_Init();
+    Board_LED_Set(0, true);
+
+    /* Enable and setup SysTick Timer at a periodic rate */
+    SysTick_Config(SystemCoreClock / TICKRATE_HZ1);
+
+    while(1) {
+        __WFI();
+    }
+return 0 ;
+}
