@@ -1,6 +1,65 @@
-00:45:17 **** Incremental Build of configuration Debug for project periph_adc ****
+11:49:23 **** Build of configuration Debug for project periph_adc ****
 make -r all 
-make: No se hace nada para 'all'.
+Building file: ../example/src/adc.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/adc.d" -MT"example/src/adc.o" -MT"example/src/adc.d" -o "example/src/adc.o" "../example/src/adc.c"
+../example/src/adc.c: In function 'App_DMA_Test':
+../example/src/adc.c:104:29: error: '_LPC_ADC_ID' undeclared (first use in this function)
+  Chip_ADC_Int_SetChannelCmd(_LPC_ADC_ID, _ADC_CHANNLE, ENABLE);
+                             ^
+../example/src/adc.c:104:29: note: each undeclared identifier is reported only once for each function it appears in
+example/src/subdir.mk:24: fallo en las instrucciones para el objetivo 'example/src/adc.o'
+../example/src/adc.c:104:42: error: '_ADC_CHANNLE' undeclared (first use in this function)
+  Chip_ADC_Int_SetChannelCmd(_LPC_ADC_ID, _ADC_CHANNLE, ENABLE);
+                                          ^
+../example/src/adc.c:106:55: error: '_GPDMA_CONN_ADC' undeclared (first use in this function)
+  dmaChannelNum = Chip_GPDMA_GetFreeChannel(LPC_GPDMA, _GPDMA_CONN_ADC);
+                                                       ^
+../example/src/adc.c: In function 'App_Interrupt_Test':
+../example/src/adc.c:145:17: error: '_LPC_ADC_IRQ' undeclared (first use in this function)
+  NVIC_EnableIRQ(_LPC_ADC_IRQ);
+                 ^
+../example/src/adc.c:146:29: error: '_LPC_ADC_ID' undeclared (first use in this function)
+  Chip_ADC_Int_SetChannelCmd(_LPC_ADC_ID, _ADC_CHANNLE, ENABLE);
+                             ^
+../example/src/adc.c:146:42: error: '_ADC_CHANNLE' undeclared (first use in this function)
+  Chip_ADC_Int_SetChannelCmd(_LPC_ADC_ID, _ADC_CHANNLE, ENABLE);
+                                          ^
+../example/src/adc.c: In function 'App_Polling_Test':
+../example/src/adc.c:175:24: error: '_LPC_ADC_ID' undeclared (first use in this function)
+   Chip_ADC_SetBurstCmd(_LPC_ADC_ID, ENABLE);
+                        ^
+../example/src/adc.c:188:43: error: '_ADC_CHANNLE' undeclared (first use in this function)
+   while (Chip_ADC_ReadStatus(_LPC_ADC_ID, _ADC_CHANNLE, ADC_DR_DONE_STAT) != SET) {}
+                                           ^
+../example/src/adc.c: In function 'ADC0_IRQHandler':
+../example/src/adc.c:213:18: error: '_LPC_ADC_IRQ' undeclared (first use in this function)
+  NVIC_DisableIRQ(_LPC_ADC_IRQ);
+                  ^
+../example/src/adc.c:214:29: error: '_LPC_ADC_ID' undeclared (first use in this function)
+  Chip_ADC_Int_SetChannelCmd(_LPC_ADC_ID, _ADC_CHANNLE, DISABLE);
+                             ^
+../example/src/adc.c:214:42: error: '_ADC_CHANNLE' undeclared (first use in this function)
+  Chip_ADC_Int_SetChannelCmd(_LPC_ADC_ID, _ADC_CHANNLE, DISABLE);
+                                          ^
+../example/src/adc.c: In function 'ADC1_IRQHandler':
+../example/src/adc.c:233:18: error: '_LPC_ADC_IRQ' undeclared (first use in this function)
+  NVIC_DisableIRQ(_LPC_ADC_IRQ);
+                  ^
+../example/src/adc.c:234:29: error: '_LPC_ADC_ID' undeclared (first use in this function)
+  Chip_ADC_Int_SetChannelCmd(_LPC_ADC_ID, _ADC_CHANNLE, DISABLE);
+                             ^
+../example/src/adc.c:234:42: error: '_ADC_CHANNLE' undeclared (first use in this function)
+  Chip_ADC_Int_SetChannelCmd(_LPC_ADC_ID, _ADC_CHANNLE, DISABLE);
+                                          ^
+../example/src/adc.c: In function 'main':
+../example/src/adc.c:273:16: error: '_LPC_ADC_ID' undeclared (first use in this function)
+  Chip_ADC_Init(_LPC_ADC_ID, &ADCSetup);
+                ^
+../example/src/adc.c:274:38: error: '_ADC_CHANNLE' undeclared (first use in this function)
+  Chip_ADC_EnableChannel(_LPC_ADC_ID, _ADC_CHANNLE, ENABLE);
+                                      ^
+make: *** [example/src/adc.o] Error 1
 
-00:45:17 Build Finished (took 64ms)
+11:49:24 Build Finished (took 124ms)
 

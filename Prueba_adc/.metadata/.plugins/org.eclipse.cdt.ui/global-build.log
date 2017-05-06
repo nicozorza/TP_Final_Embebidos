@@ -1,310 +1,1448 @@
-00:40:39 **** Clean-only build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
-make -r clean 
-rm -rf  ./src/board.o ./src/board_sysinit.o ./src/lcd_st7565s.o ./src/lpc_phy_smsc87x0.o ./src/wm8904.o  ./src/board.d ./src/board_sysinit.d ./src/lcd_st7565s.d ./src/lpc_phy_smsc87x0.d ./src/wm8904.d  liblpc_board_nxp_lpcxpresso_4337.a
- 
-00:40:39 **** Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+10:21:44 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
 make -r all 
-Building file: ../src/board.c
+make: No se hace nada para 'all'.
+10:21:44 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+10:21:44 **** Incremental Build of configuration Debug for project adc_test ****
+make -r all 
+Building file: ../src/adc_test.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/board.d" -MT"src/board.o" -MT"src/board.d" -o "src/board.o" "../src/board.c"
-Finished building: ../src/board.c
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -DCORE_M4 -D__USE_LPCOPEN -D__LPC43XX__ -D__REDLIB__ -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc/usbd" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/adc_test.d" -MT"src/adc_test.o" -MT"src/adc_test.d" -o "src/adc_test.o" "../src/adc_test.c"
+Finished building: ../src/adc_test.c
  
-Building file: ../src/board_sysinit.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/board_sysinit.d" -MT"src/board_sysinit.o" -MT"src/board_sysinit.d" -o "src/board_sysinit.o" "../src/board_sysinit.c"
-Finished building: ../src/board_sysinit.c
- 
-Building file: ../src/lcd_st7565s.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/lcd_st7565s.d" -MT"src/lcd_st7565s.o" -MT"src/lcd_st7565s.d" -o "src/lcd_st7565s.o" "../src/lcd_st7565s.c"
-Finished building: ../src/lcd_st7565s.c
- 
-Building file: ../src/lpc_phy_smsc87x0.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/lpc_phy_smsc87x0.d" -MT"src/lpc_phy_smsc87x0.o" -MT"src/lpc_phy_smsc87x0.d" -o "src/lpc_phy_smsc87x0.o" "../src/lpc_phy_smsc87x0.c"
-Finished building: ../src/lpc_phy_smsc87x0.c
- 
-Building file: ../src/wm8904.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/wm8904.d" -MT"src/wm8904.o" -MT"src/wm8904.d" -o "src/wm8904.o" "../src/wm8904.c"
-Finished building: ../src/wm8904.c
- 
-Building target: liblpc_board_nxp_lpcxpresso_4337.a
-Invoking: MCU Archiver
-arm-none-eabi-ar -r  "liblpc_board_nxp_lpcxpresso_4337.a"  ./src/board.o ./src/board_sysinit.o ./src/lcd_st7565s.o ./src/lpc_phy_smsc87x0.o ./src/wm8904.o   
-arm-none-eabi-ar: creating liblpc_board_nxp_lpcxpresso_4337.a
-Finished building target: liblpc_board_nxp_lpcxpresso_4337.a
+Building target: adc_test.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/Debug" -Xlinker -Map="adc_test.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "adc_test_Debug.ld" -o "adc_test.axf"  ./src/adc_test.o ./src/cr_start_m0.o ./src/cr_startup_lpc43xx.o ./src/crp.o ./src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Memory region         Used Size  Region Size  %age Used
+      MFlashA512:        7000 B       512 KB      1.34%
+      MFlashB512:          0 GB       512 KB      0.00%
+        RamLoc32:          20 B        32 KB      0.06%
+        RamLoc40:          0 GB        40 KB      0.00%
+        RamAHB32:          0 GB        32 KB      0.00%
+        RamAHB16:          0 GB        16 KB      0.00%
+    RamAHB_ETB16:          0 GB        16 KB      0.00%
+Finished building target: adc_test.axf
  
 make --no-print-directory post-build
 Performing post-build steps
-arm-none-eabi-size "liblpc_board_nxp_lpcxpresso_4337.a" ; # arm-none-eabi-objdump -h -S "liblpc_board_nxp_lpcxpresso_4337.a" >"liblpc_board_nxp_lpcxpresso_4337.lss"
+arm-none-eabi-size "adc_test.axf"; # arm-none-eabi-objcopy -v -O binary "adc_test.axf" "adc_test.bin" ; # checksum -p LPC4337 -d "adc_test.bin";
    text	   data	    bss	    dec	    hex	filename
-   2262	      0	      4	   2266	    8da	board.o (ex liblpc_board_nxp_lpcxpresso_4337.a)
-    436	      0	      0	    436	    1b4	board_sysinit.o (ex liblpc_board_nxp_lpcxpresso_4337.a)
-   1702	      4	   1044	   2750	    abe	lcd_st7565s.o (ex liblpc_board_nxp_lpcxpresso_4337.a)
-    876	      0	     18	    894	    37e	lpc_phy_smsc87x0.o (ex liblpc_board_nxp_lpcxpresso_4337.a)
-    796	      0	      0	    796	    31c	wm8904.o (ex liblpc_board_nxp_lpcxpresso_4337.a)
+   7000	      0	     20	   7020	   1b6c	adc_test.axf
  
-00:40:40 **** Clean-only build of configuration Debug for project lpc_chip_43xx ****
-make -r clean 
-rm -rf  ./src/adc_18xx_43xx.o ./src/aes_18xx_43xx.o ./src/atimer_18xx_43xx.o ./src/ccan_18xx_43xx.o ./src/chip_18xx_43xx.o ./src/clock_18xx_43xx.o ./src/dac_18xx_43xx.o ./src/eeprom_18xx_43xx.o ./src/emc_18xx_43xx.o ./src/enet_18xx_43xx.o ./src/evrt_18xx_43xx.o ./src/fpu_init.o ./src/gpdma_18xx_43xx.o ./src/gpio_18xx_43xx.o ./src/gpiogroup_18xx_43xx.o ./src/hsadc_18xx_43xx.o ./src/i2c_18xx_43xx.o ./src/i2cm_18xx_43xx.o ./src/i2s_18xx_43xx.o ./src/iap_18xx_43xx.o ./src/lcd_18xx_43xx.o ./src/otp_18xx_43xx.o ./src/pinint_18xx_43xx.o ./src/pmc_18xx_43xx.o ./src/ring_buffer.o ./src/ritimer_18xx_43xx.o ./src/rtc_18xx_43xx.o ./src/sct_18xx_43xx.o ./src/sct_pwm_18xx_43xx.o ./src/sdif_18xx_43xx.o ./src/sdio_18xx_43xx.o ./src/sdmmc_18xx_43xx.o ./src/spi_18xx_43xx.o ./src/ssp_18xx_43xx.o ./src/stopwatch_18xx_43xx.o ./src/sysinit_18xx_43xx.o ./src/timer_18xx_43xx.o ./src/uart_18xx_43xx.o ./src/wwdt_18xx_43xx.o  ./src/adc_18xx_43xx.d ./src/aes_18xx_43xx.d ./src/atimer_18xx_43xx.d ./src/ccan_18xx_43xx.d ./src/chip_18xx_43xx.d ./src/clock_18xx_43xx.d ./src/dac_18xx_43xx.d ./src/eeprom_18xx_43xx.d ./src/emc_18xx_43xx.d ./src/enet_18xx_43xx.d ./src/evrt_18xx_43xx.d ./src/fpu_init.d ./src/gpdma_18xx_43xx.d ./src/gpio_18xx_43xx.d ./src/gpiogroup_18xx_43xx.d ./src/hsadc_18xx_43xx.d ./src/i2c_18xx_43xx.d ./src/i2cm_18xx_43xx.d ./src/i2s_18xx_43xx.d ./src/iap_18xx_43xx.d ./src/lcd_18xx_43xx.d ./src/otp_18xx_43xx.d ./src/pinint_18xx_43xx.d ./src/pmc_18xx_43xx.d ./src/ring_buffer.d ./src/ritimer_18xx_43xx.d ./src/rtc_18xx_43xx.d ./src/sct_18xx_43xx.d ./src/sct_pwm_18xx_43xx.d ./src/sdif_18xx_43xx.d ./src/sdio_18xx_43xx.d ./src/sdmmc_18xx_43xx.d ./src/spi_18xx_43xx.d ./src/ssp_18xx_43xx.d ./src/stopwatch_18xx_43xx.d ./src/sysinit_18xx_43xx.d ./src/timer_18xx_43xx.d ./src/uart_18xx_43xx.d ./src/wwdt_18xx_43xx.d  liblpc_chip_43xx.a
- 
-00:40:40 **** Build of configuration Debug for project lpc_chip_43xx ****
+10:24:31 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
 make -r all 
-Building file: ../src/adc_18xx_43xx.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/adc_18xx_43xx.d" -MT"src/adc_18xx_43xx.o" -MT"src/adc_18xx_43xx.d" -o "src/adc_18xx_43xx.o" "../src/adc_18xx_43xx.c"
-Finished building: ../src/adc_18xx_43xx.c
+make: No se hace nada para 'all'.
+10:24:32 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+10:24:32 **** Clean-only build of configuration Debug for project adc_test ****
+make -r clean 
+rm -rf  ./src/adc_test.o ./src/cr_start_m0.o ./src/cr_startup_lpc43xx.o ./src/crp.o ./src/sysinit.o  ./src/adc_test.d ./src/cr_start_m0.d ./src/cr_startup_lpc43xx.d ./src/crp.d ./src/sysinit.d  adc_test.axf
  
-Building file: ../src/aes_18xx_43xx.c
+10:24:32 **** Build of configuration Debug for project adc_test ****
+make -r all 
+Building file: ../src/adc_test.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/aes_18xx_43xx.d" -MT"src/aes_18xx_43xx.o" -MT"src/aes_18xx_43xx.d" -o "src/aes_18xx_43xx.o" "../src/aes_18xx_43xx.c"
-Finished building: ../src/aes_18xx_43xx.c
- 
-Building file: ../src/atimer_18xx_43xx.c
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -DCORE_M4 -D__USE_LPCOPEN -DCR_INTEGER_PRINTF -D__LPC43XX__ -D__REDLIB__ -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc/usbd" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/adc_test.d" -MT"src/adc_test.o" -MT"src/adc_test.d" -o "src/adc_test.o" "../src/adc_test.c"
+../src/adc_test.c: In function 'main':
+../src/adc_test.c:18:16: error: '_LPC_ADC_ID' undeclared (first use in this function)
+  Chip_ADC_Init(_LPC_ADC_ID, &ADCSetup);
+src/subdir.mk:30: fallo en las instrucciones para el objetivo 'src/adc_test.o'
+                ^
+../src/adc_test.c:18:16: note: each undeclared identifier is reported only once for each function it appears in
+../src/adc_test.c:18:30: error: 'ADCSetup' undeclared (first use in this function)
+  Chip_ADC_Init(_LPC_ADC_ID, &ADCSetup);
+                              ^
+../src/adc_test.c:19:38: error: '_ADC_CHANNLE' undeclared (first use in this function)
+  Chip_ADC_EnableChannel(_LPC_ADC_ID, _ADC_CHANNLE, ENABLE);
+                                      ^
+make: *** [src/adc_test.o] Error 1
+10:24:33 **** Incremental Build of configuration Debug for project periph_adc ****
+make -r all 
+Building file: ../example/src/adc.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/atimer_18xx_43xx.d" -MT"src/atimer_18xx_43xx.o" -MT"src/atimer_18xx_43xx.d" -o "src/atimer_18xx_43xx.o" "../src/atimer_18xx_43xx.c"
-Finished building: ../src/atimer_18xx_43xx.c
- 
-Building file: ../src/ccan_18xx_43xx.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/ccan_18xx_43xx.d" -MT"src/ccan_18xx_43xx.o" -MT"src/ccan_18xx_43xx.d" -o "src/ccan_18xx_43xx.o" "../src/ccan_18xx_43xx.c"
-Finished building: ../src/ccan_18xx_43xx.c
- 
-Building file: ../src/chip_18xx_43xx.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/chip_18xx_43xx.d" -MT"src/chip_18xx_43xx.o" -MT"src/chip_18xx_43xx.d" -o "src/chip_18xx_43xx.o" "../src/chip_18xx_43xx.c"
-Finished building: ../src/chip_18xx_43xx.c
- 
-Building file: ../src/clock_18xx_43xx.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/clock_18xx_43xx.d" -MT"src/clock_18xx_43xx.o" -MT"src/clock_18xx_43xx.d" -o "src/clock_18xx_43xx.o" "../src/clock_18xx_43xx.c"
-Finished building: ../src/clock_18xx_43xx.c
- 
-Building file: ../src/dac_18xx_43xx.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/dac_18xx_43xx.d" -MT"src/dac_18xx_43xx.o" -MT"src/dac_18xx_43xx.d" -o "src/dac_18xx_43xx.o" "../src/dac_18xx_43xx.c"
-Finished building: ../src/dac_18xx_43xx.c
- 
-Building file: ../src/eeprom_18xx_43xx.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/eeprom_18xx_43xx.d" -MT"src/eeprom_18xx_43xx.o" -MT"src/eeprom_18xx_43xx.d" -o "src/eeprom_18xx_43xx.o" "../src/eeprom_18xx_43xx.c"
-Finished building: ../src/eeprom_18xx_43xx.c
- 
-Building file: ../src/emc_18xx_43xx.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/emc_18xx_43xx.d" -MT"src/emc_18xx_43xx.o" -MT"src/emc_18xx_43xx.d" -o "src/emc_18xx_43xx.o" "../src/emc_18xx_43xx.c"
-Finished building: ../src/emc_18xx_43xx.c
- 
-Building file: ../src/enet_18xx_43xx.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/enet_18xx_43xx.d" -MT"src/enet_18xx_43xx.o" -MT"src/enet_18xx_43xx.d" -o "src/enet_18xx_43xx.o" "../src/enet_18xx_43xx.c"
-Finished building: ../src/enet_18xx_43xx.c
- 
-Building file: ../src/evrt_18xx_43xx.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/evrt_18xx_43xx.d" -MT"src/evrt_18xx_43xx.o" -MT"src/evrt_18xx_43xx.d" -o "src/evrt_18xx_43xx.o" "../src/evrt_18xx_43xx.c"
-Finished building: ../src/evrt_18xx_43xx.c
- 
-Building file: ../src/fpu_init.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/fpu_init.d" -MT"src/fpu_init.o" -MT"src/fpu_init.d" -o "src/fpu_init.o" "../src/fpu_init.c"
-Finished building: ../src/fpu_init.c
- 
-Building file: ../src/gpdma_18xx_43xx.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/gpdma_18xx_43xx.d" -MT"src/gpdma_18xx_43xx.o" -MT"src/gpdma_18xx_43xx.d" -o "src/gpdma_18xx_43xx.o" "../src/gpdma_18xx_43xx.c"
-Finished building: ../src/gpdma_18xx_43xx.c
- 
-Building file: ../src/gpio_18xx_43xx.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/gpio_18xx_43xx.d" -MT"src/gpio_18xx_43xx.o" -MT"src/gpio_18xx_43xx.d" -o "src/gpio_18xx_43xx.o" "../src/gpio_18xx_43xx.c"
-Finished building: ../src/gpio_18xx_43xx.c
- 
-Building file: ../src/gpiogroup_18xx_43xx.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/gpiogroup_18xx_43xx.d" -MT"src/gpiogroup_18xx_43xx.o" -MT"src/gpiogroup_18xx_43xx.d" -o "src/gpiogroup_18xx_43xx.o" "../src/gpiogroup_18xx_43xx.c"
-Finished building: ../src/gpiogroup_18xx_43xx.c
- 
-Building file: ../src/hsadc_18xx_43xx.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/hsadc_18xx_43xx.d" -MT"src/hsadc_18xx_43xx.o" -MT"src/hsadc_18xx_43xx.d" -o "src/hsadc_18xx_43xx.o" "../src/hsadc_18xx_43xx.c"
-Finished building: ../src/hsadc_18xx_43xx.c
- 
-Building file: ../src/i2c_18xx_43xx.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/i2c_18xx_43xx.d" -MT"src/i2c_18xx_43xx.o" -MT"src/i2c_18xx_43xx.d" -o "src/i2c_18xx_43xx.o" "../src/i2c_18xx_43xx.c"
-Finished building: ../src/i2c_18xx_43xx.c
- 
-Building file: ../src/i2cm_18xx_43xx.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/i2cm_18xx_43xx.d" -MT"src/i2cm_18xx_43xx.o" -MT"src/i2cm_18xx_43xx.d" -o "src/i2cm_18xx_43xx.o" "../src/i2cm_18xx_43xx.c"
-Finished building: ../src/i2cm_18xx_43xx.c
- 
-Building file: ../src/i2s_18xx_43xx.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/i2s_18xx_43xx.d" -MT"src/i2s_18xx_43xx.o" -MT"src/i2s_18xx_43xx.d" -o "src/i2s_18xx_43xx.o" "../src/i2s_18xx_43xx.c"
-Finished building: ../src/i2s_18xx_43xx.c
- 
-Building file: ../src/iap_18xx_43xx.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/iap_18xx_43xx.d" -MT"src/iap_18xx_43xx.o" -MT"src/iap_18xx_43xx.d" -o "src/iap_18xx_43xx.o" "../src/iap_18xx_43xx.c"
-Finished building: ../src/iap_18xx_43xx.c
- 
-Building file: ../src/lcd_18xx_43xx.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/lcd_18xx_43xx.d" -MT"src/lcd_18xx_43xx.o" -MT"src/lcd_18xx_43xx.d" -o "src/lcd_18xx_43xx.o" "../src/lcd_18xx_43xx.c"
-Finished building: ../src/lcd_18xx_43xx.c
- 
-Building file: ../src/otp_18xx_43xx.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/otp_18xx_43xx.d" -MT"src/otp_18xx_43xx.o" -MT"src/otp_18xx_43xx.d" -o "src/otp_18xx_43xx.o" "../src/otp_18xx_43xx.c"
-Finished building: ../src/otp_18xx_43xx.c
- 
-Building file: ../src/pinint_18xx_43xx.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/pinint_18xx_43xx.d" -MT"src/pinint_18xx_43xx.o" -MT"src/pinint_18xx_43xx.d" -o "src/pinint_18xx_43xx.o" "../src/pinint_18xx_43xx.c"
-Finished building: ../src/pinint_18xx_43xx.c
- 
-Building file: ../src/pmc_18xx_43xx.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/pmc_18xx_43xx.d" -MT"src/pmc_18xx_43xx.o" -MT"src/pmc_18xx_43xx.d" -o "src/pmc_18xx_43xx.o" "../src/pmc_18xx_43xx.c"
-Finished building: ../src/pmc_18xx_43xx.c
- 
-Building file: ../src/ring_buffer.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/ring_buffer.d" -MT"src/ring_buffer.o" -MT"src/ring_buffer.d" -o "src/ring_buffer.o" "../src/ring_buffer.c"
-Finished building: ../src/ring_buffer.c
- 
-Building file: ../src/ritimer_18xx_43xx.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/ritimer_18xx_43xx.d" -MT"src/ritimer_18xx_43xx.o" -MT"src/ritimer_18xx_43xx.d" -o "src/ritimer_18xx_43xx.o" "../src/ritimer_18xx_43xx.c"
-Finished building: ../src/ritimer_18xx_43xx.c
- 
-Building file: ../src/rtc_18xx_43xx.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/rtc_18xx_43xx.d" -MT"src/rtc_18xx_43xx.o" -MT"src/rtc_18xx_43xx.d" -o "src/rtc_18xx_43xx.o" "../src/rtc_18xx_43xx.c"
-Finished building: ../src/rtc_18xx_43xx.c
- 
-Building file: ../src/sct_18xx_43xx.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/sct_18xx_43xx.d" -MT"src/sct_18xx_43xx.o" -MT"src/sct_18xx_43xx.d" -o "src/sct_18xx_43xx.o" "../src/sct_18xx_43xx.c"
-Finished building: ../src/sct_18xx_43xx.c
- 
-Building file: ../src/sct_pwm_18xx_43xx.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/sct_pwm_18xx_43xx.d" -MT"src/sct_pwm_18xx_43xx.o" -MT"src/sct_pwm_18xx_43xx.d" -o "src/sct_pwm_18xx_43xx.o" "../src/sct_pwm_18xx_43xx.c"
-Finished building: ../src/sct_pwm_18xx_43xx.c
- 
-Building file: ../src/sdif_18xx_43xx.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/sdif_18xx_43xx.d" -MT"src/sdif_18xx_43xx.o" -MT"src/sdif_18xx_43xx.d" -o "src/sdif_18xx_43xx.o" "../src/sdif_18xx_43xx.c"
-Finished building: ../src/sdif_18xx_43xx.c
- 
-Building file: ../src/sdio_18xx_43xx.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/sdio_18xx_43xx.d" -MT"src/sdio_18xx_43xx.o" -MT"src/sdio_18xx_43xx.d" -o "src/sdio_18xx_43xx.o" "../src/sdio_18xx_43xx.c"
-Finished building: ../src/sdio_18xx_43xx.c
- 
-Building file: ../src/sdmmc_18xx_43xx.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/sdmmc_18xx_43xx.d" -MT"src/sdmmc_18xx_43xx.o" -MT"src/sdmmc_18xx_43xx.d" -o "src/sdmmc_18xx_43xx.o" "../src/sdmmc_18xx_43xx.c"
-Finished building: ../src/sdmmc_18xx_43xx.c
- 
-Building file: ../src/spi_18xx_43xx.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/spi_18xx_43xx.d" -MT"src/spi_18xx_43xx.o" -MT"src/spi_18xx_43xx.d" -o "src/spi_18xx_43xx.o" "../src/spi_18xx_43xx.c"
-../src/spi_18xx_43xx.c: In function 'Chip_SPI_Int_FlushData':
-../src/spi_18xx_43xx.c:138:20: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
-  volatile uint32_t tmp;
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/adc.d" -MT"example/src/adc.o" -MT"example/src/adc.d" -o "example/src/adc.o" "../example/src/adc.c"
+../example/src/adc.c:273:2: warning: "/*" within comment [-Wcomment]
+  /*ADC Init *
+  ^
+../example/src/adc.c:292:16: warning: "/*" within comment [-Wcomment]
+     case '1':  /* Polling Mode */
+                ^
+../example/src/adc.c:293:6: warning: data definition has no type or storage class
+example/src/subdir.mk:24: fallo en las instrucciones para el objetivo 'example/src/adc.o'
+      App_Polling_Test();
+      ^
+../example/src/adc.c:293:6: warning: type defaults to 'int' in declaration of 'App_Polling_Test' [-Wimplicit-int]
+../example/src/adc.c:293:6: error: conflicting types for 'App_Polling_Test'
+../example/src/adc.c:170:13: note: previous definition of 'App_Polling_Test' was here
+ static void App_Polling_Test(void)
+             ^
+../example/src/adc.c:294:6: error: expected identifier or '(' before 'break'
+      break;
+      ^
+../example/src/adc.c:296:5: error: expected identifier or '(' before 'case'
+     case '2':  /* Interrupt Mode */
+     ^
+../example/src/adc.c:298:6: error: expected identifier or '(' before 'break'
+      break;
+      ^
+../example/src/adc.c:300:5: error: expected identifier or '(' before 'case'
+     case '3':  /* DMA mode */
+     ^
+../example/src/adc.c:302:6: error: expected identifier or '(' before 'break'
+      break;
+      ^
+../example/src/adc.c:303:5: error: expected identifier or '(' before '}' token
+     }
+     ^
+../example/src/adc.c:304:5: error: expected identifier or '(' before 'break'
+     break;
+     ^
+../example/src/adc.c:305:4: error: expected identifier or '(' before '}' token
+    }
+    ^
+../example/src/adc.c:306:4: error: expected identifier or '(' before 'else'
+    else if (bufferUART == 'x') {
+    ^
+../example/src/adc.c:310:4: error: expected identifier or '(' before 'else'
+    else if (bufferUART == 'o') {
+    ^
+../example/src/adc.c:315:4: error: expected identifier or '(' before 'else'
+    else if (bufferUART == 'p') {
+    ^
+../example/src/adc.c:320:4: error: expected identifier or '(' before 'else'
+    else if (bufferUART == 'k') {
+    ^
+../example/src/adc.c:325:4: error: expected identifier or '(' before 'else'
+    else if (bufferUART == 'l') {
+    ^
+../example/src/adc.c:330:4: error: expected identifier or '(' before 'else'
+    else if (bufferUART == 'b') {
+    ^
+../example/src/adc.c:341:3: error: expected identifier or '(' before '}' token
+   }
+   ^
+../example/src/adc.c:342:2: error: expected identifier or '(' before '}' token
+  }
+  ^
+../example/src/adc.c:343:2: error: expected identifier or '(' before 'return'
+  return 0;
+  ^
+../example/src/adc.c:344:1: error: expected identifier or '(' before '}' token
+ }
+ ^
+../example/src/adc.c:345:2: error: expected identifier or '(' before '/' token
+ */
+  ^
+../example/src/adc.c:57:20: warning: 'WelcomeMenu' defined but not used [-Wunused-variable]
+ static const char *WelcomeMenu = "\r\nHello NXP Semiconductors \r\n"
                     ^
-Finished building: ../src/spi_18xx_43xx.c
- 
-Building file: ../src/ssp_18xx_43xx.c
+../example/src/adc.c:66:20: warning: 'SelectMenu' defined but not used [-Wunused-variable]
+ static const char *SelectMenu = "\r\nPress number 1-3 to choose ADC running mode:\r\n"
+                    ^
+../example/src/adc.c:71:26: warning: 'ADCSetup' defined but not used [-Wunused-variable]
+ static ADC_CLOCK_SETUP_T ADCSetup;
+                          ^
+../example/src/adc.c:94:13: warning: 'App_DMA_Test' defined but not used [-Wunused-function]
+ static void App_DMA_Test(void)
+             ^
+../example/src/adc.c:143:13: warning: 'App_Interrupt_Test' defined but not used [-Wunused-function]
+ static void App_Interrupt_Test(void)
+             ^
+../example/src/adc.c:170:13: warning: 'App_Polling_Test' defined but not used [-Wunused-function]
+ static void App_Polling_Test(void)
+             ^
+make: *** [example/src/adc.o] Error 1
+10:25:07 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+10:25:07 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+10:25:08 **** Incremental Build of configuration Debug for project adc_test ****
+make -r all 
+Building file: ../src/adc_test.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/ssp_18xx_43xx.d" -MT"src/ssp_18xx_43xx.o" -MT"src/ssp_18xx_43xx.d" -o "src/ssp_18xx_43xx.o" "../src/ssp_18xx_43xx.c"
-Finished building: ../src/ssp_18xx_43xx.c
- 
-Building file: ../src/stopwatch_18xx_43xx.c
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -DCORE_M4 -D__USE_LPCOPEN -DCR_INTEGER_PRINTF -D__LPC43XX__ -D__REDLIB__ -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc/usbd" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/adc_test.d" -MT"src/adc_test.o" -MT"src/adc_test.d" -o "src/adc_test.o" "../src/adc_test.c"
+../src/adc_test.c: In function 'main':
+../src/adc_test.c:21:35: error: '_0' undeclared (first use in this function)
+  Chip_ADC_EnableChannel(LPC_ADC0, _0, ENABLE);
+src/subdir.mk:30: fallo en las instrucciones para el objetivo 'src/adc_test.o'
+                                   ^
+../src/adc_test.c:21:35: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/adc_test.o] Error 1
+10:25:08 **** Incremental Build of configuration Debug for project periph_adc ****
+make -r all 
+Building file: ../example/src/adc.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/stopwatch_18xx_43xx.d" -MT"src/stopwatch_18xx_43xx.o" -MT"src/stopwatch_18xx_43xx.d" -o "src/stopwatch_18xx_43xx.o" "../src/stopwatch_18xx_43xx.c"
-Finished building: ../src/stopwatch_18xx_43xx.c
- 
-Building file: ../src/sysinit_18xx_43xx.c
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/adc.d" -MT"example/src/adc.o" -MT"example/src/adc.d" -o "example/src/adc.o" "../example/src/adc.c"
+../example/src/adc.c:273:2: warning: "/*" within comment [-Wcomment]
+  /*ADC Init *
+  ^
+../example/src/adc.c:292:16: warning: "/*" within comment [-Wcomment]
+     case '1':  /* Polling Mode */
+                ^
+../example/src/adc.c:293:6: warning: data definition has no type or storage class
+      App_Polling_Test();
+example/src/subdir.mk:24: fallo en las instrucciones para el objetivo 'example/src/adc.o'
+      ^
+../example/src/adc.c:293:6: warning: type defaults to 'int' in declaration of 'App_Polling_Test' [-Wimplicit-int]
+../example/src/adc.c:293:6: error: conflicting types for 'App_Polling_Test'
+../example/src/adc.c:170:13: note: previous definition of 'App_Polling_Test' was here
+ static void App_Polling_Test(void)
+             ^
+../example/src/adc.c:294:6: error: expected identifier or '(' before 'break'
+      break;
+      ^
+../example/src/adc.c:296:5: error: expected identifier or '(' before 'case'
+     case '2':  /* Interrupt Mode */
+     ^
+../example/src/adc.c:298:6: error: expected identifier or '(' before 'break'
+      break;
+      ^
+../example/src/adc.c:300:5: error: expected identifier or '(' before 'case'
+     case '3':  /* DMA mode */
+     ^
+../example/src/adc.c:302:6: error: expected identifier or '(' before 'break'
+      break;
+      ^
+../example/src/adc.c:303:5: error: expected identifier or '(' before '}' token
+     }
+     ^
+../example/src/adc.c:304:5: error: expected identifier or '(' before 'break'
+     break;
+     ^
+../example/src/adc.c:305:4: error: expected identifier or '(' before '}' token
+    }
+    ^
+../example/src/adc.c:306:4: error: expected identifier or '(' before 'else'
+    else if (bufferUART == 'x') {
+    ^
+../example/src/adc.c:310:4: error: expected identifier or '(' before 'else'
+    else if (bufferUART == 'o') {
+    ^
+../example/src/adc.c:315:4: error: expected identifier or '(' before 'else'
+    else if (bufferUART == 'p') {
+    ^
+../example/src/adc.c:320:4: error: expected identifier or '(' before 'else'
+    else if (bufferUART == 'k') {
+    ^
+../example/src/adc.c:325:4: error: expected identifier or '(' before 'else'
+    else if (bufferUART == 'l') {
+    ^
+../example/src/adc.c:330:4: error: expected identifier or '(' before 'else'
+    else if (bufferUART == 'b') {
+    ^
+../example/src/adc.c:341:3: error: expected identifier or '(' before '}' token
+   }
+   ^
+../example/src/adc.c:342:2: error: expected identifier or '(' before '}' token
+  }
+  ^
+../example/src/adc.c:343:2: error: expected identifier or '(' before 'return'
+  return 0;
+  ^
+../example/src/adc.c:344:1: error: expected identifier or '(' before '}' token
+ }
+ ^
+../example/src/adc.c:345:2: error: expected identifier or '(' before '/' token
+ */
+  ^
+../example/src/adc.c:57:20: warning: 'WelcomeMenu' defined but not used [-Wunused-variable]
+ static const char *WelcomeMenu = "\r\nHello NXP Semiconductors \r\n"
+                    ^
+../example/src/adc.c:66:20: warning: 'SelectMenu' defined but not used [-Wunused-variable]
+ static const char *SelectMenu = "\r\nPress number 1-3 to choose ADC running mode:\r\n"
+                    ^
+../example/src/adc.c:71:26: warning: 'ADCSetup' defined but not used [-Wunused-variable]
+ static ADC_CLOCK_SETUP_T ADCSetup;
+                          ^
+../example/src/adc.c:94:13: warning: 'App_DMA_Test' defined but not used [-Wunused-function]
+ static void App_DMA_Test(void)
+             ^
+../example/src/adc.c:143:13: warning: 'App_Interrupt_Test' defined but not used [-Wunused-function]
+ static void App_Interrupt_Test(void)
+             ^
+../example/src/adc.c:170:13: warning: 'App_Polling_Test' defined but not used [-Wunused-function]
+ static void App_Polling_Test(void)
+             ^
+make: *** [example/src/adc.o] Error 1
+10:25:22 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+10:25:22 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+10:25:23 **** Incremental Build of configuration Debug for project adc_test ****
+make -r all 
+Building file: ../src/adc_test.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/sysinit_18xx_43xx.d" -MT"src/sysinit_18xx_43xx.o" -MT"src/sysinit_18xx_43xx.d" -o "src/sysinit_18xx_43xx.o" "../src/sysinit_18xx_43xx.c"
-Finished building: ../src/sysinit_18xx_43xx.c
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -DCORE_M4 -D__USE_LPCOPEN -DCR_INTEGER_PRINTF -D__LPC43XX__ -D__REDLIB__ -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc/usbd" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/adc_test.d" -MT"src/adc_test.o" -MT"src/adc_test.d" -o "src/adc_test.o" "../src/adc_test.c"
+Finished building: ../src/adc_test.c
  
-Building file: ../src/timer_18xx_43xx.c
+Building file: ../src/cr_start_m0.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/timer_18xx_43xx.d" -MT"src/timer_18xx_43xx.o" -MT"src/timer_18xx_43xx.d" -o "src/timer_18xx_43xx.o" "../src/timer_18xx_43xx.c"
-Finished building: ../src/timer_18xx_43xx.c
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -DCORE_M4 -D__USE_LPCOPEN -DCR_INTEGER_PRINTF -D__LPC43XX__ -D__REDLIB__ -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc/usbd" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/cr_start_m0.d" -MT"src/cr_start_m0.o" -MT"src/cr_start_m0.d" -o "src/cr_start_m0.o" "../src/cr_start_m0.c"
+Finished building: ../src/cr_start_m0.c
  
-Building file: ../src/uart_18xx_43xx.c
+Building file: ../src/cr_startup_lpc43xx.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/uart_18xx_43xx.d" -MT"src/uart_18xx_43xx.o" -MT"src/uart_18xx_43xx.d" -o "src/uart_18xx_43xx.o" "../src/uart_18xx_43xx.c"
-../src/uart_18xx_43xx.c: In function 'Chip_UART_Init':
-../src/uart_18xx_43xx.c:98:23: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
-     volatile uint32_t tmp;
-                       ^
-Finished building: ../src/uart_18xx_43xx.c
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -DCORE_M4 -D__USE_LPCOPEN -DCR_INTEGER_PRINTF -D__LPC43XX__ -D__REDLIB__ -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc/usbd" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/cr_startup_lpc43xx.d" -MT"src/cr_startup_lpc43xx.o" -MT"src/cr_startup_lpc43xx.d" -o "src/cr_startup_lpc43xx.o" "../src/cr_startup_lpc43xx.c"
+Finished building: ../src/cr_startup_lpc43xx.c
  
-Building file: ../src/wwdt_18xx_43xx.c
+Building file: ../src/crp.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/wwdt_18xx_43xx.d" -MT"src/wwdt_18xx_43xx.o" -MT"src/wwdt_18xx_43xx.d" -o "src/wwdt_18xx_43xx.o" "../src/wwdt_18xx_43xx.c"
-Finished building: ../src/wwdt_18xx_43xx.c
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -DCORE_M4 -D__USE_LPCOPEN -DCR_INTEGER_PRINTF -D__LPC43XX__ -D__REDLIB__ -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc/usbd" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/crp.d" -MT"src/crp.o" -MT"src/crp.d" -o "src/crp.o" "../src/crp.c"
+Finished building: ../src/crp.c
  
-Building target: liblpc_chip_43xx.a
-Invoking: MCU Archiver
-arm-none-eabi-ar -r  "liblpc_chip_43xx.a"  ./src/adc_18xx_43xx.o ./src/aes_18xx_43xx.o ./src/atimer_18xx_43xx.o ./src/ccan_18xx_43xx.o ./src/chip_18xx_43xx.o ./src/clock_18xx_43xx.o ./src/dac_18xx_43xx.o ./src/eeprom_18xx_43xx.o ./src/emc_18xx_43xx.o ./src/enet_18xx_43xx.o ./src/evrt_18xx_43xx.o ./src/fpu_init.o ./src/gpdma_18xx_43xx.o ./src/gpio_18xx_43xx.o ./src/gpiogroup_18xx_43xx.o ./src/hsadc_18xx_43xx.o ./src/i2c_18xx_43xx.o ./src/i2cm_18xx_43xx.o ./src/i2s_18xx_43xx.o ./src/iap_18xx_43xx.o ./src/lcd_18xx_43xx.o ./src/otp_18xx_43xx.o ./src/pinint_18xx_43xx.o ./src/pmc_18xx_43xx.o ./src/ring_buffer.o ./src/ritimer_18xx_43xx.o ./src/rtc_18xx_43xx.o ./src/sct_18xx_43xx.o ./src/sct_pwm_18xx_43xx.o ./src/sdif_18xx_43xx.o ./src/sdio_18xx_43xx.o ./src/sdmmc_18xx_43xx.o ./src/spi_18xx_43xx.o ./src/ssp_18xx_43xx.o ./src/stopwatch_18xx_43xx.o ./src/sysinit_18xx_43xx.o ./src/timer_18xx_43xx.o ./src/uart_18xx_43xx.o ./src/wwdt_18xx_43xx.o   
-arm-none-eabi-ar: creating liblpc_chip_43xx.a
-Finished building target: liblpc_chip_43xx.a
+Building file: ../src/sysinit.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -DCORE_M4 -D__USE_LPCOPEN -DCR_INTEGER_PRINTF -D__LPC43XX__ -D__REDLIB__ -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc/usbd" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/sysinit.d" -MT"src/sysinit.o" -MT"src/sysinit.d" -o "src/sysinit.o" "../src/sysinit.c"
+Finished building: ../src/sysinit.c
+ 
+Building target: adc_test.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/Debug" -Xlinker -Map="adc_test.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "adc_test_Debug.ld" -o "adc_test.axf"  ./src/adc_test.o ./src/cr_start_m0.o ./src/cr_startup_lpc43xx.o ./src/crp.o ./src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Memory region         Used Size  Region Size  %age Used
+      MFlashA512:       12216 B       512 KB      2.33%
+      MFlashB512:          0 GB       512 KB      0.00%
+        RamLoc32:         352 B        32 KB      1.07%
+        RamLoc40:          0 GB        40 KB      0.00%
+        RamAHB32:          0 GB        32 KB      0.00%
+        RamAHB16:          0 GB        16 KB      0.00%
+/usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(_deferredlazyseek.o): In function `__flsbuf':
+_deferredlazyseek.c:(.text.__flsbuf+0x84): undefined reference to `__sys_istty'
+    RamAHB_ETB16:          0 GB        16 KB      0.00%
+makefile:30: fallo en las instrucciones para el objetivo 'adc_test.axf'
+/usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(_writebuf.o): In function `_Cwritebuf':
+_writebuf.c:(.text._Cwritebuf+0x14): undefined reference to `__sys_flen'
+_writebuf.c:(.text._Cwritebuf+0x28): undefined reference to `__sys_seek'
+/usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(alloc.o): In function `_Csys_alloc':
+alloc.c:(.text._Csys_alloc+0x12): undefined reference to `__sys_appexit'
+/usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(fseek.o): In function `fseek':
+fseek.c:(.text.fseek+0x1a): undefined reference to `__sys_istty'
+fseek.c:(.text.fseek+0x44): undefined reference to `__sys_flen'
+collect2: error: ld returned 1 exit status
+make: *** [adc_test.axf] Error 1
+10:25:24 **** Incremental Build of configuration Debug for project periph_adc ****
+make -r all 
+Building file: ../example/src/adc.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/adc.d" -MT"example/src/adc.o" -MT"example/src/adc.d" -o "example/src/adc.o" "../example/src/adc.c"
+../example/src/adc.c:273:2: warning: "/*" within comment [-Wcomment]
+  /*ADC Init *
+  ^
+../example/src/adc.c:292:16: warning: "/*" within comment [-Wcomment]
+     case '1':  /* Polling Mode */
+                ^
+../example/src/adc.c:293:6: warning: data definition has no type or storage class
+example/src/subdir.mk:24: fallo en las instrucciones para el objetivo 'example/src/adc.o'
+      App_Polling_Test();
+      ^
+../example/src/adc.c:293:6: warning: type defaults to 'int' in declaration of 'App_Polling_Test' [-Wimplicit-int]
+../example/src/adc.c:293:6: error: conflicting types for 'App_Polling_Test'
+../example/src/adc.c:170:13: note: previous definition of 'App_Polling_Test' was here
+ static void App_Polling_Test(void)
+             ^
+../example/src/adc.c:294:6: error: expected identifier or '(' before 'break'
+      break;
+      ^
+../example/src/adc.c:296:5: error: expected identifier or '(' before 'case'
+     case '2':  /* Interrupt Mode */
+     ^
+../example/src/adc.c:298:6: error: expected identifier or '(' before 'break'
+      break;
+      ^
+../example/src/adc.c:300:5: error: expected identifier or '(' before 'case'
+     case '3':  /* DMA mode */
+     ^
+../example/src/adc.c:302:6: error: expected identifier or '(' before 'break'
+      break;
+      ^
+../example/src/adc.c:303:5: error: expected identifier or '(' before '}' token
+     }
+     ^
+../example/src/adc.c:304:5: error: expected identifier or '(' before 'break'
+     break;
+     ^
+../example/src/adc.c:305:4: error: expected identifier or '(' before '}' token
+    }
+    ^
+../example/src/adc.c:306:4: error: expected identifier or '(' before 'else'
+    else if (bufferUART == 'x') {
+    ^
+../example/src/adc.c:310:4: error: expected identifier or '(' before 'else'
+    else if (bufferUART == 'o') {
+    ^
+../example/src/adc.c:315:4: error: expected identifier or '(' before 'else'
+    else if (bufferUART == 'p') {
+    ^
+../example/src/adc.c:320:4: error: expected identifier or '(' before 'else'
+    else if (bufferUART == 'k') {
+    ^
+../example/src/adc.c:325:4: error: expected identifier or '(' before 'else'
+    else if (bufferUART == 'l') {
+    ^
+../example/src/adc.c:330:4: error: expected identifier or '(' before 'else'
+    else if (bufferUART == 'b') {
+    ^
+../example/src/adc.c:341:3: error: expected identifier or '(' before '}' token
+   }
+   ^
+../example/src/adc.c:342:2: error: expected identifier or '(' before '}' token
+  }
+  ^
+../example/src/adc.c:343:2: error: expected identifier or '(' before 'return'
+  return 0;
+  ^
+../example/src/adc.c:344:1: error: expected identifier or '(' before '}' token
+ }
+ ^
+../example/src/adc.c:345:2: error: expected identifier or '(' before '/' token
+ */
+  ^
+../example/src/adc.c:57:20: warning: 'WelcomeMenu' defined but not used [-Wunused-variable]
+ static const char *WelcomeMenu = "\r\nHello NXP Semiconductors \r\n"
+                    ^
+../example/src/adc.c:66:20: warning: 'SelectMenu' defined but not used [-Wunused-variable]
+ static const char *SelectMenu = "\r\nPress number 1-3 to choose ADC running mode:\r\n"
+                    ^
+../example/src/adc.c:71:26: warning: 'ADCSetup' defined but not used [-Wunused-variable]
+ static ADC_CLOCK_SETUP_T ADCSetup;
+                          ^
+../example/src/adc.c:94:13: warning: 'App_DMA_Test' defined but not used [-Wunused-function]
+ static void App_DMA_Test(void)
+             ^
+../example/src/adc.c:143:13: warning: 'App_Interrupt_Test' defined but not used [-Wunused-function]
+ static void App_Interrupt_Test(void)
+             ^
+../example/src/adc.c:170:13: warning: 'App_Polling_Test' defined but not used [-Wunused-function]
+ static void App_Polling_Test(void)
+             ^
+make: *** [example/src/adc.o] Error 1
+10:25:31 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+10:25:31 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+10:25:31 **** Incremental Build of configuration Debug for project adc_test ****
+make -r all 
+Building file: ../src/adc_test.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -DCORE_M4 -D__USE_LPCOPEN -DCR_INTEGER_PRINTF -D__LPC43XX__ -D__REDLIB__ -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc/usbd" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/adc_test.d" -MT"src/adc_test.o" -MT"src/adc_test.d" -o "src/adc_test.o" "../src/adc_test.c"
+Finished building: ../src/adc_test.c
+ 
+Building target: adc_test.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/Debug" -Xlinker -Map="adc_test.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "adc_test_Debug.ld" -o "adc_test.axf"  ./src/adc_test.o ./src/cr_start_m0.o ./src/cr_startup_lpc43xx.o ./src/crp.o ./src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Memory region         Used Size  Region Size  %age Used
+      MFlashA512:        7000 B       512 KB      1.34%
+      MFlashB512:          0 GB       512 KB      0.00%
+        RamLoc32:          20 B        32 KB      0.06%
+        RamLoc40:          0 GB        40 KB      0.00%
+        RamAHB32:          0 GB        32 KB      0.00%
+        RamAHB16:          0 GB        16 KB      0.00%
+    RamAHB_ETB16:          0 GB        16 KB      0.00%
+Finished building target: adc_test.axf
  
 make --no-print-directory post-build
 Performing post-build steps
-arm-none-eabi-size "liblpc_chip_43xx.a" ; # arm-none-eabi-objdump -h -S "liblpc_chip_43xx.a" >"liblpc_chip_43xx.lss"
+arm-none-eabi-size "adc_test.axf"; # arm-none-eabi-objcopy -v -O binary "adc_test.axf" "adc_test.bin" ; # checksum -p LPC4337 -d "adc_test.bin";
    text	   data	    bss	    dec	    hex	filename
-   1116	      0	      0	   1116	    45c	adc_18xx_43xx.o (ex liblpc_chip_43xx.a)
-    656	      0	     56	    712	    2c8	aes_18xx_43xx.o (ex liblpc_chip_43xx.a)
-    144	      0	      0	    144	     90	atimer_18xx_43xx.o (ex liblpc_chip_43xx.a)
-   2084	      0	      0	   2084	    824	ccan_18xx_43xx.o (ex liblpc_chip_43xx.a)
-    268	      0	      0	    268	    10c	chip_18xx_43xx.o (ex liblpc_chip_43xx.a)
-   4322	      0	      8	   4330	   10ea	clock_18xx_43xx.o (ex liblpc_chip_43xx.a)
-    164	      0	      0	    164	     a4	dac_18xx_43xx.o (ex liblpc_chip_43xx.a)
-    380	      0	      0	    380	    17c	eeprom_18xx_43xx.o (ex liblpc_chip_43xx.a)
-   1476	      0	      0	   1476	    5c4	emc_18xx_43xx.o (ex liblpc_chip_43xx.a)
-    848	      0	      4	    852	    354	enet_18xx_43xx.o (ex liblpc_chip_43xx.a)
-    428	      0	      0	    428	    1ac	evrt_18xx_43xx.o (ex liblpc_chip_43xx.a)
-    116	      0	      0	    116	     74	fpu_init.o (ex liblpc_chip_43xx.a)
-   2692	    120	      8	   2820	    b04	gpdma_18xx_43xx.o (ex liblpc_chip_43xx.a)
-    632	      0	      0	    632	    278	gpio_18xx_43xx.o (ex liblpc_chip_43xx.a)
-      0	      0	      0	      0	      0	gpiogroup_18xx_43xx.o (ex liblpc_chip_43xx.a)
-    832	      0	      0	    832	    340	hsadc_18xx_43xx.o (ex liblpc_chip_43xx.a)
-   3668	     56	     80	   3804	    edc	i2c_18xx_43xx.o (ex liblpc_chip_43xx.a)
-   1704	      0	      0	   1704	    6a8	i2cm_18xx_43xx.o (ex liblpc_chip_43xx.a)
-   1340	      0	      0	   1340	    53c	i2s_18xx_43xx.o (ex liblpc_chip_43xx.a)
-    652	      0	      0	    652	    28c	iap_18xx_43xx.o (ex liblpc_chip_43xx.a)
-    940	      1	      0	    941	    3ad	lcd_18xx_43xx.o (ex liblpc_chip_43xx.a)
-    464	      0	     40	    504	    1f8	otp_18xx_43xx.o (ex liblpc_chip_43xx.a)
-      0	      0	      0	      0	      0	pinint_18xx_43xx.o (ex liblpc_chip_43xx.a)
-     60	      0	      0	     60	     3c	pmc_18xx_43xx.o (ex liblpc_chip_43xx.a)
-    980	      0	      0	    980	    3d4	ring_buffer.o (ex liblpc_chip_43xx.a)
-    256	      0	      0	    256	    100	ritimer_18xx_43xx.o (ex liblpc_chip_43xx.a)
-   1016	      0	      0	   1016	    3f8	rtc_18xx_43xx.o (ex liblpc_chip_43xx.a)
-    196	      0	      0	    196	     c4	sct_18xx_43xx.o (ex liblpc_chip_43xx.a)
-    448	      0	      0	    448	    1c0	sct_pwm_18xx_43xx.o (ex liblpc_chip_43xx.a)
-    708	      0	      0	    708	    2c4	sdif_18xx_43xx.o (ex liblpc_chip_43xx.a)
-   2640	      4	    320	   2964	    b94	sdio_18xx_43xx.o (ex liblpc_chip_43xx.a)
-   3156	      0	      4	   3160	    c58	sdmmc_18xx_43xx.o (ex liblpc_chip_43xx.a)
-   1068	      0	      0	   1068	    42c	spi_18xx_43xx.o (ex liblpc_chip_43xx.a)
-   2344	      0	      0	   2344	    928	ssp_18xx_43xx.o (ex liblpc_chip_43xx.a)
-    388	      0	     12	    400	    190	stopwatch_18xx_43xx.o (ex liblpc_chip_43xx.a)
-    616	      0	      0	    616	    268	sysinit_18xx_43xx.o (ex liblpc_chip_43xx.a)
-    320	      0	      0	    320	    140	timer_18xx_43xx.o (ex liblpc_chip_43xx.a)
-   2196	      0	      1	   2197	    895	uart_18xx_43xx.o (ex liblpc_chip_43xx.a)
-    136	      0	      0	    136	     88	wwdt_18xx_43xx.o (ex liblpc_chip_43xx.a)
+   7000	      0	     20	   7020	   1b6c	adc_test.axf
  
-00:40:45 **** Build of configuration Debug for project periph_adc ****
+10:25:32 **** Incremental Build of configuration Debug for project periph_adc ****
+make -r all 
+Building file: ../example/src/adc.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/adc.d" -MT"example/src/adc.o" -MT"example/src/adc.d" -o "example/src/adc.o" "../example/src/adc.c"
+../example/src/adc.c:273:2: warning: "/*" within comment [-Wcomment]
+  /*ADC Init *
+  ^
+../example/src/adc.c:292:16: warning: "/*" within comment [-Wcomment]
+     case '1':  /* Polling Mode */
+                ^
+../example/src/adc.c:293:6: warning: data definition has no type or storage class
+example/src/subdir.mk:24: fallo en las instrucciones para el objetivo 'example/src/adc.o'
+      App_Polling_Test();
+      ^
+../example/src/adc.c:293:6: warning: type defaults to 'int' in declaration of 'App_Polling_Test' [-Wimplicit-int]
+../example/src/adc.c:293:6: error: conflicting types for 'App_Polling_Test'
+../example/src/adc.c:170:13: note: previous definition of 'App_Polling_Test' was here
+ static void App_Polling_Test(void)
+             ^
+../example/src/adc.c:294:6: error: expected identifier or '(' before 'break'
+      break;
+      ^
+../example/src/adc.c:296:5: error: expected identifier or '(' before 'case'
+     case '2':  /* Interrupt Mode */
+     ^
+../example/src/adc.c:298:6: error: expected identifier or '(' before 'break'
+      break;
+      ^
+../example/src/adc.c:300:5: error: expected identifier or '(' before 'case'
+     case '3':  /* DMA mode */
+     ^
+../example/src/adc.c:302:6: error: expected identifier or '(' before 'break'
+      break;
+      ^
+../example/src/adc.c:303:5: error: expected identifier or '(' before '}' token
+     }
+     ^
+../example/src/adc.c:304:5: error: expected identifier or '(' before 'break'
+     break;
+     ^
+../example/src/adc.c:305:4: error: expected identifier or '(' before '}' token
+    }
+    ^
+../example/src/adc.c:306:4: error: expected identifier or '(' before 'else'
+    else if (bufferUART == 'x') {
+    ^
+../example/src/adc.c:310:4: error: expected identifier or '(' before 'else'
+    else if (bufferUART == 'o') {
+    ^
+../example/src/adc.c:315:4: error: expected identifier or '(' before 'else'
+    else if (bufferUART == 'p') {
+    ^
+../example/src/adc.c:320:4: error: expected identifier or '(' before 'else'
+    else if (bufferUART == 'k') {
+    ^
+../example/src/adc.c:325:4: error: expected identifier or '(' before 'else'
+    else if (bufferUART == 'l') {
+    ^
+../example/src/adc.c:330:4: error: expected identifier or '(' before 'else'
+    else if (bufferUART == 'b') {
+    ^
+../example/src/adc.c:341:3: error: expected identifier or '(' before '}' token
+   }
+   ^
+../example/src/adc.c:342:2: error: expected identifier or '(' before '}' token
+  }
+  ^
+../example/src/adc.c:343:2: error: expected identifier or '(' before 'return'
+  return 0;
+  ^
+../example/src/adc.c:344:1: error: expected identifier or '(' before '}' token
+ }
+ ^
+../example/src/adc.c:345:2: error: expected identifier or '(' before '/' token
+ */
+  ^
+../example/src/adc.c:57:20: warning: 'WelcomeMenu' defined but not used [-Wunused-variable]
+ static const char *WelcomeMenu = "\r\nHello NXP Semiconductors \r\n"
+                    ^
+../example/src/adc.c:66:20: warning: 'SelectMenu' defined but not used [-Wunused-variable]
+ static const char *SelectMenu = "\r\nPress number 1-3 to choose ADC running mode:\r\n"
+                    ^
+../example/src/adc.c:71:26: warning: 'ADCSetup' defined but not used [-Wunused-variable]
+ static ADC_CLOCK_SETUP_T ADCSetup;
+                          ^
+../example/src/adc.c:94:13: warning: 'App_DMA_Test' defined but not used [-Wunused-function]
+ static void App_DMA_Test(void)
+             ^
+../example/src/adc.c:143:13: warning: 'App_Interrupt_Test' defined but not used [-Wunused-function]
+ static void App_Interrupt_Test(void)
+             ^
+../example/src/adc.c:170:13: warning: 'App_Polling_Test' defined but not used [-Wunused-function]
+ static void App_Polling_Test(void)
+             ^
+make: *** [example/src/adc.o] Error 1
+10:45:16 **** Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+10:45:17 **** Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+10:45:17 **** Build of configuration Debug for project adc_test ****
+make -r all 
+Building file: ../src/adc.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/adc.d" -MT"src/adc.o" -MT"src/adc.d" -o "src/adc.o" "../src/adc.c"
+../src/adc.c:33:19: fatal error: board.h: No such file or directory
+src/subdir.mk:24: fallo en las instrucciones para el objetivo 'src/adc.o'
+ #include "board.h"
+                   ^
+compilation terminated.
+make: *** [src/adc.o] Error 1
+10:46:27 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+10:46:27 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+10:46:28 **** Incremental Build of configuration Debug for project adc_test ****
+make -r all 
+Building file: ../src/adc.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/adc.d" -MT"src/adc.o" -MT"src/adc.d" -o "src/adc.o" "../src/adc.c"
+../src/adc.c:33:19: fatal error: board.h: No such file or directory
+src/subdir.mk:24: fallo en las instrucciones para el objetivo 'src/adc.o'
+ #include "board.h"
+                   ^
+compilation terminated.
+make: *** [src/adc.o] Error 1
+10:50:53 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+10:50:53 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+10:50:53 **** Build of configuration Debug for project adc_test ****
+make -r all 
+Building file: ../src/adc_test.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -DCORE_M4 -D__USE_LPCOPEN -D__LPC43XX__ -D__REDLIB__ -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/adc_test/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc/usbd" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/adc_test.d" -MT"src/adc_test.o" -MT"src/adc_test.d" -o "src/adc_test.o" "../src/adc_test.c"
+Finished building: ../src/adc_test.c
+ 
+Building file: ../src/cr_start_m0.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -DCORE_M4 -D__USE_LPCOPEN -D__LPC43XX__ -D__REDLIB__ -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/adc_test/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc/usbd" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/cr_start_m0.d" -MT"src/cr_start_m0.o" -MT"src/cr_start_m0.d" -o "src/cr_start_m0.o" "../src/cr_start_m0.c"
+Finished building: ../src/cr_start_m0.c
+ 
+Building file: ../src/cr_startup_lpc43xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -DCORE_M4 -D__USE_LPCOPEN -D__LPC43XX__ -D__REDLIB__ -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/adc_test/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc/usbd" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/cr_startup_lpc43xx.d" -MT"src/cr_startup_lpc43xx.o" -MT"src/cr_startup_lpc43xx.d" -o "src/cr_startup_lpc43xx.o" "../src/cr_startup_lpc43xx.c"
+Finished building: ../src/cr_startup_lpc43xx.c
+ 
+Building file: ../src/crp.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -DCORE_M4 -D__USE_LPCOPEN -D__LPC43XX__ -D__REDLIB__ -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/adc_test/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc/usbd" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/crp.d" -MT"src/crp.o" -MT"src/crp.d" -o "src/crp.o" "../src/crp.c"
+Finished building: ../src/crp.c
+ 
+Building file: ../src/sysinit.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -DCORE_M4 -D__USE_LPCOPEN -D__LPC43XX__ -D__REDLIB__ -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/adc_test/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc/usbd" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/sysinit.d" -MT"src/sysinit.o" -MT"src/sysinit.d" -o "src/sysinit.o" "../src/sysinit.c"
+Finished building: ../src/sysinit.c
+ 
+Building target: adc_test.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/Debug" -Xlinker -Map="adc_test.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "adc_test_Debug.ld" -o "adc_test.axf"  ./src/adc_test.o ./src/cr_start_m0.o ./src/cr_startup_lpc43xx.o ./src/crp.o ./src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Memory region         Used Size  Region Size  %age Used
+      MFlashA512:        6472 B       512 KB      1.23%
+      MFlashB512:          0 GB       512 KB      0.00%
+        RamLoc32:          16 B        32 KB      0.05%
+        RamLoc40:          0 GB        40 KB      0.00%
+        RamAHB32:          0 GB        32 KB      0.00%
+        RamAHB16:          0 GB        16 KB      0.00%
+    RamAHB_ETB16:          0 GB        16 KB      0.00%
+Finished building target: adc_test.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "adc_test.axf"; # arm-none-eabi-objcopy -v -O binary "adc_test.axf" "adc_test.bin" ; # checksum -p LPC4337 -d "adc_test.bin";
+   text	   data	    bss	    dec	    hex	filename
+   6472	      0	     16	   6488	   1958	adc_test.axf
+ 
+10:51:05 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+10:51:05 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+10:51:06 **** Incremental Build of configuration Debug for project adc_test ****
+make -r all 
+Building file: ../src/adc_test.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -DCORE_M4 -D__USE_LPCOPEN -D__LPC43XX__ -D__REDLIB__ -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/adc_test/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc/usbd" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/adc_test.d" -MT"src/adc_test.o" -MT"src/adc_test.d" -o "src/adc_test.o" "../src/adc_test.c"
+Finished building: ../src/adc_test.c
+ 
+Building target: adc_test.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/Debug" -Xlinker -Map="adc_test.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "adc_test_Debug.ld" -o "adc_test.axf"  ./src/adc_test.o ./src/cr_start_m0.o ./src/cr_startup_lpc43xx.o ./src/crp.o ./src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Memory region         Used Size  Region Size  %age Used
+      MFlashA512:       16184 B       512 KB      3.09%
+      MFlashB512:          0 GB       512 KB      0.00%
+        RamLoc32:         348 B        32 KB      1.06%
+        RamLoc40:          0 GB        40 KB      0.00%
+/usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(_deferredlazyseek.o): In function `__flsbuf':
+        RamAHB32:          0 GB        32 KB      0.00%
+        RamAHB16:          0 GB        16 KB      0.00%
+    RamAHB_ETB16:          0 GB        16 KB      0.00%
+makefile:30: fallo en las instrucciones para el objetivo 'adc_test.axf'
+_deferredlazyseek.c:(.text.__flsbuf+0x84): undefined reference to `__sys_istty'
+/usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(_writebuf.o): In function `_Cwritebuf':
+_writebuf.c:(.text._Cwritebuf+0x14): undefined reference to `__sys_flen'
+_writebuf.c:(.text._Cwritebuf+0x28): undefined reference to `__sys_seek'
+/usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(alloc.o): In function `_Csys_alloc':
+alloc.c:(.text._Csys_alloc+0x12): undefined reference to `__sys_appexit'
+/usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(fseek.o): In function `fseek':
+fseek.c:(.text.fseek+0x1a): undefined reference to `__sys_istty'
+fseek.c:(.text.fseek+0x44): undefined reference to `__sys_flen'
+collect2: error: ld returned 1 exit status
+make: *** [adc_test.axf] Error 1
+10:52:59 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+10:53:00 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+10:53:00 **** Build of configuration Debug for project periph_systick ****
+make -r all 
+Building file: ../example/src/cr_startup_lpc43xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/cr_startup_lpc43xx.d" -MT"example/src/cr_startup_lpc43xx.o" -MT"example/src/cr_startup_lpc43xx.d" -o "example/src/cr_startup_lpc43xx.o" "../example/src/cr_startup_lpc43xx.c"
+Finished building: ../example/src/cr_startup_lpc43xx.c
+ 
+Building file: ../example/src/sysinit.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/sysinit.d" -MT"example/src/sysinit.o" -MT"example/src/sysinit.d" -o "example/src/sysinit.o" "../example/src/sysinit.c"
+Finished building: ../example/src/sysinit.c
+ 
+Building file: ../example/src/systick.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/systick.d" -MT"example/src/systick.o" -MT"example/src/systick.d" -o "example/src/systick.o" "../example/src/systick.c"
+Finished building: ../example/src/systick.c
+ 
+Building target: periph_systick.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_systick.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_systick_Debug.ld" -o "periph_systick.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o ./example/src/systick.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_systick.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_systick.axf"; # arm-none-eabi-objcopy -v -O binary "periph_systick.axf" "periph_systick.bin" ; # checksum -p LPC4337 -d "periph_systick.bin";
+   text	   data	    bss	    dec	    hex	filename
+   8756	      0	    352	   9108	   2394	periph_systick.axf
+ 
+10:53:16 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+10:53:17 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+10:53:17 **** Incremental Build of configuration Debug for project periph_systick ****
+make -r all 
+Building target: periph_systick.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_systick.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_systick_Debug.ld" -o "periph_systick.axf"   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+/usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/bin/ld: warning: cannot find entry symbol ResetISR; defaulting to 1a000000
+Finished building target: periph_systick.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_systick.axf"; # arm-none-eabi-objcopy -v -O binary "periph_systick.axf" "periph_systick.bin" ; # checksum -p LPC4337 -d "periph_systick.bin";
+   text	   data	    bss	    dec	    hex	filename
+    100	      0	      0	    100	     64	periph_systick.axf
+ 
+10:53:38 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+10:53:38 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+10:53:38 **** Clean-only build of configuration Debug for project periph_systick ****
+make -r clean 
+rm -rf  periph_systick.axf
+ 
+10:53:38 **** Incremental Build of configuration Debug for project periph_systick ****
+make -r all 
+Building file: ../example/src/cr_startup_lpc43xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/cr_startup_lpc43xx.d" -MT"example/src/cr_startup_lpc43xx.o" -MT"example/src/cr_startup_lpc43xx.d" -o "example/src/cr_startup_lpc43xx.o" "../example/src/cr_startup_lpc43xx.c"
+Finished building: ../example/src/cr_startup_lpc43xx.c
+ 
+Building file: ../example/src/sysinit.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/sysinit.d" -MT"example/src/sysinit.o" -MT"example/src/sysinit.d" -o "example/src/sysinit.o" "../example/src/sysinit.c"
+Finished building: ../example/src/sysinit.c
+ 
+Building file: ../example/src/systick.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/systick.d" -MT"example/src/systick.o" -MT"example/src/systick.d" -o "example/src/systick.o" "../example/src/systick.c"
+Finished building: ../example/src/systick.c
+ 
+Building target: periph_systick.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_systick.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_systick_Debug.ld" -o "periph_systick.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o ./example/src/systick.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_systick.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_systick.axf"; # arm-none-eabi-objcopy -v -O binary "periph_systick.axf" "periph_systick.bin" ; # checksum -p LPC4337 -d "periph_systick.bin";
+   text	   data	    bss	    dec	    hex	filename
+   8756	      0	    352	   9108	   2394	periph_systick.axf
+ 
+10:57:46 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+10:57:47 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+10:57:47 **** Build of configuration Debug for project adc_test ****
+make -r all 
+Building file: ../src/adc_test.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -DCORE_M4 -D__USE_LPCOPEN -D__LPC43XX__ -D__REDLIB__ -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/adc_test/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc/usbd" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/adc_test.d" -MT"src/adc_test.o" -MT"src/adc_test.d" -o "src/adc_test.o" "../src/adc_test.c"
+Finished building: ../src/adc_test.c
+ 
+Building file: ../src/cr_start_m0.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -DCORE_M4 -D__USE_LPCOPEN -D__LPC43XX__ -D__REDLIB__ -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/adc_test/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc/usbd" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/cr_start_m0.d" -MT"src/cr_start_m0.o" -MT"src/cr_start_m0.d" -o "src/cr_start_m0.o" "../src/cr_start_m0.c"
+Finished building: ../src/cr_start_m0.c
+ 
+Building file: ../src/cr_startup_lpc43xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -DCORE_M4 -D__USE_LPCOPEN -D__LPC43XX__ -D__REDLIB__ -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/adc_test/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc/usbd" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/cr_startup_lpc43xx.d" -MT"src/cr_startup_lpc43xx.o" -MT"src/cr_startup_lpc43xx.d" -o "src/cr_startup_lpc43xx.o" "../src/cr_startup_lpc43xx.c"
+Finished building: ../src/cr_startup_lpc43xx.c
+ 
+Building file: ../src/crp.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -DCORE_M4 -D__USE_LPCOPEN -D__LPC43XX__ -D__REDLIB__ -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/adc_test/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc/usbd" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/crp.d" -MT"src/crp.o" -MT"src/crp.d" -o "src/crp.o" "../src/crp.c"
+Finished building: ../src/crp.c
+ 
+Building file: ../src/sysinit.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -DCORE_M4 -D__USE_LPCOPEN -D__LPC43XX__ -D__REDLIB__ -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/adc_test/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc/usbd" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/sysinit.d" -MT"src/sysinit.o" -MT"src/sysinit.d" -o "src/sysinit.o" "../src/sysinit.c"
+Finished building: ../src/sysinit.c
+ 
+Building target: adc_test.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/Debug" -Xlinker -Map="adc_test.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "adc_test_Debug.ld" -o "adc_test.axf"  ./src/adc_test.o ./src/cr_start_m0.o ./src/cr_startup_lpc43xx.o ./src/crp.o ./src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Memory region         Used Size  Region Size  %age Used
+      MFlashA512:        6660 B       512 KB      1.27%
+      MFlashB512:          0 GB       512 KB      0.00%
+        RamLoc32:          16 B        32 KB      0.05%
+        RamLoc40:          0 GB        40 KB      0.00%
+        RamAHB32:          0 GB        32 KB      0.00%
+        RamAHB16:          0 GB        16 KB      0.00%
+    RamAHB_ETB16:          0 GB        16 KB      0.00%
+Finished building target: adc_test.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "adc_test.axf"; # arm-none-eabi-objcopy -v -O binary "adc_test.axf" "adc_test.bin" ; # checksum -p LPC4337 -d "adc_test.bin";
+   text	   data	    bss	    dec	    hex	filename
+   6660	      0	     16	   6676	   1a14	adc_test.axf
+ 
+10:57:48 **** Incremental Build of configuration Debug for project periph_systick ****
+make -r all 
+make: No se hace nada para 'all'.
+10:57:58 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+10:57:59 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+10:57:59 **** Incremental Build of configuration Debug for project adc_test ****
+make -r all 
+Building file: ../src/adc_test.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -DCORE_M4 -D__USE_LPCOPEN -D__LPC43XX__ -D__REDLIB__ -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/adc_test/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc/usbd" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/adc_test.d" -MT"src/adc_test.o" -MT"src/adc_test.d" -o "src/adc_test.o" "../src/adc_test.c"
+Finished building: ../src/adc_test.c
+ 
+Building target: adc_test.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/Debug" -Xlinker -Map="adc_test.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "adc_test_Debug.ld" -o "adc_test.axf"  ./src/adc_test.o ./src/cr_start_m0.o ./src/cr_startup_lpc43xx.o ./src/crp.o ./src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Memory region         Used Size  Region Size  %age Used
+      MFlashA512:       16368 B       512 KB      3.12%
+      MFlashB512:          0 GB       512 KB      0.00%
+        RamLoc32:         348 B        32 KB      1.06%
+        RamLoc40:          0 GB        40 KB      0.00%
+        RamAHB32:          0 GB        32 KB      0.00%
+/usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(_deferredlazyseek.o): In function `__flsbuf':
+        RamAHB16:          0 GB        16 KB      0.00%
+_deferredlazyseek.c:(.text.__flsbuf+0x84): undefined reference to `__sys_istty'
+    RamAHB_ETB16:          0 GB        16 KB      0.00%
+makefile:30: fallo en las instrucciones para el objetivo 'adc_test.axf'
+/usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(_writebuf.o): In function `_Cwritebuf':
+_writebuf.c:(.text._Cwritebuf+0x14): undefined reference to `__sys_flen'
+_writebuf.c:(.text._Cwritebuf+0x28): undefined reference to `__sys_seek'
+/usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(alloc.o): In function `_Csys_alloc':
+alloc.c:(.text._Csys_alloc+0x12): undefined reference to `__sys_appexit'
+/usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(fseek.o): In function `fseek':
+fseek.c:(.text.fseek+0x1a): undefined reference to `__sys_istty'
+fseek.c:(.text.fseek+0x44): undefined reference to `__sys_flen'
+collect2: error: ld returned 1 exit status
+make: *** [adc_test.axf] Error 1
+10:58:00 **** Incremental Build of configuration Debug for project periph_systick ****
+make -r all 
+make: No se hace nada para 'all'.
+11:02:53 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+11:02:54 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+11:02:54 **** Incremental Build of configuration Debug for project adc_test ****
+make -r all 
+Building target: adc_test.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/Debug" -Xlinker -Map="adc_test.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "adc_test_Debug.ld" -o "adc_test.axf"  ./src/adc_test.o ./src/cr_start_m0.o ./src/cr_startup_lpc43xx.o ./src/crp.o ./src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Memory region         Used Size  Region Size  %age Used
+      MFlashA512:       16368 B       512 KB      3.12%
+      MFlashB512:          0 GB       512 KB      0.00%
+        RamLoc32:         348 B        32 KB      1.06%
+        RamLoc40:          0 GB        40 KB      0.00%
+/usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(_deferredlazyseek.o): In function `__flsbuf':
+_deferredlazyseek.c:(.text.__flsbuf+0x84): undefined reference to `__sys_istty'
+/usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(_writebuf.o): In function `_Cwritebuf':
+_writebuf.c:(.text._Cwritebuf+0x14): undefined reference to `__sys_flen'
+_writebuf.c:(.text._Cwritebuf+0x28): undefined reference to `__sys_seek'
+        RamAHB32:          0 GB        32 KB      0.00%
+/usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(alloc.o): In function `_Csys_alloc':
+        RamAHB16:          0 GB        16 KB      0.00%
+alloc.c:(.text._Csys_alloc+0x12): undefined reference to `__sys_appexit'
+    RamAHB_ETB16:          0 GB        16 KB      0.00%
+/usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(fseek.o): In function `fseek':
+makefile:30: fallo en las instrucciones para el objetivo 'adc_test.axf'
+fseek.c:(.text.fseek+0x1a): undefined reference to `__sys_istty'
+fseek.c:(.text.fseek+0x44): undefined reference to `__sys_flen'
+collect2: error: ld returned 1 exit status
+make: *** [adc_test.axf] Error 1
+11:02:54 **** Incremental Build of configuration Debug for project periph_systick ****
+make -r all 
+make: No se hace nada para 'all'.
+11:08:40 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+11:08:40 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+11:08:41 **** Build of configuration Debug for project adc_test ****
+make -r all 
+Building file: ../src/adc_test.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -DCORE_M4 -D__USE_LPCOPEN -DCR_INTEGER_PRINTF -D__LPC43XX__ -D__REDLIB__ -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc/usbd" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/adc_test.d" -MT"src/adc_test.o" -MT"src/adc_test.d" -o "src/adc_test.o" "../src/adc_test.c"
+Finished building: ../src/adc_test.c
+ 
+Building file: ../src/cr_start_m0.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -DCORE_M4 -D__USE_LPCOPEN -DCR_INTEGER_PRINTF -D__LPC43XX__ -D__REDLIB__ -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc/usbd" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/cr_start_m0.d" -MT"src/cr_start_m0.o" -MT"src/cr_start_m0.d" -o "src/cr_start_m0.o" "../src/cr_start_m0.c"
+Finished building: ../src/cr_start_m0.c
+ 
+Building file: ../src/cr_startup_lpc43xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -DCORE_M4 -D__USE_LPCOPEN -DCR_INTEGER_PRINTF -D__LPC43XX__ -D__REDLIB__ -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc/usbd" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/cr_startup_lpc43xx.d" -MT"src/cr_startup_lpc43xx.o" -MT"src/cr_startup_lpc43xx.d" -o "src/cr_startup_lpc43xx.o" "../src/cr_startup_lpc43xx.c"
+Finished building: ../src/cr_startup_lpc43xx.c
+ 
+Building file: ../src/crp.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -DCORE_M4 -D__USE_LPCOPEN -DCR_INTEGER_PRINTF -D__LPC43XX__ -D__REDLIB__ -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc/usbd" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/crp.d" -MT"src/crp.o" -MT"src/crp.d" -o "src/crp.o" "../src/crp.c"
+Finished building: ../src/crp.c
+ 
+Building file: ../src/sysinit.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -DCORE_M4 -D__USE_LPCOPEN -DCR_INTEGER_PRINTF -D__LPC43XX__ -D__REDLIB__ -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc/usbd" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/sysinit.d" -MT"src/sysinit.o" -MT"src/sysinit.d" -o "src/sysinit.o" "../src/sysinit.c"
+Finished building: ../src/sysinit.c
+ 
+Building target: adc_test.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/Debug" -Xlinker -Map="adc_test.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "adc_test_Debug.ld" -o "adc_test.axf"  ./src/adc_test.o ./src/cr_start_m0.o ./src/cr_startup_lpc43xx.o ./src/crp.o ./src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Memory region         Used Size  Region Size  %age Used
+      MFlashA512:        6660 B       512 KB      1.27%
+      MFlashB512:          0 GB       512 KB      0.00%
+        RamLoc32:          16 B        32 KB      0.05%
+        RamLoc40:          0 GB        40 KB      0.00%
+        RamAHB32:          0 GB        32 KB      0.00%
+        RamAHB16:          0 GB        16 KB      0.00%
+    RamAHB_ETB16:          0 GB        16 KB      0.00%
+Finished building target: adc_test.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "adc_test.axf"; # arm-none-eabi-objcopy -v -O binary "adc_test.axf" "adc_test.bin" ; # checksum -p LPC4337 -d "adc_test.bin";
+   text	   data	    bss	    dec	    hex	filename
+   6660	      0	     16	   6676	   1a14	adc_test.axf
+ 
+11:08:41 **** Incremental Build of configuration Debug for project periph_systick ****
+make -r all 
+make: No se hace nada para 'all'.
+11:08:57 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+11:08:58 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+11:08:58 **** Incremental Build of configuration Debug for project adc_test ****
+make -r all 
+Building file: ../src/adc_test.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -DCORE_M4 -D__USE_LPCOPEN -DCR_INTEGER_PRINTF -D__LPC43XX__ -D__REDLIB__ -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc/usbd" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/adc_test.d" -MT"src/adc_test.o" -MT"src/adc_test.d" -o "src/adc_test.o" "../src/adc_test.c"
+Finished building: ../src/adc_test.c
+ 
+Building target: adc_test.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/Debug" -Xlinker -Map="adc_test.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "adc_test_Debug.ld" -o "adc_test.axf"  ./src/adc_test.o ./src/cr_start_m0.o ./src/cr_startup_lpc43xx.o ./src/crp.o ./src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Memory region         Used Size  Region Size  %age Used
+      MFlashA512:       11876 B       512 KB      2.27%
+      MFlashB512:          0 GB       512 KB      0.00%
+        RamLoc32:         348 B        32 KB      1.06%
+        RamLoc40:          0 GB        40 KB      0.00%
+/usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(_deferredlazyseek.o): In function `__flsbuf':
+        RamAHB32:          0 GB        32 KB      0.00%
+_deferredlazyseek.c:(.text.__flsbuf+0x84): undefined reference to `__sys_istty'
+        RamAHB16:          0 GB        16 KB      0.00%
+    RamAHB_ETB16:          0 GB        16 KB      0.00%
+makefile:30: fallo en las instrucciones para el objetivo 'adc_test.axf'
+/usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(_writebuf.o): In function `_Cwritebuf':
+_writebuf.c:(.text._Cwritebuf+0x14): undefined reference to `__sys_flen'
+_writebuf.c:(.text._Cwritebuf+0x28): undefined reference to `__sys_seek'
+/usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(alloc.o): In function `_Csys_alloc':
+alloc.c:(.text._Csys_alloc+0x12): undefined reference to `__sys_appexit'
+/usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(fseek.o): In function `fseek':
+fseek.c:(.text.fseek+0x1a): undefined reference to `__sys_istty'
+fseek.c:(.text.fseek+0x44): undefined reference to `__sys_flen'
+collect2: error: ld returned 1 exit status
+make: *** [adc_test.axf] Error 1
+11:08:58 **** Incremental Build of configuration Debug for project periph_systick ****
+make -r all 
+make: No se hace nada para 'all'.
+11:10:39 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+11:10:39 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+11:10:39 **** Build of configuration Debug for project adc_test ****
+make -r all 
+Building file: ../example/src/adc_test.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/adc_test.d" -MT"example/src/adc_test.o" -MT"example/src/adc_test.d" -o "example/src/adc_test.o" "../example/src/adc_test.c"
+Finished building: ../example/src/adc_test.c
+ 
+Building file: ../example/src/cr_startup_lpc43xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/cr_startup_lpc43xx.d" -MT"example/src/cr_startup_lpc43xx.o" -MT"example/src/cr_startup_lpc43xx.d" -o "example/src/cr_startup_lpc43xx.o" "../example/src/cr_startup_lpc43xx.c"
+Finished building: ../example/src/cr_startup_lpc43xx.c
+ 
+Building file: ../example/src/sysinit.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/sysinit.d" -MT"example/src/sysinit.o" -MT"example/src/sysinit.d" -o "example/src/sysinit.o" "../example/src/sysinit.c"
+Finished building: ../example/src/sysinit.c
+ 
+Building target: adc_test.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="adc_test.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "adc_test_Debug.ld" -o "adc_test.axf"  ./example/src/adc_test.o ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: adc_test.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "adc_test.axf"; # arm-none-eabi-objcopy -v -O binary "adc_test.axf" "adc_test.bin" ; # checksum -p LPC4337 -d "adc_test.bin";
+   text	   data	    bss	    dec	    hex	filename
+   8756	      0	    352	   9108	   2394	adc_test.axf
+ 
+11:18:42 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+11:18:42 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+11:18:42 **** Incremental Build of configuration Debug for project adc_test ****
+make -r all 
+Building file: ../example/src/adc_test.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/adc_test.d" -MT"example/src/adc_test.o" -MT"example/src/adc_test.d" -o "example/src/adc_test.o" "../example/src/adc_test.c"
+Finished building: ../example/src/adc_test.c
+ 
+Building target: adc_test.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="adc_test.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "adc_test_Debug.ld" -o "adc_test.axf"  ./example/src/adc_test.o ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: adc_test.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "adc_test.axf"; # arm-none-eabi-objcopy -v -O binary "adc_test.axf" "adc_test.bin" ; # checksum -p LPC4337 -d "adc_test.bin";
+   text	   data	    bss	    dec	    hex	filename
+  17760	      0	    364	  18124	   46cc	adc_test.axf
+ 
+11:21:03 **** Incremental Build of configuration Debug for project adc_test ****
+make -r all 
+make: No se hace nada para 'all'.
+11:21:19 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+11:21:20 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+11:21:20 **** Incremental Build of configuration Debug for project adc_test ****
+make -r all 
+make: No se hace nada para 'all'.
+11:21:51 **** Incremental Build of configuration Debug for project adc_test ****
+make -r all 
+make: No se hace nada para 'all'.
+11:22:20 **** Incremental Build of configuration Debug for project adc_test ****
+make -r all 
+make: No se hace nada para 'all'.
+11:22:37 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+11:22:38 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+11:22:38 **** Incremental Build of configuration Debug for project adc_test ****
+make -r all 
+make: No se hace nada para 'all'.
+11:22:41 **** Incremental Build of configuration Debug for project adc_test ****
+make -r all 
+make: No se hace nada para 'all'.
+11:27:22 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+11:27:22 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+11:27:23 **** Incremental Build of configuration Debug for project adc_test ****
+make -r all 
+Building file: ../example/src/adc_test.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/adc_test.d" -MT"example/src/adc_test.o" -MT"example/src/adc_test.d" -o "example/src/adc_test.o" "../example/src/adc_test.c"
+../example/src/adc_test.c: In function 'main':
+../example/src/adc_test.c:77:17: error: '_LPC_ADC_IRQ' undeclared (first use in this function)
+  NVIC_EnableIRQ(_LPC_ADC_IRQ);
+                 ^
+example/src/subdir.mk:24: fallo en las instrucciones para el objetivo 'example/src/adc_test.o'
+../example/src/adc_test.c:77:17: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [example/src/adc_test.o] Error 1
+11:27:23 **** Build of configuration Debug for project periph_adc ****
+make -r all 
+Building file: ../example/src/adc.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/adc.d" -MT"example/src/adc.o" -MT"example/src/adc.d" -o "example/src/adc.o" "../example/src/adc.c"
+../example/src/adc.c: In function 'App_DMA_Test':
+../example/src/adc.c:104:29: error: '_LPC_ADC_ID' undeclared (first use in this function)
+  Chip_ADC_Int_SetChannelCmd(_LPC_ADC_ID, _ADC_CHANNLE, ENABLE);
+                             ^
+../example/src/adc.c:104:29: note: each undeclared identifier is reported only once for each function it appears in
+../example/src/adc.c:104:42: error: '_ADC_CHANNLE' undeclared (first use in this function)
+example/src/subdir.mk:24: fallo en las instrucciones para el objetivo 'example/src/adc.o'
+  Chip_ADC_Int_SetChannelCmd(_LPC_ADC_ID, _ADC_CHANNLE, ENABLE);
+                                          ^
+../example/src/adc.c:106:55: error: '_GPDMA_CONN_ADC' undeclared (first use in this function)
+  dmaChannelNum = Chip_GPDMA_GetFreeChannel(LPC_GPDMA, _GPDMA_CONN_ADC);
+                                                       ^
+../example/src/adc.c: In function 'App_Interrupt_Test':
+../example/src/adc.c:145:17: error: '_LPC_ADC_IRQ' undeclared (first use in this function)
+  NVIC_EnableIRQ(_LPC_ADC_IRQ);
+                 ^
+../example/src/adc.c:146:29: error: '_LPC_ADC_ID' undeclared (first use in this function)
+  Chip_ADC_Int_SetChannelCmd(_LPC_ADC_ID, _ADC_CHANNLE, ENABLE);
+                             ^
+../example/src/adc.c:146:42: error: '_ADC_CHANNLE' undeclared (first use in this function)
+  Chip_ADC_Int_SetChannelCmd(_LPC_ADC_ID, _ADC_CHANNLE, ENABLE);
+                                          ^
+../example/src/adc.c: In function 'App_Polling_Test':
+../example/src/adc.c:175:24: error: '_LPC_ADC_ID' undeclared (first use in this function)
+   Chip_ADC_SetBurstCmd(_LPC_ADC_ID, ENABLE);
+                        ^
+../example/src/adc.c:188:43: error: '_ADC_CHANNLE' undeclared (first use in this function)
+   while (Chip_ADC_ReadStatus(_LPC_ADC_ID, _ADC_CHANNLE, ADC_DR_DONE_STAT) != SET) {}
+                                           ^
+../example/src/adc.c: In function 'ADC0_IRQHandler':
+../example/src/adc.c:213:18: error: '_LPC_ADC_IRQ' undeclared (first use in this function)
+  NVIC_DisableIRQ(_LPC_ADC_IRQ);
+                  ^
+../example/src/adc.c:214:29: error: '_LPC_ADC_ID' undeclared (first use in this function)
+  Chip_ADC_Int_SetChannelCmd(_LPC_ADC_ID, _ADC_CHANNLE, DISABLE);
+                             ^
+../example/src/adc.c:214:42: error: '_ADC_CHANNLE' undeclared (first use in this function)
+  Chip_ADC_Int_SetChannelCmd(_LPC_ADC_ID, _ADC_CHANNLE, DISABLE);
+                                          ^
+../example/src/adc.c: In function 'ADC1_IRQHandler':
+../example/src/adc.c:233:18: error: '_LPC_ADC_IRQ' undeclared (first use in this function)
+  NVIC_DisableIRQ(_LPC_ADC_IRQ);
+                  ^
+../example/src/adc.c:234:29: error: '_LPC_ADC_ID' undeclared (first use in this function)
+  Chip_ADC_Int_SetChannelCmd(_LPC_ADC_ID, _ADC_CHANNLE, DISABLE);
+                             ^
+../example/src/adc.c:234:42: error: '_ADC_CHANNLE' undeclared (first use in this function)
+  Chip_ADC_Int_SetChannelCmd(_LPC_ADC_ID, _ADC_CHANNLE, DISABLE);
+                                          ^
+../example/src/adc.c: In function 'main':
+../example/src/adc.c:273:16: error: '_LPC_ADC_ID' undeclared (first use in this function)
+  Chip_ADC_Init(_LPC_ADC_ID, &ADCSetup);
+                ^
+../example/src/adc.c:274:38: error: '_ADC_CHANNLE' undeclared (first use in this function)
+  Chip_ADC_EnableChannel(_LPC_ADC_ID, _ADC_CHANNLE, ENABLE);
+                                      ^
+make: *** [example/src/adc.o] Error 1
+11:27:56 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+11:27:57 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+11:27:57 **** Incremental Build of configuration Debug for project adc_test ****
+make -r all 
+Building file: ../example/src/adc_test.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/adc_test.d" -MT"example/src/adc_test.o" -MT"example/src/adc_test.d" -o "example/src/adc_test.o" "../example/src/adc_test.c"
+Finished building: ../example/src/adc_test.c
+ 
+Building target: adc_test.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="adc_test.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "adc_test_Debug.ld" -o "adc_test.axf"  ./example/src/adc_test.o ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: adc_test.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "adc_test.axf"; # arm-none-eabi-objcopy -v -O binary "adc_test.axf" "adc_test.bin" ; # checksum -p LPC4337 -d "adc_test.bin";
+   text	   data	    bss	    dec	    hex	filename
+  17960	      0	    364	  18324	   4794	adc_test.axf
+ 
+11:27:58 **** Incremental Build of configuration Debug for project periph_adc ****
+make -r all 
+Building file: ../example/src/adc.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/adc.d" -MT"example/src/adc.o" -MT"example/src/adc.d" -o "example/src/adc.o" "../example/src/adc.c"
+../example/src/adc.c: In function 'App_DMA_Test':
+../example/src/adc.c:104:29: error: '_LPC_ADC_ID' undeclared (first use in this function)
+  Chip_ADC_Int_SetChannelCmd(_LPC_ADC_ID, _ADC_CHANNLE, ENABLE);
+                             ^
+../example/src/adc.c:104:29: note: each undeclared identifier is reported only once for each function it appears in
+../example/src/adc.c:104:42: error: '_ADC_CHANNLE' undeclared (first use in this function)
+  Chip_ADC_Int_SetChannelCmd(_LPC_ADC_ID, _ADC_CHANNLE, ENABLE);
+                                          ^
+../example/src/adc.c:106:55: error: '_GPDMA_CONN_ADC' undeclared (first use in this function)
+  dmaChannelNum = Chip_GPDMA_GetFreeChannel(LPC_GPDMA, _GPDMA_CONN_ADC);
+                                                       ^
+../example/src/adc.c: In function 'App_Interrupt_Test':
+../example/src/adc.c:145:17: error: '_LPC_ADC_IRQ' undeclared (first use in this function)
+  NVIC_EnableIRQ(_LPC_ADC_IRQ);
+                 ^
+example/src/subdir.mk:24: fallo en las instrucciones para el objetivo 'example/src/adc.o'
+../example/src/adc.c:146:29: error: '_LPC_ADC_ID' undeclared (first use in this function)
+  Chip_ADC_Int_SetChannelCmd(_LPC_ADC_ID, _ADC_CHANNLE, ENABLE);
+                             ^
+../example/src/adc.c:146:42: error: '_ADC_CHANNLE' undeclared (first use in this function)
+  Chip_ADC_Int_SetChannelCmd(_LPC_ADC_ID, _ADC_CHANNLE, ENABLE);
+                                          ^
+../example/src/adc.c: In function 'App_Polling_Test':
+../example/src/adc.c:175:24: error: '_LPC_ADC_ID' undeclared (first use in this function)
+   Chip_ADC_SetBurstCmd(_LPC_ADC_ID, ENABLE);
+                        ^
+../example/src/adc.c:188:43: error: '_ADC_CHANNLE' undeclared (first use in this function)
+   while (Chip_ADC_ReadStatus(_LPC_ADC_ID, _ADC_CHANNLE, ADC_DR_DONE_STAT) != SET) {}
+                                           ^
+../example/src/adc.c: In function 'ADC0_IRQHandler':
+../example/src/adc.c:213:18: error: '_LPC_ADC_IRQ' undeclared (first use in this function)
+  NVIC_DisableIRQ(_LPC_ADC_IRQ);
+                  ^
+../example/src/adc.c:214:29: error: '_LPC_ADC_ID' undeclared (first use in this function)
+  Chip_ADC_Int_SetChannelCmd(_LPC_ADC_ID, _ADC_CHANNLE, DISABLE);
+                             ^
+../example/src/adc.c:214:42: error: '_ADC_CHANNLE' undeclared (first use in this function)
+  Chip_ADC_Int_SetChannelCmd(_LPC_ADC_ID, _ADC_CHANNLE, DISABLE);
+                                          ^
+../example/src/adc.c: In function 'ADC1_IRQHandler':
+../example/src/adc.c:233:18: error: '_LPC_ADC_IRQ' undeclared (first use in this function)
+  NVIC_DisableIRQ(_LPC_ADC_IRQ);
+                  ^
+../example/src/adc.c:234:29: error: '_LPC_ADC_ID' undeclared (first use in this function)
+  Chip_ADC_Int_SetChannelCmd(_LPC_ADC_ID, _ADC_CHANNLE, DISABLE);
+                             ^
+../example/src/adc.c:234:42: error: '_ADC_CHANNLE' undeclared (first use in this function)
+  Chip_ADC_Int_SetChannelCmd(_LPC_ADC_ID, _ADC_CHANNLE, DISABLE);
+                                          ^
+../example/src/adc.c: In function 'main':
+../example/src/adc.c:273:16: error: '_LPC_ADC_ID' undeclared (first use in this function)
+  Chip_ADC_Init(_LPC_ADC_ID, &ADCSetup);
+                ^
+../example/src/adc.c:274:38: error: '_ADC_CHANNLE' undeclared (first use in this function)
+  Chip_ADC_EnableChannel(_LPC_ADC_ID, _ADC_CHANNLE, ENABLE);
+                                      ^
+make: *** [example/src/adc.o] Error 1
+11:28:12 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+11:28:12 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+11:28:13 **** Incremental Build of configuration Debug for project adc_test ****
+make -r all 
+make: No se hace nada para 'all'.
+11:28:22 **** Incremental Build of configuration Debug for project adc_test ****
+make -r all 
+make: No se hace nada para 'all'.
+11:31:04 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+11:31:05 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+11:31:05 **** Incremental Build of configuration Debug for project adc_test ****
+make -r all 
+Building file: ../example/src/adc_test.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/adc_test.d" -MT"example/src/adc_test.o" -MT"example/src/adc_test.d" -o "example/src/adc_test.o" "../example/src/adc_test.c"
+Finished building: ../example/src/adc_test.c
+ 
+Building target: adc_test.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="adc_test.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "adc_test_Debug.ld" -o "adc_test.axf"  ./example/src/adc_test.o ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: adc_test.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "adc_test.axf"; # arm-none-eabi-objcopy -v -O binary "adc_test.axf" "adc_test.bin" ; # checksum -p LPC4337 -d "adc_test.bin";
+   text	   data	    bss	    dec	    hex	filename
+  17736	      0	    364	  18100	   46b4	adc_test.axf
+ 
+11:31:07 **** Incremental Build of configuration Debug for project adc_test ****
+make -r all 
+make: No se hace nada para 'all'.
+11:34:27 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+11:34:28 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+11:34:28 **** Incremental Build of configuration Debug for project adc_test ****
+make -r all 
+Building file: ../example/src/adc_test.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/adc_test.d" -MT"example/src/adc_test.o" -MT"example/src/adc_test.d" -o "example/src/adc_test.o" "../example/src/adc_test.c"
+Finished building: ../example/src/adc_test.c
+ 
+Building target: adc_test.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="adc_test.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "adc_test_Debug.ld" -o "adc_test.axf"  ./example/src/adc_test.o ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: adc_test.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "adc_test.axf"; # arm-none-eabi-objcopy -v -O binary "adc_test.axf" "adc_test.bin" ; # checksum -p LPC4337 -d "adc_test.bin";
+   text	   data	    bss	    dec	    hex	filename
+  17712	      0	    364	  18076	   469c	adc_test.axf
+ 
+11:34:31 **** Incremental Build of configuration Debug for project adc_test ****
+make -r all 
+make: No se hace nada para 'all'.
+11:35:41 **** Incremental Build of configuration Debug for project adc_test ****
+make -r all 
+make: No se hace nada para 'all'.
+11:37:07 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+11:37:07 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+11:37:08 **** Incremental Build of configuration Debug for project adc_test ****
+make -r all 
+Building file: ../example/src/adc_test.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/adc_test.d" -MT"example/src/adc_test.o" -MT"example/src/adc_test.d" -o "example/src/adc_test.o" "../example/src/adc_test.c"
+../example/src/adc_test.c: In function 'ADC0_IRQHandler':
+../example/src/adc_test.c:60:38: warning: passing argument 3 of 'Chip_ADC_ReadByte' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadByte(LPC_ADC0, ADC_CH0,&adc_data);
+                                      ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/adc_test.c:32:
+/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc/adc_18xx_43xx.h:172:8: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'volatile uint8_t * {aka volatile unsigned char *}'
+ Status Chip_ADC_ReadByte(LPC_ADC_T *pADC, ADC_CHANNEL_T channel, uint8_t *data);
+        ^
+Finished building: ../example/src/adc_test.c
+ 
+Building target: adc_test.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="adc_test.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "adc_test_Debug.ld" -o "adc_test.axf"  ./example/src/adc_test.o ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: adc_test.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "adc_test.axf"; # arm-none-eabi-objcopy -v -O binary "adc_test.axf" "adc_test.bin" ; # checksum -p LPC4337 -d "adc_test.bin";
+   text	   data	    bss	    dec	    hex	filename
+  17848	      0	    364	  18212	   4724	adc_test.axf
+ 
+11:37:14 **** Incremental Build of configuration Debug for project adc_test ****
+make -r all 
+make: No se hace nada para 'all'.
+11:37:56 **** Incremental Build of configuration Debug for project adc_test ****
+make -r all 
+make: No se hace nada para 'all'.
+11:38:57 **** Incremental Build of configuration Debug for project adc_test ****
+make -r all 
+make: No se hace nada para 'all'.
+11:41:22 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+11:41:22 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+11:41:23 **** Incremental Build of configuration Debug for project adc_test ****
+make -r all 
+Building file: ../example/src/adc_test.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/adc_test.d" -MT"example/src/adc_test.o" -MT"example/src/adc_test.d" -o "example/src/adc_test.o" "../example/src/adc_test.c"
+../example/src/adc_test.c: In function 'ADC0_IRQHandler':
+../example/src/adc_test.c:60:38: warning: passing argument 3 of 'Chip_ADC_ReadByte' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadByte(LPC_ADC0, ADC_CH0,&adc_data);
+                                      ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/adc_test.c:32:
+/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc/adc_18xx_43xx.h:172:8: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'volatile uint8_t * {aka volatile unsigned char *}'
+ Status Chip_ADC_ReadByte(LPC_ADC_T *pADC, ADC_CHANNEL_T channel, uint8_t *data);
+        ^
+Finished building: ../example/src/adc_test.c
+ 
+Building target: adc_test.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="adc_test.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "adc_test_Debug.ld" -o "adc_test.axf"  ./example/src/adc_test.o ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: adc_test.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "adc_test.axf"; # arm-none-eabi-objcopy -v -O binary "adc_test.axf" "adc_test.bin" ; # checksum -p LPC4337 -d "adc_test.bin";
+   text	   data	    bss	    dec	    hex	filename
+  17832	      0	    364	  18196	   4714	adc_test.axf
+ 
+11:41:38 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+11:41:39 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+11:41:39 **** Incremental Build of configuration Debug for project adc_test ****
+make -r all 
+Building file: ../example/src/adc_test.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/adc_test.d" -MT"example/src/adc_test.o" -MT"example/src/adc_test.d" -o "example/src/adc_test.o" "../example/src/adc_test.c"
+Finished building: ../example/src/adc_test.c
+ 
+Building target: adc_test.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="adc_test.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "adc_test_Debug.ld" -o "adc_test.axf"  ./example/src/adc_test.o ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: adc_test.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "adc_test.axf"; # arm-none-eabi-objcopy -v -O binary "adc_test.axf" "adc_test.bin" ; # checksum -p LPC4337 -d "adc_test.bin";
+   text	   data	    bss	    dec	    hex	filename
+  17832	      0	    364	  18196	   4714	adc_test.axf
+ 
+11:42:02 **** Incremental Build of configuration Debug for project adc_test ****
+make -r all 
+make: No se hace nada para 'all'.
+11:49:22 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+11:49:23 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+11:49:23 **** Incremental Build of configuration Debug for project adc_test ****
+make -r all 
+Building file: ../example/src/adc_test.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/adc_test.d" -MT"example/src/adc_test.o" -MT"example/src/adc_test.d" -o "example/src/adc_test.o" "../example/src/adc_test.c"
+Finished building: ../example/src/adc_test.c
+ 
+Building target: adc_test.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="adc_test.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "adc_test_Debug.ld" -o "adc_test.axf"  ./example/src/adc_test.o ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: adc_test.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "adc_test.axf"; # arm-none-eabi-objcopy -v -O binary "adc_test.axf" "adc_test.bin" ; # checksum -p LPC4337 -d "adc_test.bin";
+   text	   data	    bss	    dec	    hex	filename
+  17920	      0	    364	  18284	   476c	adc_test.axf
+ 
+11:49:23 **** Build of configuration Debug for project periph_adc ****
 make -r all 
 Building file: ../example/src/adc.c
 Invoking: MCU C Compiler
@@ -366,119 +1504,427 @@ example/src/subdir.mk:24: fallo en las instrucciones para el objetivo 'example/s
   Chip_ADC_EnableChannel(_LPC_ADC_ID, _ADC_CHANNLE, ENABLE);
                                       ^
 make: *** [example/src/adc.o] Error 1
-00:42:08 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+11:49:40 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
 make -r all 
 make: No se hace nada para 'all'.
-00:42:08 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+11:49:41 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
 make -r all 
 make: No se hace nada para 'all'.
-00:42:09 **** Incremental Build of configuration Debug for project periph_adc ****
+11:49:41 **** Incremental Build of configuration Debug for project adc_test ****
 make -r all 
-Building file: ../example/src/adc.c
+make: No se hace nada para 'all'.
+11:49:45 **** Incremental Build of configuration Debug for project adc_test ****
+make -r all 
+make: No se hace nada para 'all'.
+12:04:51 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+12:04:51 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+12:04:52 **** Incremental Build of configuration Debug for project adc_test ****
+make -r all 
+Building file: ../example/src/adc_test.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/adc.d" -MT"example/src/adc.o" -MT"example/src/adc.d" -o "example/src/adc.o" "../example/src/adc.c"
-../example/src/adc.c: In function 'App_DMA_Test':
-../example/src/adc.c:105:42: error: '_ADC_CHANNEL' undeclared (first use in this function)
-  Chip_ADC_Int_SetChannelCmd(_LPC_ADC_ID, _ADC_CHANNEL, ENABLE);
-                                          ^
-../example/src/adc.c:105:42: note: each undeclared identifier is reported only once for each function it appears in
-make: *** [example/src/adc.o] Error 1
-example/src/subdir.mk:24: fallo en las instrucciones para el objetivo 'example/src/adc.o'
-00:42:49 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
-make -r all 
-make: No se hace nada para 'all'.
-00:42:50 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
-make -r all 
-make: No se hace nada para 'all'.
-00:42:50 **** Incremental Build of configuration Debug for project periph_adc ****
-make -r all 
-Building file: ../example/src/adc.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/adc.d" -MT"example/src/adc.o" -MT"example/src/adc.d" -o "example/src/adc.o" "../example/src/adc.c"
-../example/src/adc.c: In function 'App_Interrupt_Test':
-../example/src/adc.c:147:42: error: '_ADC_CHANNLE' undeclared (first use in this function)
-  Chip_ADC_Int_SetChannelCmd(_LPC_ADC_ID, _ADC_CHANNLE, ENABLE);
-                                          ^
-../example/src/adc.c:147:42: note: each undeclared identifier is reported only once for each function it appears in
-../example/src/adc.c: In function 'App_Polling_Test':
-../example/src/adc.c:189:43: error: '_ADC_CHANNLE' undeclared (first use in this function)
-example/src/subdir.mk:24: fallo en las instrucciones para el objetivo 'example/src/adc.o'
-   while (Chip_ADC_ReadStatus(_LPC_ADC_ID, _ADC_CHANNLE, ADC_DR_DONE_STAT) != SET) {}
-                                           ^
-../example/src/adc.c: In function 'ADC0_IRQHandler':
-../example/src/adc.c:215:42: error: '_ADC_CHANNLE' undeclared (first use in this function)
-  Chip_ADC_Int_SetChannelCmd(_LPC_ADC_ID, _ADC_CHANNLE, DISABLE);
-                                          ^
-../example/src/adc.c: In function 'ADC1_IRQHandler':
-../example/src/adc.c:235:42: error: '_ADC_CHANNLE' undeclared (first use in this function)
-  Chip_ADC_Int_SetChannelCmd(_LPC_ADC_ID, _ADC_CHANNLE, DISABLE);
-                                          ^
-../example/src/adc.c: In function 'main':
-../example/src/adc.c:275:38: error: '_ADC_CHANNLE' undeclared (first use in this function)
-  Chip_ADC_EnableChannel(_LPC_ADC_ID, _ADC_CHANNLE, ENABLE);
-                                      ^
-make: *** [example/src/adc.o] Error 1
-00:43:12 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
-make -r all 
-make: No se hace nada para 'all'.
-00:43:12 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
-make -r all 
-make: No se hace nada para 'all'.
-00:43:12 **** Incremental Build of configuration Debug for project periph_adc ****
-make -r all 
-Building file: ../example/src/adc.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/adc.d" -MT"example/src/adc.o" -MT"example/src/adc.d" -o "example/src/adc.o" "../example/src/adc.c"
-../example/src/adc.c: In function 'App_DMA_Test':
-../example/src/adc.c:105:42: error: '_ADC_CHANNEL' undeclared (first use in this function)
-  Chip_ADC_Int_SetChannelCmd(_LPC_ADC_ID, _ADC_CHANNEL, ENABLE);
-                                          ^
-../example/src/adc.c:105:42: note: each undeclared identifier is reported only once for each function it appears in
-example/src/subdir.mk:24: fallo en las instrucciones para el objetivo 'example/src/adc.o'
-make: *** [example/src/adc.o] Error 1
-00:43:43 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
-make -r all 
-make: No se hace nada para 'all'.
-00:43:43 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
-make -r all 
-make: No se hace nada para 'all'.
-00:43:44 **** Incremental Build of configuration Debug for project periph_adc ****
-make -r all 
-Building file: ../example/src/adc.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/adc.d" -MT"example/src/adc.o" -MT"example/src/adc.d" -o "example/src/adc.o" "../example/src/adc.c"
-Finished building: ../example/src/adc.c
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/adc_test.d" -MT"example/src/adc_test.o" -MT"example/src/adc_test.d" -o "example/src/adc_test.o" "../example/src/adc_test.c"
+Finished building: ../example/src/adc_test.c
  
-Building file: ../example/src/cr_startup_lpc43xx.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/cr_startup_lpc43xx.d" -MT"example/src/cr_startup_lpc43xx.o" -MT"example/src/cr_startup_lpc43xx.d" -o "example/src/cr_startup_lpc43xx.o" "../example/src/cr_startup_lpc43xx.c"
-Finished building: ../example/src/cr_startup_lpc43xx.c
- 
-Building file: ../example/src/sysinit.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/sysinit.d" -MT"example/src/sysinit.o" -MT"example/src/sysinit.d" -o "example/src/sysinit.o" "../example/src/sysinit.c"
-Finished building: ../example/src/sysinit.c
- 
-Building target: periph_adc.axf
+Building target: adc_test.axf
 Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_adc.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_adc_Debug.ld" -o "periph_adc.axf"  ./example/src/adc.o ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
-Finished building target: periph_adc.axf
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="adc_test.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "adc_test_Debug.ld" -o "adc_test.axf"  ./example/src/adc_test.o ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: adc_test.axf
  
 make --no-print-directory post-build
 Performing post-build steps
-arm-none-eabi-size "periph_adc.axf"; # arm-none-eabi-objcopy -v -O binary "periph_adc.axf" "periph_adc.bin" ; # checksum -p LPC4337 -d "periph_adc.bin";
+arm-none-eabi-size "adc_test.axf"; # arm-none-eabi-objcopy -v -O binary "adc_test.axf" "adc_test.bin" ; # checksum -p LPC4337 -d "adc_test.bin";
    text	   data	    bss	    dec	    hex	filename
-  22208	    128	    376	  22712	   58b8	periph_adc.axf
+  17800	      0	    364	  18164	   46f4	adc_test.axf
  
-00:45:12 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+12:05:08 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
 make -r all 
 make: No se hace nada para 'all'.
-00:45:12 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+12:05:09 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
 make -r all 
 make: No se hace nada para 'all'.
-00:45:13 **** Incremental Build of configuration Debug for project periph_adc ****
+12:05:09 **** Incremental Build of configuration Debug for project adc_test ****
+make -r all 
+Building file: ../example/src/adc_test.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/adc_test.d" -MT"example/src/adc_test.o" -MT"example/src/adc_test.d" -o "example/src/adc_test.o" "../example/src/adc_test.c"
+Finished building: ../example/src/adc_test.c
+ 
+Building target: adc_test.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="adc_test.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "adc_test_Debug.ld" -o "adc_test.axf"  ./example/src/adc_test.o ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: adc_test.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "adc_test.axf"; # arm-none-eabi-objcopy -v -O binary "adc_test.axf" "adc_test.bin" ; # checksum -p LPC4337 -d "adc_test.bin";
+   text	   data	    bss	    dec	    hex	filename
+  17816	      0	    364	  18180	   4704	adc_test.axf
+ 
+12:05:13 **** Incremental Build of configuration Debug for project adc_test ****
 make -r all 
 make: No se hace nada para 'all'.
-00:45:17 **** Incremental Build of configuration Debug for project periph_adc ****
+12:05:37 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+12:05:38 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+12:05:38 **** Incremental Build of configuration Debug for project adc_test ****
+make -r all 
+Building file: ../example/src/adc_test.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/adc_test.d" -MT"example/src/adc_test.o" -MT"example/src/adc_test.d" -o "example/src/adc_test.o" "../example/src/adc_test.c"
+Finished building: ../example/src/adc_test.c
+ 
+Building target: adc_test.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="adc_test.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "adc_test_Debug.ld" -o "adc_test.axf"  ./example/src/adc_test.o ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: adc_test.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "adc_test.axf"; # arm-none-eabi-objcopy -v -O binary "adc_test.axf" "adc_test.bin" ; # checksum -p LPC4337 -d "adc_test.bin";
+   text	   data	    bss	    dec	    hex	filename
+  17928	      0	    364	  18292	   4774	adc_test.axf
+ 
+12:05:44 **** Incremental Build of configuration Debug for project adc_test ****
+make -r all 
+make: No se hace nada para 'all'.
+12:09:12 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+12:09:13 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+12:09:13 **** Incremental Build of configuration Debug for project adc_test ****
+make -r all 
+Building file: ../example/src/adc_test.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/adc_test.d" -MT"example/src/adc_test.o" -MT"example/src/adc_test.d" -o "example/src/adc_test.o" "../example/src/adc_test.c"
+Finished building: ../example/src/adc_test.c
+ 
+Building target: adc_test.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="adc_test.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "adc_test_Debug.ld" -o "adc_test.axf"  ./example/src/adc_test.o ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: adc_test.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "adc_test.axf"; # arm-none-eabi-objcopy -v -O binary "adc_test.axf" "adc_test.bin" ; # checksum -p LPC4337 -d "adc_test.bin";
+   text	   data	    bss	    dec	    hex	filename
+  17952	      0	    364	  18316	   478c	adc_test.axf
+ 
+12:09:17 **** Incremental Build of configuration Debug for project adc_test ****
+make -r all 
+make: No se hace nada para 'all'.
+12:11:03 **** Incremental Build of configuration Debug for project adc_test ****
+make -r all 
+make: No se hace nada para 'all'.
+12:11:34 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+12:11:35 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+12:11:35 **** Incremental Build of configuration Debug for project adc_test ****
+make -r all 
+Building file: ../example/src/adc_test.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/adc_test.d" -MT"example/src/adc_test.o" -MT"example/src/adc_test.d" -o "example/src/adc_test.o" "../example/src/adc_test.c"
+Finished building: ../example/src/adc_test.c
+ 
+Building target: adc_test.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="adc_test.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "adc_test_Debug.ld" -o "adc_test.axf"  ./example/src/adc_test.o ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: adc_test.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "adc_test.axf"; # arm-none-eabi-objcopy -v -O binary "adc_test.axf" "adc_test.bin" ; # checksum -p LPC4337 -d "adc_test.bin";
+   text	   data	    bss	    dec	    hex	filename
+  17960	      0	    364	  18324	   4794	adc_test.axf
+ 
+12:11:44 **** Incremental Build of configuration Debug for project adc_test ****
+make -r all 
+make: No se hace nada para 'all'.
+12:17:19 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+12:17:19 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+12:17:20 **** Incremental Build of configuration Debug for project adc_test ****
+make -r all 
+Building file: ../example/src/adc_test.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/adc_test.d" -MT"example/src/adc_test.o" -MT"example/src/adc_test.d" -o "example/src/adc_test.o" "../example/src/adc_test.c"
+Finished building: ../example/src/adc_test.c
+ 
+Building target: adc_test.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="adc_test.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "adc_test_Debug.ld" -o "adc_test.axf"  ./example/src/adc_test.o ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: adc_test.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "adc_test.axf"; # arm-none-eabi-objcopy -v -O binary "adc_test.axf" "adc_test.bin" ; # checksum -p LPC4337 -d "adc_test.bin";
+   text	   data	    bss	    dec	    hex	filename
+  17896	      0	    364	  18260	   4754	adc_test.axf
+ 
+12:17:21 **** Incremental Build of configuration Debug for project adc_test ****
+make -r all 
+make: No se hace nada para 'all'.
+12:17:52 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+12:17:52 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+12:17:53 **** Incremental Build of configuration Debug for project adc_test ****
+make -r all 
+Building file: ../example/src/adc_test.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/adc_test.d" -MT"example/src/adc_test.o" -MT"example/src/adc_test.d" -o "example/src/adc_test.o" "../example/src/adc_test.c"
+Finished building: ../example/src/adc_test.c
+ 
+Building target: adc_test.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="adc_test.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "adc_test_Debug.ld" -o "adc_test.axf"  ./example/src/adc_test.o ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: adc_test.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "adc_test.axf"; # arm-none-eabi-objcopy -v -O binary "adc_test.axf" "adc_test.bin" ; # checksum -p LPC4337 -d "adc_test.bin";
+   text	   data	    bss	    dec	    hex	filename
+  17864	      0	    364	  18228	   4734	adc_test.axf
+ 
+12:17:55 **** Incremental Build of configuration Debug for project adc_test ****
+make -r all 
+make: No se hace nada para 'all'.
+12:18:31 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+12:18:32 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+12:18:32 **** Incremental Build of configuration Debug for project adc_test ****
+make -r all 
+Building file: ../example/src/adc_test.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/adc_test.d" -MT"example/src/adc_test.o" -MT"example/src/adc_test.d" -o "example/src/adc_test.o" "../example/src/adc_test.c"
+Finished building: ../example/src/adc_test.c
+ 
+Building target: adc_test.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="adc_test.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "adc_test_Debug.ld" -o "adc_test.axf"  ./example/src/adc_test.o ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: adc_test.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "adc_test.axf"; # arm-none-eabi-objcopy -v -O binary "adc_test.axf" "adc_test.bin" ; # checksum -p LPC4337 -d "adc_test.bin";
+   text	   data	    bss	    dec	    hex	filename
+  17880	      0	    364	  18244	   4744	adc_test.axf
+ 
+12:18:34 **** Incremental Build of configuration Debug for project adc_test ****
+make -r all 
+make: No se hace nada para 'all'.
+12:22:57 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+12:22:57 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+12:22:58 **** Incremental Build of configuration Debug for project adc_test ****
+make -r all 
+Building file: ../example/src/adc_test.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/adc_test.d" -MT"example/src/adc_test.o" -MT"example/src/adc_test.d" -o "example/src/adc_test.o" "../example/src/adc_test.c"
+../example/src/adc_test.c: In function 'ADC0_IRQHandler':
+../example/src/adc_test.c:60:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' from incompatible pointer type [-Wincompatible-pointer-types]
+  Chip_ADC_ReadValue(LPC_ADC0, ADC_CH0,&adc_data);
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/adc_test.c:32:
+/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'uint8_t * {aka unsigned char *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+Finished building: ../example/src/adc_test.c
+ 
+Building target: adc_test.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="adc_test.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "adc_test_Debug.ld" -o "adc_test.axf"  ./example/src/adc_test.o ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: adc_test.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "adc_test.axf"; # arm-none-eabi-objcopy -v -O binary "adc_test.axf" "adc_test.bin" ; # checksum -p LPC4337 -d "adc_test.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18136	      0	    364	  18500	   4844	adc_test.axf
+ 
+12:23:16 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+12:23:16 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+12:23:16 **** Incremental Build of configuration Debug for project adc_test ****
+make -r all 
+Building file: ../example/src/adc_test.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/adc_test.d" -MT"example/src/adc_test.o" -MT"example/src/adc_test.d" -o "example/src/adc_test.o" "../example/src/adc_test.c"
+Finished building: ../example/src/adc_test.c
+ 
+Building target: adc_test.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="adc_test.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "adc_test_Debug.ld" -o "adc_test.axf"  ./example/src/adc_test.o ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: adc_test.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "adc_test.axf"; # arm-none-eabi-objcopy -v -O binary "adc_test.axf" "adc_test.bin" ; # checksum -p LPC4337 -d "adc_test.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18136	      0	    364	  18500	   4844	adc_test.axf
+ 
+12:24:11 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+12:24:11 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+12:24:12 **** Incremental Build of configuration Debug for project adc_test ****
+make -r all 
+Building file: ../example/src/adc_test.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/adc_test.d" -MT"example/src/adc_test.o" -MT"example/src/adc_test.d" -o "example/src/adc_test.o" "../example/src/adc_test.c"
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc/board.h:312:0,
+                 from ../example/src/adc_test.c:32:
+../example/src/adc_test.c: In function 'main':
+../example/src/adc_test.c:88:31: error: 'HEX' undeclared (first use in this function)
+    DEBUGOUT("%i\n\r",adc_data,HEX);
+                               ^
+example/src/subdir.mk:24: fallo en las instrucciones para el objetivo 'example/src/adc_test.o'
+/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc/board_api.h:167:30: note: in definition of macro 'DEBUGOUT'
+ #define DEBUGOUT(...) printf(__VA_ARGS__)
+                              ^
+../example/src/adc_test.c:88:31: note: each undeclared identifier is reported only once for each function it appears in
+    DEBUGOUT("%i\n\r",adc_data,HEX);
+                               ^
+/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc/board_api.h:167:30: note: in definition of macro 'DEBUGOUT'
+ #define DEBUGOUT(...) printf(__VA_ARGS__)
+                              ^
+make: *** [example/src/adc_test.o] Error 1
+12:25:02 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+12:25:03 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+12:25:03 **** Incremental Build of configuration Debug for project adc_test ****
+make -r all 
+Building file: ../example/src/adc_test.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/adc_test.d" -MT"example/src/adc_test.o" -MT"example/src/adc_test.d" -o "example/src/adc_test.o" "../example/src/adc_test.c"
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc/board.h:312:0,
+                 from ../example/src/adc_test.c:32:
+../example/src/adc_test.c: In function 'main':
+../example/src/adc_test.c:88:33: error: 'HEX' undeclared (first use in this function)
+    DEBUGOUT("%04x\n\r",adc_data,HEX);
+example/src/subdir.mk:24: fallo en las instrucciones para el objetivo 'example/src/adc_test.o'
+                                 ^
+/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc/board_api.h:167:30: note: in definition of macro 'DEBUGOUT'
+ #define DEBUGOUT(...) printf(__VA_ARGS__)
+                              ^
+../example/src/adc_test.c:88:33: note: each undeclared identifier is reported only once for each function it appears in
+    DEBUGOUT("%04x\n\r",adc_data,HEX);
+                                 ^
+/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc/board_api.h:167:30: note: in definition of macro 'DEBUGOUT'
+ #define DEBUGOUT(...) printf(__VA_ARGS__)
+                              ^
+make: *** [example/src/adc_test.o] Error 1
+12:25:12 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+12:25:13 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+12:25:13 **** Incremental Build of configuration Debug for project adc_test ****
+make -r all 
+Building file: ../example/src/adc_test.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/adc_test.d" -MT"example/src/adc_test.o" -MT"example/src/adc_test.d" -o "example/src/adc_test.o" "../example/src/adc_test.c"
+Finished building: ../example/src/adc_test.c
+ 
+Building target: adc_test.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="adc_test.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "adc_test_Debug.ld" -o "adc_test.axf"  ./example/src/adc_test.o ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: adc_test.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "adc_test.axf"; # arm-none-eabi-objcopy -v -O binary "adc_test.axf" "adc_test.bin" ; # checksum -p LPC4337 -d "adc_test.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18136	      0	    364	  18500	   4844	adc_test.axf
+ 
+12:25:19 **** Incremental Build of configuration Debug for project adc_test ****
+make -r all 
+make: No se hace nada para 'all'.
+12:26:06 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+12:26:06 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+12:26:07 **** Incremental Build of configuration Debug for project adc_test ****
+make -r all 
+Building file: ../example/src/adc_test.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/adc_test.d" -MT"example/src/adc_test.o" -MT"example/src/adc_test.d" -o "example/src/adc_test.o" "../example/src/adc_test.c"
+Finished building: ../example/src/adc_test.c
+ 
+Building target: adc_test.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="adc_test.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "adc_test_Debug.ld" -o "adc_test.axf"  ./example/src/adc_test.o ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: adc_test.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "adc_test.axf"; # arm-none-eabi-objcopy -v -O binary "adc_test.axf" "adc_test.bin" ; # checksum -p LPC4337 -d "adc_test.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18136	      0	    364	  18500	   4844	adc_test.axf
+ 
+12:26:10 **** Incremental Build of configuration Debug for project adc_test ****
+make -r all 
+make: No se hace nada para 'all'.
+12:28:03 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+12:28:03 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+12:28:03 **** Incremental Build of configuration Debug for project adc_test ****
+make -r all 
+Building file: ../example/src/adc_test.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/adc_test.d" -MT"example/src/adc_test.o" -MT"example/src/adc_test.d" -o "example/src/adc_test.o" "../example/src/adc_test.c"
+Finished building: ../example/src/adc_test.c
+ 
+Building target: adc_test.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_adc/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="adc_test.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "adc_test_Debug.ld" -o "adc_test.axf"  ./example/src/adc_test.o ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: adc_test.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "adc_test.axf"; # arm-none-eabi-objcopy -v -O binary "adc_test.axf" "adc_test.bin" ; # checksum -p LPC4337 -d "adc_test.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18136	      0	    364	  18500	   4844	adc_test.axf
+ 
+12:28:06 **** Incremental Build of configuration Debug for project adc_test ****
 make -r all 
 make: No se hace nada para 'all'.
