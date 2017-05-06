@@ -9,8 +9,12 @@ El TP final de Seminario de Sistemas Embebidos consiste en realizar el control d
 -NVIC_EnableIRQ: Agrega las interrupciones del ADC al vector de interrupciones. Recibe ADC0_IRQn o ADC1_IRQn. 
 	El handler es ADC0_IRQHandler o ADC1_IRQHandler.
 -Chip_ADC_Int_SetChannelCmd: Habilita o desabilita las interrupciones de un terminado canal del ADC.
--Chip_ADC_SetBurstCmd: Hace una conversion en Burst Mode, pero no termino de entender como funciona. Creo que para lo que quiero hacer
-	no funciona. 
+-Chip_ADC_SetBurstCmd: Este modo realiza conversiones a maxima velocidad. Apenas termina una conversión comienza otra. Por esta razón,
+	si se desean leer los valores convertidos es necesario parar las conversiones en la interrupcion, ya que la velocidad de las
+	conversiones no permiten realizar otras actividades (la interrupcion salta todo el tiempo). Este modo permite tambien hacer
+	conversiones de todos los canales al mismo tiempo (primero convierte ADC0, luego ADC1 y asi. Convierte los canales activados),
+	lo cual evita tener que multiplexar. Hay que tener cuidado porque las sucesivas conversiones se van pisando, asi que hay que 
+	leerlas rapido.
 -Chip_ADC_SetStartMode: Comienza una conversión del ADC. Permite seleccionar si la conversion quiere hacerse inmediatamente o con
 	alguna señal de trigger.
 	
