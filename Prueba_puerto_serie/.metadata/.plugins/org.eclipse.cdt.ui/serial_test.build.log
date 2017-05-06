@@ -1,6 +1,0 @@
-15:53:57 **** Incremental Build of configuration Debug for project serial_test ****
-make -r all 
-make: No se hace nada para 'all'.
-
-15:53:57 Build Finished (took 65ms)
-
