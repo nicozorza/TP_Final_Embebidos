@@ -36,7 +36,7 @@
  ****************************************************************************/
 
 #define SCT_PWM            LPC_SCT
-
+#define BOARD_NXP_LPCXPRESSO_4337
 #if (defined(BOARD_KEIL_MCB_1857) || defined(BOARD_KEIL_MCB_4357))
 #define SCT_PWM_PIN_OUT    10        /* COUT10 Generate square wave */
 #define SCT_PWM_PIN_LED    14        /* COUT14 [index 2] Controls LED */
@@ -92,9 +92,9 @@ static void app_setup_pin(void)
 	Chip_SCU_PinMuxSet(0x2, 12, (SCU_MODE_INACT | SCU_MODE_FUNC1));
 #elif (defined(BOARD_NXP_LPCXPRESSO_4337))
 	/* SCT_OUT2 on P2.10 mapped to FUNC1: LED2 */
-	Chip_SCU_PinMuxSet(0x2, 7, (SCU_MODE_INACT | SCU_MODE_FUNC1));
+	Chip_SCU_PinMuxSet(0x2, 0, (SCU_MODE_INACT | SCU_MODE_FUNC1));
 	/* SCT_OUT4 on P2.12 mapped to FUNC1: Oscilloscope input */
-	Chip_SCU_PinMuxSet(0x2, 12, (SCU_MODE_INACT | SCU_MODE_FUNC1));
+	Chip_SCU_PinMuxSet(0x2, 10, (SCU_MODE_INACT | SCU_MODE_FUNC1));
 #elif (defined(BOARD_NXP_LPCLINK2_4370))
 	/* SCT_OUT7 on P1.1 mapped to FUNC1: LED2 */
 	Chip_SCU_PinMuxSet(0x1, 1, (SCU_MODE_INACT | SCU_MODE_FUNC1));

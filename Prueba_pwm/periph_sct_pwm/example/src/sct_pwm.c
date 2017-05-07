@@ -56,7 +56,7 @@
 
 #define SCT_PWM_OUT        1        /* Index of OUT PWM */
 #define SCT_PWM_LED        2        /* Index of LED PWM */
-#define SCT_PWM_RATE   10000        /* PWM frequency 10 KHz */
+#define SCT_PWM_RATE   1000000        /* PWM frequency 10 KHz */
 
 /* Systick timer tick rate, to change duty cycle */
 #define TICKRATE_HZ     1000        /* 1 ms Tick rate */
