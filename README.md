@@ -50,7 +50,9 @@ Para configurar este bloque se debe hacer:
 
 # OBSERVACIONES:
 -Chip_SCT_EnableEventInt(LPC_SCT_T *pSCT, CHIP_SCT_EVENT_T evt) permite habilitar las interrupciones de acuerdo a los eventos. El
-	handler es SCT_IRQHandler(). Los posibles eventos son: match condition, input o output condition, combinaciones de ambos.	
+	handler es SCT_IRQHandler(). Los posibles eventos son: match condition, input o output condition, combinaciones de ambos.
+-El tema de las interrupciones no me funciono todavia, pero todo lo otro al parecer funciona perfectamente. Tendria que ver si logro
+	hacer andar el pwm de la forma original.	
 
 ######################################################################################################################################
 

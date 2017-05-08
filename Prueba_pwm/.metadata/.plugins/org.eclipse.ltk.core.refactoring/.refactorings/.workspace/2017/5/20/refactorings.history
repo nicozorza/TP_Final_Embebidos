@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;periph_sct_pwm&apos;" deleteContents="true" description="Delete resource &apos;periph_sct_pwm&apos;" element1="/periph_sct_pwm" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1494201941863"/>
+</session>

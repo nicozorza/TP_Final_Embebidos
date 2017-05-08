@@ -368,3 +368,285 @@ make: No se hace nada para 'all'.
 17:46:55 **** Incremental Build of configuration Debug for project periph_sct_pwm ****
 make -r all 
 make: No se hace nada para 'all'.
+21:01:08 **** Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+21:01:09 **** Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+21:01:11 **** Build of configuration Debug for project periph_sct_pwm ****
+make -r all 
+Building file: ../example/src/sct_pwm.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pwm/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pwm/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/sct_pwm.d" -MT"example/src/sct_pwm.o" -MT"example/src/sct_pwm.d" -o "example/src/sct_pwm.o" "../example/src/sct_pwm.c"
+Finished building: ../example/src/sct_pwm.c
+ 
+Building target: periph_sct_pwm.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pwm/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pwm/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_sct_pwm.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_sct_pwm_Debug.ld" -o "periph_sct_pwm.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/sct_pwm.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_sct_pwm.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_sct_pwm.axf"; # arm-none-eabi-objcopy -v -O binary "periph_sct_pwm.axf" "periph_sct_pwm.bin" ; # checksum -p LPC4337 -d "periph_sct_pwm.bin";
+   text	   data	    bss	    dec	    hex	filename
+   9512	      0	    348	   9860	   2684	periph_sct_pwm.axf
+ 
+21:01:12 **** Build of configuration Debug for project pwm_test ****
+make -r all 
+Building file: ../example/src/pwm_test.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pwm/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pwm/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/pwm_test.d" -MT"example/src/pwm_test.o" -MT"example/src/pwm_test.d" -o "example/src/pwm_test.o" "../example/src/pwm_test.c"
+../example/src/pwm_test.c: In function 'main':
+../example/src/pwm_test.c:89:36: error: 'SCT_PWM_OUT' undeclared (first use in this function)
+example/src/subdir.mk:24: fallo en las instrucciones para el objetivo 'example/src/pwm_test.o'
+  Chip_SCTPWM_SetDutyCycle(LPC_SCT, SCT_PWM_OUT, Chip_SCTPWM_GetTicksPerCycle(LPC_SCT)/2);
+                                    ^
+../example/src/pwm_test.c:89:36: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [example/src/pwm_test.o] Error 1
+21:01:36 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+21:01:36 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+21:01:36 **** Incremental Build of configuration Debug for project periph_sct_pwm ****
+make -r all 
+make: No se hace nada para 'all'.
+21:01:37 **** Incremental Build of configuration Debug for project pwm_test ****
+make -r all 
+Building file: ../example/src/pwm_test.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pwm/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pwm/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/pwm_test.d" -MT"example/src/pwm_test.o" -MT"example/src/pwm_test.d" -o "example/src/pwm_test.o" "../example/src/pwm_test.c"
+Finished building: ../example/src/pwm_test.c
+ 
+Building target: pwm_test.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pwm/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pwm/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="pwm_test.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_sct_pwm_Debug.ld" -o "pwm_test.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/pwm_test.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: pwm_test.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "pwm_test.axf"; # arm-none-eabi-objcopy -v -O binary "pwm_test.axf" "pwm_test.bin" ; # checksum -p LPC4337 -d "pwm_test.bin";
+   text	   data	    bss	    dec	    hex	filename
+   9252	      0	    348	   9600	   2580	pwm_test.axf
+ 
+21:04:05 **** Incremental Build of configuration Debug for project periph_sct_pwm ****
+make -r all 
+make: No se hace nada para 'all'.
+21:06:00 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+21:06:01 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+21:06:01 **** Incremental Build of configuration Debug for project pwm_test ****
+make -r all 
+Building file: ../example/src/pwm_test.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pwm/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pwm/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/pwm_test.d" -MT"example/src/pwm_test.o" -MT"example/src/pwm_test.d" -o "example/src/pwm_test.o" "../example/src/pwm_test.c"
+Finished building: ../example/src/pwm_test.c
+ 
+Building target: pwm_test.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pwm/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pwm/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="pwm_test.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_sct_pwm_Debug.ld" -o "pwm_test.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/pwm_test.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: pwm_test.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "pwm_test.axf"; # arm-none-eabi-objcopy -v -O binary "pwm_test.axf" "pwm_test.bin" ; # checksum -p LPC4337 -d "pwm_test.bin";
+   text	   data	    bss	    dec	    hex	filename
+   9316	      0	    348	   9664	   25c0	pwm_test.axf
+ 
+21:06:49 **** Incremental Build of configuration Debug for project pwm_test ****
+make -r all 
+make: No se hace nada para 'all'.
+21:12:12 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+21:12:12 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+21:12:13 **** Incremental Build of configuration Debug for project pwm_test ****
+make -r all 
+Building file: ../example/src/pwm_test.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pwm/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pwm/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/pwm_test.d" -MT"example/src/pwm_test.o" -MT"example/src/pwm_test.d" -o "example/src/pwm_test.o" "../example/src/pwm_test.c"
+Finished building: ../example/src/pwm_test.c
+ 
+Building target: pwm_test.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pwm/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pwm/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="pwm_test.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_sct_pwm_Debug.ld" -o "pwm_test.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/pwm_test.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: pwm_test.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "pwm_test.axf"; # arm-none-eabi-objcopy -v -O binary "pwm_test.axf" "pwm_test.bin" ; # checksum -p LPC4337 -d "pwm_test.bin";
+   text	   data	    bss	    dec	    hex	filename
+   9316	      0	    348	   9664	   25c0	pwm_test.axf
+ 
+21:12:15 **** Incremental Build of configuration Debug for project pwm_test ****
+make -r all 
+make: No se hace nada para 'all'.
+21:12:48 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+21:12:48 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+21:12:49 **** Incremental Build of configuration Debug for project pwm_test ****
+make -r all 
+Building file: ../example/src/pwm_test.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pwm/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pwm/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/pwm_test.d" -MT"example/src/pwm_test.o" -MT"example/src/pwm_test.d" -o "example/src/pwm_test.o" "../example/src/pwm_test.c"
+Finished building: ../example/src/pwm_test.c
+ 
+Building target: pwm_test.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pwm/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pwm/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="pwm_test.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_sct_pwm_Debug.ld" -o "pwm_test.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/pwm_test.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: pwm_test.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "pwm_test.axf"; # arm-none-eabi-objcopy -v -O binary "pwm_test.axf" "pwm_test.bin" ; # checksum -p LPC4337 -d "pwm_test.bin";
+   text	   data	    bss	    dec	    hex	filename
+   9328	      0	    348	   9676	   25cc	pwm_test.axf
+ 
+21:12:59 **** Incremental Build of configuration Debug for project pwm_test ****
+make -r all 
+make: No se hace nada para 'all'.
+21:16:07 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+21:16:07 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+21:16:08 **** Incremental Build of configuration Debug for project pwm_test ****
+make -r all 
+Building file: ../example/src/pwm_test.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pwm/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pwm/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/pwm_test.d" -MT"example/src/pwm_test.o" -MT"example/src/pwm_test.d" -o "example/src/pwm_test.o" "../example/src/pwm_test.c"
+Finished building: ../example/src/pwm_test.c
+ 
+Building target: pwm_test.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pwm/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pwm/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="pwm_test.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_sct_pwm_Debug.ld" -o "pwm_test.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/pwm_test.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: pwm_test.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "pwm_test.axf"; # arm-none-eabi-objcopy -v -O binary "pwm_test.axf" "pwm_test.bin" ; # checksum -p LPC4337 -d "pwm_test.bin";
+   text	   data	    bss	    dec	    hex	filename
+   9324	      0	    348	   9672	   25c8	pwm_test.axf
+ 
+21:16:12 **** Incremental Build of configuration Debug for project pwm_test ****
+make -r all 
+make: No se hace nada para 'all'.
+21:18:59 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+21:18:59 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+21:19:00 **** Incremental Build of configuration Debug for project pwm_test ****
+make -r all 
+Building file: ../example/src/pwm_test.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pwm/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pwm/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/pwm_test.d" -MT"example/src/pwm_test.o" -MT"example/src/pwm_test.d" -o "example/src/pwm_test.o" "../example/src/pwm_test.c"
+Finished building: ../example/src/pwm_test.c
+ 
+Building target: pwm_test.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pwm/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pwm/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="pwm_test.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_sct_pwm_Debug.ld" -o "pwm_test.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/pwm_test.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: pwm_test.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "pwm_test.axf"; # arm-none-eabi-objcopy -v -O binary "pwm_test.axf" "pwm_test.bin" ; # checksum -p LPC4337 -d "pwm_test.bin";
+   text	   data	    bss	    dec	    hex	filename
+   9324	      0	    348	   9672	   25c8	pwm_test.axf
+ 
+21:19:02 **** Incremental Build of configuration Debug for project pwm_test ****
+make -r all 
+make: No se hace nada para 'all'.
+21:24:22 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+21:24:23 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+21:24:23 **** Incremental Build of configuration Debug for project pwm_test ****
+make -r all 
+Building file: ../example/src/pwm_test.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pwm/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pwm/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/pwm_test.d" -MT"example/src/pwm_test.o" -MT"example/src/pwm_test.d" -o "example/src/pwm_test.o" "../example/src/pwm_test.c"
+Finished building: ../example/src/pwm_test.c
+ 
+Building target: pwm_test.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pwm/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pwm/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="pwm_test.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_sct_pwm_Debug.ld" -o "pwm_test.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/pwm_test.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: pwm_test.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "pwm_test.axf"; # arm-none-eabi-objcopy -v -O binary "pwm_test.axf" "pwm_test.bin" ; # checksum -p LPC4337 -d "pwm_test.bin";
+   text	   data	    bss	    dec	    hex	filename
+   9148	      0	    348	   9496	   2518	pwm_test.axf
+ 
+21:24:24 **** Incremental Build of configuration Debug for project pwm_test ****
+make -r all 
+make: No se hace nada para 'all'.
+21:25:07 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+21:25:08 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+21:25:08 **** Incremental Build of configuration Debug for project pwm_test ****
+make -r all 
+Building file: ../example/src/pwm_test.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pwm/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pwm/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/pwm_test.d" -MT"example/src/pwm_test.o" -MT"example/src/pwm_test.d" -o "example/src/pwm_test.o" "../example/src/pwm_test.c"
+Finished building: ../example/src/pwm_test.c
+ 
+Building target: pwm_test.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pwm/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pwm/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="pwm_test.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_sct_pwm_Debug.ld" -o "pwm_test.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/pwm_test.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: pwm_test.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "pwm_test.axf"; # arm-none-eabi-objcopy -v -O binary "pwm_test.axf" "pwm_test.bin" ; # checksum -p LPC4337 -d "pwm_test.bin";
+   text	   data	    bss	    dec	    hex	filename
+   9136	      0	    348	   9484	   250c	pwm_test.axf
+ 
+21:25:16 **** Incremental Build of configuration Debug for project pwm_test ****
+make -r all 
+make: No se hace nada para 'all'.
+21:27:40 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+21:27:41 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+21:27:41 **** Incremental Build of configuration Debug for project pwm_test ****
+make -r all 
+Building file: ../example/src/pwm_test.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pwm/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pwm/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/pwm_test.d" -MT"example/src/pwm_test.o" -MT"example/src/pwm_test.d" -o "example/src/pwm_test.o" "../example/src/pwm_test.c"
+Finished building: ../example/src/pwm_test.c
+ 
+Building target: pwm_test.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pwm/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pwm/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="pwm_test.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_sct_pwm_Debug.ld" -o "pwm_test.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/pwm_test.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: pwm_test.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "pwm_test.axf"; # arm-none-eabi-objcopy -v -O binary "pwm_test.axf" "pwm_test.bin" ; # checksum -p LPC4337 -d "pwm_test.bin";
+   text	   data	    bss	    dec	    hex	filename
+   9280	      0	    348	   9628	   259c	pwm_test.axf
+ 
+21:27:45 **** Incremental Build of configuration Debug for project pwm_test ****
+make -r all 
+make: No se hace nada para 'all'.
