@@ -1,6 +1,6 @@
-18:10:52 **** Incremental Build of configuration Debug for project pid_test ****
+20:44:53 **** Incremental Build of configuration Debug for project pid_test ****
 make -r all 
 make: No se hace nada para 'all'.
 
-18:10:52 Build Finished (took 61ms)
+20:44:53 Build Finished (took 70ms)
 

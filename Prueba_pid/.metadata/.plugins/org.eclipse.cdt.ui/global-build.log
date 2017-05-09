@@ -89,3 +89,388 @@ arm-none-eabi-size "pid_test.axf"; # arm-none-eabi-objcopy -v -O binary "pid_tes
 18:10:52 **** Incremental Build of configuration Debug for project pid_test ****
 make -r all 
 make: No se hace nada para 'all'.
+20:09:39 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+20:09:40 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+20:09:40 **** Incremental Build of configuration Debug for project pid_test ****
+make -r all 
+Building file: ../example/src/pid_test.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pid/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pid/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/pid_test.d" -MT"example/src/pid_test.o" -MT"example/src/pid_test.d" -o "example/src/pid_test.o" "../example/src/pid_test.c"
+Finished building: ../example/src/pid_test.c
+ 
+Building target: pid_test.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pid/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pid/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="pid_test.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_systick_Debug.ld" -o "pid_test.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/pid_test.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: pid_test.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "pid_test.axf"; # arm-none-eabi-objcopy -v -O binary "pid_test.axf" "pid_test.bin" ; # checksum -p LPC4337 -d "pid_test.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18872	      0	    376	  19248	   4b30	pid_test.axf
+ 
+20:20:56 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+20:20:56 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+20:20:57 **** Incremental Build of configuration Debug for project pid_test ****
+make -r all 
+Building file: ../example/src/pid_test.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pid/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pid/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/pid_test.d" -MT"example/src/pid_test.o" -MT"example/src/pid_test.d" -o "example/src/pid_test.o" "../example/src/pid_test.c"
+../example/src/pid_test.c: In function 'main':
+../example/src/pid_test.c:130:4: warning: "/*" within comment [-Wcomment]
+    /**********************/
+    ^
+Finished building: ../example/src/pid_test.c
+ 
+Building target: pid_test.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pid/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pid/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="pid_test.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_systick_Debug.ld" -o "pid_test.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/pid_test.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: pid_test.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "pid_test.axf"; # arm-none-eabi-objcopy -v -O binary "pid_test.axf" "pid_test.bin" ; # checksum -p LPC4337 -d "pid_test.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18656	      0	    360	  19016	   4a48	pid_test.axf
+ 
+20:21:22 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+20:21:23 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+20:21:23 **** Incremental Build of configuration Debug for project pid_test ****
+make -r all 
+Building file: ../example/src/pid_test.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pid/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pid/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/pid_test.d" -MT"example/src/pid_test.o" -MT"example/src/pid_test.d" -o "example/src/pid_test.o" "../example/src/pid_test.c"
+Finished building: ../example/src/pid_test.c
+ 
+Building target: pid_test.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pid/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pid/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="pid_test.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_systick_Debug.ld" -o "pid_test.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/pid_test.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: pid_test.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "pid_test.axf"; # arm-none-eabi-objcopy -v -O binary "pid_test.axf" "pid_test.bin" ; # checksum -p LPC4337 -d "pid_test.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18656	      0	    360	  19016	   4a48	pid_test.axf
+ 
+20:23:15 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+20:23:16 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+20:23:16 **** Incremental Build of configuration Debug for project pid_test ****
+make -r all 
+Building file: ../example/src/pid_test.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pid/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pid/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/pid_test.d" -MT"example/src/pid_test.o" -MT"example/src/pid_test.d" -o "example/src/pid_test.o" "../example/src/pid_test.c"
+Finished building: ../example/src/pid_test.c
+ 
+Building target: pid_test.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pid/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pid/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="pid_test.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_systick_Debug.ld" -o "pid_test.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/pid_test.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: pid_test.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "pid_test.axf"; # arm-none-eabi-objcopy -v -O binary "pid_test.axf" "pid_test.bin" ; # checksum -p LPC4337 -d "pid_test.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18728	      0	    360	  19088	   4a90	pid_test.axf
+ 
+20:23:24 **** Incremental Build of configuration Debug for project pid_test ****
+make -r all 
+make: No se hace nada para 'all'.
+20:25:22 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+20:25:22 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+20:25:23 **** Incremental Build of configuration Debug for project pid_test ****
+make -r all 
+Building file: ../example/src/pid_test.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pid/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pid/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/pid_test.d" -MT"example/src/pid_test.o" -MT"example/src/pid_test.d" -o "example/src/pid_test.o" "../example/src/pid_test.c"
+Finished building: ../example/src/pid_test.c
+ 
+Building target: pid_test.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pid/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pid/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="pid_test.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_systick_Debug.ld" -o "pid_test.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/pid_test.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: pid_test.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "pid_test.axf"; # arm-none-eabi-objcopy -v -O binary "pid_test.axf" "pid_test.bin" ; # checksum -p LPC4337 -d "pid_test.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18744	      0	    360	  19104	   4aa0	pid_test.axf
+ 
+20:25:26 **** Incremental Build of configuration Debug for project pid_test ****
+make -r all 
+make: No se hace nada para 'all'.
+20:26:46 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+20:26:47 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+20:26:47 **** Incremental Build of configuration Debug for project pid_test ****
+make -r all 
+Building file: ../example/src/pid_test.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pid/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pid/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/pid_test.d" -MT"example/src/pid_test.o" -MT"example/src/pid_test.d" -o "example/src/pid_test.o" "../example/src/pid_test.c"
+Finished building: ../example/src/pid_test.c
+ 
+Building target: pid_test.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pid/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pid/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="pid_test.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_systick_Debug.ld" -o "pid_test.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/pid_test.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: pid_test.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "pid_test.axf"; # arm-none-eabi-objcopy -v -O binary "pid_test.axf" "pid_test.bin" ; # checksum -p LPC4337 -d "pid_test.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18792	      0	    360	  19152	   4ad0	pid_test.axf
+ 
+20:26:55 **** Incremental Build of configuration Debug for project pid_test ****
+make -r all 
+make: No se hace nada para 'all'.
+20:27:33 **** Incremental Build of configuration Debug for project pid_test ****
+make -r all 
+make: No se hace nada para 'all'.
+20:28:37 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+20:28:38 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+20:28:38 **** Incremental Build of configuration Debug for project pid_test ****
+make -r all 
+Building file: ../example/src/pid_test.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pid/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pid/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/pid_test.d" -MT"example/src/pid_test.o" -MT"example/src/pid_test.d" -o "example/src/pid_test.o" "../example/src/pid_test.c"
+Finished building: ../example/src/pid_test.c
+ 
+Building target: pid_test.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pid/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pid/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="pid_test.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_systick_Debug.ld" -o "pid_test.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/pid_test.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: pid_test.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "pid_test.axf"; # arm-none-eabi-objcopy -v -O binary "pid_test.axf" "pid_test.bin" ; # checksum -p LPC4337 -d "pid_test.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18792	      0	    360	  19152	   4ad0	pid_test.axf
+ 
+20:28:45 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+20:28:45 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+20:28:46 **** Incremental Build of configuration Debug for project pid_test ****
+make -r all 
+Building file: ../example/src/pid_test.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pid/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pid/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/pid_test.d" -MT"example/src/pid_test.o" -MT"example/src/pid_test.d" -o "example/src/pid_test.o" "../example/src/pid_test.c"
+Finished building: ../example/src/pid_test.c
+ 
+Building target: pid_test.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pid/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pid/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="pid_test.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_systick_Debug.ld" -o "pid_test.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/pid_test.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: pid_test.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "pid_test.axf"; # arm-none-eabi-objcopy -v -O binary "pid_test.axf" "pid_test.bin" ; # checksum -p LPC4337 -d "pid_test.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18784	      0	    360	  19144	   4ac8	pid_test.axf
+ 
+20:28:48 **** Incremental Build of configuration Debug for project pid_test ****
+make -r all 
+make: No se hace nada para 'all'.
+20:29:53 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+20:29:53 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+20:29:54 **** Incremental Build of configuration Debug for project pid_test ****
+make -r all 
+Building file: ../example/src/pid_test.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pid/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pid/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/pid_test.d" -MT"example/src/pid_test.o" -MT"example/src/pid_test.d" -o "example/src/pid_test.o" "../example/src/pid_test.c"
+Finished building: ../example/src/pid_test.c
+ 
+Building target: pid_test.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pid/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pid/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="pid_test.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_systick_Debug.ld" -o "pid_test.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/pid_test.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: pid_test.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "pid_test.axf"; # arm-none-eabi-objcopy -v -O binary "pid_test.axf" "pid_test.bin" ; # checksum -p LPC4337 -d "pid_test.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18792	      0	    360	  19152	   4ad0	pid_test.axf
+ 
+20:29:56 **** Incremental Build of configuration Debug for project pid_test ****
+make -r all 
+make: No se hace nada para 'all'.
+20:30:36 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+20:30:36 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+20:30:36 **** Incremental Build of configuration Debug for project pid_test ****
+make -r all 
+Building file: ../example/src/pid_test.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pid/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pid/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/pid_test.d" -MT"example/src/pid_test.o" -MT"example/src/pid_test.d" -o "example/src/pid_test.o" "../example/src/pid_test.c"
+Finished building: ../example/src/pid_test.c
+ 
+Building target: pid_test.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pid/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pid/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="pid_test.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_systick_Debug.ld" -o "pid_test.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/pid_test.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: pid_test.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "pid_test.axf"; # arm-none-eabi-objcopy -v -O binary "pid_test.axf" "pid_test.bin" ; # checksum -p LPC4337 -d "pid_test.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18576	      0	    360	  18936	   49f8	pid_test.axf
+ 
+20:30:39 **** Incremental Build of configuration Debug for project pid_test ****
+make -r all 
+make: No se hace nada para 'all'.
+20:32:07 **** Incremental Build of configuration Debug for project pid_test ****
+make -r all 
+make: No se hace nada para 'all'.
+20:33:33 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+20:33:33 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+20:33:34 **** Incremental Build of configuration Debug for project pid_test ****
+make -r all 
+Building file: ../example/src/pid_test.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pid/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pid/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/pid_test.d" -MT"example/src/pid_test.o" -MT"example/src/pid_test.d" -o "example/src/pid_test.o" "../example/src/pid_test.c"
+Finished building: ../example/src/pid_test.c
+ 
+Building target: pid_test.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pid/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pid/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="pid_test.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_systick_Debug.ld" -o "pid_test.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/pid_test.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: pid_test.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "pid_test.axf"; # arm-none-eabi-objcopy -v -O binary "pid_test.axf" "pid_test.bin" ; # checksum -p LPC4337 -d "pid_test.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18576	      0	    360	  18936	   49f8	pid_test.axf
+ 
+20:33:36 **** Incremental Build of configuration Debug for project pid_test ****
+make -r all 
+make: No se hace nada para 'all'.
+20:35:05 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+20:35:06 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+20:35:06 **** Incremental Build of configuration Debug for project pid_test ****
+make -r all 
+Building file: ../example/src/pid_test.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pid/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pid/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/pid_test.d" -MT"example/src/pid_test.o" -MT"example/src/pid_test.d" -o "example/src/pid_test.o" "../example/src/pid_test.c"
+Finished building: ../example/src/pid_test.c
+ 
+Building target: pid_test.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pid/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pid/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="pid_test.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_systick_Debug.ld" -o "pid_test.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/pid_test.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: pid_test.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "pid_test.axf"; # arm-none-eabi-objcopy -v -O binary "pid_test.axf" "pid_test.bin" ; # checksum -p LPC4337 -d "pid_test.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18600	      0	    360	  18960	   4a10	pid_test.axf
+ 
+20:35:10 **** Incremental Build of configuration Debug for project pid_test ****
+make -r all 
+make: No se hace nada para 'all'.
+20:38:38 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+20:38:39 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+20:38:39 **** Incremental Build of configuration Debug for project pid_test ****
+make -r all 
+Building file: ../example/src/pid_test.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pid/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pid/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/pid_test.d" -MT"example/src/pid_test.o" -MT"example/src/pid_test.d" -o "example/src/pid_test.o" "../example/src/pid_test.c"
+Finished building: ../example/src/pid_test.c
+ 
+Building target: pid_test.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pid/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pid/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="pid_test.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_systick_Debug.ld" -o "pid_test.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/pid_test.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: pid_test.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "pid_test.axf"; # arm-none-eabi-objcopy -v -O binary "pid_test.axf" "pid_test.bin" ; # checksum -p LPC4337 -d "pid_test.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18728	      0	    376	  19104	   4aa0	pid_test.axf
+ 
+20:38:41 **** Incremental Build of configuration Debug for project pid_test ****
+make -r all 
+make: No se hace nada para 'all'.
+20:42:51 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+20:42:52 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+20:42:52 **** Incremental Build of configuration Debug for project pid_test ****
+make -r all 
+make: No se hace nada para 'all'.
+20:44:36 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+20:44:36 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+20:44:37 **** Incremental Build of configuration Debug for project pid_test ****
+make -r all 
+Building file: ../example/src/pid_test.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pid/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pid/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/pid_test.d" -MT"example/src/pid_test.o" -MT"example/src/pid_test.d" -o "example/src/pid_test.o" "../example/src/pid_test.c"
+Finished building: ../example/src/pid_test.c
+ 
+Building target: pid_test.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pid/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_pid/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="pid_test.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_systick_Debug.ld" -o "pid_test.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/pid_test.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: pid_test.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "pid_test.axf"; # arm-none-eabi-objcopy -v -O binary "pid_test.axf" "pid_test.bin" ; # checksum -p LPC4337 -d "pid_test.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18720	      0	    376	  19096	   4a98	pid_test.axf
+ 
+20:44:53 **** Incremental Build of configuration Debug for project pid_test ****
+make -r all 
+make: No se hace nada para 'all'.
