@@ -18,7 +18,7 @@ El TP final de Seminario de Sistemas Embebidos consiste en realizar el control d
 -Chip_ADC_SetStartMode: Comienza una conversión del ADC. Permite seleccionar si la conversion quiere hacerse inmediatamente o con
 	alguna señal de trigger.
 	
-#OBSERVACION: 
+# OBSERVACIONES: 
 -Usando el StartMode, luego de cada conversión es necesario volver a habilitar el StartMode para realizar una nueva conversión.
 
 ######################################################################################################################################

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;periph_systick&apos; to &apos;pid_test&apos;" description="Rename resource &apos;periph_systick&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/periph_systick" name="pid_test" stamp="1494359447773" updateReferences="true"/>
+</session>

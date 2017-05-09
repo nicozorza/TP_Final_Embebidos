@@ -2,12 +2,13 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="Chip_SCT_Init" key="selection"/>
+		<item value="SCT" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="SCT"/>
 			<item value="Chip_SCT_Init"/>
 			<item value="inter"/>
 			<item value="INTEN"/>
@@ -15,7 +16,6 @@
 			<item value="interrupt"/>
 			<item value="pwm"/>
 			<item value="Chip_SCTPWM_PercentageToTicks"/>
-			<item value="__SCT_PWM_18XX_43XX_H_"/>
 		</list>
 		<list key="replacehistory">
 		</list>
