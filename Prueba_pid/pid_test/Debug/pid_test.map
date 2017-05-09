@@ -2852,8 +2852,8 @@ END GROUP
                 0x1a004880                __sys_tmpnam
  *(.rodata .rodata.* .constdata .constdata.*)
  *fill*         0x1a004886        0x2 ff
- .rodata        0x1a004888        0x5 ./example/src/pid_test.o
- *fill*         0x1a00488d        0x3 ff
+ .rodata        0x1a004888        0x7 ./example/src/pid_test.o
+ *fill*         0x1a00488f        0x1 ff
  .rodata.ExtRateIn
                 0x1a004890        0x4 /home/nicozorza/LPCXpresso/TP_Final/Prueba_pid/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
                 0x1a004890                ExtRateIn
@@ -3236,34 +3236,34 @@ OUTPUT(pid_test.axf elf32-littlearm)
  .debug_line    0x00004d46      0x6bd /home/nicozorza/LPCXpresso/TP_Final/Prueba_pid/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
  .debug_line    0x00005403      0x92c /home/nicozorza/LPCXpresso/TP_Final/Prueba_pid/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
 
-.debug_str      0x00000000    0x196a6
- .debug_str     0x00000000     0x2744 ./example/src/cr_startup_lpc43xx.o
-                               0x275c (size before relaxing)
- .debug_str     0x00002744    0x14464 ./example/src/pid_test.o
+.debug_str      0x00000000    0x19662
+ .debug_str     0x00000000     0x273e ./example/src/cr_startup_lpc43xx.o
+                               0x2756 (size before relaxing)
+ .debug_str     0x0000273e    0x14426 ./example/src/pid_test.o
                               0x16b14 (size before relaxing)
- .debug_str     0x00016ba8       0x23 ./example/src/sysinit.o
-                              0x1577c (size before relaxing)
- .debug_str     0x00016bcb     0x19b9 /home/nicozorza/LPCXpresso/TP_Final/Prueba_pid/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+ .debug_str     0x00016b64       0x23 ./example/src/sysinit.o
+                              0x15776 (size before relaxing)
+ .debug_str     0x00016b87     0x19b9 /home/nicozorza/LPCXpresso/TP_Final/Prueba_pid/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
                               0x17c1b (size before relaxing)
- .debug_str     0x00018584      0x125 /home/nicozorza/LPCXpresso/TP_Final/Prueba_pid/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
+ .debug_str     0x00018540      0x125 /home/nicozorza/LPCXpresso/TP_Final/Prueba_pid/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
                               0x1651d (size before relaxing)
- .debug_str     0x000186a9      0x309 /home/nicozorza/LPCXpresso/TP_Final/Prueba_pid/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(adc_18xx_43xx.o)
+ .debug_str     0x00018665      0x309 /home/nicozorza/LPCXpresso/TP_Final/Prueba_pid/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(adc_18xx_43xx.o)
                               0x158d7 (size before relaxing)
- .debug_str     0x000189b2       0xa1 /home/nicozorza/LPCXpresso/TP_Final/Prueba_pid/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(chip_18xx_43xx.o)
+ .debug_str     0x0001896e       0xa1 /home/nicozorza/LPCXpresso/TP_Final/Prueba_pid/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(chip_18xx_43xx.o)
                               0x15dbf (size before relaxing)
- .debug_str     0x00018a53      0x5d8 /home/nicozorza/LPCXpresso/TP_Final/Prueba_pid/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
+ .debug_str     0x00018a0f      0x5d8 /home/nicozorza/LPCXpresso/TP_Final/Prueba_pid/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
                               0x16342 (size before relaxing)
- .debug_str     0x0001902b       0xb5 /home/nicozorza/LPCXpresso/TP_Final/Prueba_pid/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(fpu_init.o)
+ .debug_str     0x00018fe7       0xb5 /home/nicozorza/LPCXpresso/TP_Final/Prueba_pid/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(fpu_init.o)
                                0x9958 (size before relaxing)
- .debug_str     0x000190e0       0xe4 /home/nicozorza/LPCXpresso/TP_Final/Prueba_pid/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(gpio_18xx_43xx.o)
+ .debug_str     0x0001909c       0xe4 /home/nicozorza/LPCXpresso/TP_Final/Prueba_pid/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(gpio_18xx_43xx.o)
                               0x151c1 (size before relaxing)
- .debug_str     0x000191c4       0x72 /home/nicozorza/LPCXpresso/TP_Final/Prueba_pid/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(sct_18xx_43xx.o)
+ .debug_str     0x00019180       0x72 /home/nicozorza/LPCXpresso/TP_Final/Prueba_pid/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(sct_18xx_43xx.o)
                               0x156c4 (size before relaxing)
- .debug_str     0x00019236       0x91 /home/nicozorza/LPCXpresso/TP_Final/Prueba_pid/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(sct_pwm_18xx_43xx.o)
+ .debug_str     0x000191f2       0x91 /home/nicozorza/LPCXpresso/TP_Final/Prueba_pid/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(sct_pwm_18xx_43xx.o)
                               0x15750 (size before relaxing)
- .debug_str     0x000192c7       0xb4 /home/nicozorza/LPCXpresso/TP_Final/Prueba_pid/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
+ .debug_str     0x00019283       0xb4 /home/nicozorza/LPCXpresso/TP_Final/Prueba_pid/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
                               0x15d8e (size before relaxing)
- .debug_str     0x0001937b      0x32b /home/nicozorza/LPCXpresso/TP_Final/Prueba_pid/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
+ .debug_str     0x00019337      0x32b /home/nicozorza/LPCXpresso/TP_Final/Prueba_pid/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
                               0x15ef2 (size before relaxing)
 
 .comment        0x00000000       0xdc

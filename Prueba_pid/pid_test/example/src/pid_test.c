@@ -53,7 +53,7 @@ static uint32_t tick_ct = 0;
 void SysTick_Handler(void)
 {
 	tick_ct += 1;
-	if ((tick_ct % 100) == 0) {
+	if ((tick_ct % 300) == 0) {
 		systick_flag=true;
 	}
 }
@@ -80,7 +80,7 @@ void init_pwm(void){
 	Chip_SCTPWM_SetRate(LPC_SCT, SCT_PWM_RATE);
 
 	/* Setup Board specific output pin */
-	Chip_SCU_PinMuxSet(0x4, 4, (SCU_MODE_INACT | SCU_MODE_FUNC1));	//CTOUT2=P4_2
+	Chip_SCU_PinMuxSet(0x4, 4, (SCU_MODE_INACT | SCU_MODE_FUNC1));	//CTOUT2=P4_4
 
 	/* Use SCT0_OUT1 pin */
 	Chip_SCTPWM_SetOutPin(LPC_SCT, 1, 2);
@@ -89,10 +89,8 @@ void init_pwm(void){
 	Chip_SCTPWM_SetDutyCycle(LPC_SCT, 1, Chip_SCTPWM_GetTicksPerCycle(LPC_SCT)*DUTY_CYCLE );
 	Chip_SCTPWM_Start(LPC_SCT);
 }
-/**
- * @brief	main routine for blinky example
- * @return	Function should not exit.
- */
+
+
 int main(void)
 {
 
@@ -111,12 +109,13 @@ int main(void)
 		__WFI();
 		if( adc_flag==true){
 			Chip_SCTPWM_SetDutyCycle(LPC_SCT, 1, Chip_SCTPWM_GetTicksPerCycle(LPC_SCT)*adc_data/1024 );
-			DEBUGOUT("%i\n\r",adc_data);
+			//Chip_SCTPWM_Start(LPC_SCT);
+			DEBUGOUT("%04x\n\r",adc_data);
 			adc_flag=false;
 			Chip_ADC_SetStartMode(LPC_ADC0, ADC_START_NOW, ADC_TRIGGERMODE_RISING);
 		}
 		if( systick_flag==true){
-			Board_LED_Toggle(3);
+			Board_LED_Toggle(4);
 			systick_flag=false;
 		}
 	}

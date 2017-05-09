@@ -1,6 +1,6 @@
-21:27:45 **** Incremental Build of configuration Debug for project pwm_test ****
+17:55:04 **** Incremental Build of configuration Debug for project pwm_test ****
 make -r all 
 make: No se hace nada para 'all'.
 
-21:27:45 Build Finished (took 60ms)
+17:55:05 Build Finished (took 62ms)
 

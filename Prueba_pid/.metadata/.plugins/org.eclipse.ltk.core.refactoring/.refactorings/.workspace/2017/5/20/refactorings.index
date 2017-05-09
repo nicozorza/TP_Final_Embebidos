@@ -1,1 +1,4 @@
 1494359447773	Rename resource 'periph_systick'
+1494363928316	Delete resource 'pid_test/Debug/periph_systick.axf'
+1494363943730	Delete resource 'pid_test/Debug'
+1494363989207	Delete resource 'pid_test/Debug'

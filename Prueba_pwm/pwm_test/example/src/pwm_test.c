@@ -80,7 +80,7 @@ int main(void)
 	Chip_SCTPWM_SetRate(LPC_SCT, SCT_PWM_RATE);
 
 	/* Setup Board specific output pin */
-	Chip_SCU_PinMuxSet(0x4, 4, (SCU_MODE_INACT | SCU_MODE_FUNC1));	//CTOUT2=P4_2
+	Chip_SCU_PinMuxSet(0x4, 4, (SCU_MODE_INACT | SCU_MODE_FUNC1));	//CTOUT2=P4_4
 
 	/* Use SCT0_OUT1 pin */
 	Chip_SCTPWM_SetOutPin(LPC_SCT, 1, 2);
