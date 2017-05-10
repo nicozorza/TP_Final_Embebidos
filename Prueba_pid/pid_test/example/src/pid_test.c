@@ -47,7 +47,7 @@ uint16_t adc_data=0;
 
 /* Variables para el PID */
 float pwm=0;
-const float reference=50;	//Valor de referencia para el PID
+const float reference=75;	//Valor de referencia para el PID (porcentaje)
 float err=0;	//Error del PID
 float err_acum=0;	//Error acumulado para el PID
 float err_prev=0;	//Error del paso previo del PID
@@ -98,8 +98,7 @@ void init_pwm(void){
  * @return: Retorna la salida del controlador
  */
 float pid( float err , float err_acum , float err_prev ){
-	//return -(KP*err+KI*(err_acum+err)+KD*(err-err_prev));
-	return err;
+	return -(KP*err+KI*(err_acum+err)+KD*(err-err_prev));
 }
 
 /*******************************************************************/
@@ -129,16 +128,15 @@ int main(void)
 
 			/* Aplicacion del PID */
 			err_prev=err;					//Error del paso previo
-			err=(float)adc_data-reference;	//Error de la salida
+			err=pwm*100/1024-reference;//(float)adc_data*100/1024;	//Error de la salida
 			err_acum=err_acum+err;			//Integral del error (valor acumulado)
 			pwm=pid(err,err_acum,err_prev);	//Se aplica el controlador
 			/**********************/
 
-			Chip_SCTPWM_SetDutyCycle(LPC_SCT, 1, Chip_SCTPWM_GetTicksPerCycle(LPC_SCT)*adc_data/1024 );
-			DEBUGOUT("%f\n\r",(float)pwm*100/1024);
+			Chip_SCTPWM_SetDutyCycle(LPC_SCT, 1, Chip_SCTPWM_GetTicksPerCycle(LPC_SCT)*pwm/1024 );
+			DEBUGOUT("%f\n\r",pwm*100/1024);
 
 			adc_flag=false;
-			//Chip_ADC_SetStartMode(LPC_ADC0, ADC_START_NOW, ADC_TRIGGERMODE_RISING);
 		}
 	}
 }
