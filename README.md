@@ -1,8 +1,8 @@
 # TP_Final_Embebidos
 El TP final de Seminario de Sistemas Embebidos consiste en realizar el control de temperatura para un horno SMD.
 
-######################################################################################################################################
-# Avances con el ADC
+###################################################################################################
+## Avances con el ADC
 *Chip_ADC_Init: Hace una configuracion por default del ADC. Recibe LPC_AD0 o LPC_ADC1, y un puntero a una estructura
 	del tipo ADC_CLOCK_SETUP_T que es la que contiene toda la informacion de la configuracion.	
 *Chip_ADC_EnableChannel: Habilita un determinado canal del ADC. Recibe LPC_ADC0 o LPC_ADC1, el canal del ADC a utilizar (ADC_CH0-7).
@@ -18,11 +18,11 @@ El TP final de Seminario de Sistemas Embebidos consiste en realizar el control d
 *Chip_ADC_SetStartMode: Comienza una conversión del ADC. Permite seleccionar si la conversion quiere hacerse inmediatamente o con
 	alguna señal de trigger.
 	
-# OBSERVACIONES: 
+### OBSERVACIONES: 
 *Usando el StartMode, luego de cada conversión es necesario volver a habilitar el StartMode para realizar una nueva conversión.
 
-######################################################################################################################################
-# Avances con la salida PWM
+###################################################################################################
+## Avances con la salida PWM
 El bloque PWM tiene 2 salidas (con polaridades opuestas), cada una con 3 canales: MCOA0/1/2 y MCOB0/1/2. Tiene tambien dos canales
 de entrada que permiten generar un trigger.
 Cada canal tiene un TC(Timer/Counter), el cual es comparado con un "Limit Register", y cuando coinciden, el TC se resetea de dos formas
@@ -48,13 +48,13 @@ Para configurar este bloque se debe hacer:
 6) Se inicia el PWM con Chip_SCTPWM_Start(LPC_SCT).
 7) El PWM se detiene con Chip_SCTPWM_Stop(LPC_SCT).
 
-# OBSERVACIONES:
+### OBSERVACIONES:
 *Chip_SCT_EnableEventInt(LPC_SCT_T *pSCT, CHIP_SCT_EVENT_T evt) permite habilitar las interrupciones de acuerdo a los eventos. El
 	handler es SCT_IRQHandler(). Los posibles eventos son: match condition, input o output condition, combinaciones de ambos.
 *El tema de las interrupciones no me funciono todavia, pero todo lo otro al parecer funciona perfectamente. Tendria que ver si logro
 	hacer andar el pwm de la forma original.	
 
-######################################################################################################################################
+###################################################################################################
 
 
 
