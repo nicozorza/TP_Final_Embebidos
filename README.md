@@ -17,8 +17,10 @@ El TP final de Seminario de Sistemas Embebidos consiste en realizar el control d
 	leerlas rapido.
 * Chip_ADC_SetStartMode: Comienza una conversión del ADC. Permite seleccionar si la conversion quiere hacerse inmediatamente o con
 	alguna señal de trigger.
+	
 ### OBSERVACIONES: 
 * Usando el StartMode, luego de cada conversión es necesario volver a habilitar el StartMode para realizar una nueva conversión.
+
 ###################################################################################################
 ## Avances con la salida PWM
 El bloque PWM tiene 2 salidas (con polaridades opuestas), cada una con 3 canales: MCOA0/1/2 y MCOB0/1/2. Tiene tambien dos canales
@@ -30,6 +32,7 @@ diferentes:
 Cada canal tiene tambien un "Match Register", que tiene un valor menor al Limit Register:
 * En el modo "Edge aligned Mode" las salidas se switchean siempre que se alcance el Match o el Limit Register.
 * En el modo "Centered Mode" las salidas se switchean unicamente cuando se alcanza el Match Register.
+
 Por lo tanto, el Limit Register controla el periodo mientras que el Match Register el duty cycle.
 Al parecer esta libreria no esta implementada, pero lo que si esta es una adaptacion del SCT como PWM. En esta pagina hay información
 para configurar el bloque SCT como PWM http://www.lpcware.com/content/faq/how-use-sct-standard-pwm-using-lpcopen. 
@@ -45,11 +48,13 @@ Para configurar este bloque se debe hacer:
 	porcentajes sobre el total.
 6) Se inicia el PWM con Chip_SCTPWM_Start(LPC_SCT).
 7) El PWM se detiene con Chip_SCTPWM_Stop(LPC_SCT).
+
 ### OBSERVACIONES:
 * Chip_SCT_EnableEventInt(LPC_SCT_T *pSCT, CHIP_SCT_EVENT_T evt) permite habilitar las interrupciones de acuerdo a los eventos. El
 	handler es SCT_IRQHandler(). Los posibles eventos son: match condition, input o output condition, combinaciones de ambos.
 * El tema de las interrupciones no me funciono todavia, pero todo lo otro al parecer funciona perfectamente. Tendria que ver si logro
-	hacer andar el pwm de la forma original.	
+	hacer andar el pwm de la forma original.
+		
 ###################################################################################################
 
 
