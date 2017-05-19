@@ -1,0 +1,496 @@
+14:04:34 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+14:04:35 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+14:04:35 **** Incremental Build of configuration Debug for project periph_pinint ****
+make -r all 
+Building file: ../example/src/pinint.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_detectar_fase/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_detectar_fase/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/pinint.d" -MT"example/src/pinint.o" -MT"example/src/pinint.d" -o "example/src/pinint.o" "../example/src/pinint.c"
+Finished building: ../example/src/pinint.c
+ 
+Building target: periph_pinint.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_detectar_fase/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_detectar_fase/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_pinint.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_pinint_Debug.ld" -o "periph_pinint.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/pinint.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_pinint.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_pinint.axf"; # arm-none-eabi-objcopy -v -O binary "periph_pinint.axf" "periph_pinint.bin" ; # checksum -p LPC4337 -d "periph_pinint.bin";
+   text	   data	    bss	    dec	    hex	filename
+   9060	      0	    348	   9408	   24c0	periph_pinint.axf
+ 
+14:06:07 **** Incremental Build of configuration Debug for project periph_pinint ****
+make -r all 
+make: No se hace nada para 'all'.
+14:06:48 **** Incremental Build of configuration Debug for project periph_pinint ****
+make -r all 
+make: No se hace nada para 'all'.
+14:07:59 **** Incremental Build of configuration Debug for project periph_pinint ****
+make -r all 
+make: No se hace nada para 'all'.
+14:08:59 **** Incremental Build of configuration Debug for project periph_pinint ****
+make -r all 
+make: No se hace nada para 'all'.
+14:09:40 **** Incremental Build of configuration Debug for project periph_pinint ****
+make -r all 
+make: No se hace nada para 'all'.
+14:19:43 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+14:19:44 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+14:19:45 **** Incremental Build of configuration Debug for project periph_pinint ****
+make -r all 
+Building file: ../example/src/pinint.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_detectar_fase/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_detectar_fase/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/pinint.d" -MT"example/src/pinint.o" -MT"example/src/pinint.d" -o "example/src/pinint.o" "../example/src/pinint.c"
+Finished building: ../example/src/pinint.c
+ 
+Building target: periph_pinint.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_detectar_fase/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_detectar_fase/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_pinint.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_pinint_Debug.ld" -o "periph_pinint.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/pinint.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_pinint.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_pinint.axf"; # arm-none-eabi-objcopy -v -O binary "periph_pinint.axf" "periph_pinint.bin" ; # checksum -p LPC4337 -d "periph_pinint.bin";
+   text	   data	    bss	    dec	    hex	filename
+   9276	      0	    348	   9624	   2598	periph_pinint.axf
+ 
+14:20:40 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+14:20:40 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+14:20:41 **** Incremental Build of configuration Debug for project periph_pinint ****
+make -r all 
+Building file: ../example/src/pinint.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_detectar_fase/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_detectar_fase/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/pinint.d" -MT"example/src/pinint.o" -MT"example/src/pinint.d" -o "example/src/pinint.o" "../example/src/pinint.c"
+Finished building: ../example/src/pinint.c
+ 
+Building target: periph_pinint.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_detectar_fase/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_detectar_fase/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_pinint.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_pinint_Debug.ld" -o "periph_pinint.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/pinint.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_pinint.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_pinint.axf"; # arm-none-eabi-objcopy -v -O binary "periph_pinint.axf" "periph_pinint.bin" ; # checksum -p LPC4337 -d "periph_pinint.bin";
+   text	   data	    bss	    dec	    hex	filename
+   9276	      0	    348	   9624	   2598	periph_pinint.axf
+ 
+14:20:48 **** Incremental Build of configuration Debug for project periph_pinint ****
+make -r all 
+make: No se hace nada para 'all'.
+14:23:30 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+14:23:31 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+14:23:31 **** Incremental Build of configuration Debug for project periph_pinint ****
+make -r all 
+Building file: ../example/src/pinint.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_detectar_fase/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_detectar_fase/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/pinint.d" -MT"example/src/pinint.o" -MT"example/src/pinint.d" -o "example/src/pinint.o" "../example/src/pinint.c"
+Finished building: ../example/src/pinint.c
+ 
+Building target: periph_pinint.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_detectar_fase/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_detectar_fase/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_pinint.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_pinint_Debug.ld" -o "periph_pinint.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/pinint.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_pinint.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_pinint.axf"; # arm-none-eabi-objcopy -v -O binary "periph_pinint.axf" "periph_pinint.bin" ; # checksum -p LPC4337 -d "periph_pinint.bin";
+   text	   data	    bss	    dec	    hex	filename
+   9276	      0	    348	   9624	   2598	periph_pinint.axf
+ 
+14:23:37 **** Incremental Build of configuration Debug for project periph_pinint ****
+make -r all 
+make: No se hace nada para 'all'.
+14:27:30 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+14:27:31 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+14:27:31 **** Incremental Build of configuration Debug for project periph_pinint ****
+make -r all 
+Building file: ../example/src/pinint.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_detectar_fase/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_detectar_fase/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/pinint.d" -MT"example/src/pinint.o" -MT"example/src/pinint.d" -o "example/src/pinint.o" "../example/src/pinint.c"
+Finished building: ../example/src/pinint.c
+ 
+Building target: periph_pinint.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_detectar_fase/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_detectar_fase/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_pinint.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_pinint_Debug.ld" -o "periph_pinint.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/pinint.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_pinint.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_pinint.axf"; # arm-none-eabi-objcopy -v -O binary "periph_pinint.axf" "periph_pinint.bin" ; # checksum -p LPC4337 -d "periph_pinint.bin";
+   text	   data	    bss	    dec	    hex	filename
+   9276	      0	    348	   9624	   2598	periph_pinint.axf
+ 
+14:27:35 **** Incremental Build of configuration Debug for project periph_pinint ****
+make -r all 
+make: No se hace nada para 'all'.
+14:27:47 **** Incremental Build of configuration Debug for project periph_pinint ****
+make -r all 
+make: No se hace nada para 'all'.
+14:28:06 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+14:28:07 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+14:28:07 **** Incremental Build of configuration Debug for project periph_pinint ****
+make -r all 
+Building file: ../example/src/pinint.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_detectar_fase/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_detectar_fase/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/pinint.d" -MT"example/src/pinint.o" -MT"example/src/pinint.d" -o "example/src/pinint.o" "../example/src/pinint.c"
+Finished building: ../example/src/pinint.c
+ 
+Building target: periph_pinint.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_detectar_fase/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_detectar_fase/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_pinint.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_pinint_Debug.ld" -o "periph_pinint.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/pinint.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_pinint.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_pinint.axf"; # arm-none-eabi-objcopy -v -O binary "periph_pinint.axf" "periph_pinint.bin" ; # checksum -p LPC4337 -d "periph_pinint.bin";
+   text	   data	    bss	    dec	    hex	filename
+   9276	      0	    348	   9624	   2598	periph_pinint.axf
+ 
+14:28:15 **** Incremental Build of configuration Debug for project periph_pinint ****
+make -r all 
+make: No se hace nada para 'all'.
+14:38:51 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+14:38:51 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+14:38:52 **** Incremental Build of configuration Debug for project periph_pinint ****
+make -r all 
+Building file: ../example/src/pinint.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_detectar_fase/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_detectar_fase/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/pinint.d" -MT"example/src/pinint.o" -MT"example/src/pinint.d" -o "example/src/pinint.o" "../example/src/pinint.c"
+Finished building: ../example/src/pinint.c
+ 
+Building target: periph_pinint.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_detectar_fase/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_detectar_fase/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_pinint.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_pinint_Debug.ld" -o "periph_pinint.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/pinint.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_pinint.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_pinint.axf"; # arm-none-eabi-objcopy -v -O binary "periph_pinint.axf" "periph_pinint.bin" ; # checksum -p LPC4337 -d "periph_pinint.bin";
+   text	   data	    bss	    dec	    hex	filename
+   9276	      0	    348	   9624	   2598	periph_pinint.axf
+ 
+14:39:16 **** Incremental Build of configuration Debug for project periph_pinint ****
+make -r all 
+make: No se hace nada para 'all'.
+14:57:04 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+14:57:05 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+14:57:05 **** Incremental Build of configuration Debug for project periph_pinint ****
+make -r all 
+Building file: ../example/src/pinint.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_detectar_fase/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_detectar_fase/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/pinint.d" -MT"example/src/pinint.o" -MT"example/src/pinint.d" -o "example/src/pinint.o" "../example/src/pinint.c"
+Finished building: ../example/src/pinint.c
+ 
+Building target: periph_pinint.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_detectar_fase/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_detectar_fase/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_pinint.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_pinint_Debug.ld" -o "periph_pinint.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/pinint.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_pinint.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_pinint.axf"; # arm-none-eabi-objcopy -v -O binary "periph_pinint.axf" "periph_pinint.bin" ; # checksum -p LPC4337 -d "periph_pinint.bin";
+   text	   data	    bss	    dec	    hex	filename
+   9300	      0	    348	   9648	   25b0	periph_pinint.axf
+ 
+14:57:11 **** Incremental Build of configuration Debug for project periph_pinint ****
+make -r all 
+make: No se hace nada para 'all'.
+14:59:05 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+14:59:05 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+14:59:06 **** Incremental Build of configuration Debug for project periph_pinint ****
+make -r all 
+Building file: ../example/src/pinint.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_detectar_fase/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_detectar_fase/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/pinint.d" -MT"example/src/pinint.o" -MT"example/src/pinint.d" -o "example/src/pinint.o" "../example/src/pinint.c"
+Finished building: ../example/src/pinint.c
+ 
+Building target: periph_pinint.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_detectar_fase/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_detectar_fase/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_pinint.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_pinint_Debug.ld" -o "periph_pinint.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/pinint.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_pinint.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_pinint.axf"; # arm-none-eabi-objcopy -v -O binary "periph_pinint.axf" "periph_pinint.bin" ; # checksum -p LPC4337 -d "periph_pinint.bin";
+   text	   data	    bss	    dec	    hex	filename
+   9300	      0	    348	   9648	   25b0	periph_pinint.axf
+ 
+14:59:09 **** Incremental Build of configuration Debug for project periph_pinint ****
+make -r all 
+make: No se hace nada para 'all'.
+15:12:11 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+15:12:11 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+15:12:12 **** Incremental Build of configuration Debug for project periph_pinint ****
+make -r all 
+Building file: ../example/src/pinint.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_detectar_fase/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_detectar_fase/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/pinint.d" -MT"example/src/pinint.o" -MT"example/src/pinint.d" -o "example/src/pinint.o" "../example/src/pinint.c"
+../example/src/pinint.c: In function 'GPIO0_IRQHandler':
+../example/src/pinint.c:116:2: warning: implicit declaration of function 'delay' [-Wimplicit-function-declaration]
+  delay(200000);
+  ^
+Finished building: ../example/src/pinint.c
+ 
+Building target: periph_pinint.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_detectar_fase/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_detectar_fase/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_pinint.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_pinint_Debug.ld" -o "periph_pinint.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/pinint.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+./example/src/pinint.o: In function `GPIO0_IRQHandler':
+/home/nicozorza/LPCXpresso/TP_Final/Prueba_detectar_fase/periph_pinint/Debug/../example/src/pinint.c:116: undefined reference to `delay'
+makefile:30: fallo en las instrucciones para el objetivo 'periph_pinint.axf'
+collect2: error: ld returned 1 exit status
+make: *** [periph_pinint.axf] Error 1
+15:14:36 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+15:14:37 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+15:14:37 **** Incremental Build of configuration Debug for project periph_pinint ****
+make -r all 
+Building file: ../example/src/pinint.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_detectar_fase/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_detectar_fase/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/pinint.d" -MT"example/src/pinint.o" -MT"example/src/pinint.d" -o "example/src/pinint.o" "../example/src/pinint.c"
+Finished building: ../example/src/pinint.c
+ 
+Building target: periph_pinint.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_detectar_fase/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_detectar_fase/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_pinint.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_pinint_Debug.ld" -o "periph_pinint.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/pinint.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_pinint.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_pinint.axf"; # arm-none-eabi-objcopy -v -O binary "periph_pinint.axf" "periph_pinint.bin" ; # checksum -p LPC4337 -d "periph_pinint.bin";
+   text	   data	    bss	    dec	    hex	filename
+   9356	      0	    348	   9704	   25e8	periph_pinint.axf
+ 
+15:15:10 **** Incremental Build of configuration Debug for project periph_pinint ****
+make -r all 
+make: No se hace nada para 'all'.
+15:18:47 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+15:18:47 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+15:18:48 **** Incremental Build of configuration Debug for project periph_pinint ****
+make -r all 
+Building file: ../example/src/pinint.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_detectar_fase/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_detectar_fase/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/pinint.d" -MT"example/src/pinint.o" -MT"example/src/pinint.d" -o "example/src/pinint.o" "../example/src/pinint.c"
+Finished building: ../example/src/pinint.c
+ 
+Building target: periph_pinint.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_detectar_fase/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_detectar_fase/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_pinint.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_pinint_Debug.ld" -o "periph_pinint.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/pinint.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_pinint.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_pinint.axf"; # arm-none-eabi-objcopy -v -O binary "periph_pinint.axf" "periph_pinint.bin" ; # checksum -p LPC4337 -d "periph_pinint.bin";
+   text	   data	    bss	    dec	    hex	filename
+   9308	      0	    348	   9656	   25b8	periph_pinint.axf
+ 
+15:18:53 **** Incremental Build of configuration Debug for project periph_pinint ****
+make -r all 
+make: No se hace nada para 'all'.
+15:19:16 **** Incremental Build of configuration Debug for project periph_pinint ****
+make -r all 
+make: No se hace nada para 'all'.
+15:24:09 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+15:24:10 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+15:24:10 **** Incremental Build of configuration Debug for project periph_pinint ****
+make -r all 
+Building file: ../example/src/pinint.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_detectar_fase/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_detectar_fase/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/pinint.d" -MT"example/src/pinint.o" -MT"example/src/pinint.d" -o "example/src/pinint.o" "../example/src/pinint.c"
+Finished building: ../example/src/pinint.c
+ 
+Building target: periph_pinint.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_detectar_fase/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_detectar_fase/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_pinint.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_pinint_Debug.ld" -o "periph_pinint.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/pinint.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_pinint.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_pinint.axf"; # arm-none-eabi-objcopy -v -O binary "periph_pinint.axf" "periph_pinint.bin" ; # checksum -p LPC4337 -d "periph_pinint.bin";
+   text	   data	    bss	    dec	    hex	filename
+   9308	      0	    348	   9656	   25b8	periph_pinint.axf
+ 
+15:24:34 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+15:24:34 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+15:24:34 **** Incremental Build of configuration Debug for project periph_pinint ****
+make -r all 
+Building file: ../example/src/pinint.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_detectar_fase/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_detectar_fase/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/pinint.d" -MT"example/src/pinint.o" -MT"example/src/pinint.d" -o "example/src/pinint.o" "../example/src/pinint.c"
+Finished building: ../example/src/pinint.c
+ 
+Building target: periph_pinint.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_detectar_fase/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_detectar_fase/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_pinint.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_pinint_Debug.ld" -o "periph_pinint.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/pinint.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_pinint.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_pinint.axf"; # arm-none-eabi-objcopy -v -O binary "periph_pinint.axf" "periph_pinint.bin" ; # checksum -p LPC4337 -d "periph_pinint.bin";
+   text	   data	    bss	    dec	    hex	filename
+   9308	      0	    348	   9656	   25b8	periph_pinint.axf
+ 
+15:27:21 **** Incremental Build of configuration Debug for project periph_pinint ****
+make -r all 
+Building file: ../example/src/pinint.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_detectar_fase/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_detectar_fase/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/pinint.d" -MT"example/src/pinint.o" -MT"example/src/pinint.d" -o "example/src/pinint.o" "../example/src/pinint.c"
+Finished building: ../example/src/pinint.c
+ 
+Building target: periph_pinint.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_detectar_fase/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_detectar_fase/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_pinint.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_pinint_Debug.ld" -o "periph_pinint.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/pinint.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_pinint.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_pinint.axf"; # arm-none-eabi-objcopy -v -O binary "periph_pinint.axf" "periph_pinint.bin" ; # checksum -p LPC4337 -d "periph_pinint.bin";
+   text	   data	    bss	    dec	    hex	filename
+   9308	      0	    348	   9656	   25b8	periph_pinint.axf
+ 
+15:27:34 **** Incremental Build of configuration Debug for project periph_pinint ****
+make -r all 
+make: No se hace nada para 'all'.
+15:29:52 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+15:29:53 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+15:29:53 **** Incremental Build of configuration Debug for project periph_pinint ****
+make -r all 
+Building file: ../example/src/pinint.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_detectar_fase/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_detectar_fase/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/pinint.d" -MT"example/src/pinint.o" -MT"example/src/pinint.d" -o "example/src/pinint.o" "../example/src/pinint.c"
+Finished building: ../example/src/pinint.c
+ 
+Building target: periph_pinint.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_detectar_fase/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_detectar_fase/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_pinint.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_pinint_Debug.ld" -o "periph_pinint.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/pinint.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_pinint.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_pinint.axf"; # arm-none-eabi-objcopy -v -O binary "periph_pinint.axf" "periph_pinint.bin" ; # checksum -p LPC4337 -d "periph_pinint.bin";
+   text	   data	    bss	    dec	    hex	filename
+   9308	      0	    348	   9656	   25b8	periph_pinint.axf
+ 
+15:29:55 **** Incremental Build of configuration Debug for project periph_pinint ****
+make -r all 
+make: No se hace nada para 'all'.
+15:31:51 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+15:31:52 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+15:31:52 **** Incremental Build of configuration Debug for project periph_pinint ****
+make -r all 
+Building file: ../example/src/pinint.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_detectar_fase/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_detectar_fase/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/pinint.d" -MT"example/src/pinint.o" -MT"example/src/pinint.d" -o "example/src/pinint.o" "../example/src/pinint.c"
+Finished building: ../example/src/pinint.c
+ 
+Building target: periph_pinint.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_detectar_fase/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_detectar_fase/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_pinint.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_pinint_Debug.ld" -o "periph_pinint.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/pinint.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_pinint.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_pinint.axf"; # arm-none-eabi-objcopy -v -O binary "periph_pinint.axf" "periph_pinint.bin" ; # checksum -p LPC4337 -d "periph_pinint.bin";
+   text	   data	    bss	    dec	    hex	filename
+   9308	      0	    348	   9656	   25b8	periph_pinint.axf
+ 
+15:32:08 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+15:32:09 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+15:32:09 **** Incremental Build of configuration Debug for project periph_pinint ****
+make -r all 
+make: No se hace nada para 'all'.
+15:32:12 **** Incremental Build of configuration Debug for project periph_pinint ****
+make -r all 
+make: No se hace nada para 'all'.
+15:33:28 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+15:33:29 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+15:33:29 **** Incremental Build of configuration Debug for project periph_pinint ****
+make -r all 
+Building file: ../example/src/pinint.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_detectar_fase/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_detectar_fase/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/pinint.d" -MT"example/src/pinint.o" -MT"example/src/pinint.d" -o "example/src/pinint.o" "../example/src/pinint.c"
+Finished building: ../example/src/pinint.c
+ 
+Building target: periph_pinint.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_detectar_fase/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_detectar_fase/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_pinint.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_pinint_Debug.ld" -o "periph_pinint.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/pinint.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_pinint.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_pinint.axf"; # arm-none-eabi-objcopy -v -O binary "periph_pinint.axf" "periph_pinint.bin" ; # checksum -p LPC4337 -d "periph_pinint.bin";
+   text	   data	    bss	    dec	    hex	filename
+   9308	      0	    348	   9656	   25b8	periph_pinint.axf
+ 
+15:33:31 **** Incremental Build of configuration Debug for project periph_pinint ****
+make -r all 
+make: No se hace nada para 'all'.
