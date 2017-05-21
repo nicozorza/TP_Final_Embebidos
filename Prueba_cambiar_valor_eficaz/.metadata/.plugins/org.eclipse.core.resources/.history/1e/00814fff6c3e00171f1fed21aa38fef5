@@ -1,0 +1,178 @@
+/*
+ * @brief Blinky example using a timer and interrupt
+ *
+ * @note
+ * Copyright(C) NXP Semiconductors, 2013
+ * All rights reserved.
+ *
+ * @par
+ * Software that is described herein is for illustrative purposes only
+ * which provides customers with programming information regarding the
+ * LPC products.  This software is supplied "AS IS" without any warranties of
+ * any kind, and NXP Semiconductors and its licensor disclaim any and
+ * all warranties, express or implied, including all implied warranties of
+ * merchantability, fitness for a particular purpose and non-infringement of
+ * intellectual property rights.  NXP Semiconductors assumes no responsibility
+ * or liability for the use of the software, conveys no license or rights under any
+ * patent, copyright, mask work right, or any other intellectual property rights in
+ * or to any products. NXP Semiconductors reserves the right to make changes
+ * in the software without notification. NXP Semiconductors also makes no
+ * representation or warranty that such application will be suitable for the
+ * specified use without further testing or modification.
+ *
+ * @par
+ * Permission to use, copy, modify, and distribute this software and its
+ * documentation is hereby granted, under NXP Semiconductors' and its
+ * licensor's relevant copyrights in the software, without fee, provided that it
+ * is used in conjunction with NXP Semiconductors microcontrollers.  This
+ * copyright, permission, and disclaimer notice must appear in all copies of
+ * this code.
+ */
+
+#include "board.h"
+#include <stdio.h>
+
+/* GPIO pin for PININT interrupt.  The only switch available on this board is
+   the ISP switch input.  The other switches are connected to an I2C device. */
+#define TEST_INPUT_PIN          0	/* GPIO pin number mapped to PININT */
+#define TEST_INPUT_PORT         3	/* GPIO port number mapped to PININT */
+#define TEST_INPUT_PIN_PORT     6
+#define TEST_INPUT_PIN_BIT      1
+#define TEST_INPUT_MODE_FUNC    SCU_MODE_FUNC0
+#define PININT_INDEX   0	/* PININT index used for GPIO mapping */
+#define PININT_IRQ_HANDLER  GPIO0_IRQHandler	/* GPIO interrupt IRQ function name */
+#define PININT_NVIC_NAME    PIN_INT0_IRQn	/* GPIO interrupt NVIC interrupt name */
+
+/*****************************************************************************
+ * Private types/enumerations/variables
+ ****************************************************************************/
+
+#define TICKRATE_HZ 50
+
+/*****************************************************************************
+ * Public types/enumerations/variables
+ ****************************************************************************/
+
+/*****************************************************************************
+ * Private functions
+ ****************************************************************************/
+
+/*****************************************************************************
+ * Public functions
+ ****************************************************************************/
+
+/**
+ * @brief	Handle interrupt from GPIO pin or GPIO pin mapped to PININT
+ * @return	Nothing
+ */
+void PININT_IRQ_HANDLER(void)
+{
+	Chip_PININT_ClearIntStatus(LPC_GPIO_PIN_INT, PININTCH(PININT_INDEX));
+	Chip_TIMER_Enable(LPC_TIMER1);
+}
+
+/**
+ * @brief	Handle interrupt from 32-bit timer
+ * @return	Nothing
+ */
+void TIMER1_IRQHandler(void)
+{
+
+	Chip_TIMER_Disable(LPC_TIMER1);
+	if (Chip_TIMER_MatchPending(LPC_TIMER1, 1)) {
+		timer_flag=true;
+		Chip_TIMER_ClearMatch(LPC_TIMER1, 1);
+	}
+
+}
+void ConfigureTimer( void ){
+	uint32_t timerFreq;
+
+	/* Enable timer 1 clock and reset it */
+	Chip_TIMER_Init(LPC_TIMER1);
+	Chip_RGU_TriggerReset(RGU_TIMER1_RST);
+	while (Chip_RGU_InReset(RGU_TIMER1_RST)) {}
+
+	/* Get timer 1 peripheral clock rate */
+	timerFreq = Chip_Clock_GetRate(CLK_MX_TIMER1);
+
+	/* Timer setup for match and interrupt at TICKRATE_HZ */
+	Chip_TIMER_Reset(LPC_TIMER1);
+	Chip_TIMER_MatchEnableInt(LPC_TIMER1, 1);
+	Chip_TIMER_SetMatch(LPC_TIMER1, 1, 450000);
+	Chip_TIMER_ResetOnMatchEnable(LPC_TIMER1, 1);
+	//Chip_TIMER_Enable(LPC_TIMER1);
+
+	/* Enable timer interrupt */
+	NVIC_EnableIRQ(TIMER1_IRQn);
+	NVIC_ClearPendingIRQ(TIMER1_IRQn);
+
+	Chip_SCU_PinMuxSet(6, 5,(SCU_MODE_INBUFF_EN | SCU_MODE_INACT | TEST_INPUT_MODE_FUNC) );
+	Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, 3, 4);	//Pin de salida
+	Chip_GPIO_SetPinState(LPC_GPIO_PORT, 3, 4, (bool) false);
+
+}
+void ConfigurePhaseDetector( void ){
+
+	/* Set pin back to GPIO (on some boards may have been changed to something
+	   else by Board_Init()) */
+	Chip_SCU_PinMuxSet(TEST_INPUT_PIN_PORT, TEST_INPUT_PIN_BIT,
+					   (SCU_MODE_INBUFF_EN | SCU_MODE_INACT | TEST_INPUT_MODE_FUNC) );
+
+	/* Configure GPIO pin as input */
+	Chip_GPIO_SetPinDIRInput(LPC_GPIO_PORT, TEST_INPUT_PORT, TEST_INPUT_PIN);
+
+	/* Configure interrupt channel for the GPIO pin in SysCon block */
+	Chip_SCU_GPIOIntPinSel(PININT_INDEX, TEST_INPUT_PORT, TEST_INPUT_PIN);
+
+	/* Configure channel interrupt as edge sensitive and falling edge interrupt */
+	Chip_PININT_ClearIntStatus(LPC_GPIO_PIN_INT, PININTCH(PININT_INDEX));
+	Chip_PININT_SetPinModeEdge(LPC_GPIO_PIN_INT, PININTCH(PININT_INDEX));
+	LPC_GPIO_PIN_INT->SIENR |= PININTCH(PININT_INDEX);
+	LPC_GPIO_PIN_INT->IENF |= PININTCH(PININT_INDEX);
+
+	Chip_PININT_EnableIntLow(LPC_GPIO_PIN_INT, PININTCH(PININT_INDEX));
+	/* Enable interrupt in the NVIC */
+	NVIC_ClearPendingIRQ(PININT_NVIC_NAME);
+	NVIC_EnableIRQ(PININT_NVIC_NAME);
+}
+
+uint16_t adc_data=0;
+
+void ADC0_IRQHandler(void){
+	Chip_ADC_ReadValue(LPC_ADC0, ADC_CH0,&adc_data);
+}
+
+ADC_CLOCK_SETUP_T ADCSetup;
+void ConfigureADC( void ){
+	/* Inicializacion del ADC */
+		Chip_ADC_Init(LPC_ADC0, &ADCSetup);
+		Chip_ADC_EnableChannel(LPC_ADC0, ADC_CH0, ENABLE);
+		NVIC_EnableIRQ(ADC0_IRQn);
+		Chip_ADC_Int_SetChannelCmd(LPC_ADC0, ADC_CH0, ENABLE);
+		Chip_ADC_SetStartMode(LPC_ADC0, ADC_START_NOW, ADC_TRIGGERMODE_RISING);
+}
+/**
+ * @brief	main routine for blinky example
+ * @return	Function should not exit.
+ */
+int main(void)
+{
+	int i=100;
+
+	SystemCoreClockUpdate();
+	Board_Init();
+
+	ConfigureTimer();
+	ConfigurePhaseDetector();
+
+	while (1) {
+		__WFI();
+		if( timer_flag==true ){
+			i=100;
+			Chip_GPIO_SetPinState(LPC_GPIO_PORT, 3, 4, true);
+			while(i--);
+			Chip_GPIO_SetPinState(LPC_GPIO_PORT, 3, 4, false);
+		}
+	}
+}

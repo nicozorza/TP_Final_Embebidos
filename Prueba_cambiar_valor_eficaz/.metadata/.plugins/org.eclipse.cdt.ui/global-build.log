@@ -1,0 +1,1880 @@
+15:04:55 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+15:04:56 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+15:04:56 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+Building file: ../example/src/timers.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/timers.d" -MT"example/src/timers.o" -MT"example/src/timers.d" -o "example/src/timers.o" "../example/src/timers.c"
+Finished building: ../example/src/timers.c
+ 
+Building target: periph_timers.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_timers.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_timers_Debug.ld" -o "periph_timers.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o ./example/src/timers.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_timers.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_timers.axf"; # arm-none-eabi-objcopy -v -O binary "periph_timers.axf" "periph_timers.bin" ; # checksum -p LPC4337 -d "periph_timers.bin";
+   text	   data	    bss	    dec	    hex	filename
+  17880	      0	    352	  18232	   4738	periph_timers.axf
+ 
+15:05:03 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+make: No se hace nada para 'all'.
+15:11:26 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+15:11:26 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+15:11:27 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+Building file: ../example/src/timers.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/timers.d" -MT"example/src/timers.o" -MT"example/src/timers.d" -o "example/src/timers.o" "../example/src/timers.c"
+Finished building: ../example/src/timers.c
+ 
+Building target: periph_timers.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_timers.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_timers_Debug.ld" -o "periph_timers.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o ./example/src/timers.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_timers.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_timers.axf"; # arm-none-eabi-objcopy -v -O binary "periph_timers.axf" "periph_timers.bin" ; # checksum -p LPC4337 -d "periph_timers.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18088	      0	    352	  18440	   4808	periph_timers.axf
+ 
+15:11:50 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+make: No se hace nada para 'all'.
+15:12:26 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+15:12:26 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+15:12:27 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+Building file: ../example/src/timers.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/timers.d" -MT"example/src/timers.o" -MT"example/src/timers.d" -o "example/src/timers.o" "../example/src/timers.c"
+Finished building: ../example/src/timers.c
+ 
+Building target: periph_timers.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_timers.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_timers_Debug.ld" -o "periph_timers.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o ./example/src/timers.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_timers.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_timers.axf"; # arm-none-eabi-objcopy -v -O binary "periph_timers.axf" "periph_timers.bin" ; # checksum -p LPC4337 -d "periph_timers.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18088	      0	    352	  18440	   4808	periph_timers.axf
+ 
+15:13:09 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+make: No se hace nada para 'all'.
+15:14:14 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+15:14:15 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+15:14:15 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+Building file: ../example/src/timers.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/timers.d" -MT"example/src/timers.o" -MT"example/src/timers.d" -o "example/src/timers.o" "../example/src/timers.c"
+../example/src/timers.c: In function 'TIMER1_IRQHandler':
+../example/src/timers.c:66:25: error: expected expression before 'LPC_GPIO_T'
+  Chip_GPIO_SetPinToggle(LPC_GPIO_T *pGPIO, 3, 0);
+                         ^
+../example/src/timers.c:66:2: error: too few arguments to function 'Chip_GPIO_SetPinToggle'
+example/src/subdir.mk:24: fallo en las instrucciones para el objetivo 'example/src/timers.o'
+  Chip_GPIO_SetPinToggle(LPC_GPIO_T *pGPIO, 3, 0);
+  ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/inc/chip_lpc43xx.h:190:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/timers.c:32:
+/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/inc/gpio_18xx_43xx.h:445:20: note: declared here
+ STATIC INLINE void Chip_GPIO_SetPinToggle(LPC_GPIO_T *pGPIO, uint8_t port, uint8_t pin)
+                    ^
+make: *** [example/src/timers.o] Error 1
+15:14:17 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+Building file: ../example/src/timers.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/timers.d" -MT"example/src/timers.o" -MT"example/src/timers.d" -o "example/src/timers.o" "../example/src/timers.c"
+../example/src/timers.c: In function 'TIMER1_IRQHandler':
+../example/src/timers.c:66:25: error: expected expression before 'LPC_GPIO_T'
+  Chip_GPIO_SetPinToggle(LPC_GPIO_T *pGPIO, 3, 0);
+                         ^
+../example/src/timers.c:66:2: error: too few arguments to function 'Chip_GPIO_SetPinToggle'
+  Chip_GPIO_SetPinToggle(LPC_GPIO_T *pGPIO, 3, 0);
+  ^
+example/src/subdir.mk:24: fallo en las instrucciones para el objetivo 'example/src/timers.o'
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/inc/chip_lpc43xx.h:190:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/timers.c:32:
+/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/inc/gpio_18xx_43xx.h:445:20: note: declared here
+ STATIC INLINE void Chip_GPIO_SetPinToggle(LPC_GPIO_T *pGPIO, uint8_t port, uint8_t pin)
+                    ^
+make: *** [example/src/timers.o] Error 1
+15:14:39 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+15:14:39 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+15:14:40 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+Building file: ../example/src/timers.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/timers.d" -MT"example/src/timers.o" -MT"example/src/timers.d" -o "example/src/timers.o" "../example/src/timers.c"
+Finished building: ../example/src/timers.c
+ 
+Building target: periph_timers.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_timers.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_timers_Debug.ld" -o "periph_timers.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o ./example/src/timers.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_timers.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_timers.axf"; # arm-none-eabi-objcopy -v -O binary "periph_timers.axf" "periph_timers.bin" ; # checksum -p LPC4337 -d "periph_timers.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18160	      0	    352	  18512	   4850	periph_timers.axf
+ 
+15:14:42 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+make: No se hace nada para 'all'.
+15:15:23 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+15:15:24 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+15:15:24 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+Building file: ../example/src/timers.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/timers.d" -MT"example/src/timers.o" -MT"example/src/timers.d" -o "example/src/timers.o" "../example/src/timers.c"
+Finished building: ../example/src/timers.c
+ 
+Building target: periph_timers.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_timers.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_timers_Debug.ld" -o "periph_timers.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o ./example/src/timers.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_timers.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_timers.axf"; # arm-none-eabi-objcopy -v -O binary "periph_timers.axf" "periph_timers.bin" ; # checksum -p LPC4337 -d "periph_timers.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18160	      0	    352	  18512	   4850	periph_timers.axf
+ 
+15:15:32 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+make: No se hace nada para 'all'.
+15:44:11 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+15:44:12 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+15:44:13 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+Building file: ../example/src/timers.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/timers.d" -MT"example/src/timers.o" -MT"example/src/timers.d" -o "example/src/timers.o" "../example/src/timers.c"
+Finished building: ../example/src/timers.c
+ 
+Building target: periph_timers.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_timers.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_timers_Debug.ld" -o "periph_timers.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o ./example/src/timers.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_timers.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_timers.axf"; # arm-none-eabi-objcopy -v -O binary "periph_timers.axf" "periph_timers.bin" ; # checksum -p LPC4337 -d "periph_timers.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18792	      0	    352	  19144	   4ac8	periph_timers.axf
+ 
+15:44:31 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+make: No se hace nada para 'all'.
+15:45:01 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+15:45:02 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+15:45:02 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+Building file: ../example/src/timers.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/timers.d" -MT"example/src/timers.o" -MT"example/src/timers.d" -o "example/src/timers.o" "../example/src/timers.c"
+Finished building: ../example/src/timers.c
+ 
+Building target: periph_timers.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_timers.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_timers_Debug.ld" -o "periph_timers.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o ./example/src/timers.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_timers.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_timers.axf"; # arm-none-eabi-objcopy -v -O binary "periph_timers.axf" "periph_timers.bin" ; # checksum -p LPC4337 -d "periph_timers.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18592	      0	    352	  18944	   4a00	periph_timers.axf
+ 
+15:48:22 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+15:48:23 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+15:48:23 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+Building file: ../example/src/timers.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/timers.d" -MT"example/src/timers.o" -MT"example/src/timers.d" -o "example/src/timers.o" "../example/src/timers.c"
+Finished building: ../example/src/timers.c
+ 
+Building target: periph_timers.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_timers.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_timers_Debug.ld" -o "periph_timers.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o ./example/src/timers.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_timers.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_timers.axf"; # arm-none-eabi-objcopy -v -O binary "periph_timers.axf" "periph_timers.bin" ; # checksum -p LPC4337 -d "periph_timers.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18592	      0	    352	  18944	   4a00	periph_timers.axf
+ 
+15:48:25 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+make: No se hace nada para 'all'.
+15:56:35 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+15:56:36 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+15:56:36 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+Building file: ../example/src/timers.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/timers.d" -MT"example/src/timers.o" -MT"example/src/timers.d" -o "example/src/timers.o" "../example/src/timers.c"
+../example/src/timers.c: In function 'ConfigureTimer':
+../example/src/timers.c:97:2: error: 'timerFreq' undeclared (first use in this function)
+  timerFreq = Chip_Clock_GetRate(CLK_MX_TIMER1);
+  ^
+../example/src/timers.c:97:2: note: each undeclared identifier is reported only once for each function it appears in
+../example/src/timers.c: In function 'main':
+../example/src/timers.c:152:11: warning: unused variable 'timerFreq' [-Wunused-variable]
+  uint32_t timerFreq;
+           ^
+example/src/subdir.mk:24: fallo en las instrucciones para el objetivo 'example/src/timers.o'
+make: *** [example/src/timers.o] Error 1
+15:56:53 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+Building file: ../example/src/timers.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/timers.d" -MT"example/src/timers.o" -MT"example/src/timers.d" -o "example/src/timers.o" "../example/src/timers.c"
+../example/src/timers.c: In function 'ConfigureTimer':
+../example/src/timers.c:97:2: error: 'timerFreq' undeclared (first use in this function)
+  timerFreq = Chip_Clock_GetRate(CLK_MX_TIMER1);
+  ^
+../example/src/timers.c:97:2: note: each undeclared identifier is reported only once for each function it appears in
+../example/src/timers.c: In function 'main':
+../example/src/timers.c:152:11: warning: unused variable 'timerFreq' [-Wunused-variable]
+  uint32_t timerFreq;
+           ^
+example/src/subdir.mk:24: fallo en las instrucciones para el objetivo 'example/src/timers.o'
+make: *** [example/src/timers.o] Error 1
+15:57:18 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+15:57:19 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+15:57:19 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+Building file: ../example/src/timers.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/timers.d" -MT"example/src/timers.o" -MT"example/src/timers.d" -o "example/src/timers.o" "../example/src/timers.c"
+Finished building: ../example/src/timers.c
+ 
+Building target: periph_timers.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_timers.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_timers_Debug.ld" -o "periph_timers.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o ./example/src/timers.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_timers.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_timers.axf"; # arm-none-eabi-objcopy -v -O binary "periph_timers.axf" "periph_timers.bin" ; # checksum -p LPC4337 -d "periph_timers.bin";
+   text	   data	    bss	    dec	    hex	filename
+   9460	      0	    352	   9812	   2654	periph_timers.axf
+ 
+15:57:22 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+make: No se hace nada para 'all'.
+15:58:52 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+15:58:52 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+15:58:53 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+Building file: ../example/src/timers.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/timers.d" -MT"example/src/timers.o" -MT"example/src/timers.d" -o "example/src/timers.o" "../example/src/timers.c"
+Finished building: ../example/src/timers.c
+ 
+Building target: periph_timers.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_timers.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_timers_Debug.ld" -o "periph_timers.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o ./example/src/timers.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_timers.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_timers.axf"; # arm-none-eabi-objcopy -v -O binary "periph_timers.axf" "periph_timers.bin" ; # checksum -p LPC4337 -d "periph_timers.bin";
+   text	   data	    bss	    dec	    hex	filename
+   9460	      0	    352	   9812	   2654	periph_timers.axf
+ 
+15:58:56 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+make: No se hace nada para 'all'.
+15:59:32 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+15:59:33 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+15:59:33 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+Building file: ../example/src/timers.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/timers.d" -MT"example/src/timers.o" -MT"example/src/timers.d" -o "example/src/timers.o" "../example/src/timers.c"
+Finished building: ../example/src/timers.c
+ 
+Building target: periph_timers.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_timers.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_timers_Debug.ld" -o "periph_timers.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o ./example/src/timers.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_timers.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_timers.axf"; # arm-none-eabi-objcopy -v -O binary "periph_timers.axf" "periph_timers.bin" ; # checksum -p LPC4337 -d "periph_timers.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18808	      0	    352	  19160	   4ad8	periph_timers.axf
+ 
+15:59:36 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+make: No se hace nada para 'all'.
+16:00:28 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+16:00:29 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+16:00:29 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+Building file: ../example/src/timers.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/timers.d" -MT"example/src/timers.o" -MT"example/src/timers.d" -o "example/src/timers.o" "../example/src/timers.c"
+Finished building: ../example/src/timers.c
+ 
+Building target: periph_timers.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_timers.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_timers_Debug.ld" -o "periph_timers.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o ./example/src/timers.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_timers.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_timers.axf"; # arm-none-eabi-objcopy -v -O binary "periph_timers.axf" "periph_timers.bin" ; # checksum -p LPC4337 -d "periph_timers.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18808	      0	    352	  19160	   4ad8	periph_timers.axf
+ 
+16:00:31 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+make: No se hace nada para 'all'.
+16:00:59 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+16:01:00 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+16:01:00 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+Building file: ../example/src/timers.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/timers.d" -MT"example/src/timers.o" -MT"example/src/timers.d" -o "example/src/timers.o" "../example/src/timers.c"
+Finished building: ../example/src/timers.c
+ 
+Building target: periph_timers.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_timers.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_timers_Debug.ld" -o "periph_timers.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o ./example/src/timers.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_timers.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_timers.axf"; # arm-none-eabi-objcopy -v -O binary "periph_timers.axf" "periph_timers.bin" ; # checksum -p LPC4337 -d "periph_timers.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18416	      0	    352	  18768	   4950	periph_timers.axf
+ 
+16:01:02 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+make: No se hace nada para 'all'.
+16:02:33 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+16:02:34 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+16:02:34 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+Building file: ../example/src/timers.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/timers.d" -MT"example/src/timers.o" -MT"example/src/timers.d" -o "example/src/timers.o" "../example/src/timers.c"
+Finished building: ../example/src/timers.c
+ 
+Building target: periph_timers.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_timers.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_timers_Debug.ld" -o "periph_timers.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o ./example/src/timers.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_timers.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_timers.axf"; # arm-none-eabi-objcopy -v -O binary "periph_timers.axf" "periph_timers.bin" ; # checksum -p LPC4337 -d "periph_timers.bin";
+   text	   data	    bss	    dec	    hex	filename
+   9460	      0	    352	   9812	   2654	periph_timers.axf
+ 
+16:02:36 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+make: No se hace nada para 'all'.
+16:04:31 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+16:04:31 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+16:04:32 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+Building file: ../example/src/timers.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/timers.d" -MT"example/src/timers.o" -MT"example/src/timers.d" -o "example/src/timers.o" "../example/src/timers.c"
+Finished building: ../example/src/timers.c
+ 
+Building target: periph_timers.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_timers.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_timers_Debug.ld" -o "periph_timers.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o ./example/src/timers.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_timers.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_timers.axf"; # arm-none-eabi-objcopy -v -O binary "periph_timers.axf" "periph_timers.bin" ; # checksum -p LPC4337 -d "periph_timers.bin";
+   text	   data	    bss	    dec	    hex	filename
+   9472	      0	    352	   9824	   2660	periph_timers.axf
+ 
+16:04:33 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+make: No se hace nada para 'all'.
+16:06:52 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+16:06:53 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+16:06:53 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+Building file: ../example/src/timers.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/timers.d" -MT"example/src/timers.o" -MT"example/src/timers.d" -o "example/src/timers.o" "../example/src/timers.c"
+Finished building: ../example/src/timers.c
+ 
+Building target: periph_timers.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_timers.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_timers_Debug.ld" -o "periph_timers.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o ./example/src/timers.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_timers.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_timers.axf"; # arm-none-eabi-objcopy -v -O binary "periph_timers.axf" "periph_timers.bin" ; # checksum -p LPC4337 -d "periph_timers.bin";
+   text	   data	    bss	    dec	    hex	filename
+   9472	      0	    352	   9824	   2660	periph_timers.axf
+ 
+16:07:31 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+16:07:31 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+16:07:31 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+make: No se hace nada para 'all'.
+16:07:36 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+make: No se hace nada para 'all'.
+16:10:51 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+16:10:52 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+16:10:52 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+make: No se hace nada para 'all'.
+16:10:57 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+make: No se hace nada para 'all'.
+16:12:54 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+16:12:54 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+16:12:55 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+make: No se hace nada para 'all'.
+16:12:57 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+make: No se hace nada para 'all'.
+16:16:30 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+16:16:31 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+16:16:31 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+Building file: ../example/src/timers.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/timers.d" -MT"example/src/timers.o" -MT"example/src/timers.d" -o "example/src/timers.o" "../example/src/timers.c"
+Finished building: ../example/src/timers.c
+ 
+Building target: periph_timers.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_timers.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_timers_Debug.ld" -o "periph_timers.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o ./example/src/timers.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_timers.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_timers.axf"; # arm-none-eabi-objcopy -v -O binary "periph_timers.axf" "periph_timers.bin" ; # checksum -p LPC4337 -d "periph_timers.bin";
+   text	   data	    bss	    dec	    hex	filename
+   9472	      0	    352	   9824	   2660	periph_timers.axf
+ 
+16:16:34 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+make: No se hace nada para 'all'.
+16:21:04 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+16:21:05 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+16:21:05 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+Building file: ../example/src/timers.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/timers.d" -MT"example/src/timers.o" -MT"example/src/timers.d" -o "example/src/timers.o" "../example/src/timers.c"
+Finished building: ../example/src/timers.c
+ 
+Building target: periph_timers.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_timers.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_timers_Debug.ld" -o "periph_timers.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o ./example/src/timers.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_timers.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_timers.axf"; # arm-none-eabi-objcopy -v -O binary "periph_timers.axf" "periph_timers.bin" ; # checksum -p LPC4337 -d "periph_timers.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18416	      0	    352	  18768	   4950	periph_timers.axf
+ 
+16:21:07 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+make: No se hace nada para 'all'.
+16:25:12 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+16:25:13 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+16:25:13 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+Building file: ../example/src/timers.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/timers.d" -MT"example/src/timers.o" -MT"example/src/timers.d" -o "example/src/timers.o" "../example/src/timers.c"
+Finished building: ../example/src/timers.c
+ 
+Building target: periph_timers.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_timers.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_timers_Debug.ld" -o "periph_timers.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o ./example/src/timers.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_timers.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_timers.axf"; # arm-none-eabi-objcopy -v -O binary "periph_timers.axf" "periph_timers.bin" ; # checksum -p LPC4337 -d "periph_timers.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18376	      0	    352	  18728	   4928	periph_timers.axf
+ 
+16:25:17 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+make: No se hace nada para 'all'.
+16:36:33 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+16:36:34 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+16:36:34 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+Building file: ../example/src/timers.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/timers.d" -MT"example/src/timers.o" -MT"example/src/timers.d" -o "example/src/timers.o" "../example/src/timers.c"
+Finished building: ../example/src/timers.c
+ 
+Building target: periph_timers.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_timers.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_timers_Debug.ld" -o "periph_timers.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o ./example/src/timers.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_timers.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_timers.axf"; # arm-none-eabi-objcopy -v -O binary "periph_timers.axf" "periph_timers.bin" ; # checksum -p LPC4337 -d "periph_timers.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18824	      0	    352	  19176	   4ae8	periph_timers.axf
+ 
+16:37:03 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+make: No se hace nada para 'all'.
+17:19:42 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+17:19:43 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+17:19:43 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+Building file: ../example/src/timers.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/timers.d" -MT"example/src/timers.o" -MT"example/src/timers.d" -o "example/src/timers.o" "../example/src/timers.c"
+Finished building: ../example/src/timers.c
+ 
+Building target: periph_timers.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_timers.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_timers_Debug.ld" -o "periph_timers.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o ./example/src/timers.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_timers.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_timers.axf"; # arm-none-eabi-objcopy -v -O binary "periph_timers.axf" "periph_timers.bin" ; # checksum -p LPC4337 -d "periph_timers.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18824	      0	    352	  19176	   4ae8	periph_timers.axf
+ 
+17:19:52 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+make: No se hace nada para 'all'.
+17:23:03 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+17:23:03 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+17:23:04 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+Building file: ../example/src/timers.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/timers.d" -MT"example/src/timers.o" -MT"example/src/timers.d" -o "example/src/timers.o" "../example/src/timers.c"
+Finished building: ../example/src/timers.c
+ 
+Building target: periph_timers.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_timers.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_timers_Debug.ld" -o "periph_timers.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o ./example/src/timers.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_timers.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_timers.axf"; # arm-none-eabi-objcopy -v -O binary "periph_timers.axf" "periph_timers.bin" ; # checksum -p LPC4337 -d "periph_timers.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18824	      0	    352	  19176	   4ae8	periph_timers.axf
+ 
+17:23:20 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+make: No se hace nada para 'all'.
+17:23:45 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+17:23:45 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+17:23:45 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+Building file: ../example/src/timers.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/timers.d" -MT"example/src/timers.o" -MT"example/src/timers.d" -o "example/src/timers.o" "../example/src/timers.c"
+Finished building: ../example/src/timers.c
+ 
+Building target: periph_timers.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_timers.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_timers_Debug.ld" -o "periph_timers.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o ./example/src/timers.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_timers.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_timers.axf"; # arm-none-eabi-objcopy -v -O binary "periph_timers.axf" "periph_timers.bin" ; # checksum -p LPC4337 -d "periph_timers.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18824	      0	    352	  19176	   4ae8	periph_timers.axf
+ 
+17:24:04 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+make: No se hace nada para 'all'.
+17:25:13 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+17:25:13 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+17:25:14 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+Building file: ../example/src/timers.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/timers.d" -MT"example/src/timers.o" -MT"example/src/timers.d" -o "example/src/timers.o" "../example/src/timers.c"
+Finished building: ../example/src/timers.c
+ 
+Building target: periph_timers.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_timers.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_timers_Debug.ld" -o "periph_timers.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o ./example/src/timers.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_timers.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_timers.axf"; # arm-none-eabi-objcopy -v -O binary "periph_timers.axf" "periph_timers.bin" ; # checksum -p LPC4337 -d "periph_timers.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18824	      0	    352	  19176	   4ae8	periph_timers.axf
+ 
+17:25:20 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+make: No se hace nada para 'all'.
+17:26:53 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+17:26:53 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+17:26:54 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+Building file: ../example/src/timers.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/timers.d" -MT"example/src/timers.o" -MT"example/src/timers.d" -o "example/src/timers.o" "../example/src/timers.c"
+Finished building: ../example/src/timers.c
+ 
+Building target: periph_timers.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_timers.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_timers_Debug.ld" -o "periph_timers.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o ./example/src/timers.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_timers.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_timers.axf"; # arm-none-eabi-objcopy -v -O binary "periph_timers.axf" "periph_timers.bin" ; # checksum -p LPC4337 -d "periph_timers.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18824	      0	    352	  19176	   4ae8	periph_timers.axf
+ 
+17:27:07 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+17:27:07 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+17:27:08 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+make: No se hace nada para 'all'.
+17:27:09 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+make: No se hace nada para 'all'.
+17:28:02 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+17:28:02 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+17:28:02 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+Building file: ../example/src/timers.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/timers.d" -MT"example/src/timers.o" -MT"example/src/timers.d" -o "example/src/timers.o" "../example/src/timers.c"
+Finished building: ../example/src/timers.c
+ 
+Building target: periph_timers.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_timers.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_timers_Debug.ld" -o "periph_timers.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o ./example/src/timers.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_timers.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_timers.axf"; # arm-none-eabi-objcopy -v -O binary "periph_timers.axf" "periph_timers.bin" ; # checksum -p LPC4337 -d "periph_timers.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18824	      0	    352	  19176	   4ae8	periph_timers.axf
+ 
+17:28:08 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+make: No se hace nada para 'all'.
+17:29:27 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+17:29:28 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+17:29:28 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+Building file: ../example/src/timers.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/timers.d" -MT"example/src/timers.o" -MT"example/src/timers.d" -o "example/src/timers.o" "../example/src/timers.c"
+Finished building: ../example/src/timers.c
+ 
+Building target: periph_timers.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_timers.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_timers_Debug.ld" -o "periph_timers.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o ./example/src/timers.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_timers.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_timers.axf"; # arm-none-eabi-objcopy -v -O binary "periph_timers.axf" "periph_timers.bin" ; # checksum -p LPC4337 -d "periph_timers.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18824	      0	    352	  19176	   4ae8	periph_timers.axf
+ 
+17:29:40 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+17:29:40 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+17:29:41 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+make: No se hace nada para 'all'.
+17:29:43 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+make: No se hace nada para 'all'.
+17:30:37 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+17:30:38 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+17:30:38 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+Building file: ../example/src/timers.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/timers.d" -MT"example/src/timers.o" -MT"example/src/timers.d" -o "example/src/timers.o" "../example/src/timers.c"
+../example/src/timers.c: In function 'TIMER1_IRQHandler':
+../example/src/timers.c:82:6: warning: unused variable 'i' [-Wunused-variable]
+  int i=100;
+      ^
+Finished building: ../example/src/timers.c
+ 
+Building target: periph_timers.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_timers.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_timers_Debug.ld" -o "periph_timers.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o ./example/src/timers.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_timers.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_timers.axf"; # arm-none-eabi-objcopy -v -O binary "periph_timers.axf" "periph_timers.bin" ; # checksum -p LPC4337 -d "periph_timers.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18808	      0	    352	  19160	   4ad8	periph_timers.axf
+ 
+17:30:47 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+make: No se hace nada para 'all'.
+17:31:25 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+17:31:25 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+17:31:26 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+Building file: ../example/src/timers.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/timers.d" -MT"example/src/timers.o" -MT"example/src/timers.d" -o "example/src/timers.o" "../example/src/timers.c"
+Finished building: ../example/src/timers.c
+ 
+Building target: periph_timers.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_timers.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_timers_Debug.ld" -o "periph_timers.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o ./example/src/timers.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_timers.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_timers.axf"; # arm-none-eabi-objcopy -v -O binary "periph_timers.axf" "periph_timers.bin" ; # checksum -p LPC4337 -d "periph_timers.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18824	      0	    352	  19176	   4ae8	periph_timers.axf
+ 
+17:31:32 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+make: No se hace nada para 'all'.
+17:32:10 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+17:32:10 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+17:32:11 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+Building file: ../example/src/timers.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/timers.d" -MT"example/src/timers.o" -MT"example/src/timers.d" -o "example/src/timers.o" "../example/src/timers.c"
+Finished building: ../example/src/timers.c
+ 
+Building target: periph_timers.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_timers.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_timers_Debug.ld" -o "periph_timers.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o ./example/src/timers.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_timers.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_timers.axf"; # arm-none-eabi-objcopy -v -O binary "periph_timers.axf" "periph_timers.bin" ; # checksum -p LPC4337 -d "periph_timers.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18824	      0	    352	  19176	   4ae8	periph_timers.axf
+ 
+17:32:14 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+make: No se hace nada para 'all'.
+17:32:57 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+17:32:57 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+17:32:57 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+Building file: ../example/src/timers.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/timers.d" -MT"example/src/timers.o" -MT"example/src/timers.d" -o "example/src/timers.o" "../example/src/timers.c"
+Finished building: ../example/src/timers.c
+ 
+Building target: periph_timers.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_timers.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_timers_Debug.ld" -o "periph_timers.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o ./example/src/timers.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_timers.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_timers.axf"; # arm-none-eabi-objcopy -v -O binary "periph_timers.axf" "periph_timers.bin" ; # checksum -p LPC4337 -d "periph_timers.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18824	      0	    352	  19176	   4ae8	periph_timers.axf
+ 
+17:33:04 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+make: No se hace nada para 'all'.
+17:33:44 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+17:33:44 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+17:33:44 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+Building file: ../example/src/timers.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/timers.d" -MT"example/src/timers.o" -MT"example/src/timers.d" -o "example/src/timers.o" "../example/src/timers.c"
+Finished building: ../example/src/timers.c
+ 
+Building target: periph_timers.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_timers.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_timers_Debug.ld" -o "periph_timers.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o ./example/src/timers.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_timers.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_timers.axf"; # arm-none-eabi-objcopy -v -O binary "periph_timers.axf" "periph_timers.bin" ; # checksum -p LPC4337 -d "periph_timers.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18824	      0	    352	  19176	   4ae8	periph_timers.axf
+ 
+17:33:52 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+make: No se hace nada para 'all'.
+17:34:34 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+17:34:35 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+17:34:35 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+Building file: ../example/src/timers.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/timers.d" -MT"example/src/timers.o" -MT"example/src/timers.d" -o "example/src/timers.o" "../example/src/timers.c"
+Finished building: ../example/src/timers.c
+ 
+Building target: periph_timers.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_timers.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_timers_Debug.ld" -o "periph_timers.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o ./example/src/timers.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_timers.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_timers.axf"; # arm-none-eabi-objcopy -v -O binary "periph_timers.axf" "periph_timers.bin" ; # checksum -p LPC4337 -d "periph_timers.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18824	      0	    352	  19176	   4ae8	periph_timers.axf
+ 
+17:34:37 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+make: No se hace nada para 'all'.
+17:35:17 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+17:35:18 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+17:35:18 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+Building file: ../example/src/timers.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/timers.d" -MT"example/src/timers.o" -MT"example/src/timers.d" -o "example/src/timers.o" "../example/src/timers.c"
+Finished building: ../example/src/timers.c
+ 
+Building target: periph_timers.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_timers.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_timers_Debug.ld" -o "periph_timers.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o ./example/src/timers.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_timers.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_timers.axf"; # arm-none-eabi-objcopy -v -O binary "periph_timers.axf" "periph_timers.bin" ; # checksum -p LPC4337 -d "periph_timers.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18824	      0	    352	  19176	   4ae8	periph_timers.axf
+ 
+17:35:43 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+17:35:44 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+17:35:44 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+make: No se hace nada para 'all'.
+17:35:46 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+make: No se hace nada para 'all'.
+17:36:24 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+17:36:24 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+17:36:25 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+Building file: ../example/src/timers.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/timers.d" -MT"example/src/timers.o" -MT"example/src/timers.d" -o "example/src/timers.o" "../example/src/timers.c"
+Finished building: ../example/src/timers.c
+ 
+Building target: periph_timers.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_timers.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_timers_Debug.ld" -o "periph_timers.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o ./example/src/timers.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_timers.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_timers.axf"; # arm-none-eabi-objcopy -v -O binary "periph_timers.axf" "periph_timers.bin" ; # checksum -p LPC4337 -d "periph_timers.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18816	      0	    352	  19168	   4ae0	periph_timers.axf
+ 
+17:36:28 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+make: No se hace nada para 'all'.
+17:37:04 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+17:37:05 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+17:37:05 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+Building file: ../example/src/timers.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/timers.d" -MT"example/src/timers.o" -MT"example/src/timers.d" -o "example/src/timers.o" "../example/src/timers.c"
+Finished building: ../example/src/timers.c
+ 
+Building target: periph_timers.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_timers.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_timers_Debug.ld" -o "periph_timers.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o ./example/src/timers.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_timers.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_timers.axf"; # arm-none-eabi-objcopy -v -O binary "periph_timers.axf" "periph_timers.bin" ; # checksum -p LPC4337 -d "periph_timers.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18816	      0	    352	  19168	   4ae0	periph_timers.axf
+ 
+17:37:07 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+make: No se hace nada para 'all'.
+17:37:37 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+17:37:37 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+17:37:38 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+Building file: ../example/src/timers.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/timers.d" -MT"example/src/timers.o" -MT"example/src/timers.d" -o "example/src/timers.o" "../example/src/timers.c"
+Finished building: ../example/src/timers.c
+ 
+Building target: periph_timers.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_timers.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_timers_Debug.ld" -o "periph_timers.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o ./example/src/timers.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_timers.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_timers.axf"; # arm-none-eabi-objcopy -v -O binary "periph_timers.axf" "periph_timers.bin" ; # checksum -p LPC4337 -d "periph_timers.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18816	      0	    352	  19168	   4ae0	periph_timers.axf
+ 
+17:37:43 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+make: No se hace nada para 'all'.
+17:38:06 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+17:38:07 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+17:38:07 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+Building file: ../example/src/timers.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/timers.d" -MT"example/src/timers.o" -MT"example/src/timers.d" -o "example/src/timers.o" "../example/src/timers.c"
+Finished building: ../example/src/timers.c
+ 
+Building target: periph_timers.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_timers.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_timers_Debug.ld" -o "periph_timers.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o ./example/src/timers.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_timers.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_timers.axf"; # arm-none-eabi-objcopy -v -O binary "periph_timers.axf" "periph_timers.bin" ; # checksum -p LPC4337 -d "periph_timers.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18816	      0	    352	  19168	   4ae0	periph_timers.axf
+ 
+17:38:11 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+make: No se hace nada para 'all'.
+17:38:35 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+17:38:36 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+17:38:36 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+Building file: ../example/src/timers.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/timers.d" -MT"example/src/timers.o" -MT"example/src/timers.d" -o "example/src/timers.o" "../example/src/timers.c"
+Finished building: ../example/src/timers.c
+ 
+Building target: periph_timers.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_timers.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_timers_Debug.ld" -o "periph_timers.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o ./example/src/timers.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_timers.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_timers.axf"; # arm-none-eabi-objcopy -v -O binary "periph_timers.axf" "periph_timers.bin" ; # checksum -p LPC4337 -d "periph_timers.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18816	      0	    352	  19168	   4ae0	periph_timers.axf
+ 
+17:38:39 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+make: No se hace nada para 'all'.
+17:38:58 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+17:38:58 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+17:38:59 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+Building file: ../example/src/timers.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/timers.d" -MT"example/src/timers.o" -MT"example/src/timers.d" -o "example/src/timers.o" "../example/src/timers.c"
+Finished building: ../example/src/timers.c
+ 
+Building target: periph_timers.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_timers.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_timers_Debug.ld" -o "periph_timers.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o ./example/src/timers.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_timers.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_timers.axf"; # arm-none-eabi-objcopy -v -O binary "periph_timers.axf" "periph_timers.bin" ; # checksum -p LPC4337 -d "periph_timers.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18824	      0	    352	  19176	   4ae8	periph_timers.axf
+ 
+17:39:04 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+make: No se hace nada para 'all'.
+17:39:30 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+17:39:30 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+17:39:31 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+Building file: ../example/src/timers.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/timers.d" -MT"example/src/timers.o" -MT"example/src/timers.d" -o "example/src/timers.o" "../example/src/timers.c"
+Finished building: ../example/src/timers.c
+ 
+Building target: periph_timers.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_timers.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_timers_Debug.ld" -o "periph_timers.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o ./example/src/timers.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_timers.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_timers.axf"; # arm-none-eabi-objcopy -v -O binary "periph_timers.axf" "periph_timers.bin" ; # checksum -p LPC4337 -d "periph_timers.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18824	      0	    352	  19176	   4ae8	periph_timers.axf
+ 
+17:39:37 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+make: No se hace nada para 'all'.
+17:39:59 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+17:40:00 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+17:40:00 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+Building file: ../example/src/timers.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/timers.d" -MT"example/src/timers.o" -MT"example/src/timers.d" -o "example/src/timers.o" "../example/src/timers.c"
+Finished building: ../example/src/timers.c
+ 
+Building target: periph_timers.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_timers.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_timers_Debug.ld" -o "periph_timers.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o ./example/src/timers.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_timers.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_timers.axf"; # arm-none-eabi-objcopy -v -O binary "periph_timers.axf" "periph_timers.bin" ; # checksum -p LPC4337 -d "periph_timers.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18824	      0	    352	  19176	   4ae8	periph_timers.axf
+ 
+17:40:07 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+make: No se hace nada para 'all'.
+18:36:10 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+18:36:10 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+18:36:11 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+Building file: ../example/src/timers.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/timers.d" -MT"example/src/timers.o" -MT"example/src/timers.d" -o "example/src/timers.o" "../example/src/timers.c"
+../example/src/timers.c: In function 'ConfigureTimer':
+../example/src/timers.c:110:11: warning: variable 'timerFreq' set but not used [-Wunused-but-set-variable]
+  uint32_t timerFreq;
+           ^
+Finished building: ../example/src/timers.c
+ 
+Building target: periph_timers.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_timers.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_timers_Debug.ld" -o "periph_timers.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o ./example/src/timers.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_timers.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_timers.axf"; # arm-none-eabi-objcopy -v -O binary "periph_timers.axf" "periph_timers.bin" ; # checksum -p LPC4337 -d "periph_timers.bin";
+   text	   data	    bss	    dec	    hex	filename
+  10272	      0	    356	  10628	   2984	periph_timers.axf
+ 
+18:43:17 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+18:43:18 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+18:43:19 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+Building file: ../example/src/timers.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/timers.d" -MT"example/src/timers.o" -MT"example/src/timers.d" -o "example/src/timers.o" "../example/src/timers.c"
+../example/src/timers.c: In function 'GPIO0_IRQHandler':
+../example/src/timers.c:76:37: error: 'TIMER_BASE' undeclared (first use in this function)
+  Chip_TIMER_SetMatch(LPC_TIMER1, 1, TIMER_BASE+341*adc_data);
+                                     ^
+../example/src/timers.c:76:37: note: each undeclared identifier is reported only once for each function it appears in
+../example/src/timers.c: In function 'ConfigureTimer':
+../example/src/timers.c:112:11: warning: variable 'timerFreq' set but not used [-Wunused-but-set-variable]
+  uint32_t timerFreq;
+           ^
+example/src/subdir.mk:24: fallo en las instrucciones para el objetivo 'example/src/timers.o'
+make: *** [example/src/timers.o] Error 1
+18:43:25 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+Building file: ../example/src/timers.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/timers.d" -MT"example/src/timers.o" -MT"example/src/timers.d" -o "example/src/timers.o" "../example/src/timers.c"
+../example/src/timers.c: In function 'GPIO0_IRQHandler':
+../example/src/timers.c:76:37: error: 'TIMER_BASE' undeclared (first use in this function)
+  Chip_TIMER_SetMatch(LPC_TIMER1, 1, TIMER_BASE+341*adc_data);
+                                     ^
+../example/src/timers.c:76:37: note: each undeclared identifier is reported only once for each function it appears in
+../example/src/timers.c: In function 'ConfigureTimer':
+../example/src/timers.c:112:11: warning: variable 'timerFreq' set but not used [-Wunused-but-set-variable]
+example/src/subdir.mk:24: fallo en las instrucciones para el objetivo 'example/src/timers.o'
+  uint32_t timerFreq;
+           ^
+make: *** [example/src/timers.o] Error 1
+18:43:57 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+18:43:57 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+18:43:58 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+Building file: ../example/src/timers.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/timers.d" -MT"example/src/timers.o" -MT"example/src/timers.d" -o "example/src/timers.o" "../example/src/timers.c"
+../example/src/timers.c: In function 'ConfigureTimer':
+../example/src/timers.c:113:11: warning: variable 'timerFreq' set but not used [-Wunused-but-set-variable]
+  uint32_t timerFreq;
+           ^
+Finished building: ../example/src/timers.c
+ 
+Building target: periph_timers.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_timers.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_timers_Debug.ld" -o "periph_timers.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o ./example/src/timers.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_timers.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_timers.axf"; # arm-none-eabi-objcopy -v -O binary "periph_timers.axf" "periph_timers.bin" ; # checksum -p LPC4337 -d "periph_timers.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18792	      0	    356	  19148	   4acc	periph_timers.axf
+ 
+18:44:18 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+make: No se hace nada para 'all'.
+18:45:08 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+make: No se hace nada para 'all'.
+18:46:09 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+18:46:09 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+18:46:10 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+Building file: ../example/src/timers.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/timers.d" -MT"example/src/timers.o" -MT"example/src/timers.d" -o "example/src/timers.o" "../example/src/timers.c"
+../example/src/timers.c: In function 'ConfigureTimer':
+../example/src/timers.c:113:11: warning: variable 'timerFreq' set but not used [-Wunused-but-set-variable]
+  uint32_t timerFreq;
+           ^
+Finished building: ../example/src/timers.c
+ 
+Building target: periph_timers.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_timers.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_timers_Debug.ld" -o "periph_timers.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o ./example/src/timers.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_timers.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_timers.axf"; # arm-none-eabi-objcopy -v -O binary "periph_timers.axf" "periph_timers.bin" ; # checksum -p LPC4337 -d "periph_timers.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18328	      0	    364	  18692	   4904	periph_timers.axf
+ 
+18:46:20 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+make: No se hace nada para 'all'.
+18:46:59 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+18:46:59 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+18:47:00 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+Building file: ../example/src/timers.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/timers.d" -MT"example/src/timers.o" -MT"example/src/timers.d" -o "example/src/timers.o" "../example/src/timers.c"
+../example/src/timers.c: In function 'ConfigureTimer':
+../example/src/timers.c:113:11: warning: variable 'timerFreq' set but not used [-Wunused-but-set-variable]
+  uint32_t timerFreq;
+           ^
+Finished building: ../example/src/timers.c
+ 
+Building target: periph_timers.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_timers.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_timers_Debug.ld" -o "periph_timers.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o ./example/src/timers.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_timers.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_timers.axf"; # arm-none-eabi-objcopy -v -O binary "periph_timers.axf" "periph_timers.bin" ; # checksum -p LPC4337 -d "periph_timers.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18792	      0	    364	  19156	   4ad4	periph_timers.axf
+ 
+18:47:02 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+make: No se hace nada para 'all'.
+18:49:11 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+18:49:12 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+18:49:12 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+Building file: ../example/src/timers.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/timers.d" -MT"example/src/timers.o" -MT"example/src/timers.d" -o "example/src/timers.o" "../example/src/timers.c"
+../example/src/timers.c: In function 'ConfigureTimer':
+../example/src/timers.c:118:11: warning: variable 'timerFreq' set but not used [-Wunused-but-set-variable]
+  uint32_t timerFreq;
+           ^
+Finished building: ../example/src/timers.c
+ 
+Building target: periph_timers.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_timers.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_timers_Debug.ld" -o "periph_timers.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o ./example/src/timers.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_timers.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_timers.axf"; # arm-none-eabi-objcopy -v -O binary "periph_timers.axf" "periph_timers.bin" ; # checksum -p LPC4337 -d "periph_timers.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18800	      0	    364	  19164	   4adc	periph_timers.axf
+ 
+18:49:15 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+make: No se hace nada para 'all'.
+18:51:34 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+18:51:35 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+18:51:35 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+Building file: ../example/src/timers.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/timers.d" -MT"example/src/timers.o" -MT"example/src/timers.d" -o "example/src/timers.o" "../example/src/timers.c"
+../example/src/timers.c: In function 'ConfigureTimer':
+../example/src/timers.c:118:11: warning: variable 'timerFreq' set but not used [-Wunused-but-set-variable]
+  uint32_t timerFreq;
+           ^
+Finished building: ../example/src/timers.c
+ 
+Building target: periph_timers.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_timers.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_timers_Debug.ld" -o "periph_timers.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o ./example/src/timers.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_timers.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_timers.axf"; # arm-none-eabi-objcopy -v -O binary "periph_timers.axf" "periph_timers.bin" ; # checksum -p LPC4337 -d "periph_timers.bin";
+   text	   data	    bss	    dec	    hex	filename
+  10328	      0	    364	  10692	   29c4	periph_timers.axf
+ 
+18:51:53 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+18:51:54 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+18:51:54 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+Building file: ../example/src/timers.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/timers.d" -MT"example/src/timers.o" -MT"example/src/timers.d" -o "example/src/timers.o" "../example/src/timers.c"
+../example/src/timers.c: In function 'ConfigureTimer':
+../example/src/timers.c:118:11: warning: variable 'timerFreq' set but not used [-Wunused-but-set-variable]
+  uint32_t timerFreq;
+           ^
+Finished building: ../example/src/timers.c
+ 
+Building target: periph_timers.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_timers.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_timers_Debug.ld" -o "periph_timers.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o ./example/src/timers.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_timers.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_timers.axf"; # arm-none-eabi-objcopy -v -O binary "periph_timers.axf" "periph_timers.bin" ; # checksum -p LPC4337 -d "periph_timers.bin";
+   text	   data	    bss	    dec	    hex	filename
+  10328	      0	    364	  10692	   29c4	periph_timers.axf
+ 
+18:52:24 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+18:52:24 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+18:52:24 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+Building file: ../example/src/timers.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/timers.d" -MT"example/src/timers.o" -MT"example/src/timers.d" -o "example/src/timers.o" "../example/src/timers.c"
+../example/src/timers.c: In function 'ConfigureTimer':
+../example/src/timers.c:118:11: warning: variable 'timerFreq' set but not used [-Wunused-but-set-variable]
+  uint32_t timerFreq;
+           ^
+Finished building: ../example/src/timers.c
+ 
+Building target: periph_timers.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_timers.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_timers_Debug.ld" -o "periph_timers.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o ./example/src/timers.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_timers.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_timers.axf"; # arm-none-eabi-objcopy -v -O binary "periph_timers.axf" "periph_timers.bin" ; # checksum -p LPC4337 -d "periph_timers.bin";
+   text	   data	    bss	    dec	    hex	filename
+  11032	      0	    364	  11396	   2c84	periph_timers.axf
+ 
+18:55:45 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+18:55:46 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+18:55:46 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+make: No se hace nada para 'all'.
+18:55:49 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+make: No se hace nada para 'all'.
+19:01:14 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+19:01:15 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+19:01:15 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+Building file: ../example/src/timers.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/timers.d" -MT"example/src/timers.o" -MT"example/src/timers.d" -o "example/src/timers.o" "../example/src/timers.c"
+../example/src/timers.c: In function 'ConfigureTimer':
+../example/src/timers.c:118:11: warning: variable 'timerFreq' set but not used [-Wunused-but-set-variable]
+  uint32_t timerFreq;
+           ^
+Finished building: ../example/src/timers.c
+ 
+Building target: periph_timers.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_timers.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_timers_Debug.ld" -o "periph_timers.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o ./example/src/timers.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_timers.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_timers.axf"; # arm-none-eabi-objcopy -v -O binary "periph_timers.axf" "periph_timers.bin" ; # checksum -p LPC4337 -d "periph_timers.bin";
+   text	   data	    bss	    dec	    hex	filename
+  11032	      0	    364	  11396	   2c84	periph_timers.axf
+ 
+19:02:04 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+make: No se hace nada para 'all'.
+19:03:53 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+19:03:54 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+19:03:54 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+Building file: ../example/src/timers.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/timers.d" -MT"example/src/timers.o" -MT"example/src/timers.d" -o "example/src/timers.o" "../example/src/timers.c"
+../example/src/timers.c: In function 'ConfigureTimer':
+../example/src/timers.c:118:11: warning: variable 'timerFreq' set but not used [-Wunused-but-set-variable]
+  uint32_t timerFreq;
+           ^
+Finished building: ../example/src/timers.c
+ 
+Building target: periph_timers.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_timers.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_timers_Debug.ld" -o "periph_timers.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o ./example/src/timers.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_timers.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_timers.axf"; # arm-none-eabi-objcopy -v -O binary "periph_timers.axf" "periph_timers.bin" ; # checksum -p LPC4337 -d "periph_timers.bin";
+   text	   data	    bss	    dec	    hex	filename
+  11032	      0	    364	  11396	   2c84	periph_timers.axf
+ 
+19:04:02 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+make: No se hace nada para 'all'.
+19:07:01 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+19:07:02 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+19:07:02 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+Building file: ../example/src/timers.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/timers.d" -MT"example/src/timers.o" -MT"example/src/timers.d" -o "example/src/timers.o" "../example/src/timers.c"
+../example/src/timers.c: In function 'ConfigureTimer':
+../example/src/timers.c:120:11: warning: variable 'timerFreq' set but not used [-Wunused-but-set-variable]
+  uint32_t timerFreq;
+           ^
+Finished building: ../example/src/timers.c
+ 
+Building target: periph_timers.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_timers.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_timers_Debug.ld" -o "periph_timers.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o ./example/src/timers.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_timers.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_timers.axf"; # arm-none-eabi-objcopy -v -O binary "periph_timers.axf" "periph_timers.bin" ; # checksum -p LPC4337 -d "periph_timers.bin";
+   text	   data	    bss	    dec	    hex	filename
+  11032	      0	    364	  11396	   2c84	periph_timers.axf
+ 
+19:07:04 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+make: No se hace nada para 'all'.
+19:08:19 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+19:08:19 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+19:08:20 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+Building file: ../example/src/timers.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/timers.d" -MT"example/src/timers.o" -MT"example/src/timers.d" -o "example/src/timers.o" "../example/src/timers.c"
+../example/src/timers.c: In function 'ConfigureTimer':
+../example/src/timers.c:120:11: warning: variable 'timerFreq' set but not used [-Wunused-but-set-variable]
+  uint32_t timerFreq;
+           ^
+Finished building: ../example/src/timers.c
+ 
+Building target: periph_timers.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_timers.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_timers_Debug.ld" -o "periph_timers.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o ./example/src/timers.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_timers.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_timers.axf"; # arm-none-eabi-objcopy -v -O binary "periph_timers.axf" "periph_timers.bin" ; # checksum -p LPC4337 -d "periph_timers.bin";
+   text	   data	    bss	    dec	    hex	filename
+  11032	      0	    364	  11396	   2c84	periph_timers.axf
+ 
+19:08:32 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+make: No se hace nada para 'all'.
+19:09:51 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+19:09:51 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+19:09:52 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+Building file: ../example/src/timers.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/timers.d" -MT"example/src/timers.o" -MT"example/src/timers.d" -o "example/src/timers.o" "../example/src/timers.c"
+../example/src/timers.c: In function 'ConfigureTimer':
+../example/src/timers.c:120:11: warning: variable 'timerFreq' set but not used [-Wunused-but-set-variable]
+  uint32_t timerFreq;
+           ^
+Finished building: ../example/src/timers.c
+ 
+Building target: periph_timers.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_timers.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_timers_Debug.ld" -o "periph_timers.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o ./example/src/timers.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_timers.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_timers.axf"; # arm-none-eabi-objcopy -v -O binary "periph_timers.axf" "periph_timers.bin" ; # checksum -p LPC4337 -d "periph_timers.bin";
+   text	   data	    bss	    dec	    hex	filename
+  11032	      0	    364	  11396	   2c84	periph_timers.axf
+ 
+19:10:00 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+make: No se hace nada para 'all'.
+19:11:27 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+19:11:28 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+19:11:29 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+Building file: ../example/src/timers.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/timers.d" -MT"example/src/timers.o" -MT"example/src/timers.d" -o "example/src/timers.o" "../example/src/timers.c"
+../example/src/timers.c: In function 'ConfigureTimer':
+../example/src/timers.c:120:11: warning: variable 'timerFreq' set but not used [-Wunused-but-set-variable]
+  uint32_t timerFreq;
+           ^
+Finished building: ../example/src/timers.c
+ 
+Building target: periph_timers.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_timers.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_timers_Debug.ld" -o "periph_timers.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o ./example/src/timers.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_timers.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_timers.axf"; # arm-none-eabi-objcopy -v -O binary "periph_timers.axf" "periph_timers.bin" ; # checksum -p LPC4337 -d "periph_timers.bin";
+   text	   data	    bss	    dec	    hex	filename
+  11032	      0	    364	  11396	   2c84	periph_timers.axf
+ 
+19:11:31 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+make: No se hace nada para 'all'.
+19:16:29 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+19:16:30 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+19:16:30 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+Building file: ../example/src/timers.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/timers.d" -MT"example/src/timers.o" -MT"example/src/timers.d" -o "example/src/timers.o" "../example/src/timers.c"
+../example/src/timers.c: In function 'ConfigureTimer':
+../example/src/timers.c:120:11: warning: variable 'timerFreq' set but not used [-Wunused-but-set-variable]
+  uint32_t timerFreq;
+           ^
+Finished building: ../example/src/timers.c
+ 
+Building target: periph_timers.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_timers.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_timers_Debug.ld" -o "periph_timers.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o ./example/src/timers.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_timers.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_timers.axf"; # arm-none-eabi-objcopy -v -O binary "periph_timers.axf" "periph_timers.bin" ; # checksum -p LPC4337 -d "periph_timers.bin";
+   text	   data	    bss	    dec	    hex	filename
+  11032	      0	    364	  11396	   2c84	periph_timers.axf
+ 
+19:16:43 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+make: No se hace nada para 'all'.
+19:17:47 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+19:17:47 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+19:17:48 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+Building file: ../example/src/timers.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/timers.d" -MT"example/src/timers.o" -MT"example/src/timers.d" -o "example/src/timers.o" "../example/src/timers.c"
+../example/src/timers.c: In function 'ConfigureTimer':
+../example/src/timers.c:120:11: warning: variable 'timerFreq' set but not used [-Wunused-but-set-variable]
+  uint32_t timerFreq;
+           ^
+Finished building: ../example/src/timers.c
+ 
+Building target: periph_timers.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_timers.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_timers_Debug.ld" -o "periph_timers.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o ./example/src/timers.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_timers.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_timers.axf"; # arm-none-eabi-objcopy -v -O binary "periph_timers.axf" "periph_timers.bin" ; # checksum -p LPC4337 -d "periph_timers.bin";
+   text	   data	    bss	    dec	    hex	filename
+  11036	      0	    364	  11400	   2c88	periph_timers.axf
+ 
+19:17:59 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+make: No se hace nada para 'all'.
+19:19:37 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+19:19:37 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+19:19:38 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+Building file: ../example/src/timers.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/timers.d" -MT"example/src/timers.o" -MT"example/src/timers.d" -o "example/src/timers.o" "../example/src/timers.c"
+../example/src/timers.c: In function 'ConfigureTimer':
+../example/src/timers.c:120:11: warning: variable 'timerFreq' set but not used [-Wunused-but-set-variable]
+  uint32_t timerFreq;
+           ^
+Finished building: ../example/src/timers.c
+ 
+Building target: periph_timers.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_timers.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_timers_Debug.ld" -o "periph_timers.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o ./example/src/timers.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_timers.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_timers.axf"; # arm-none-eabi-objcopy -v -O binary "periph_timers.axf" "periph_timers.bin" ; # checksum -p LPC4337 -d "periph_timers.bin";
+   text	   data	    bss	    dec	    hex	filename
+  11032	      0	    364	  11396	   2c84	periph_timers.axf
+ 
+19:19:42 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+make: No se hace nada para 'all'.
+19:36:25 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+19:36:26 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+19:36:26 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+Building file: ../example/src/timers.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/timers.d" -MT"example/src/timers.o" -MT"example/src/timers.d" -o "example/src/timers.o" "../example/src/timers.c"
+../example/src/timers.c: In function 'ConfigureTimer':
+../example/src/timers.c:121:11: warning: variable 'timerFreq' set but not used [-Wunused-but-set-variable]
+  uint32_t timerFreq;
+           ^
+Finished building: ../example/src/timers.c
+ 
+Building target: periph_timers.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_timers.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_timers_Debug.ld" -o "periph_timers.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o ./example/src/timers.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_timers.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_timers.axf"; # arm-none-eabi-objcopy -v -O binary "periph_timers.axf" "periph_timers.bin" ; # checksum -p LPC4337 -d "periph_timers.bin";
+   text	   data	    bss	    dec	    hex	filename
+  11024	      0	    364	  11388	   2c7c	periph_timers.axf
+ 
+19:36:41 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+make: No se hace nada para 'all'.

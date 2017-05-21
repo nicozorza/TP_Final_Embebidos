@@ -1,0 +1,6 @@
+19:36:41 **** Incremental Build of configuration Debug for project periph_timers ****
+make -r all 
+make: No se hace nada para 'all'.
+
+19:36:41 Build Finished (took 71ms)
+
