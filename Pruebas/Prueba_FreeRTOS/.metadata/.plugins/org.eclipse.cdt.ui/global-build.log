@@ -1122,3 +1122,552 @@ arm-none-eabi-size "Prueba_FreeRTOS.axf"; # arm-none-eabi-objcopy -v -O binary "
    text	   data	    bss	    dec	    hex	filename
   24656	      8	    688	  25352	   6308	Prueba_FreeRTOS.axf
  
+14:15:23 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+14:15:24 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+14:15:24 **** Incremental Build of configuration Debug for project Prueba_FreeRTOS ****
+make -r all 
+Building file: ../example/src/prueba_freertos.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/Prueba_FreeRTOS/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/Prueba_FreeRTOS/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"example/src/prueba_freertos.d" -MT"example/src/prueba_freertos.o" -MT"example/src/prueba_freertos.d" -o "example/src/prueba_freertos.o" "../example/src/prueba_freertos.c"
+../example/src/prueba_freertos.c:1077:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'void'
+ void vApplicationIdleHook(void){
+ ^
+../example/src/prueba_freertos.c: In function 'ADC0_IRQHandler':
+../example/src/prueba_freertos.c:1088:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+example/src/subdir.mk:24: fallo en las instrucciones para el objetivo 'example/src/prueba_freertos.o'
+  Chip_ADC_ReadValue(LPC_ADC0, ADC_CH0,&adc_data);
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/prueba_freertos.c:32:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+In file included from ../example/src/prueba_freertos.c:36:0:
+../example/src/prueba_freertos.c: In function 'TIMER1_IRQHandler':
+../example/src/prueba_freertos.c:1109:24: error: 'xTimerSemaphore' undeclared (first use in this function)
+  xSemaphoreGiveFromISR(xTimerSemaphore, &xHigherPriorityTaskWoken); //Se otorga el semaforo del timer
+                        ^
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/Prueba_FreeRTOS/freertos/inc/semphr.h:608:118: note: in definition of macro 'xSemaphoreGiveFromISR'
+ #define xSemaphoreGiveFromISR( xSemaphore, pxHigherPriorityTaskWoken ) xQueueGenericSendFromISR( ( QueueHandle_t ) ( xSemaphore ), NULL, ( pxHigherPriorityTaskWoken ), queueSEND_TO_BACK )
+                                                                                                                      ^
+../example/src/prueba_freertos.c:1109:24: note: each undeclared identifier is reported only once for each function it appears in
+  xSemaphoreGiveFromISR(xTimerSemaphore, &xHigherPriorityTaskWoken); //Se otorga el semaforo del timer
+                        ^
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/Prueba_FreeRTOS/freertos/inc/semphr.h:608:118: note: in definition of macro 'xSemaphoreGiveFromISR'
+ #define xSemaphoreGiveFromISR( xSemaphore, pxHigherPriorityTaskWoken ) xQueueGenericSendFromISR( ( QueueHandle_t ) ( xSemaphore ), NULL, ( pxHigherPriorityTaskWoken ), queueSEND_TO_BACK )
+                                                                                                                      ^
+../example/src/prueba_freertos.c: In function 'SetupHardware':
+../example/src/prueba_freertos.c:1126:2: warning: implicit declaration of function 'ConfigureTimer' [-Wimplicit-function-declaration]
+  ConfigureTimer(); //Se configura el timer para la generacion del delay del trigger
+  ^
+../example/src/prueba_freertos.c: At top level:
+../example/src/prueba_freertos.c:1161:6: warning: conflicting types for 'ConfigureTimer'
+ void ConfigureTimer( void ){
+      ^
+../example/src/prueba_freertos.c:1126:2: note: previous implicit declaration of 'ConfigureTimer' was here
+  ConfigureTimer(); //Se configura el timer para la generacion del delay del trigger
+  ^
+In file included from ../example/src/prueba_freertos.c:36:0:
+../example/src/prueba_freertos.c: In function 'vHandlerFireTrigger':
+../example/src/prueba_freertos.c:1214:20: error: 'xTImerSemaphore' undeclared (first use in this function)
+     xSemaphoreTake(xTImerSemaphore, (portTickType) 0);
+                    ^
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/Prueba_FreeRTOS/freertos/inc/semphr.h:248:93: note: in definition of macro 'xSemaphoreTake'
+ #define xSemaphoreTake( xSemaphore, xBlockTime )  xQueueGenericReceive( ( QueueHandle_t ) ( xSemaphore ), NULL, ( xBlockTime ), pdFALSE )
+                                                                                             ^
+../example/src/prueba_freertos.c:1219:24: error: 'xTimerSemaphore' undeclared (first use in this function)
+         xSemaphoreTake(xTimerSemaphore, portMAX_DELAY);
+                        ^
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/Prueba_FreeRTOS/freertos/inc/semphr.h:248:93: note: in definition of macro 'xSemaphoreTake'
+ #define xSemaphoreTake( xSemaphore, xBlockTime )  xQueueGenericReceive( ( QueueHandle_t ) ( xSemaphore ), NULL, ( xBlockTime ), pdFALSE )
+                                                                                             ^
+In file included from ../example/src/prueba_freertos.c:36:0:
+../example/src/prueba_freertos.c: In function 'main':
+../example/src/prueba_freertos.c:1234:25: error: 'xTimerSemaphore' undeclared (first use in this function)
+  vSemaphoreCreateBinary(xTimerSemaphore); //Se crea el semaforo para la activacion del timer
+                         ^
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/Prueba_FreeRTOS/freertos/inc/semphr.h:129:5: note: in definition of macro 'vSemaphoreCreateBinary'
+   ( xSemaphore ) = xQueueGenericCreate( ( UBaseType_t ) 1, semSEMAPHORE_QUEUE_ITEM_LENGTH, queueQUEUE_TYPE_BINARY_SEMAPHORE ); \
+     ^
+make: *** [example/src/prueba_freertos.o] Error 1
+14:16:02 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+14:16:03 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+14:16:03 **** Incremental Build of configuration Debug for project Prueba_FreeRTOS ****
+make -r all 
+Building file: ../example/src/prueba_freertos.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/Prueba_FreeRTOS/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/Prueba_FreeRTOS/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"example/src/prueba_freertos.d" -MT"example/src/prueba_freertos.o" -MT"example/src/prueba_freertos.d" -o "example/src/prueba_freertos.o" "../example/src/prueba_freertos.c"
+../example/src/prueba_freertos.c: In function 'ADC0_IRQHandler':
+../example/src/prueba_freertos.c:1088:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC0, ADC_CH0,&adc_data);
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/prueba_freertos.c:32:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+example/src/subdir.mk:24: fallo en las instrucciones para el objetivo 'example/src/prueba_freertos.o'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+../example/src/prueba_freertos.c: In function 'SetupHardware':
+../example/src/prueba_freertos.c:1126:2: warning: implicit declaration of function 'ConfigureTimer' [-Wimplicit-function-declaration]
+  ConfigureTimer(); //Se configura el timer para la generacion del delay del trigger
+  ^
+../example/src/prueba_freertos.c: At top level:
+../example/src/prueba_freertos.c:1161:6: warning: conflicting types for 'ConfigureTimer'
+ void ConfigureTimer( void ){
+      ^
+../example/src/prueba_freertos.c:1126:2: note: previous implicit declaration of 'ConfigureTimer' was here
+  ConfigureTimer(); //Se configura el timer para la generacion del delay del trigger
+  ^
+In file included from ../example/src/prueba_freertos.c:36:0:
+../example/src/prueba_freertos.c: In function 'vHandlerFireTrigger':
+../example/src/prueba_freertos.c:1214:20: error: 'xTImerSemaphore' undeclared (first use in this function)
+     xSemaphoreTake(xTImerSemaphore, (portTickType) 0);
+                    ^
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/Prueba_FreeRTOS/freertos/inc/semphr.h:248:93: note: in definition of macro 'xSemaphoreTake'
+ #define xSemaphoreTake( xSemaphore, xBlockTime )  xQueueGenericReceive( ( QueueHandle_t ) ( xSemaphore ), NULL, ( xBlockTime ), pdFALSE )
+                                                                                             ^
+../example/src/prueba_freertos.c:1214:20: note: each undeclared identifier is reported only once for each function it appears in
+     xSemaphoreTake(xTImerSemaphore, (portTickType) 0);
+                    ^
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/Prueba_FreeRTOS/freertos/inc/semphr.h:248:93: note: in definition of macro 'xSemaphoreTake'
+ #define xSemaphoreTake( xSemaphore, xBlockTime )  xQueueGenericReceive( ( QueueHandle_t ) ( xSemaphore ), NULL, ( xBlockTime ), pdFALSE )
+                                                                                             ^
+make: *** [example/src/prueba_freertos.o] Error 1
+14:16:15 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+14:16:16 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+14:16:16 **** Incremental Build of configuration Debug for project Prueba_FreeRTOS ****
+make -r all 
+Building file: ../example/src/prueba_freertos.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/Prueba_FreeRTOS/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/Prueba_FreeRTOS/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"example/src/prueba_freertos.d" -MT"example/src/prueba_freertos.o" -MT"example/src/prueba_freertos.d" -o "example/src/prueba_freertos.o" "../example/src/prueba_freertos.c"
+../example/src/prueba_freertos.c: In function 'ADC0_IRQHandler':
+../example/src/prueba_freertos.c:1088:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC0, ADC_CH0,&adc_data);
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/prueba_freertos.c:32:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+../example/src/prueba_freertos.c: In function 'SetupHardware':
+../example/src/prueba_freertos.c:1126:2: warning: implicit declaration of function 'ConfigureTimer' [-Wimplicit-function-declaration]
+  ConfigureTimer(); //Se configura el timer para la generacion del delay del trigger
+  ^
+../example/src/prueba_freertos.c: At top level:
+../example/src/prueba_freertos.c:1161:6: warning: conflicting types for 'ConfigureTimer'
+ void ConfigureTimer( void ){
+      ^
+../example/src/prueba_freertos.c:1126:2: note: previous implicit declaration of 'ConfigureTimer' was here
+  ConfigureTimer(); //Se configura el timer para la generacion del delay del trigger
+  ^
+Finished building: ../example/src/prueba_freertos.c
+ 
+Building target: Prueba_FreeRTOS.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="Prueba_FreeRTOS.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "Prueba_FreeRTOS_Debug.ld" -o "Prueba_FreeRTOS.axf"  ./freertos/src/FreeRTOSCommonHooks.o ./freertos/src/croutine.o ./freertos/src/event_groups.o ./freertos/src/heap_3.o ./freertos/src/list.o ./freertos/src/port.o ./freertos/src/queue.o ./freertos/src/redlib_memfix.o ./freertos/src/tasks.o ./freertos/src/timers.o  ./example/src/cr_startup_lpc43xx.o ./example/src/prueba_freertos.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: Prueba_FreeRTOS.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Prueba_FreeRTOS.axf"; # arm-none-eabi-objcopy -v -O binary "Prueba_FreeRTOS.axf" "Prueba_FreeRTOS.bin" ; # checksum -p LPC4337 -d "Prueba_FreeRTOS.bin";
+   text	   data	    bss	    dec	    hex	filename
+  25672	      8	    692	  26372	   6704	Prueba_FreeRTOS.axf
+ 
+14:17:24 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+14:17:25 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+14:17:25 **** Incremental Build of configuration Debug for project Prueba_FreeRTOS ****
+make -r all 
+Building file: ../example/src/prueba_freertos.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/Prueba_FreeRTOS/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/Prueba_FreeRTOS/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"example/src/prueba_freertos.d" -MT"example/src/prueba_freertos.o" -MT"example/src/prueba_freertos.d" -o "example/src/prueba_freertos.o" "../example/src/prueba_freertos.c"
+../example/src/prueba_freertos.c: In function 'ADC0_IRQHandler':
+../example/src/prueba_freertos.c:1089:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC0, ADC_CH0,&adc_data);
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/prueba_freertos.c:32:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+Finished building: ../example/src/prueba_freertos.c
+ 
+Building target: Prueba_FreeRTOS.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="Prueba_FreeRTOS.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "Prueba_FreeRTOS_Debug.ld" -o "Prueba_FreeRTOS.axf"  ./freertos/src/FreeRTOSCommonHooks.o ./freertos/src/croutine.o ./freertos/src/event_groups.o ./freertos/src/heap_3.o ./freertos/src/list.o ./freertos/src/port.o ./freertos/src/queue.o ./freertos/src/redlib_memfix.o ./freertos/src/tasks.o ./freertos/src/timers.o  ./example/src/cr_startup_lpc43xx.o ./example/src/prueba_freertos.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: Prueba_FreeRTOS.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Prueba_FreeRTOS.axf"; # arm-none-eabi-objcopy -v -O binary "Prueba_FreeRTOS.axf" "Prueba_FreeRTOS.bin" ; # checksum -p LPC4337 -d "Prueba_FreeRTOS.bin";
+   text	   data	    bss	    dec	    hex	filename
+  25672	      8	    692	  26372	   6704	Prueba_FreeRTOS.axf
+ 
+14:17:46 **** Incremental Build of configuration Debug for project Prueba_FreeRTOS ****
+make -r all 
+make: No se hace nada para 'all'.
+14:20:03 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+14:20:04 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+14:20:05 **** Incremental Build of configuration Debug for project Prueba_FreeRTOS ****
+make -r all 
+Building file: ../example/src/prueba_freertos.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/Prueba_FreeRTOS/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/Prueba_FreeRTOS/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"example/src/prueba_freertos.d" -MT"example/src/prueba_freertos.o" -MT"example/src/prueba_freertos.d" -o "example/src/prueba_freertos.o" "../example/src/prueba_freertos.c"
+../example/src/prueba_freertos.c: In function 'ADC0_IRQHandler':
+../example/src/prueba_freertos.c:1089:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC0, ADC_CH0,&adc_data);
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/prueba_freertos.c:32:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+Finished building: ../example/src/prueba_freertos.c
+ 
+Building target: Prueba_FreeRTOS.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="Prueba_FreeRTOS.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "Prueba_FreeRTOS_Debug.ld" -o "Prueba_FreeRTOS.axf"  ./freertos/src/FreeRTOSCommonHooks.o ./freertos/src/croutine.o ./freertos/src/event_groups.o ./freertos/src/heap_3.o ./freertos/src/list.o ./freertos/src/port.o ./freertos/src/queue.o ./freertos/src/redlib_memfix.o ./freertos/src/tasks.o ./freertos/src/timers.o  ./example/src/cr_startup_lpc43xx.o ./example/src/prueba_freertos.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: Prueba_FreeRTOS.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Prueba_FreeRTOS.axf"; # arm-none-eabi-objcopy -v -O binary "Prueba_FreeRTOS.axf" "Prueba_FreeRTOS.bin" ; # checksum -p LPC4337 -d "Prueba_FreeRTOS.bin";
+   text	   data	    bss	    dec	    hex	filename
+  25680	      8	    692	  26380	   670c	Prueba_FreeRTOS.axf
+ 
+14:20:15 **** Incremental Build of configuration Debug for project Prueba_FreeRTOS ****
+make -r all 
+make: No se hace nada para 'all'.
+14:21:25 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+14:21:25 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+14:21:26 **** Incremental Build of configuration Debug for project Prueba_FreeRTOS ****
+make -r all 
+Building file: ../example/src/prueba_freertos.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/Prueba_FreeRTOS/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/Prueba_FreeRTOS/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"example/src/prueba_freertos.d" -MT"example/src/prueba_freertos.o" -MT"example/src/prueba_freertos.d" -o "example/src/prueba_freertos.o" "../example/src/prueba_freertos.c"
+../example/src/prueba_freertos.c: In function 'ADC0_IRQHandler':
+../example/src/prueba_freertos.c:1089:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC0, ADC_CH0,&adc_data);
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/prueba_freertos.c:32:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+Finished building: ../example/src/prueba_freertos.c
+ 
+Building target: Prueba_FreeRTOS.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="Prueba_FreeRTOS.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "Prueba_FreeRTOS_Debug.ld" -o "Prueba_FreeRTOS.axf"  ./freertos/src/FreeRTOSCommonHooks.o ./freertos/src/croutine.o ./freertos/src/event_groups.o ./freertos/src/heap_3.o ./freertos/src/list.o ./freertos/src/port.o ./freertos/src/queue.o ./freertos/src/redlib_memfix.o ./freertos/src/tasks.o ./freertos/src/timers.o  ./example/src/cr_startup_lpc43xx.o ./example/src/prueba_freertos.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: Prueba_FreeRTOS.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Prueba_FreeRTOS.axf"; # arm-none-eabi-objcopy -v -O binary "Prueba_FreeRTOS.axf" "Prueba_FreeRTOS.bin" ; # checksum -p LPC4337 -d "Prueba_FreeRTOS.bin";
+   text	   data	    bss	    dec	    hex	filename
+  25680	      8	    692	  26380	   670c	Prueba_FreeRTOS.axf
+ 
+14:21:33 **** Incremental Build of configuration Debug for project Prueba_FreeRTOS ****
+make -r all 
+make: No se hace nada para 'all'.
+14:22:11 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+14:22:12 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+14:22:12 **** Incremental Build of configuration Debug for project Prueba_FreeRTOS ****
+make -r all 
+Building file: ../example/src/prueba_freertos.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/Prueba_FreeRTOS/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/Prueba_FreeRTOS/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"example/src/prueba_freertos.d" -MT"example/src/prueba_freertos.o" -MT"example/src/prueba_freertos.d" -o "example/src/prueba_freertos.o" "../example/src/prueba_freertos.c"
+../example/src/prueba_freertos.c: In function 'ADC0_IRQHandler':
+../example/src/prueba_freertos.c:1089:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC0, ADC_CH0,&adc_data);
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/prueba_freertos.c:32:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+Finished building: ../example/src/prueba_freertos.c
+ 
+Building target: Prueba_FreeRTOS.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="Prueba_FreeRTOS.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "Prueba_FreeRTOS_Debug.ld" -o "Prueba_FreeRTOS.axf"  ./freertos/src/FreeRTOSCommonHooks.o ./freertos/src/croutine.o ./freertos/src/event_groups.o ./freertos/src/heap_3.o ./freertos/src/list.o ./freertos/src/port.o ./freertos/src/queue.o ./freertos/src/redlib_memfix.o ./freertos/src/tasks.o ./freertos/src/timers.o  ./example/src/cr_startup_lpc43xx.o ./example/src/prueba_freertos.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: Prueba_FreeRTOS.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Prueba_FreeRTOS.axf"; # arm-none-eabi-objcopy -v -O binary "Prueba_FreeRTOS.axf" "Prueba_FreeRTOS.bin" ; # checksum -p LPC4337 -d "Prueba_FreeRTOS.bin";
+   text	   data	    bss	    dec	    hex	filename
+  25672	      8	    692	  26372	   6704	Prueba_FreeRTOS.axf
+ 
+14:39:00 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+14:39:01 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+14:39:01 **** Incremental Build of configuration Debug for project Prueba_FreeRTOS ****
+make -r all 
+Building file: ../example/src/prueba_freertos.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/Prueba_FreeRTOS/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/Prueba_FreeRTOS/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"example/src/prueba_freertos.d" -MT"example/src/prueba_freertos.o" -MT"example/src/prueba_freertos.d" -o "example/src/prueba_freertos.o" "../example/src/prueba_freertos.c"
+../example/src/prueba_freertos.c: In function 'ADC0_IRQHandler':
+../example/src/prueba_freertos.c:1089:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC0, ADC_CH0,&adc_data);
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/prueba_freertos.c:32:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+Finished building: ../example/src/prueba_freertos.c
+ 
+Building target: Prueba_FreeRTOS.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="Prueba_FreeRTOS.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "Prueba_FreeRTOS_Debug.ld" -o "Prueba_FreeRTOS.axf"  ./freertos/src/FreeRTOSCommonHooks.o ./freertos/src/croutine.o ./freertos/src/event_groups.o ./freertos/src/heap_3.o ./freertos/src/list.o ./freertos/src/port.o ./freertos/src/queue.o ./freertos/src/redlib_memfix.o ./freertos/src/tasks.o ./freertos/src/timers.o  ./example/src/cr_startup_lpc43xx.o ./example/src/prueba_freertos.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: Prueba_FreeRTOS.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Prueba_FreeRTOS.axf"; # arm-none-eabi-objcopy -v -O binary "Prueba_FreeRTOS.axf" "Prueba_FreeRTOS.bin" ; # checksum -p LPC4337 -d "Prueba_FreeRTOS.bin";
+   text	   data	    bss	    dec	    hex	filename
+  25952	      8	    692	  26652	   681c	Prueba_FreeRTOS.axf
+ 
+14:39:05 **** Incremental Build of configuration Debug for project Prueba_FreeRTOS ****
+make -r all 
+make: No se hace nada para 'all'.
+14:40:45 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+14:40:45 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+14:40:46 **** Incremental Build of configuration Debug for project Prueba_FreeRTOS ****
+make -r all 
+Building file: ../example/src/prueba_freertos.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/Prueba_FreeRTOS/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/Prueba_FreeRTOS/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"example/src/prueba_freertos.d" -MT"example/src/prueba_freertos.o" -MT"example/src/prueba_freertos.d" -o "example/src/prueba_freertos.o" "../example/src/prueba_freertos.c"
+../example/src/prueba_freertos.c: In function 'ADC0_IRQHandler':
+../example/src/prueba_freertos.c:1089:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC0, ADC_CH0,&adc_data);
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/prueba_freertos.c:32:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+Finished building: ../example/src/prueba_freertos.c
+ 
+Building target: Prueba_FreeRTOS.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="Prueba_FreeRTOS.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "Prueba_FreeRTOS_Debug.ld" -o "Prueba_FreeRTOS.axf"  ./freertos/src/FreeRTOSCommonHooks.o ./freertos/src/croutine.o ./freertos/src/event_groups.o ./freertos/src/heap_3.o ./freertos/src/list.o ./freertos/src/port.o ./freertos/src/queue.o ./freertos/src/redlib_memfix.o ./freertos/src/tasks.o ./freertos/src/timers.o  ./example/src/cr_startup_lpc43xx.o ./example/src/prueba_freertos.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: Prueba_FreeRTOS.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Prueba_FreeRTOS.axf"; # arm-none-eabi-objcopy -v -O binary "Prueba_FreeRTOS.axf" "Prueba_FreeRTOS.bin" ; # checksum -p LPC4337 -d "Prueba_FreeRTOS.bin";
+   text	   data	    bss	    dec	    hex	filename
+  25952	      8	    692	  26652	   681c	Prueba_FreeRTOS.axf
+ 
+14:40:50 **** Incremental Build of configuration Debug for project Prueba_FreeRTOS ****
+make -r all 
+make: No se hace nada para 'all'.
+14:51:08 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+14:51:08 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+14:51:09 **** Incremental Build of configuration Debug for project Prueba_FreeRTOS ****
+make -r all 
+Building file: ../example/src/prueba_freertos.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/Prueba_FreeRTOS/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/Prueba_FreeRTOS/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"example/src/prueba_freertos.d" -MT"example/src/prueba_freertos.o" -MT"example/src/prueba_freertos.d" -o "example/src/prueba_freertos.o" "../example/src/prueba_freertos.c"
+../example/src/prueba_freertos.c: In function 'ADC0_IRQHandler':
+../example/src/prueba_freertos.c:1092:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC0, ADC_CH0,&adc_data);
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/prueba_freertos.c:32:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+Finished building: ../example/src/prueba_freertos.c
+ 
+Building target: Prueba_FreeRTOS.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="Prueba_FreeRTOS.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "Prueba_FreeRTOS_Debug.ld" -o "Prueba_FreeRTOS.axf"  ./freertos/src/FreeRTOSCommonHooks.o ./freertos/src/croutine.o ./freertos/src/event_groups.o ./freertos/src/heap_3.o ./freertos/src/list.o ./freertos/src/port.o ./freertos/src/queue.o ./freertos/src/redlib_memfix.o ./freertos/src/tasks.o ./freertos/src/timers.o  ./example/src/cr_startup_lpc43xx.o ./example/src/prueba_freertos.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: Prueba_FreeRTOS.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Prueba_FreeRTOS.axf"; # arm-none-eabi-objcopy -v -O binary "Prueba_FreeRTOS.axf" "Prueba_FreeRTOS.bin" ; # checksum -p LPC4337 -d "Prueba_FreeRTOS.bin";
+   text	   data	    bss	    dec	    hex	filename
+  26056	      8	    692	  26756	   6884	Prueba_FreeRTOS.axf
+ 
+14:51:14 **** Incremental Build of configuration Debug for project Prueba_FreeRTOS ****
+make -r all 
+make: No se hace nada para 'all'.
+14:53:46 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+14:53:46 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+14:53:47 **** Incremental Build of configuration Debug for project Prueba_FreeRTOS ****
+make -r all 
+Building file: ../example/src/prueba_freertos.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/Prueba_FreeRTOS/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/Prueba_FreeRTOS/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"example/src/prueba_freertos.d" -MT"example/src/prueba_freertos.o" -MT"example/src/prueba_freertos.d" -o "example/src/prueba_freertos.o" "../example/src/prueba_freertos.c"
+../example/src/prueba_freertos.c: In function 'ADC0_IRQHandler':
+../example/src/prueba_freertos.c:1092:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC0, ADC_CH0,&adc_data);
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/prueba_freertos.c:32:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+Finished building: ../example/src/prueba_freertos.c
+ 
+Building target: Prueba_FreeRTOS.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="Prueba_FreeRTOS.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "Prueba_FreeRTOS_Debug.ld" -o "Prueba_FreeRTOS.axf"  ./freertos/src/FreeRTOSCommonHooks.o ./freertos/src/croutine.o ./freertos/src/event_groups.o ./freertos/src/heap_3.o ./freertos/src/list.o ./freertos/src/port.o ./freertos/src/queue.o ./freertos/src/redlib_memfix.o ./freertos/src/tasks.o ./freertos/src/timers.o  ./example/src/cr_startup_lpc43xx.o ./example/src/prueba_freertos.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: Prueba_FreeRTOS.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Prueba_FreeRTOS.axf"; # arm-none-eabi-objcopy -v -O binary "Prueba_FreeRTOS.axf" "Prueba_FreeRTOS.bin" ; # checksum -p LPC4337 -d "Prueba_FreeRTOS.bin";
+   text	   data	    bss	    dec	    hex	filename
+  26096	      8	    692	  26796	   68ac	Prueba_FreeRTOS.axf
+ 
+14:53:51 **** Incremental Build of configuration Debug for project Prueba_FreeRTOS ****
+make -r all 
+make: No se hace nada para 'all'.
+14:54:35 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+14:54:35 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+14:54:36 **** Incremental Build of configuration Debug for project Prueba_FreeRTOS ****
+make -r all 
+Building file: ../example/src/prueba_freertos.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/Prueba_FreeRTOS/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/Prueba_FreeRTOS/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"example/src/prueba_freertos.d" -MT"example/src/prueba_freertos.o" -MT"example/src/prueba_freertos.d" -o "example/src/prueba_freertos.o" "../example/src/prueba_freertos.c"
+../example/src/prueba_freertos.c: In function 'ADC0_IRQHandler':
+../example/src/prueba_freertos.c:1092:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC0, ADC_CH0,&adc_data);
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/prueba_freertos.c:32:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+Finished building: ../example/src/prueba_freertos.c
+ 
+Building target: Prueba_FreeRTOS.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="Prueba_FreeRTOS.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "Prueba_FreeRTOS_Debug.ld" -o "Prueba_FreeRTOS.axf"  ./freertos/src/FreeRTOSCommonHooks.o ./freertos/src/croutine.o ./freertos/src/event_groups.o ./freertos/src/heap_3.o ./freertos/src/list.o ./freertos/src/port.o ./freertos/src/queue.o ./freertos/src/redlib_memfix.o ./freertos/src/tasks.o ./freertos/src/timers.o  ./example/src/cr_startup_lpc43xx.o ./example/src/prueba_freertos.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: Prueba_FreeRTOS.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Prueba_FreeRTOS.axf"; # arm-none-eabi-objcopy -v -O binary "Prueba_FreeRTOS.axf" "Prueba_FreeRTOS.bin" ; # checksum -p LPC4337 -d "Prueba_FreeRTOS.bin";
+   text	   data	    bss	    dec	    hex	filename
+  26096	      8	    692	  26796	   68ac	Prueba_FreeRTOS.axf
+ 
+14:54:39 **** Incremental Build of configuration Debug for project Prueba_FreeRTOS ****
+make -r all 
+make: No se hace nada para 'all'.
+15:18:01 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+15:18:01 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+15:18:02 **** Incremental Build of configuration Debug for project Prueba_FreeRTOS ****
+make -r all 
+Building file: ../example/src/prueba_freertos.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/Prueba_FreeRTOS/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/Prueba_FreeRTOS/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"example/src/prueba_freertos.d" -MT"example/src/prueba_freertos.o" -MT"example/src/prueba_freertos.d" -o "example/src/prueba_freertos.o" "../example/src/prueba_freertos.c"
+../example/src/prueba_freertos.c: In function 'ADC0_IRQHandler':
+../example/src/prueba_freertos.c:1092:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC0, ADC_CH0,&adc_data);
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/prueba_freertos.c:32:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+Finished building: ../example/src/prueba_freertos.c
+ 
+Building target: Prueba_FreeRTOS.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="Prueba_FreeRTOS.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "Prueba_FreeRTOS_Debug.ld" -o "Prueba_FreeRTOS.axf"  ./freertos/src/FreeRTOSCommonHooks.o ./freertos/src/croutine.o ./freertos/src/event_groups.o ./freertos/src/heap_3.o ./freertos/src/list.o ./freertos/src/port.o ./freertos/src/queue.o ./freertos/src/redlib_memfix.o ./freertos/src/tasks.o ./freertos/src/timers.o  ./example/src/cr_startup_lpc43xx.o ./example/src/prueba_freertos.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: Prueba_FreeRTOS.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Prueba_FreeRTOS.axf"; # arm-none-eabi-objcopy -v -O binary "Prueba_FreeRTOS.axf" "Prueba_FreeRTOS.bin" ; # checksum -p LPC4337 -d "Prueba_FreeRTOS.bin";
+   text	   data	    bss	    dec	    hex	filename
+  26096	      8	    692	  26796	   68ac	Prueba_FreeRTOS.axf
+ 
+15:18:04 **** Incremental Build of configuration Debug for project Prueba_FreeRTOS ****
+make -r all 
+make: No se hace nada para 'all'.
+15:18:13 **** Incremental Build of configuration Debug for project Prueba_FreeRTOS ****
+make -r all 
+make: No se hace nada para 'all'.
