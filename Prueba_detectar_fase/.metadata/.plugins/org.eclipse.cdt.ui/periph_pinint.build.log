@@ -1,6 +1,0 @@
-17:11:51 **** Incremental Build of configuration Debug for project periph_pinint ****
-make -r all 
-make: No se hace nada para 'all'.
-
-17:11:51 Build Finished (took 60ms)
-
