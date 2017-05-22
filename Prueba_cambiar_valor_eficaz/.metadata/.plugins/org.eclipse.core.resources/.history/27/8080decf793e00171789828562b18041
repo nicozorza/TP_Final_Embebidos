@@ -61,15 +61,28 @@
  * Public functions
  ****************************************************************************/
 
+volatile bool systick_flag=false;
+volatile bool timer_flag=false;
+uint16_t adc_data=0;
+#define TIMER_BASE 1000
+#define TIMER_MAX 500000
+#define TIMER_STEP (TIMER_MAX-TIMER_BASE)/1024
+
 /**
  * @brief	Handle interrupt from GPIO pin or GPIO pin mapped to PININT
  * @return	Nothing
  */
 void PININT_IRQ_HANDLER(void)
 {
+	uint32_t aux;
+
 	Chip_PININT_ClearIntStatus(LPC_GPIO_PIN_INT, PININTCH(PININT_INDEX));
-	Board_LED_Toggle(4);
+	aux=TIMER_BASE+TIMER_STEP*adc_data;
+	if( aux >= TIMER_MAX )
+		aux=TIMER_MAX;
+	Chip_TIMER_SetMatch(LPC_TIMER1, 1, aux);
 	Chip_TIMER_Enable(LPC_TIMER1);
+	//DEBUGOUT("%i\n\r",aux);
 }
 
 /**
@@ -78,21 +91,32 @@ void PININT_IRQ_HANDLER(void)
  */
 void TIMER1_IRQHandler(void)
 {
-	static bool On = false;
-	int i=100;
 
 	Chip_TIMER_Disable(LPC_TIMER1);
 	if (Chip_TIMER_MatchPending(LPC_TIMER1, 1)) {
+		timer_flag=true;
 		Chip_TIMER_ClearMatch(LPC_TIMER1, 1);
-		On = (bool) !On;
-		Board_LED_Set(0, On);
-		Chip_GPIO_SetPinState(LPC_GPIO_PORT, 3, 4, true);
-		while(i--);
-		Chip_GPIO_SetPinState(LPC_GPIO_PORT, 3, 4, false);
-		Board_LED_Set(0, !On);
 	}
 
 }
+
+void ADC0_IRQHandler(void){
+	Chip_ADC_ReadValue(LPC_ADC0, ADC_CH0,&adc_data);
+}
+/**
+ * @brief	Handle interrupt from SysTick timer
+ * @return	Nothing
+ */
+static uint32_t tick_ct = 0;
+void SysTick_Handler(void)
+{
+	tick_ct += 1;
+	if ((tick_ct % 10) == 0) {
+		systick_flag=true;
+		Chip_ADC_SetStartMode(LPC_ADC0, ADC_START_NOW, ADC_TRIGGERMODE_RISING);
+	}
+}
+
 void ConfigureTimer( void ){
 	uint32_t timerFreq;
 
@@ -107,17 +131,13 @@ void ConfigureTimer( void ){
 	/* Timer setup for match and interrupt at TICKRATE_HZ */
 	Chip_TIMER_Reset(LPC_TIMER1);
 	Chip_TIMER_MatchEnableInt(LPC_TIMER1, 1);
-	Chip_TIMER_SetMatch(LPC_TIMER1, 1, 255000);
+	Chip_TIMER_SetMatch(LPC_TIMER1, 1, 450000);
 	Chip_TIMER_ResetOnMatchEnable(LPC_TIMER1, 1);
 	//Chip_TIMER_Enable(LPC_TIMER1);
 
 	/* Enable timer interrupt */
 	NVIC_EnableIRQ(TIMER1_IRQn);
 	NVIC_ClearPendingIRQ(TIMER1_IRQn);
-
-	DEBUGSTR("Blinky example using timer 1!\r\n");
-	DEBUGOUT("Timer 1 clock     = %d Hz\r\n", timerFreq);
-	DEBUGOUT("Timer 1 tick rate = %d Hz\r\n", TICKRATE_HZ);
 
 	Chip_SCU_PinMuxSet(6, 5,(SCU_MODE_INBUFF_EN | SCU_MODE_INACT | TEST_INPUT_MODE_FUNC) );
 	Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, 3, 4);	//Pin de salida
@@ -148,20 +168,45 @@ void ConfigurePhaseDetector( void ){
 	NVIC_ClearPendingIRQ(PININT_NVIC_NAME);
 	NVIC_EnableIRQ(PININT_NVIC_NAME);
 }
+
+ADC_CLOCK_SETUP_T ADCSetup;
+void ConfigureADC( void ){
+	/* Inicializacion del ADC */
+		Chip_ADC_Init(LPC_ADC0, &ADCSetup);
+		Chip_ADC_EnableChannel(LPC_ADC0, ADC_CH0, ENABLE);
+		NVIC_EnableIRQ(ADC0_IRQn);
+		Chip_ADC_Int_SetChannelCmd(LPC_ADC0, ADC_CH0, ENABLE);
+		//Chip_ADC_SetStartMode(LPC_ADC0, ADC_START_NOW, ADC_TRIGGERMODE_RISING);
+}
 /**
  * @brief	main routine for blinky example
  * @return	Function should not exit.
  */
 int main(void)
 {
+	int i=100;
 
 	SystemCoreClockUpdate();
 	Board_Init();
+	/* Enable and setup SysTick Timer at a periodic rate */
+	SysTick_Config(SystemCoreClock / TICKRATE_HZ);
 
 	ConfigureTimer();
 	ConfigurePhaseDetector();
+	ConfigureADC();
 
 	while (1) {
 		__WFI();
+		if( timer_flag==true ){
+			timer_flag=false;
+			i=100;
+			Chip_GPIO_SetPinState(LPC_GPIO_PORT, 3, 4, true);
+			while(i--);
+			Chip_GPIO_SetPinState(LPC_GPIO_PORT, 3, 4, false);
+		}
+		if( systick_flag==true ){
+			//Chip_ADC_SetStartMode(LPC_ADC0, ADC_START_NOW, ADC_TRIGGERMODE_RISING);
+			systick_flag=false;
+		}
 	}
 }
