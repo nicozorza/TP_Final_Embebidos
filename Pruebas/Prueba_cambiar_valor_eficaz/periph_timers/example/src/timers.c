@@ -64,8 +64,8 @@
 volatile bool systick_flag=false;
 volatile bool timer_flag=false;
 uint16_t adc_data=0;
-#define TIMER_BASE 100000
-#define TIMER_MAX 500000
+#define TIMER_BASE 200000
+#define TIMER_MAX 900000
 #define TIMER_STEP (TIMER_MAX-TIMER_BASE)/1024
 
 /**
@@ -199,7 +199,7 @@ int main(void)
 		__WFI();
 		if( timer_flag==true ){
 			timer_flag=false;
-			i=100;
+			i=300;
 			Chip_GPIO_SetPinState(LPC_GPIO_PORT, 3, 4, true);
 			while(i--);
 			Chip_GPIO_SetPinState(LPC_GPIO_PORT, 3, 4, false);

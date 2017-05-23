@@ -1,6 +1,26 @@
-20:08:17 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+10:15:38 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
 make -r all 
-make: No se hace nada para 'all'.
+Building file: ../src/board_sysinit.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/board_sysinit.d" -MT"src/board_sysinit.o" -MT"src/board_sysinit.d" -o "src/board_sysinit.o" "../src/board_sysinit.c"
+Finished building: ../src/board_sysinit.c
+ 
+Building target: liblpc_board_nxp_lpcxpresso_4337.a
+Invoking: MCU Archiver
+arm-none-eabi-ar -r  "liblpc_board_nxp_lpcxpresso_4337.a"  ./src/board.o ./src/board_sysinit.o ./src/lcd_st7565s.o ./src/lpc_phy_smsc87x0.o ./src/wm8904.o   
+arm-none-eabi-ar: creating liblpc_board_nxp_lpcxpresso_4337.a
+Finished building target: liblpc_board_nxp_lpcxpresso_4337.a
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "liblpc_board_nxp_lpcxpresso_4337.a" ; # arm-none-eabi-objdump -h -S "liblpc_board_nxp_lpcxpresso_4337.a" >"liblpc_board_nxp_lpcxpresso_4337.lss"
+   text	   data	    bss	    dec	    hex	filename
+   2262	      0	      4	   2266	    8da	board.o (ex liblpc_board_nxp_lpcxpresso_4337.a)
+    436	      0	      0	    436	    1b4	board_sysinit.o (ex liblpc_board_nxp_lpcxpresso_4337.a)
+   1702	      4	   1044	   2750	    abe	lcd_st7565s.o (ex liblpc_board_nxp_lpcxpresso_4337.a)
+    876	      0	     18	    894	    37e	lpc_phy_smsc87x0.o (ex liblpc_board_nxp_lpcxpresso_4337.a)
+    796	      0	      0	    796	    31c	wm8904.o (ex liblpc_board_nxp_lpcxpresso_4337.a)
+ 
 
-20:08:17 Build Finished (took 62ms)
+10:15:39 Build Finished (took 260ms)
 

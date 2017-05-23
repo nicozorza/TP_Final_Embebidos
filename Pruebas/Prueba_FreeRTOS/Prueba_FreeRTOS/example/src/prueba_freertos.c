@@ -1050,10 +1050,10 @@ ADC_CLOCK_SETUP_T ADCSetup;			//Estructura de condiguracion del ADC
 #define ADC_INTERRUPT_PRIORITY	5	//Prioridad de la interrupcion del ADC
 
 /* Pin de deteccion de fase */
-#define PHASE_SCU_INT_PORT	1			//Puerto del SCU usado para la deteccion de fase
-#define PHASE_SCU_INT_PIN		0			//Pin del SCU usado para la deteccion de fase
-#define PHASE_GPIO_INT_PORT	0			//Puerto del GPIO usado para la deteccion de fase
-#define PHASE_GPIO_INT_PIN	4			//Pin del GPIO usado para la deteccion de fase
+#define PHASE_SCU_INT_PORT	6			//Puerto del SCU usado para la deteccion de fase
+#define PHASE_SCU_INT_PIN	1				//Pin del SCU usado para la deteccion de fase
+#define PHASE_GPIO_INT_PORT	3			//Puerto del GPIO usado para la deteccion de fase
+#define PHASE_GPIO_INT_PIN	0			//Pin del GPIO usado para la deteccion de fase
 #define PHASE_PININT_INDEX	0			//Canal de las interrupciones para el cruce por cero
 #define PHASE_INTERRUPT_PRIORITY	5		//Prioridad de la interrupcion del detector de cruce por cero
 
@@ -1065,8 +1065,8 @@ ADC_CLOCK_SETUP_T ADCSetup;			//Estructura de condiguracion del ADC
 
 /* Macros para el timer. Dado que el detector de cruce por cero no es inmediato, se deben
  * los margenes para evitar problemas. */
-#define TIMER_BASE 100000
-#define TIMER_MAX 500000
+#define TIMER_BASE 400000
+#define TIMER_MAX 1800000
 #define TIMER_STEP (TIMER_MAX-TIMER_BASE)/1024
 #define TIMER_INTERRUPT_PRIORITY 5
 /*****************************************************************************/
@@ -1203,9 +1203,9 @@ static void vHandlerZeroCrossing(void *pvParameters){
         Chip_TIMER_SetMatch(LPC_TIMER1, 1,TIMER_BASE+TIMER_STEP*adc_data);	//Se configura el valor maximo del timer
         Chip_TIMER_Enable(LPC_TIMER1);			//Se habilita el timer para disparar el trigger
 
-        /* To get here the event must have occurred.  Process the event (in this
-         * case we just print out a message). */
-        DEBUGOUT("Deteccion de cruce por cero.\r\n");
+
+        //DEBUGOUT("----------------------------\r\n");
+       // DEBUGOUT("Deteccion de cruce por cero.\r\n");
     }
 }
 
@@ -1213,7 +1213,7 @@ static void vHandlerZeroCrossing(void *pvParameters){
  * decir que el timer finalizo la cuenta.*/
 static void vHandlerFireTrigger(void *pvParameters){
 	portTickType xLastExecutionTime;
-
+	int i;
 	/* Se toma el semaforo para vaciarlo antes de entrar al loop infinito */
     xSemaphoreTake(xTimerSemaphore, (portTickType) 0);
 
@@ -1224,19 +1224,21 @@ static void vHandlerFireTrigger(void *pvParameters){
 
         /* Se evita que el scheduler retire la CPU antes de disparar el trigger */
         taskENTER_CRITICAL();
-        DEBUGOUT("Se dispara el trigger.\r\n");
+        //DEBUGOUT("Se dispara el trigger.\r\n");
         	/* Se lee el instante inicial para tener un timer preciso */
 			xLastExecutionTime = xTaskGetTickCount();
 
 			/* Se dispara el trigger */
 			Chip_GPIO_SetPinState(LPC_GPIO_PORT, TRIGGER_GPIO_INT_PORT, TRIGGER_GPIO_INT_PIN, (bool) true);
-				DEBUGOUT("El delay es: %i\n\r", (adc_data*TIMER_STEP+TIMER_BASE)/ portTICK_RATE_MS);
+				i=1000;
+				while(i--);
+				//DEBUGOUT("El delay es: %i\n\r", (adc_data*TIMER_STEP+TIMER_BASE)/ portTICK_RATE_MS);
 				/* Se espera cierto tiempo para asegurar que el triac pueda ser encendido */
-				vTaskDelayUntil(&xLastExecutionTime, 1 / portTICK_RATE_MS);
+				//vTaskDelayUntil(&xLastExecutionTime, 1 / portTICK_RATE_MS);
 
 			/* Se apaga el trigger */
 			Chip_GPIO_SetPinState(LPC_GPIO_PORT, TRIGGER_GPIO_INT_PORT, TRIGGER_GPIO_INT_PIN, (bool) false);
-		DEBUGOUT("Se apaga el trigger.\r\n");
+		//DEBUGOUT("Se apaga el trigger.\r\n");
         /* Una vez disparado el trigger se libera la CPU */
         taskEXIT_CRITICAL();
     }

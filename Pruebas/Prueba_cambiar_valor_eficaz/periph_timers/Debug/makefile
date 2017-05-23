@@ -29,7 +29,7 @@ all: periph_timers.axf
 periph_timers.axf: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: MCU Linker'
-	arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_timers.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_timers_Debug.ld" -o "periph_timers.axf" $(OBJS) $(USER_OBJS) $(LIBS)
+	arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_timers.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_timers_Debug.ld" -o "periph_timers.axf" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 	$(MAKE) --no-print-directory post-build

@@ -1,6 +1,16 @@
-20:09:50 **** Incremental Build of configuration Debug for project periph_timers ****
+10:15:39 **** Incremental Build of configuration Debug for project periph_timers ****
 make -r all 
-make: No se hace nada para 'all'.
+Building target: periph_timers.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_cambiar_valor_eficaz/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_cambiar_valor_eficaz/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_timers.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_timers_Debug.ld" -o "periph_timers.axf"  ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o ./example/src/timers.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_timers.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_timers.axf"; # arm-none-eabi-objcopy -v -O binary "periph_timers.axf" "periph_timers.bin" ; # checksum -p LPC4337 -d "periph_timers.bin";
+   text	   data	    bss	    dec	    hex	filename
+  11032	      0	    364	  11396	   2c84	periph_timers.axf
+ 
 
-20:09:50 Build Finished (took 68ms)
+10:15:40 Build Finished (took 116ms)
 
