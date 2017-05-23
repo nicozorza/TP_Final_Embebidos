@@ -127,7 +127,7 @@ void Board_SetupClocking(void)
 #endif
 
 #if defined (BOARD_EDU_CIAA_NXP)
-	Chip_SetupCoreClock(CLKIN_CRYSTAL, MAX_CLOCK_FREQ, true);
+	Chip_SetupCoreClock(CLKIN_CRYSTAL, MAX_CLOCK_FREQ/4, true);
 #endif
 
 	/* Setup system base clocks and initial states. This won't enable and
