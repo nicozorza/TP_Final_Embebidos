@@ -1,6 +1,6 @@
-10:48:21 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+11:13:18 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
 make -r all 
 make: No se hace nada para 'all'.
 
-10:48:21 Build Finished (took 63ms)
+11:13:18 Build Finished (took 63ms)
 

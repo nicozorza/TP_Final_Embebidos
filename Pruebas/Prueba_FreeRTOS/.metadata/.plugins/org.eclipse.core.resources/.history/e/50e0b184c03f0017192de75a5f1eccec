@@ -74,7 +74,7 @@
 #define configMAX_PRIORITIES		( ( UBaseType_t ) 8 )
 #define configUSE_TICK_HOOK			0
 #define configCPU_CLOCK_HZ			( ( uint32_t ) SystemCoreClock )
-#define configTICK_RATE_HZ			( ( TickType_t ) 1000 )
+#define configTICK_RATE_HZ			( ( TickType_t ) 100 )
 #define configMINIMAL_STACK_SIZE	( ( uint16_t ) 128 )
 #ifdef __CODE_RED
 #define configTOTAL_HEAP_SIZE		( ( size_t ) ( 16*1024 ) )
