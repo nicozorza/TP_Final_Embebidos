@@ -1,0 +1,6 @@
+11:53:26 **** Incremental Build of configuration Debug for project periph_adc ****
+make -r all 
+make: No se hace nada para 'all'.
+
+11:53:26 Build Finished (took 59ms)
+
