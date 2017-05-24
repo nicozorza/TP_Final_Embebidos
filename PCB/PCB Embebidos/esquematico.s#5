@@ -5662,6 +5662,7 @@ naming: grid - package width</description>
 <part name="R7" library="resistor" deviceset="R-EU_" device="0207/10"/>
 <part name="C1" library="capacitor-wima" deviceset="C" device="2,5-3"/>
 <part name="R8" library="resistor" deviceset="R-EU_" device="0207/10"/>
+<part name="SUPPLY2" library="supply2" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -5693,6 +5694,7 @@ naming: grid - package width</description>
 <instance part="R7" gate="G$1" x="193.04" y="104.14"/>
 <instance part="C1" gate="G$1" x="167.64" y="91.44"/>
 <instance part="R8" gate="G$1" x="180.34" y="93.98" rot="R180"/>
+<instance part="SUPPLY2" gate="GND" x="167.64" y="81.28"/>
 </instances>
 <busses>
 </busses>
@@ -5770,8 +5772,14 @@ naming: grid - package width</description>
 </segment>
 <segment>
 <pinref part="C1" gate="G$1" pin="2"/>
-<wire x1="167.64" y1="86.36" x2="167.64" y2="81.28" width="0.1524" layer="91"/>
-<label x="167.64" y="81.28" size="1.778" layer="95"/>
+<wire x1="167.64" y1="86.36" x2="167.64" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="167.64" y1="81.28" x2="167.64" y2="83.82" width="0.1524" layer="91"/>
+<pinref part="SUPPLY2" gate="GND" pin="GND"/>
+</segment>
+<segment>
+<pinref part="TERMOCUPLA" gate="-2" pin="KL"/>
+<wire x1="195.58" y1="119.38" x2="175.26" y2="119.38" width="0.1524" layer="91"/>
+<label x="175.26" y="119.38" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="PWM" class="0">
@@ -5870,19 +5878,13 @@ naming: grid - package width</description>
 <wire x1="195.58" y1="124.46" x2="175.26" y2="124.46" width="0.1524" layer="91"/>
 <label x="175.26" y="124.46" size="1.778" layer="95"/>
 </segment>
-</net>
-<net name="TERMOCUPLA2" class="0">
-<segment>
-<pinref part="TERMOCUPLA" gate="-2" pin="KL"/>
-<wire x1="195.58" y1="119.38" x2="175.26" y2="119.38" width="0.1524" layer="91"/>
-<label x="175.26" y="119.38" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="N$5" class="0">
 <segment>
 <pinref part="R8" gate="G$1" pin="2"/>
 <pinref part="C1" gate="G$1" pin="1"/>
 <wire x1="175.26" y1="93.98" x2="167.64" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="167.64" y1="93.98" x2="144.78" y2="93.98" width="0.1524" layer="91"/>
+<junction x="167.64" y="93.98"/>
+<label x="144.78" y="93.98" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$6" class="0">
@@ -5906,6 +5908,13 @@ naming: grid - package width</description>
 <pinref part="IC1" gate="B" pin="+IN"/>
 <wire x1="215.9" y1="91.44" x2="210.82" y2="91.44" width="0.1524" layer="91"/>
 <junction x="210.82" y="91.44"/>
+</segment>
+</net>
+<net name="SAL_TERMOCUPLA" class="0">
+<segment>
+<pinref part="IC1" gate="B" pin="OUT"/>
+<wire x1="231.14" y1="88.9" x2="241.3" y2="88.9" width="0.1524" layer="91"/>
+<label x="236.22" y="88.9" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
