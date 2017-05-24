@@ -1,0 +1,71 @@
+#include "board.h"
+
+volatile bool adc_flag0=false;
+volatile bool adc_flag1=false;
+volatile uint16_t adc_data0=0;
+volatile uint16_t adc_data1=0;
+
+#define OPAMP_GAIN 250		//Ganancia del circuito amplificador de la termocupla
+#define PT100_PULLUP 100	//Resistencia conectada al PT100 para el divisor resistivo
+
+void ADC0_IRQHandler(void){
+	adc_flag0=true;
+	Chip_ADC_ReadValue(LPC_ADC0, ADC_CH0,&adc_data0);
+}
+
+void ADC1_IRQHandler(void){
+	adc_flag1=true;
+	Chip_ADC_ReadValue(LPC_ADC1, ADC_CH1,&adc_data1);
+}
+
+ADC_CLOCK_SETUP_T ADCSetup0;
+ADC_CLOCK_SETUP_T ADCSetup1;
+
+/**
+ * @brief	main routine for blinky example
+ * @return	Function should not exit.
+ */
+int main(void)
+{
+	float temp_termocupla, temp_pt100;
+
+	SystemCoreClockUpdate();
+	Board_Init();
+
+	/* Inicializacion del ADC0 */
+	Chip_ADC_Init(LPC_ADC0, &ADCSetup0);
+	Chip_ADC_EnableChannel(LPC_ADC0, ADC_CH0, ENABLE);
+	NVIC_EnableIRQ(ADC0_IRQn);
+	Chip_ADC_Int_SetChannelCmd(LPC_ADC0, ADC_CH0, ENABLE);
+	Chip_ADC_SetStartMode(LPC_ADC0, ADC_START_NOW, ADC_TRIGGERMODE_RISING);
+
+	/* Inicializacion del ADC1 */
+	Chip_ADC_Init(LPC_ADC1, &ADCSetup1);
+	Chip_ADC_EnableChannel(LPC_ADC1, ADC_CH1, ENABLE);
+	NVIC_EnableIRQ(ADC1_IRQn);
+	Chip_ADC_Int_SetChannelCmd(LPC_ADC1, ADC_CH1, ENABLE);
+	Chip_ADC_SetStartMode(LPC_ADC1, ADC_START_NOW, ADC_TRIGGERMODE_RISING);
+
+	while (1) {
+		__WFI();
+		if( adc_flag0==true){									//Medicion de la termocupla
+			temp_termocupla = ((float)adc_data0)*3.3/1023;		//Lo mapeo de 0-3.3v
+			temp_termocupla /= OPAMP_GAIN;						//Lo divido por la ganancia del operacional
+			temp_termocupla=24599.766*temp_termocupla-0.213;	//Mapeo la temperatura
+			DEBUGOUT("Termocupla: %f\n\r",temp_termocupla);
+
+			adc_flag0=false;
+			Chip_ADC_SetStartMode(LPC_ADC0, ADC_START_NOW, ADC_TRIGGERMODE_RISING);
+		}
+		if( adc_flag1==true){								//Medicion del PT100. Se hace a traves de un divisor resistivo
+			temp_pt100 = ((float)adc_data1)*3.3/1023;		//Lo mapeo de 0-3.3v
+			temp_pt100 = temp_pt100*PT100_PULLUP/(3.3-temp_pt100);
+
+			//temp=((temp*22869.2)/237.24)+0.135;
+			//DEBUGOUT("PT100: %f\n\r",temp);
+
+			adc_flag1=false;
+			Chip_ADC_SetStartMode(LPC_ADC1, ADC_START_NOW, ADC_TRIGGERMODE_RISING);
+		}
+	}
+}

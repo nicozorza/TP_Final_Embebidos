@@ -496,3 +496,1590 @@ arm-none-eabi-size "periph_adc.axf"; # arm-none-eabi-objcopy -v -O binary "perip
 11:53:26 **** Incremental Build of configuration Debug for project periph_adc ****
 make -r all 
 make: No se hace nada para 'all'.
+16:21:35 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+16:21:37 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+16:21:38 **** Incremental Build of configuration Debug for project periph_adc ****
+make -r all 
+Building file: ../example/src/adc.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/adc.d" -MT"example/src/adc.o" -MT"example/src/adc.d" -o "example/src/adc.o" "../example/src/adc.c"
+../example/src/adc.c: In function 'ADC0_IRQHandler':
+../example/src/adc.c:62:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC0, ADC_CH0,&adc_data0);
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/adc.c:32:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+../example/src/adc.c: In function 'ADC1_IRQHandler':
+../example/src/adc.c:67:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC0, ADC_CH0,&adc_data1);
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/adc.c:32:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+Finished building: ../example/src/adc.c
+ 
+Building target: periph_adc.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_adc.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_adc_Debug.ld" -o "periph_adc.axf"  ./example/src/adc.o ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_adc.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_adc.axf"; # arm-none-eabi-objcopy -v -O binary "periph_adc.axf" "periph_adc.bin" ; # checksum -p LPC4337 -d "periph_adc.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18056	      0	    372	  18428	   47fc	periph_adc.axf
+ 
+16:22:08 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+16:22:09 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+16:22:09 **** Incremental Build of configuration Debug for project periph_adc ****
+make -r all 
+Building file: ../example/src/adc.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/adc.d" -MT"example/src/adc.o" -MT"example/src/adc.d" -o "example/src/adc.o" "../example/src/adc.c"
+../example/src/adc.c: In function 'ADC0_IRQHandler':
+../example/src/adc.c:62:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC0, ADC_CH0,&adc_data0);
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/adc.c:32:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+../example/src/adc.c: In function 'ADC1_IRQHandler':
+../example/src/adc.c:67:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC0, ADC_CH0,&adc_data1);
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/adc.c:32:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+Finished building: ../example/src/adc.c
+ 
+Building target: periph_adc.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_adc.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_adc_Debug.ld" -o "periph_adc.axf"  ./example/src/adc.o ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_adc.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_adc.axf"; # arm-none-eabi-objcopy -v -O binary "periph_adc.axf" "periph_adc.bin" ; # checksum -p LPC4337 -d "periph_adc.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18088	      0	    372	  18460	   481c	periph_adc.axf
+ 
+16:24:05 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+16:24:05 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+16:24:06 **** Incremental Build of configuration Debug for project periph_adc ****
+make -r all 
+Building file: ../example/src/adc.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/adc.d" -MT"example/src/adc.o" -MT"example/src/adc.d" -o "example/src/adc.o" "../example/src/adc.c"
+../example/src/adc.c: In function 'ADC0_IRQHandler':
+../example/src/adc.c:62:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC0, ADC_CH0,&adc_data0);
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/adc.c:32:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+../example/src/adc.c: In function 'ADC1_IRQHandler':
+../example/src/adc.c:67:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC0, ADC_CH0,&adc_data1);
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/adc.c:32:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+Finished building: ../example/src/adc.c
+ 
+Building target: periph_adc.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_adc.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_adc_Debug.ld" -o "periph_adc.axf"  ./example/src/adc.o ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_adc.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_adc.axf"; # arm-none-eabi-objcopy -v -O binary "periph_adc.axf" "periph_adc.bin" ; # checksum -p LPC4337 -d "periph_adc.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18088	      0	    372	  18460	   481c	periph_adc.axf
+ 
+16:24:33 **** Incremental Build of configuration Debug for project periph_adc ****
+make -r all 
+make: No se hace nada para 'all'.
+16:25:58 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+16:25:59 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+16:25:59 **** Incremental Build of configuration Debug for project periph_adc ****
+make -r all 
+make: No se hace nada para 'all'.
+16:26:01 **** Incremental Build of configuration Debug for project periph_adc ****
+make -r all 
+make: No se hace nada para 'all'.
+16:27:01 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+16:27:01 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+16:27:02 **** Incremental Build of configuration Debug for project periph_adc ****
+make -r all 
+Building file: ../example/src/adc.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/adc.d" -MT"example/src/adc.o" -MT"example/src/adc.d" -o "example/src/adc.o" "../example/src/adc.c"
+../example/src/adc.c: In function 'ADC0_IRQHandler':
+../example/src/adc.c:62:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC0, ADC_CH0,&adc_data0);
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/adc.c:32:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+../example/src/adc.c: In function 'ADC1_IRQHandler':
+../example/src/adc.c:67:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC1, ADC_CH1,&adc_data1);
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/adc.c:32:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+Finished building: ../example/src/adc.c
+ 
+Building target: periph_adc.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_adc.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_adc_Debug.ld" -o "periph_adc.axf"  ./example/src/adc.o ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_adc.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_adc.axf"; # arm-none-eabi-objcopy -v -O binary "periph_adc.axf" "periph_adc.bin" ; # checksum -p LPC4337 -d "periph_adc.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18088	      0	    372	  18460	   481c	periph_adc.axf
+ 
+16:27:03 **** Incremental Build of configuration Debug for project periph_adc ****
+make -r all 
+make: No se hace nada para 'all'.
+16:28:01 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+16:28:01 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+16:28:02 **** Incremental Build of configuration Debug for project periph_adc ****
+make -r all 
+Building file: ../example/src/adc.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/adc.d" -MT"example/src/adc.o" -MT"example/src/adc.d" -o "example/src/adc.o" "../example/src/adc.c"
+../example/src/adc.c: In function 'ADC0_IRQHandler':
+../example/src/adc.c:62:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC0, ADC_CH0,&adc_data0);
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/adc.c:32:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+../example/src/adc.c: In function 'ADC1_IRQHandler':
+../example/src/adc.c:67:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC1, ADC_CH1,&adc_data1);
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/adc.c:32:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+Finished building: ../example/src/adc.c
+ 
+Building target: periph_adc.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_adc.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_adc_Debug.ld" -o "periph_adc.axf"  ./example/src/adc.o ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_adc.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_adc.axf"; # arm-none-eabi-objcopy -v -O binary "periph_adc.axf" "periph_adc.bin" ; # checksum -p LPC4337 -d "periph_adc.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18016	      0	    372	  18388	   47d4	periph_adc.axf
+ 
+16:28:04 **** Incremental Build of configuration Debug for project periph_adc ****
+make -r all 
+make: No se hace nada para 'all'.
+16:28:29 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+16:28:29 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+16:28:30 **** Incremental Build of configuration Debug for project periph_adc ****
+make -r all 
+Building file: ../example/src/adc.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/adc.d" -MT"example/src/adc.o" -MT"example/src/adc.d" -o "example/src/adc.o" "../example/src/adc.c"
+../example/src/adc.c: In function 'ADC0_IRQHandler':
+../example/src/adc.c:62:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC0, ADC_CH0,&adc_data0);
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/adc.c:32:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+../example/src/adc.c: In function 'ADC1_IRQHandler':
+../example/src/adc.c:67:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC1, ADC_CH1,&adc_data1);
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/adc.c:32:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+Finished building: ../example/src/adc.c
+ 
+Building target: periph_adc.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_adc.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_adc_Debug.ld" -o "periph_adc.axf"  ./example/src/adc.o ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_adc.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_adc.axf"; # arm-none-eabi-objcopy -v -O binary "periph_adc.axf" "periph_adc.bin" ; # checksum -p LPC4337 -d "periph_adc.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18016	      0	    372	  18388	   47d4	periph_adc.axf
+ 
+16:28:33 **** Incremental Build of configuration Debug for project periph_adc ****
+make -r all 
+make: No se hace nada para 'all'.
+16:29:06 **** Incremental Build of configuration Debug for project periph_adc ****
+make -r all 
+make: No se hace nada para 'all'.
+16:31:05 **** Incremental Build of configuration Debug for project periph_adc ****
+make -r all 
+make: No se hace nada para 'all'.
+16:34:46 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+16:34:46 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+16:34:47 **** Incremental Build of configuration Debug for project periph_adc ****
+make -r all 
+Building file: ../example/src/adc.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/adc.d" -MT"example/src/adc.o" -MT"example/src/adc.d" -o "example/src/adc.o" "../example/src/adc.c"
+../example/src/adc.c: In function 'ADC0_IRQHandler':
+../example/src/adc.c:62:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC0, ADC_CH0,&adc_data0);
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/adc.c:32:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+../example/src/adc.c: In function 'ADC1_IRQHandler':
+../example/src/adc.c:67:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC1, ADC_CH1,&adc_data1);
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/adc.c:32:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+Finished building: ../example/src/adc.c
+ 
+Building target: periph_adc.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_adc.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_adc_Debug.ld" -o "periph_adc.axf"  ./example/src/adc.o ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_adc.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_adc.axf"; # arm-none-eabi-objcopy -v -O binary "periph_adc.axf" "periph_adc.bin" ; # checksum -p LPC4337 -d "periph_adc.bin";
+   text	   data	    bss	    dec	    hex	filename
+  17920	      0	    372	  18292	   4774	periph_adc.axf
+ 
+16:36:59 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+16:36:59 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+16:37:00 **** Incremental Build of configuration Debug for project periph_adc ****
+make -r all 
+Building file: ../example/src/adc.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/adc.d" -MT"example/src/adc.o" -MT"example/src/adc.d" -o "example/src/adc.o" "../example/src/adc.c"
+../example/src/adc.c: In function 'ADC0_IRQHandler':
+../example/src/adc.c:62:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC0, ADC_CH0,&adc_data0);
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/adc.c:32:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+../example/src/adc.c: In function 'ADC1_IRQHandler':
+../example/src/adc.c:67:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC1, ADC_CH1,&adc_data1);
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/adc.c:32:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+Finished building: ../example/src/adc.c
+ 
+Building target: periph_adc.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_adc.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_adc_Debug.ld" -o "periph_adc.axf"  ./example/src/adc.o ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_adc.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_adc.axf"; # arm-none-eabi-objcopy -v -O binary "periph_adc.axf" "periph_adc.bin" ; # checksum -p LPC4337 -d "periph_adc.bin";
+   text	   data	    bss	    dec	    hex	filename
+  17920	      0	    372	  18292	   4774	periph_adc.axf
+ 
+16:37:02 **** Incremental Build of configuration Debug for project periph_adc ****
+make -r all 
+make: No se hace nada para 'all'.
+16:45:44 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+16:45:44 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+16:45:45 **** Incremental Build of configuration Debug for project periph_adc ****
+make -r all 
+Building file: ../example/src/adc.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/adc.d" -MT"example/src/adc.o" -MT"example/src/adc.d" -o "example/src/adc.o" "../example/src/adc.c"
+../example/src/adc.c: In function 'ADC0_IRQHandler':
+../example/src/adc.c:62:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC0, ADC_CH0,&adc_data0);
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/adc.c:32:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+../example/src/adc.c: In function 'ADC1_IRQHandler':
+../example/src/adc.c:67:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC1, ADC_CH1,&adc_data1);
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/adc.c:32:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+Finished building: ../example/src/adc.c
+ 
+Building target: periph_adc.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_adc.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_adc_Debug.ld" -o "periph_adc.axf"  ./example/src/adc.o ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_adc.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_adc.axf"; # arm-none-eabi-objcopy -v -O binary "periph_adc.axf" "periph_adc.bin" ; # checksum -p LPC4337 -d "periph_adc.bin";
+   text	   data	    bss	    dec	    hex	filename
+  17968	      0	    372	  18340	   47a4	periph_adc.axf
+ 
+16:45:49 **** Incremental Build of configuration Debug for project periph_adc ****
+make -r all 
+make: No se hace nada para 'all'.
+16:46:54 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+16:46:54 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+16:46:55 **** Incremental Build of configuration Debug for project periph_adc ****
+make -r all 
+Building file: ../example/src/adc.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/adc.d" -MT"example/src/adc.o" -MT"example/src/adc.d" -o "example/src/adc.o" "../example/src/adc.c"
+../example/src/adc.c: In function 'ADC0_IRQHandler':
+../example/src/adc.c:62:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC0, ADC_CH0,&adc_data0);
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/adc.c:32:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+../example/src/adc.c: In function 'ADC1_IRQHandler':
+../example/src/adc.c:67:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC1, ADC_CH1,&adc_data1);
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/adc.c:32:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+Finished building: ../example/src/adc.c
+ 
+Building target: periph_adc.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_adc.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_adc_Debug.ld" -o "periph_adc.axf"  ./example/src/adc.o ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_adc.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_adc.axf"; # arm-none-eabi-objcopy -v -O binary "periph_adc.axf" "periph_adc.bin" ; # checksum -p LPC4337 -d "periph_adc.bin";
+   text	   data	    bss	    dec	    hex	filename
+  17968	      0	    372	  18340	   47a4	periph_adc.axf
+ 
+16:47:07 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+16:47:08 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+16:47:08 **** Incremental Build of configuration Debug for project periph_adc ****
+make -r all 
+Building file: ../example/src/adc.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/adc.d" -MT"example/src/adc.o" -MT"example/src/adc.d" -o "example/src/adc.o" "../example/src/adc.c"
+../example/src/adc.c: In function 'ADC0_IRQHandler':
+../example/src/adc.c:62:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC0, ADC_CH0,&adc_data0);
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/adc.c:32:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+../example/src/adc.c: In function 'ADC1_IRQHandler':
+../example/src/adc.c:67:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC1, ADC_CH1,&adc_data1);
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/adc.c:32:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+Finished building: ../example/src/adc.c
+ 
+Building target: periph_adc.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_adc.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_adc_Debug.ld" -o "periph_adc.axf"  ./example/src/adc.o ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_adc.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_adc.axf"; # arm-none-eabi-objcopy -v -O binary "periph_adc.axf" "periph_adc.bin" ; # checksum -p LPC4337 -d "periph_adc.bin";
+   text	   data	    bss	    dec	    hex	filename
+  17936	      0	    372	  18308	   4784	periph_adc.axf
+ 
+16:47:11 **** Incremental Build of configuration Debug for project periph_adc ****
+make -r all 
+make: No se hace nada para 'all'.
+16:48:24 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+16:48:25 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+16:48:25 **** Incremental Build of configuration Debug for project periph_adc ****
+make -r all 
+Building file: ../example/src/adc.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/adc.d" -MT"example/src/adc.o" -MT"example/src/adc.d" -o "example/src/adc.o" "../example/src/adc.c"
+../example/src/adc.c: In function 'ADC0_IRQHandler':
+../example/src/adc.c:62:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC0, ADC_CH0,&adc_data0);
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/adc.c:32:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+../example/src/adc.c: In function 'ADC1_IRQHandler':
+../example/src/adc.c:67:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC1, ADC_CH1,&adc_data1);
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/adc.c:32:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+Finished building: ../example/src/adc.c
+ 
+Building target: periph_adc.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_adc.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_adc_Debug.ld" -o "periph_adc.axf"  ./example/src/adc.o ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_adc.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_adc.axf"; # arm-none-eabi-objcopy -v -O binary "periph_adc.axf" "periph_adc.bin" ; # checksum -p LPC4337 -d "periph_adc.bin";
+   text	   data	    bss	    dec	    hex	filename
+  17920	      0	    372	  18292	   4774	periph_adc.axf
+ 
+16:48:27 **** Incremental Build of configuration Debug for project periph_adc ****
+make -r all 
+make: No se hace nada para 'all'.
+16:49:09 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+16:49:09 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+16:49:09 **** Incremental Build of configuration Debug for project periph_adc ****
+make -r all 
+Building file: ../example/src/adc.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/adc.d" -MT"example/src/adc.o" -MT"example/src/adc.d" -o "example/src/adc.o" "../example/src/adc.c"
+../example/src/adc.c: In function 'ADC0_IRQHandler':
+../example/src/adc.c:62:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC0, ADC_CH0,&adc_data0);
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/adc.c:32:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+../example/src/adc.c: In function 'ADC1_IRQHandler':
+../example/src/adc.c:67:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC1, ADC_CH1,&adc_data1);
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/adc.c:32:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+Finished building: ../example/src/adc.c
+ 
+Building target: periph_adc.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_adc.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_adc_Debug.ld" -o "periph_adc.axf"  ./example/src/adc.o ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_adc.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_adc.axf"; # arm-none-eabi-objcopy -v -O binary "periph_adc.axf" "periph_adc.bin" ; # checksum -p LPC4337 -d "periph_adc.bin";
+   text	   data	    bss	    dec	    hex	filename
+  17920	      0	    372	  18292	   4774	periph_adc.axf
+ 
+16:49:18 **** Incremental Build of configuration Debug for project periph_adc ****
+make -r all 
+make: No se hace nada para 'all'.
+16:49:45 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+16:49:46 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+16:49:46 **** Incremental Build of configuration Debug for project periph_adc ****
+make -r all 
+Building file: ../example/src/adc.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/adc.d" -MT"example/src/adc.o" -MT"example/src/adc.d" -o "example/src/adc.o" "../example/src/adc.c"
+../example/src/adc.c: In function 'ADC0_IRQHandler':
+../example/src/adc.c:62:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC0, ADC_CH0,&adc_data0);
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/adc.c:32:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+../example/src/adc.c: In function 'ADC1_IRQHandler':
+../example/src/adc.c:67:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC1, ADC_CH1,&adc_data1);
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/adc.c:32:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+Finished building: ../example/src/adc.c
+ 
+Building target: periph_adc.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_adc.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_adc_Debug.ld" -o "periph_adc.axf"  ./example/src/adc.o ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_adc.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_adc.axf"; # arm-none-eabi-objcopy -v -O binary "periph_adc.axf" "periph_adc.bin" ; # checksum -p LPC4337 -d "periph_adc.bin";
+   text	   data	    bss	    dec	    hex	filename
+  17888	      0	    372	  18260	   4754	periph_adc.axf
+ 
+16:49:49 **** Incremental Build of configuration Debug for project periph_adc ****
+make -r all 
+make: No se hace nada para 'all'.
+16:51:30 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+16:51:31 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+16:51:31 **** Incremental Build of configuration Debug for project periph_adc ****
+make -r all 
+Building file: ../example/src/adc.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/adc.d" -MT"example/src/adc.o" -MT"example/src/adc.d" -o "example/src/adc.o" "../example/src/adc.c"
+../example/src/adc.c: In function 'ADC0_IRQHandler':
+../example/src/adc.c:62:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC0, ADC_CH0,&adc_data0);
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/adc.c:32:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+../example/src/adc.c: In function 'ADC1_IRQHandler':
+../example/src/adc.c:67:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC1, ADC_CH1,&adc_data1);
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/adc.c:32:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+Finished building: ../example/src/adc.c
+ 
+Building target: periph_adc.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_adc.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_adc_Debug.ld" -o "periph_adc.axf"  ./example/src/adc.o ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_adc.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_adc.axf"; # arm-none-eabi-objcopy -v -O binary "periph_adc.axf" "periph_adc.bin" ; # checksum -p LPC4337 -d "periph_adc.bin";
+   text	   data	    bss	    dec	    hex	filename
+  17936	      0	    372	  18308	   4784	periph_adc.axf
+ 
+16:51:34 **** Incremental Build of configuration Debug for project periph_adc ****
+make -r all 
+make: No se hace nada para 'all'.
+17:02:22 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+17:02:23 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+17:02:23 **** Incremental Build of configuration Debug for project periph_adc ****
+make -r all 
+Building file: ../example/src/adc.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/adc.d" -MT"example/src/adc.o" -MT"example/src/adc.d" -o "example/src/adc.o" "../example/src/adc.c"
+../example/src/adc.c: In function 'ADC0_IRQHandler':
+../example/src/adc.c:47:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC0, ADC_CH0,&adc_data0);
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/adc.c:32:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+../example/src/adc.c: In function 'ADC1_IRQHandler':
+../example/src/adc.c:52:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC1, ADC_CH1,&adc_data1);
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/adc.c:32:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+../example/src/adc.c: In function 'main':
+../example/src/adc.c:64:25: warning: variable 'temp_pt100' set but not used [-Wunused-but-set-variable]
+  float temp_termocupla, temp_pt100;
+                         ^
+Finished building: ../example/src/adc.c
+ 
+Building target: periph_adc.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_adc.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_adc_Debug.ld" -o "periph_adc.axf"  ./example/src/adc.o ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_adc.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_adc.axf"; # arm-none-eabi-objcopy -v -O binary "periph_adc.axf" "periph_adc.bin" ; # checksum -p LPC4337 -d "periph_adc.bin";
+   text	   data	    bss	    dec	    hex	filename
+  17936	      0	    372	  18308	   4784	periph_adc.axf
+ 
+17:07:07 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+17:07:07 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+17:07:08 **** Incremental Build of configuration Debug for project periph_adc ****
+make -r all 
+Building file: ../example/src/adc.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/adc.d" -MT"example/src/adc.o" -MT"example/src/adc.d" -o "example/src/adc.o" "../example/src/adc.c"
+../example/src/adc.c: In function 'ADC0_IRQHandler':
+../example/src/adc.c:13:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC0, ADC_CH0,&adc_data0);
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/adc.c:1:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+../example/src/adc.c: In function 'ADC1_IRQHandler':
+../example/src/adc.c:18:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC1, ADC_CH1,&adc_data1);
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/adc.c:1:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+Finished building: ../example/src/adc.c
+ 
+Building target: periph_adc.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_adc.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_adc_Debug.ld" -o "periph_adc.axf"  ./example/src/adc.o ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_adc.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_adc.axf"; # arm-none-eabi-objcopy -v -O binary "periph_adc.axf" "periph_adc.bin" ; # checksum -p LPC4337 -d "periph_adc.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18040	      0	    372	  18412	   47ec	periph_adc.axf
+ 
+17:09:02 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+17:09:03 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+17:09:03 **** Incremental Build of configuration Debug for project periph_adc ****
+make -r all 
+Building file: ../example/src/adc.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/adc.d" -MT"example/src/adc.o" -MT"example/src/adc.d" -o "example/src/adc.o" "../example/src/adc.c"
+../example/src/adc.c: In function 'ADC0_IRQHandler':
+../example/src/adc.c:13:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC0, ADC_CH0,&adc_data0);
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/adc.c:1:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+../example/src/adc.c: In function 'ADC1_IRQHandler':
+../example/src/adc.c:18:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC1, ADC_CH1,&adc_data1);
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/adc.c:1:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+Finished building: ../example/src/adc.c
+ 
+Building target: periph_adc.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_adc.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_adc_Debug.ld" -o "periph_adc.axf"  ./example/src/adc.o ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_adc.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_adc.axf"; # arm-none-eabi-objcopy -v -O binary "periph_adc.axf" "periph_adc.bin" ; # checksum -p LPC4337 -d "periph_adc.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18088	      0	    372	  18460	   481c	periph_adc.axf
+ 
+17:09:06 **** Incremental Build of configuration Debug for project periph_adc ****
+make -r all 
+make: No se hace nada para 'all'.
+17:12:36 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+17:12:37 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+17:12:37 **** Incremental Build of configuration Debug for project periph_adc ****
+make -r all 
+Building file: ../example/src/adc.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/adc.d" -MT"example/src/adc.o" -MT"example/src/adc.d" -o "example/src/adc.o" "../example/src/adc.c"
+../example/src/adc.c: In function 'ADC0_IRQHandler':
+../example/src/adc.c:13:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC0, ADC_CH0,&adc_data0);
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/adc.c:1:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+../example/src/adc.c: In function 'ADC1_IRQHandler':
+../example/src/adc.c:18:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC1, ADC_CH1,&adc_data1);
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/adc.c:1:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+Finished building: ../example/src/adc.c
+ 
+Building target: periph_adc.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_adc.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_adc_Debug.ld" -o "periph_adc.axf"  ./example/src/adc.o ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_adc.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_adc.axf"; # arm-none-eabi-objcopy -v -O binary "periph_adc.axf" "periph_adc.bin" ; # checksum -p LPC4337 -d "periph_adc.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18072	      0	    372	  18444	   480c	periph_adc.axf
+ 
+17:12:39 **** Incremental Build of configuration Debug for project periph_adc ****
+make -r all 
+make: No se hace nada para 'all'.
+17:12:44 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+17:12:44 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+17:12:45 **** Incremental Build of configuration Debug for project periph_adc ****
+make -r all 
+Building file: ../example/src/adc.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/adc.d" -MT"example/src/adc.o" -MT"example/src/adc.d" -o "example/src/adc.o" "../example/src/adc.c"
+../example/src/adc.c: In function 'ADC0_IRQHandler':
+../example/src/adc.c:13:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC0, ADC_CH0,&adc_data0);
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/adc.c:1:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+../example/src/adc.c: In function 'ADC1_IRQHandler':
+../example/src/adc.c:18:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC1, ADC_CH1,&adc_data1);
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/adc.c:1:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+Finished building: ../example/src/adc.c
+ 
+Building target: periph_adc.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_adc.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_adc_Debug.ld" -o "periph_adc.axf"  ./example/src/adc.o ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_adc.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_adc.axf"; # arm-none-eabi-objcopy -v -O binary "periph_adc.axf" "periph_adc.bin" ; # checksum -p LPC4337 -d "periph_adc.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18040	      0	    372	  18412	   47ec	periph_adc.axf
+ 
+17:12:49 **** Incremental Build of configuration Debug for project periph_adc ****
+make -r all 
+make: No se hace nada para 'all'.
+17:13:11 **** Incremental Build of configuration Debug for project periph_adc ****
+make -r all 
+make: No se hace nada para 'all'.
+17:13:43 **** Incremental Build of configuration Debug for project periph_adc ****
+make -r all 
+make: No se hace nada para 'all'.
+17:14:34 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+17:14:35 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+17:14:35 **** Incremental Build of configuration Debug for project periph_adc ****
+make -r all 
+Building file: ../example/src/adc.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/adc.d" -MT"example/src/adc.o" -MT"example/src/adc.d" -o "example/src/adc.o" "../example/src/adc.c"
+../example/src/adc.c: In function 'ADC0_IRQHandler':
+../example/src/adc.c:13:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC0, ADC_CH0,&adc_data0);
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/adc.c:1:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+../example/src/adc.c: In function 'ADC1_IRQHandler':
+../example/src/adc.c:18:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC1, ADC_CH1,&adc_data1);
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/adc.c:1:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+Finished building: ../example/src/adc.c
+ 
+Building target: periph_adc.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_adc.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_adc_Debug.ld" -o "periph_adc.axf"  ./example/src/adc.o ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_adc.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_adc.axf"; # arm-none-eabi-objcopy -v -O binary "periph_adc.axf" "periph_adc.bin" ; # checksum -p LPC4337 -d "periph_adc.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18032	      0	    372	  18404	   47e4	periph_adc.axf
+ 
+17:14:38 **** Incremental Build of configuration Debug for project periph_adc ****
+make -r all 
+make: No se hace nada para 'all'.
+17:19:29 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+17:19:30 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+17:19:30 **** Incremental Build of configuration Debug for project periph_adc ****
+make -r all 
+Building file: ../example/src/adc.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/adc.d" -MT"example/src/adc.o" -MT"example/src/adc.d" -o "example/src/adc.o" "../example/src/adc.c"
+../example/src/adc.c: In function 'ADC0_IRQHandler':
+../example/src/adc.c:30:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC0, ADC_CH0,&adc_data0);
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/adc.c:1:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+../example/src/adc.c: In function 'ADC1_IRQHandler':
+../example/src/adc.c:35:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC1, ADC_CH1,&adc_data1);
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/adc.c:1:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+Finished building: ../example/src/adc.c
+ 
+Building target: periph_adc.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_adc.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_adc_Debug.ld" -o "periph_adc.axf"  ./example/src/adc.o ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_adc.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_adc.axf"; # arm-none-eabi-objcopy -v -O binary "periph_adc.axf" "periph_adc.bin" ; # checksum -p LPC4337 -d "periph_adc.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18352	      0	    376	  18728	   4928	periph_adc.axf
+ 
+17:19:37 **** Incremental Build of configuration Debug for project periph_adc ****
+make -r all 
+make: No se hace nada para 'all'.
+17:26:29 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+17:26:30 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+17:26:30 **** Incremental Build of configuration Debug for project periph_adc ****
+make -r all 
+Building file: ../example/src/adc.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/adc.d" -MT"example/src/adc.o" -MT"example/src/adc.d" -o "example/src/adc.o" "../example/src/adc.c"
+../example/src/adc.c: In function 'ADC0_IRQHandler':
+../example/src/adc.c:30:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC0, ADC_CH0,&adc_data0);
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/adc.c:1:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+../example/src/adc.c: In function 'ADC1_IRQHandler':
+../example/src/adc.c:35:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC1, ADC_CH1,&adc_data1);
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/adc.c:1:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+Finished building: ../example/src/adc.c
+ 
+Building target: periph_adc.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_adc.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_adc_Debug.ld" -o "periph_adc.axf"  ./example/src/adc.o ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_adc.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_adc.axf"; # arm-none-eabi-objcopy -v -O binary "periph_adc.axf" "periph_adc.bin" ; # checksum -p LPC4337 -d "periph_adc.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18352	      0	    376	  18728	   4928	periph_adc.axf
+ 
+17:26:32 **** Incremental Build of configuration Debug for project periph_adc ****
+make -r all 
+make: No se hace nada para 'all'.
+17:27:51 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+17:27:51 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+17:27:52 **** Incremental Build of configuration Debug for project periph_adc ****
+make -r all 
+Building file: ../example/src/adc.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/adc.d" -MT"example/src/adc.o" -MT"example/src/adc.d" -o "example/src/adc.o" "../example/src/adc.c"
+../example/src/adc.c: In function 'ADC0_IRQHandler':
+../example/src/adc.c:30:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC0, ADC_CH0,&adc_data0);
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/adc.c:1:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+../example/src/adc.c: In function 'ADC1_IRQHandler':
+../example/src/adc.c:35:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC1, ADC_CH1,&adc_data1);
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/adc.c:1:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+Finished building: ../example/src/adc.c
+ 
+Building target: periph_adc.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_adc.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_adc_Debug.ld" -o "periph_adc.axf"  ./example/src/adc.o ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_adc.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_adc.axf"; # arm-none-eabi-objcopy -v -O binary "periph_adc.axf" "periph_adc.bin" ; # checksum -p LPC4337 -d "periph_adc.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18352	      0	    376	  18728	   4928	periph_adc.axf
+ 
+17:27:53 **** Incremental Build of configuration Debug for project periph_adc ****
+make -r all 
+make: No se hace nada para 'all'.
+17:34:07 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+17:34:07 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+17:34:07 **** Incremental Build of configuration Debug for project periph_adc ****
+make -r all 
+Building file: ../example/src/adc.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/adc.d" -MT"example/src/adc.o" -MT"example/src/adc.d" -o "example/src/adc.o" "../example/src/adc.c"
+../example/src/adc.c: In function 'ADC0_IRQHandler':
+../example/src/adc.c:30:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC0, ADC_CH0,&adc_data0);
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/adc.c:1:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+../example/src/adc.c: In function 'ADC1_IRQHandler':
+../example/src/adc.c:35:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC1, ADC_CH1,&adc_data1);
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/adc.c:1:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+Finished building: ../example/src/adc.c
+ 
+Building target: periph_adc.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_adc.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_adc_Debug.ld" -o "periph_adc.axf"  ./example/src/adc.o ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_adc.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_adc.axf"; # arm-none-eabi-objcopy -v -O binary "periph_adc.axf" "periph_adc.bin" ; # checksum -p LPC4337 -d "periph_adc.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18352	      0	    376	  18728	   4928	periph_adc.axf
+ 
+17:34:15 **** Incremental Build of configuration Debug for project periph_adc ****
+make -r all 
+make: No se hace nada para 'all'.
+17:35:05 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+17:35:06 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+17:35:06 **** Incremental Build of configuration Debug for project periph_adc ****
+make -r all 
+Building file: ../example/src/adc.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/adc.d" -MT"example/src/adc.o" -MT"example/src/adc.d" -o "example/src/adc.o" "../example/src/adc.c"
+../example/src/adc.c: In function 'ADC0_IRQHandler':
+../example/src/adc.c:30:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC0, ADC_CH0,&adc_data0);
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/adc.c:1:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+../example/src/adc.c: In function 'ADC1_IRQHandler':
+../example/src/adc.c:35:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC1, ADC_CH1,&adc_data1);
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/adc.c:1:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+Finished building: ../example/src/adc.c
+ 
+Building target: periph_adc.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_adc.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_adc_Debug.ld" -o "periph_adc.axf"  ./example/src/adc.o ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_adc.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_adc.axf"; # arm-none-eabi-objcopy -v -O binary "periph_adc.axf" "periph_adc.bin" ; # checksum -p LPC4337 -d "periph_adc.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18352	      0	    376	  18728	   4928	periph_adc.axf
+ 
+17:35:11 **** Incremental Build of configuration Debug for project periph_adc ****
+make -r all 
+make: No se hace nada para 'all'.
+17:37:04 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+17:37:04 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+17:37:05 **** Incremental Build of configuration Debug for project periph_adc ****
+make -r all 
+Building file: ../example/src/adc.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/adc.d" -MT"example/src/adc.o" -MT"example/src/adc.d" -o "example/src/adc.o" "../example/src/adc.c"
+../example/src/adc.c: In function 'ADC0_IRQHandler':
+../example/src/adc.c:30:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC0, ADC_CH0,&adc_data0);
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/adc.c:1:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+../example/src/adc.c: In function 'ADC1_IRQHandler':
+../example/src/adc.c:35:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC1, ADC_CH1,&adc_data1);
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/adc.c:1:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+Finished building: ../example/src/adc.c
+ 
+Building target: periph_adc.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_adc.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_adc_Debug.ld" -o "periph_adc.axf"  ./example/src/adc.o ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_adc.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_adc.axf"; # arm-none-eabi-objcopy -v -O binary "periph_adc.axf" "periph_adc.bin" ; # checksum -p LPC4337 -d "periph_adc.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18352	      0	    376	  18728	   4928	periph_adc.axf
+ 
+17:37:16 **** Incremental Build of configuration Debug for project periph_adc ****
+make -r all 
+make: No se hace nada para 'all'.
+17:40:49 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+17:40:50 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+17:40:50 **** Incremental Build of configuration Debug for project periph_adc ****
+make -r all 
+Building file: ../example/src/adc.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/adc.d" -MT"example/src/adc.o" -MT"example/src/adc.d" -o "example/src/adc.o" "../example/src/adc.c"
+../example/src/adc.c: In function 'ADC0_IRQHandler':
+../example/src/adc.c:30:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC0, ADC_CH0,&adc_data0);
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/adc.c:1:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+../example/src/adc.c: In function 'ADC1_IRQHandler':
+../example/src/adc.c:35:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC1, ADC_CH1,&adc_data1);
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/adc.c:1:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+Finished building: ../example/src/adc.c
+ 
+Building target: periph_adc.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_adc.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_adc_Debug.ld" -o "periph_adc.axf"  ./example/src/adc.o ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_adc.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_adc.axf"; # arm-none-eabi-objcopy -v -O binary "periph_adc.axf" "periph_adc.bin" ; # checksum -p LPC4337 -d "periph_adc.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18352	      0	    376	  18728	   4928	periph_adc.axf
+ 
+17:41:00 **** Incremental Build of configuration Debug for project periph_adc ****
+make -r all 
+make: No se hace nada para 'all'.
+17:46:49 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+17:46:50 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+17:46:50 **** Incremental Build of configuration Debug for project periph_adc ****
+make -r all 
+Building file: ../example/src/adc.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/adc.d" -MT"example/src/adc.o" -MT"example/src/adc.d" -o "example/src/adc.o" "../example/src/adc.c"
+../example/src/adc.c: In function 'ADC0_IRQHandler':
+../example/src/adc.c:30:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC0, ADC_CH0,&adc_data0);
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/adc.c:1:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+../example/src/adc.c: In function 'ADC1_IRQHandler':
+../example/src/adc.c:35:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC1, ADC_CH1,&adc_data1);
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/adc.c:1:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+Finished building: ../example/src/adc.c
+ 
+Building target: periph_adc.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_adc.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_adc_Debug.ld" -o "periph_adc.axf"  ./example/src/adc.o ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_adc.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_adc.axf"; # arm-none-eabi-objcopy -v -O binary "periph_adc.axf" "periph_adc.bin" ; # checksum -p LPC4337 -d "periph_adc.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18288	      0	    376	  18664	   48e8	periph_adc.axf
+ 
+17:46:56 **** Incremental Build of configuration Debug for project periph_adc ****
+make -r all 
+make: No se hace nada para 'all'.
+17:56:58 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+17:56:58 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+17:56:59 **** Incremental Build of configuration Debug for project periph_adc ****
+make -r all 
+Building file: ../example/src/adc.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/adc.d" -MT"example/src/adc.o" -MT"example/src/adc.d" -o "example/src/adc.o" "../example/src/adc.c"
+../example/src/adc.c: In function 'ADC0_IRQHandler':
+../example/src/adc.c:30:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC0, ADC_CH0,&adc_data0);
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/adc.c:1:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+../example/src/adc.c: In function 'ADC1_IRQHandler':
+../example/src/adc.c:35:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC1, ADC_CH1,&adc_data1);
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/adc.c:1:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+Finished building: ../example/src/adc.c
+ 
+Building target: periph_adc.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_adc.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_adc_Debug.ld" -o "periph_adc.axf"  ./example/src/adc.o ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_adc.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_adc.axf"; # arm-none-eabi-objcopy -v -O binary "periph_adc.axf" "periph_adc.bin" ; # checksum -p LPC4337 -d "periph_adc.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18288	      0	    376	  18664	   48e8	periph_adc.axf
+ 
+17:57:34 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+17:57:34 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+17:57:35 **** Incremental Build of configuration Debug for project periph_adc ****
+make -r all 
+make: No se hace nada para 'all'.
+17:57:36 **** Incremental Build of configuration Debug for project periph_adc ****
+make -r all 
+make: No se hace nada para 'all'.
+18:52:09 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+18:52:10 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+18:52:10 **** Incremental Build of configuration Debug for project periph_adc ****
+make -r all 
+Building file: ../example/src/adc.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/adc.d" -MT"example/src/adc.o" -MT"example/src/adc.d" -o "example/src/adc.o" "../example/src/adc.c"
+../example/src/adc.c: In function 'ADC0_IRQHandler':
+../example/src/adc.c:30:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC0, ADC_CH0,&adc_data0);
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/adc.c:1:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+../example/src/adc.c: In function 'ADC1_IRQHandler':
+../example/src/adc.c:35:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC1, ADC_CH1,&adc_data1);
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/adc.c:1:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+Finished building: ../example/src/adc.c
+ 
+Building target: periph_adc.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_adc.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_adc_Debug.ld" -o "periph_adc.axf"  ./example/src/adc.o ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_adc.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_adc.axf"; # arm-none-eabi-objcopy -v -O binary "periph_adc.axf" "periph_adc.bin" ; # checksum -p LPC4337 -d "periph_adc.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18352	      0	    376	  18728	   4928	periph_adc.axf
+ 
+18:52:12 **** Incremental Build of configuration Debug for project periph_adc ****
+make -r all 
+make: No se hace nada para 'all'.
+18:57:11 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+18:57:11 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+18:57:11 **** Incremental Build of configuration Debug for project periph_adc ****
+make -r all 
+Building file: ../example/src/adc.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/adc.d" -MT"example/src/adc.o" -MT"example/src/adc.d" -o "example/src/adc.o" "../example/src/adc.c"
+../example/src/adc.c: In function 'ADC0_IRQHandler':
+../example/src/adc.c:30:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC0, ADC_CH0,&adc_data0);
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/adc.c:1:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+../example/src/adc.c: In function 'ADC1_IRQHandler':
+../example/src/adc.c:35:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC1, ADC_CH1,&adc_data1);
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/adc.c:1:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+Finished building: ../example/src/adc.c
+ 
+Building target: periph_adc.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="periph_adc.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "periph_adc_Debug.ld" -o "periph_adc.axf"  ./example/src/adc.o ./example/src/cr_startup_lpc43xx.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: periph_adc.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "periph_adc.axf"; # arm-none-eabi-objcopy -v -O binary "periph_adc.axf" "periph_adc.bin" ; # checksum -p LPC4337 -d "periph_adc.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18360	      0	    376	  18736	   4930	periph_adc.axf
+ 
+18:57:16 **** Incremental Build of configuration Debug for project periph_adc ****
+make -r all 
+make: No se hace nada para 'all'.
