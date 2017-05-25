@@ -3842,9 +3842,9 @@ END GROUP
                 0x1a00023c                SSP0_IRQHandler
                 0x1a00023c                ADC1_IRQHandler
                 0x1a00023c                RTC_IRQHandler
-                0x1a00023c                TIMER0_IRQHandler
                 0x1a00023c                SPI_IRQHandler
                 0x1a00023c                LCD_IRQHandler
+                0x1a00023c                TIMER1_IRQHandler
                 0x1a00023c                UART2_IRQHandler
                 0x1a00023c                GPIO2_IRQHandler
                 0x1a00023c                I2S1_IRQHandler
@@ -4077,9 +4077,9 @@ END GROUP
  .text.GPIO0_IRQHandler
                 0x1a001f20       0x44 ./example/src/prueba_freertos.o
                 0x1a001f20                GPIO0_IRQHandler
- .text.TIMER1_IRQHandler
+ .text.TIMER0_IRQHandler
                 0x1a001f64       0x48 ./example/src/prueba_freertos.o
-                0x1a001f64                TIMER1_IRQHandler
+                0x1a001f64                TIMER0_IRQHandler
  .text.SetupHardware
                 0x1a001fac       0x1c ./example/src/prueba_freertos.o
                 0x1a001fac                SetupHardware
@@ -4712,7 +4712,7 @@ OUTPUT(Prueba_FreeRTOS.axf elf32-littlearm)
  .debug_ranges  0x000008e8       0x30 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(timer_18xx_43xx.o)
  .debug_ranges  0x00000918      0x120 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
 
-.debug_macro    0x00000000     0x4518
+.debug_macro    0x00000000     0x4542
  .debug_macro   0x00000000      0x3ab ./freertos/src/heap_3.o
  .debug_macro   0x000003ab      0x390 ./freertos/src/list.o
  .debug_macro   0x0000073b      0x434 ./freertos/src/port.o
@@ -4722,27 +4722,27 @@ OUTPUT(Prueba_FreeRTOS.axf elf32-littlearm)
  .debug_macro   0x0000102f      0x43c ./freertos/src/tasks.o
  .debug_macro   0x0000146b       0x16 ./freertos/src/tasks.o
  .debug_macro   0x00001481       0x1d ./example/src/cr_startup_lpc43xx.o
- .debug_macro   0x0000149e      0x44d ./example/src/prueba_freertos.o
- .debug_macro   0x000018eb       0x7b ./example/src/prueba_freertos.o
- .debug_macro   0x00001966       0x18 ./example/src/prueba_freertos.o
- .debug_macro   0x0000197e       0x10 ./example/src/prueba_freertos.o
- .debug_macro   0x0000198e       0xf5 ./example/src/prueba_freertos.o
- .debug_macro   0x00001a83       0x7e ./example/src/prueba_freertos.o
- .debug_macro   0x00001b01       0x1c ./example/src/prueba_freertos.o
- .debug_macro   0x00001b1d      0x310 ./example/src/sysinit.o
- .debug_macro   0x00001e2d      0x336 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
- .debug_macro   0x00002163      0x89e /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
- .debug_macro   0x00002a01       0x12 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
- .debug_macro   0x00002a13      0x339 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
- .debug_macro   0x00002d4c      0x310 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
- .debug_macro   0x0000305c      0x2da /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(adc_18xx_43xx.o)
- .debug_macro   0x00003336      0x2da /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(chip_18xx_43xx.o)
- .debug_macro   0x00003610      0x2e0 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
- .debug_macro   0x000038f0       0xc0 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(fpu_init.o)
- .debug_macro   0x000039b0      0x2da /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(gpio_18xx_43xx.o)
- .debug_macro   0x00003c8a      0x2da /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
- .debug_macro   0x00003f64      0x2da /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(timer_18xx_43xx.o)
- .debug_macro   0x0000423e      0x2da /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
+ .debug_macro   0x0000149e      0x477 ./example/src/prueba_freertos.o
+ .debug_macro   0x00001915       0x7b ./example/src/prueba_freertos.o
+ .debug_macro   0x00001990       0x18 ./example/src/prueba_freertos.o
+ .debug_macro   0x000019a8       0x10 ./example/src/prueba_freertos.o
+ .debug_macro   0x000019b8       0xf5 ./example/src/prueba_freertos.o
+ .debug_macro   0x00001aad       0x7e ./example/src/prueba_freertos.o
+ .debug_macro   0x00001b2b       0x1c ./example/src/prueba_freertos.o
+ .debug_macro   0x00001b47      0x310 ./example/src/sysinit.o
+ .debug_macro   0x00001e57      0x336 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+ .debug_macro   0x0000218d      0x89e /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+ .debug_macro   0x00002a2b       0x12 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+ .debug_macro   0x00002a3d      0x339 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+ .debug_macro   0x00002d76      0x310 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
+ .debug_macro   0x00003086      0x2da /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(adc_18xx_43xx.o)
+ .debug_macro   0x00003360      0x2da /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(chip_18xx_43xx.o)
+ .debug_macro   0x0000363a      0x2e0 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
+ .debug_macro   0x0000391a       0xc0 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(fpu_init.o)
+ .debug_macro   0x000039da      0x2da /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(gpio_18xx_43xx.o)
+ .debug_macro   0x00003cb4      0x2da /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
+ .debug_macro   0x00003f8e      0x2da /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(timer_18xx_43xx.o)
+ .debug_macro   0x00004268      0x2da /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
 
 .debug_line     0x00000000     0x8e98
  .debug_line    0x00000000      0x7ce ./freertos/src/heap_3.o
@@ -4765,44 +4765,44 @@ OUTPUT(Prueba_FreeRTOS.axf elf32-littlearm)
  .debug_line    0x00007f0c      0x653 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(timer_18xx_43xx.o)
  .debug_line    0x0000855f      0x939 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
 
-.debug_str      0x00000000    0x1f99d
+.debug_str      0x00000000    0x1fa23
  .debug_str     0x00000000    0x17f32 ./freertos/src/heap_3.o
                               0x18033 (size before relaxing)
  .debug_str     0x00017f32      0x139 ./freertos/src/list.o
                               0x17d54 (size before relaxing)
- .debug_str     0x0001806b     0x11e1 ./freertos/src/port.o
+ .debug_str     0x0001806b     0x11d2 ./freertos/src/port.o
                               0x19187 (size before relaxing)
- .debug_str     0x0001924c     0x10ed ./freertos/src/queue.o
+ .debug_str     0x0001923d     0x10ed ./freertos/src/queue.o
                               0x19c19 (size before relaxing)
- .debug_str     0x0001a339       0x62 ./freertos/src/redlib_memfix.o
+ .debug_str     0x0001a32a       0x62 ./freertos/src/redlib_memfix.o
                                0x25e4 (size before relaxing)
- .debug_str     0x0001a39b     0x167e ./freertos/src/tasks.o
+ .debug_str     0x0001a38c     0x167e ./freertos/src/tasks.o
                               0x1a29c (size before relaxing)
- .debug_str     0x0001ba19      0x1bb ./example/src/cr_startup_lpc43xx.o
+ .debug_str     0x0001ba0a      0x1bb ./example/src/cr_startup_lpc43xx.o
                                0x276a (size before relaxing)
- .debug_str     0x0001bbd4     0x12f3 ./example/src/prueba_freertos.o
-                              0x1a7b5 (size before relaxing)
- .debug_str     0x0001cec7       0x23 ./example/src/sysinit.o
+ .debug_str     0x0001bbc5     0x1388 ./example/src/prueba_freertos.o
+                              0x1a868 (size before relaxing)
+ .debug_str     0x0001cf4d       0x23 ./example/src/sysinit.o
                               0x1578a (size before relaxing)
- .debug_str     0x0001ceea     0x1956 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+ .debug_str     0x0001cf70     0x1956 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
                               0x17c28 (size before relaxing)
- .debug_str     0x0001e840      0x125 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
+ .debug_str     0x0001e8c6      0x125 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
                               0x1652a (size before relaxing)
- .debug_str     0x0001e965      0x316 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(adc_18xx_43xx.o)
+ .debug_str     0x0001e9eb      0x316 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(adc_18xx_43xx.o)
                               0x158e4 (size before relaxing)
- .debug_str     0x0001ec7b       0xa1 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(chip_18xx_43xx.o)
+ .debug_str     0x0001ed01       0xa1 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(chip_18xx_43xx.o)
                               0x15dcc (size before relaxing)
- .debug_str     0x0001ed1c      0x5d8 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
+ .debug_str     0x0001eda2      0x5d8 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
                               0x1634f (size before relaxing)
- .debug_str     0x0001f2f4       0xb5 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(fpu_init.o)
+ .debug_str     0x0001f37a       0xb5 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(fpu_init.o)
                                0x9965 (size before relaxing)
- .debug_str     0x0001f3a9       0xe4 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(gpio_18xx_43xx.o)
+ .debug_str     0x0001f42f       0xe4 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(gpio_18xx_43xx.o)
                               0x151ce (size before relaxing)
- .debug_str     0x0001f48d       0xb4 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
+ .debug_str     0x0001f513       0xb4 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
                               0x15d9b (size before relaxing)
- .debug_str     0x0001f541      0x131 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(timer_18xx_43xx.o)
+ .debug_str     0x0001f5c7      0x131 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(timer_18xx_43xx.o)
                               0x155c8 (size before relaxing)
- .debug_str     0x0001f672      0x32b /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
+ .debug_str     0x0001f6f8      0x32b /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
                               0x15eff (size before relaxing)
 
 .comment        0x00000000       0xdc
