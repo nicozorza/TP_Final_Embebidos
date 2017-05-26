@@ -86,11 +86,12 @@ uint8_t cycles_count=0;				//Cantidad de semiciclos contados
 #define FIRE_TRIGGER_IRQn				TIMER0_IRQn		//Interrupcion del timer que dispara el trigger
 
 #define TRIGGER_ON_TIMER				LPC_TIMER1		//Timer para disparar el trigger
-#define TRIGGER_ON_CHANNEL			1				//Canal del timer que dispara el trigger
-#define TRIGGER_ON_RST				RGU_TIMER1_RST	//Reset del timer que dispara el trigger
-#define TRIGGER_ON_IRQ_HANDLER		TIMER1_IRQHandler	//Handler del timer que dispara el trigger
-#define TRIGGER_ON_IRQn				TIMER1_IRQn		//Interrupcion del timer que dispara el trigger
-#define TRIGGER_ON_DELAY 			50000				//Tiempo de encendido del trigger
+#define TRIGGER_ON_CHANNEL				1				//Canal del timer que dispara el trigger
+#define TRIGGER_ON_RST					RGU_TIMER1_RST	//Reset del timer que dispara el trigger
+#define TRIGGER_ON_IRQ_HANDLER			TIMER1_IRQHandler	//Handler del timer que dispara el trigger
+#define TRIGGER_ON_IRQn					TIMER1_IRQn		//Interrupcion del timer que dispara el trigger
+
+#define TRIGGER_ON_DELAY 				50000				//Tiempo de encendido del trigger
 
 /* Macros para el timer. Dado que el detector de cruce por cero no es inmediato, se deben
  * poner los margenes para evitar problemas. */
@@ -108,7 +109,13 @@ uint8_t cycles_count=0;				//Cantidad de semiciclos contados
  * un intervalo de tiempo disponible.
  */
 void vApplicationIdleHook(void){
-	Chip_ADC_SetStartMode(LPC_ADC0, ADC_START_NOW, ADC_TRIGGERMODE_RISING);
+	/* Si se alcanzo el valor maximo de semiciclos de la senoidal,
+	 * entonces se lee un nuevo valor del ADC.
+	 */
+	if( cycles_count >= MAX_CYCLES ){
+		cycles_count=0;		//Se resetea el contador de ciclos
+		Chip_ADC_SetStartMode(LPC_ADC0, ADC_START_NOW, ADC_TRIGGERMODE_RISING);
+	}
 }
 /*****************************************************************************/
 
@@ -118,13 +125,7 @@ void vApplicationIdleHook(void){
 *****************************************************************************/
 /* Handler del ADC0 */
 void ADC0_IRQHandler(void){
-	uint16_t aux;
-
-	Chip_ADC_ReadValue(LPC_ADC0, ADC_CH0,&aux);	//Se hace una nueva lectura
-	if( cycles_count >= MAX_CYCLES ){
-		cycles_count=0;		//Se resetea el contador de ciclos
-		adc_data=aux;	//Se almacena la nueva lectura
-	}
+	Chip_ADC_ReadValue(LPC_ADC0, ADC_CH0,&adc_data);	//Se hace una nueva lectura de la temperatura
 }
 
 /* Handler de las interrupciones del GPIO */
@@ -150,7 +151,6 @@ void FIRE_TRIGGER_IRQ_HANDLER(void){
 
 /* Handler del timer */
 void TRIGGER_ON_IRQ_HANDLER(void){
-
 	Chip_TIMER_Disable(TRIGGER_ON_TIMER);	//Se apaga el timer. El timer se debe activar solo cuando se lo requiere
 	Chip_TIMER_ClearMatch(TRIGGER_ON_TIMER, TRIGGER_ON_CHANNEL);	//Se limpian las interrupciones pendientes
 	Chip_GPIO_SetPinState(LPC_GPIO_PORT, TRIGGER_GPIO_INT_PORT, TRIGGER_GPIO_INT_PIN, (bool) false);
@@ -195,31 +195,34 @@ void ConfigurePhaseDetector( void ){
 
 	Chip_PININT_ClearIntStatus(LPC_GPIO_PIN_INT, PININTCH(PHASE_PININT_INDEX));	//Se limpian las interrupciones
 	Chip_PININT_SetPinModeEdge(LPC_GPIO_PIN_INT, PININTCH(PHASE_PININT_INDEX));	//Se setea el trigger por flancos
-	LPC_GPIO_PIN_INT->SIENR |= PININTCH(PHASE_PININT_INDEX);						//Se setean los flancos ascendentes
-	LPC_GPIO_PIN_INT->SIENF |= PININTCH(PHASE_PININT_INDEX);						//Se setean los flancos descendentes
+	LPC_GPIO_PIN_INT->SIENR |= PININTCH(PHASE_PININT_INDEX);					//Se setean los flancos ascendentes
+	LPC_GPIO_PIN_INT->SIENF |= PININTCH(PHASE_PININT_INDEX);					//Se setean los flancos descendentes
 
 	/* Habilitacion de las interrupciones */
 	NVIC_SetPriority(PIN_INT0_IRQn, PHASE_INTERRUPT_PRIORITY);	//Se setea la prioridad de la interrupcion
-	NVIC_ClearPendingIRQ(PIN_INT0_IRQn);	//Se limpian las interrupciones pendientes
-	NVIC_EnableIRQ(PIN_INT0_IRQn);			//Se habilitan las interrupciones para el pin
+	NVIC_ClearPendingIRQ(PIN_INT0_IRQn);						//Se limpian las interrupciones pendientes
+	NVIC_EnableIRQ(PIN_INT0_IRQn);								//Se habilitan las interrupciones para el pin
 }
 
 /* Configuracion del timer */
 void ConfigureTimerFireTrigger( void ){
-	Chip_TIMER_Init(FIRE_TRIGGER_TIMER);	//Se habilita el timer
+	Chip_TIMER_Init(FIRE_TRIGGER_TIMER);		//Se habilita el timer
 	Chip_RGU_TriggerReset(FIRE_TRIGGER_RST);	//Se resetea el periferico del timer
 	while (Chip_RGU_InReset(FIRE_TRIGGER_RST));
+	Chip_TIMER_Reset(FIRE_TRIGGER_TIMER);	//Se resetea el timer y se inicializa en cero
 
-	Chip_TIMER_Reset(FIRE_TRIGGER_TIMER);				//Se resetea el timer y se inicializa en cero
-	Chip_TIMER_MatchEnableInt(FIRE_TRIGGER_TIMER, FIRE_TRIGGER_CHANNEL);	//Se habilitan las interrupciones por match. Cuando el timer
-												//alcanza el valor del registro, se dispara la interrupcion
-	Chip_TIMER_SetMatch(FIRE_TRIGGER_TIMER, FIRE_TRIGGER_CHANNEL,0);	//Se inicializa el valor maximo del timer
-	Chip_TIMER_ResetOnMatchEnable(FIRE_TRIGGER_TIMER, FIRE_TRIGGER_CHANNEL);	//Se resetea al timer automaticamente luego de alcanzar el maximo
+	/* Se habilitan las interrupciones por match. Cuando el timer alcanza el valor
+	 * del registro, se dispara la interrupcion. */
+	Chip_TIMER_MatchEnableInt(FIRE_TRIGGER_TIMER, FIRE_TRIGGER_CHANNEL);
+	/* Se inicializa el valor maximo del timer */
+	Chip_TIMER_SetMatch(FIRE_TRIGGER_TIMER, FIRE_TRIGGER_CHANNEL,0);
+	/* Se resetea al timer automaticamente luego de alcanzar el maximo */
+	Chip_TIMER_ResetOnMatchEnable(FIRE_TRIGGER_TIMER, FIRE_TRIGGER_CHANNEL);
 
 	NVIC_SetPriority(FIRE_TRIGGER_IRQn, TIMER_INTERRUPT_PRIORITY);	//Se setea la prioridad de la interrupcion del timer
 
 	NVIC_EnableIRQ(FIRE_TRIGGER_IRQn);				//Se habilitan las interrupciones del timer
-	NVIC_ClearPendingIRQ(FIRE_TRIGGER_IRQn);			//Se limpian las interrupciones pendientes del timer
+	NVIC_ClearPendingIRQ(FIRE_TRIGGER_IRQn);		//Se limpian las interrupciones pendientes del timer
 
 	/* Configuracion del pin de trigger del triac */
 	Chip_SCU_PinMuxSet(TRIGGER_SCU_INT_PORT, TRIGGER_SCU_INT_PIN,(SCU_MODE_INBUFF_EN|SCU_MODE_INACT|SCU_MODE_FUNC0));
@@ -229,20 +232,23 @@ void ConfigureTimerFireTrigger( void ){
 
 /* Configuracion del timer */
 void ConfigureTimerTriggerOn( void ){
-	Chip_TIMER_Init(TRIGGER_ON_TIMER);	//Se habilita el timer
+	Chip_TIMER_Init(TRIGGER_ON_TIMER);		//Se habilita el timer
 	Chip_RGU_TriggerReset(TRIGGER_ON_RST);	//Se resetea el periferico del timer
 	while (Chip_RGU_InReset(TRIGGER_ON_RST));
-
 	Chip_TIMER_Reset(TRIGGER_ON_TIMER);				//Se resetea el timer y se inicializa en cero
-	Chip_TIMER_MatchEnableInt(TRIGGER_ON_TIMER, TRIGGER_ON_CHANNEL);	//Se habilitan las interrupciones por match. Cuando el timer
-												//alcanza el valor del registro, se dispara la interrupcion
-	Chip_TIMER_SetMatch(TRIGGER_ON_TIMER, TRIGGER_ON_CHANNEL,0);	//Se inicializa el valor maximo del timer
-	Chip_TIMER_ResetOnMatchEnable(TRIGGER_ON_TIMER, TRIGGER_ON_CHANNEL);	//Se resetea al timer automaticamente luego de alcanzar el maximo
 
-	NVIC_SetPriority(TRIGGER_ON_IRQn, TIMER_INTERRUPT_PRIORITY);	//Se setea la prioridad de la interrupcion del timer
+	/* Se habilitan las interrupciones por match. Cuando el timer alcanza el valor
+	 * del registro, se dispara la interrupcion. */
+	Chip_TIMER_MatchEnableInt(TRIGGER_ON_TIMER, TRIGGER_ON_CHANNEL);
+	/* Se inicializa el valor maximo del timer */
+	Chip_TIMER_SetMatch(TRIGGER_ON_TIMER, TRIGGER_ON_CHANNEL,0);
+	/* Se resetea al timer automaticamente luego de alcanzar el maximo */
+	Chip_TIMER_ResetOnMatchEnable(TRIGGER_ON_TIMER, TRIGGER_ON_CHANNEL);
 
-	NVIC_EnableIRQ(TRIGGER_ON_IRQn);				//Se habilitan las interrupciones del timer
-	NVIC_ClearPendingIRQ(TRIGGER_ON_IRQn);			//Se limpian las interrupciones pendientes del timer
+	NVIC_SetPriority(TRIGGER_ON_IRQn, TIMER_INTERRUPT_PRIORITY);//Se setea la prioridad de la interrupcion del timer
+
+	NVIC_EnableIRQ(TRIGGER_ON_IRQn);			//Se habilitan las interrupciones del timer
+	NVIC_ClearPendingIRQ(TRIGGER_ON_IRQn);		//Se limpian las interrupciones pendientes del timer
 
 }
 /*****************************************************************************/
@@ -264,16 +270,17 @@ static void vHandlerZeroCrossing(void *pvParameters){
 
         cycles_count++;		//Se cuenta un nuevo ciclo de la senoidal
 
-        Chip_TIMER_SetMatch(FIRE_TRIGGER_TIMER, FIRE_TRIGGER_CHANNEL,TIMER_BASE+TIMER_STEP*adc_data);	//Se configura el valor maximo del timer
-        Chip_TIMER_Enable(FIRE_TRIGGER_TIMER);			//Se habilita el timer para disparar el trigger
+        /* Se configura el valor maximo del timer */
+        Chip_TIMER_SetMatch(FIRE_TRIGGER_TIMER, FIRE_TRIGGER_CHANNEL,TIMER_BASE+TIMER_STEP*adc_data);
+        /* Se habilita el timer para disparar el trigger */
+        Chip_TIMER_Enable(FIRE_TRIGGER_TIMER);
     }
 }
 
 /* Esta tarea se ejecuta siempre que se deba disparar el trigger, es
  * decir que el timer finalizo la cuenta.*/
 static void vHandlerFireTrigger(void *pvParameters){
-	portTickType xLastExecutionTime;
-	int i;
+
 	/* Se toma el semaforo para vaciarlo antes de entrar al loop infinito */
     xSemaphoreTake(xFireTriggerSemaphore, (portTickType) 0);
 

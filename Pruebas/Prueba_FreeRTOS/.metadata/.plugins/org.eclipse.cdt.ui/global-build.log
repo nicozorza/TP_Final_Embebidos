@@ -6199,3 +6199,578 @@ arm-none-eabi-size "Prueba_FreeRTOS.axf"; # arm-none-eabi-objcopy -v -O binary "
 11:38:04 **** Incremental Build of configuration Debug for project Prueba_FreeRTOS ****
 make -r all 
 make: No se hace nada para 'all'.
+11:55:16 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+11:55:16 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+11:55:17 **** Incremental Build of configuration Debug for project Prueba_FreeRTOS ****
+make -r all 
+Building file: ../example/src/prueba_freertos.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/Prueba_FreeRTOS/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/Prueba_FreeRTOS/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"example/src/prueba_freertos.d" -MT"example/src/prueba_freertos.o" -MT"example/src/prueba_freertos.d" -o "example/src/prueba_freertos.o" "../example/src/prueba_freertos.c"
+../example/src/prueba_freertos.c: In function 'ADC0_IRQHandler':
+../example/src/prueba_freertos.c:124:40: error: 'aux' undeclared (first use in this function)
+  Chip_ADC_ReadValue(LPC_ADC0, ADC_CH0,&aux); //Se hace una nueva lectura
+                                        ^
+../example/src/prueba_freertos.c:124:40: note: each undeclared identifier is reported only once for each function it appears in
+../example/src/prueba_freertos.c: In function 'vHandlerFireTrigger':
+../example/src/prueba_freertos.c:273:6: warning: unused variable 'i' [-Wunused-variable]
+example/src/subdir.mk:24: fallo en las instrucciones para el objetivo 'example/src/prueba_freertos.o'
+  int i;
+      ^
+../example/src/prueba_freertos.c:272:15: warning: unused variable 'xLastExecutionTime' [-Wunused-variable]
+  portTickType xLastExecutionTime;
+               ^
+make: *** [example/src/prueba_freertos.o] Error 1
+11:56:41 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+11:56:42 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+11:56:42 **** Incremental Build of configuration Debug for project Prueba_FreeRTOS ****
+make -r all 
+Building file: ../example/src/prueba_freertos.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/Prueba_FreeRTOS/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/Prueba_FreeRTOS/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"example/src/prueba_freertos.d" -MT"example/src/prueba_freertos.o" -MT"example/src/prueba_freertos.d" -o "example/src/prueba_freertos.o" "../example/src/prueba_freertos.c"
+../example/src/prueba_freertos.c: In function 'ADC0_IRQHandler':
+../example/src/prueba_freertos.c:127:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC0, ADC_CH0,&adc_data); //Se hace una nueva lectura de la temperatura
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/prueba_freertos.c:32:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+../example/src/prueba_freertos.c: In function 'vHandlerFireTrigger':
+../example/src/prueba_freertos.c:276:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+../example/src/prueba_freertos.c:275:15: warning: unused variable 'xLastExecutionTime' [-Wunused-variable]
+  portTickType xLastExecutionTime;
+               ^
+Finished building: ../example/src/prueba_freertos.c
+ 
+Building target: Prueba_FreeRTOS.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="Prueba_FreeRTOS.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "Prueba_FreeRTOS_Debug.ld" -o "Prueba_FreeRTOS.axf"  ./freertos/src/FreeRTOSCommonHooks.o ./freertos/src/croutine.o ./freertos/src/event_groups.o ./freertos/src/heap_3.o ./freertos/src/list.o ./freertos/src/port.o ./freertos/src/queue.o ./freertos/src/redlib_memfix.o ./freertos/src/tasks.o ./freertos/src/timers.o  ./example/src/cr_startup_lpc43xx.o ./example/src/prueba_freertos.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: Prueba_FreeRTOS.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Prueba_FreeRTOS.axf"; # arm-none-eabi-objcopy -v -O binary "Prueba_FreeRTOS.axf" "Prueba_FreeRTOS.bin" ; # checksum -p LPC4337 -d "Prueba_FreeRTOS.bin";
+   text	   data	    bss	    dec	    hex	filename
+  17428	      8	    696	  18132	   46d4	Prueba_FreeRTOS.axf
+ 
+11:56:46 **** Incremental Build of configuration Debug for project Prueba_FreeRTOS ****
+make -r all 
+make: No se hace nada para 'all'.
+11:56:55 **** Incremental Build of configuration Debug for project Prueba_FreeRTOS ****
+make -r all 
+make: No se hace nada para 'all'.
+12:18:00 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+12:18:00 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+12:18:01 **** Incremental Build of configuration Debug for project Prueba_FreeRTOS ****
+make -r all 
+Building file: ../example/src/prueba_freertos.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/Prueba_FreeRTOS/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/Prueba_FreeRTOS/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"example/src/prueba_freertos.d" -MT"example/src/prueba_freertos.o" -MT"example/src/prueba_freertos.d" -o "example/src/prueba_freertos.o" "../example/src/prueba_freertos.c"
+../example/src/prueba_freertos.c: In function 'ADC0_IRQHandler':
+../example/src/prueba_freertos.c:128:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC0, ADC_CH0,&adc_data); //Se hace una nueva lectura de la temperatura
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/prueba_freertos.c:32:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+Finished building: ../example/src/prueba_freertos.c
+ 
+Building target: Prueba_FreeRTOS.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="Prueba_FreeRTOS.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "Prueba_FreeRTOS_Debug.ld" -o "Prueba_FreeRTOS.axf"  ./freertos/src/FreeRTOSCommonHooks.o ./freertos/src/croutine.o ./freertos/src/event_groups.o ./freertos/src/heap_3.o ./freertos/src/list.o ./freertos/src/port.o ./freertos/src/queue.o ./freertos/src/redlib_memfix.o ./freertos/src/tasks.o ./freertos/src/timers.o  ./example/src/cr_startup_lpc43xx.o ./example/src/prueba_freertos.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: Prueba_FreeRTOS.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Prueba_FreeRTOS.axf"; # arm-none-eabi-objcopy -v -O binary "Prueba_FreeRTOS.axf" "Prueba_FreeRTOS.bin" ; # checksum -p LPC4337 -d "Prueba_FreeRTOS.bin";
+   text	   data	    bss	    dec	    hex	filename
+  17428	      8	    696	  18132	   46d4	Prueba_FreeRTOS.axf
+ 
+12:18:45 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+12:18:46 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+12:18:46 **** Incremental Build of configuration Debug for project Prueba_FreeRTOS ****
+make -r all 
+make: No se hace nada para 'all'.
+12:19:12 **** Clean-only build of configuration Debug for project Prueba_FreeRTOS ****
+make -r clean 
+rm -rf  ./freertos/src/FreeRTOSCommonHooks.o ./freertos/src/croutine.o ./freertos/src/event_groups.o ./freertos/src/heap_3.o ./freertos/src/list.o ./freertos/src/port.o ./freertos/src/queue.o ./freertos/src/redlib_memfix.o ./freertos/src/tasks.o ./freertos/src/timers.o  ./example/src/cr_startup_lpc43xx.o ./example/src/prueba_freertos.o ./example/src/sysinit.o  ./freertos/src/FreeRTOSCommonHooks.d ./freertos/src/croutine.d ./freertos/src/event_groups.d ./freertos/src/heap_3.d ./freertos/src/list.d ./freertos/src/port.d ./freertos/src/queue.d ./freertos/src/redlib_memfix.d ./freertos/src/tasks.d ./freertos/src/timers.d  ./example/src/cr_startup_lpc43xx.d ./example/src/prueba_freertos.d ./example/src/sysinit.d  Prueba_FreeRTOS.axf
+ 
+12:19:12 **** Clean-only build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r clean 
+rm -rf  ./src/board.o ./src/board_sysinit.o ./src/lcd_st7565s.o ./src/lpc_phy_smsc87x0.o ./src/wm8904.o  ./src/board.d ./src/board_sysinit.d ./src/lcd_st7565s.d ./src/lpc_phy_smsc87x0.d ./src/wm8904.d  liblpc_board_nxp_lpcxpresso_4337.a
+ 
+12:19:12 **** Clean-only build of configuration Debug for project lpc_chip_43xx ****
+make -r clean 
+rm -rf  ./src/adc_18xx_43xx.o ./src/aes_18xx_43xx.o ./src/atimer_18xx_43xx.o ./src/ccan_18xx_43xx.o ./src/chip_18xx_43xx.o ./src/clock_18xx_43xx.o ./src/dac_18xx_43xx.o ./src/eeprom_18xx_43xx.o ./src/emc_18xx_43xx.o ./src/enet_18xx_43xx.o ./src/evrt_18xx_43xx.o ./src/fpu_init.o ./src/gpdma_18xx_43xx.o ./src/gpio_18xx_43xx.o ./src/gpiogroup_18xx_43xx.o ./src/hsadc_18xx_43xx.o ./src/i2c_18xx_43xx.o ./src/i2cm_18xx_43xx.o ./src/i2s_18xx_43xx.o ./src/iap_18xx_43xx.o ./src/lcd_18xx_43xx.o ./src/otp_18xx_43xx.o ./src/pinint_18xx_43xx.o ./src/pmc_18xx_43xx.o ./src/ring_buffer.o ./src/ritimer_18xx_43xx.o ./src/rtc_18xx_43xx.o ./src/sct_18xx_43xx.o ./src/sct_pwm_18xx_43xx.o ./src/sdif_18xx_43xx.o ./src/sdio_18xx_43xx.o ./src/sdmmc_18xx_43xx.o ./src/spi_18xx_43xx.o ./src/ssp_18xx_43xx.o ./src/stopwatch_18xx_43xx.o ./src/sysinit_18xx_43xx.o ./src/timer_18xx_43xx.o ./src/uart_18xx_43xx.o ./src/wwdt_18xx_43xx.o  ./src/adc_18xx_43xx.d ./src/aes_18xx_43xx.d ./src/atimer_18xx_43xx.d ./src/ccan_18xx_43xx.d ./src/chip_18xx_43xx.d ./src/clock_18xx_43xx.d ./src/dac_18xx_43xx.d ./src/eeprom_18xx_43xx.d ./src/emc_18xx_43xx.d ./src/enet_18xx_43xx.d ./src/evrt_18xx_43xx.d ./src/fpu_init.d ./src/gpdma_18xx_43xx.d ./src/gpio_18xx_43xx.d ./src/gpiogroup_18xx_43xx.d ./src/hsadc_18xx_43xx.d ./src/i2c_18xx_43xx.d ./src/i2cm_18xx_43xx.d ./src/i2s_18xx_43xx.d ./src/iap_18xx_43xx.d ./src/lcd_18xx_43xx.d ./src/otp_18xx_43xx.d ./src/pinint_18xx_43xx.d ./src/pmc_18xx_43xx.d ./src/ring_buffer.d ./src/ritimer_18xx_43xx.d ./src/rtc_18xx_43xx.d ./src/sct_18xx_43xx.d ./src/sct_pwm_18xx_43xx.d ./src/sdif_18xx_43xx.d ./src/sdio_18xx_43xx.d ./src/sdmmc_18xx_43xx.d ./src/spi_18xx_43xx.d ./src/ssp_18xx_43xx.d ./src/stopwatch_18xx_43xx.d ./src/sysinit_18xx_43xx.d ./src/timer_18xx_43xx.d ./src/uart_18xx_43xx.d ./src/wwdt_18xx_43xx.d  liblpc_chip_43xx.a
+ 
+12:19:12 **** Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+Building file: ../src/board.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/board.d" -MT"src/board.o" -MT"src/board.d" -o "src/board.o" "../src/board.c"
+Finished building: ../src/board.c
+ 
+Building file: ../src/board_sysinit.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/board_sysinit.d" -MT"src/board_sysinit.o" -MT"src/board_sysinit.d" -o "src/board_sysinit.o" "../src/board_sysinit.c"
+Finished building: ../src/board_sysinit.c
+ 
+Building file: ../src/lcd_st7565s.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/lcd_st7565s.d" -MT"src/lcd_st7565s.o" -MT"src/lcd_st7565s.d" -o "src/lcd_st7565s.o" "../src/lcd_st7565s.c"
+Finished building: ../src/lcd_st7565s.c
+ 
+Building file: ../src/lpc_phy_smsc87x0.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/lpc_phy_smsc87x0.d" -MT"src/lpc_phy_smsc87x0.o" -MT"src/lpc_phy_smsc87x0.d" -o "src/lpc_phy_smsc87x0.o" "../src/lpc_phy_smsc87x0.c"
+Finished building: ../src/lpc_phy_smsc87x0.c
+ 
+Building file: ../src/wm8904.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_board_nxp_lpcxpresso_4337/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/wm8904.d" -MT"src/wm8904.o" -MT"src/wm8904.d" -o "src/wm8904.o" "../src/wm8904.c"
+Finished building: ../src/wm8904.c
+ 
+Building target: liblpc_board_nxp_lpcxpresso_4337.a
+Invoking: MCU Archiver
+arm-none-eabi-ar -r  "liblpc_board_nxp_lpcxpresso_4337.a"  ./src/board.o ./src/board_sysinit.o ./src/lcd_st7565s.o ./src/lpc_phy_smsc87x0.o ./src/wm8904.o   
+arm-none-eabi-ar: creating liblpc_board_nxp_lpcxpresso_4337.a
+Finished building target: liblpc_board_nxp_lpcxpresso_4337.a
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "liblpc_board_nxp_lpcxpresso_4337.a" ; # arm-none-eabi-objdump -h -S "liblpc_board_nxp_lpcxpresso_4337.a" >"liblpc_board_nxp_lpcxpresso_4337.lss"
+   text	   data	    bss	    dec	    hex	filename
+   2262	      0	      4	   2266	    8da	board.o (ex liblpc_board_nxp_lpcxpresso_4337.a)
+    432	      0	      0	    432	    1b0	board_sysinit.o (ex liblpc_board_nxp_lpcxpresso_4337.a)
+   1702	      4	   1044	   2750	    abe	lcd_st7565s.o (ex liblpc_board_nxp_lpcxpresso_4337.a)
+    876	      0	     18	    894	    37e	lpc_phy_smsc87x0.o (ex liblpc_board_nxp_lpcxpresso_4337.a)
+    796	      0	      0	    796	    31c	wm8904.o (ex liblpc_board_nxp_lpcxpresso_4337.a)
+ 
+12:19:13 **** Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+Building file: ../src/adc_18xx_43xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/adc_18xx_43xx.d" -MT"src/adc_18xx_43xx.o" -MT"src/adc_18xx_43xx.d" -o "src/adc_18xx_43xx.o" "../src/adc_18xx_43xx.c"
+Finished building: ../src/adc_18xx_43xx.c
+ 
+Building file: ../src/aes_18xx_43xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/aes_18xx_43xx.d" -MT"src/aes_18xx_43xx.o" -MT"src/aes_18xx_43xx.d" -o "src/aes_18xx_43xx.o" "../src/aes_18xx_43xx.c"
+Finished building: ../src/aes_18xx_43xx.c
+ 
+Building file: ../src/atimer_18xx_43xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/atimer_18xx_43xx.d" -MT"src/atimer_18xx_43xx.o" -MT"src/atimer_18xx_43xx.d" -o "src/atimer_18xx_43xx.o" "../src/atimer_18xx_43xx.c"
+Finished building: ../src/atimer_18xx_43xx.c
+ 
+Building file: ../src/ccan_18xx_43xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/ccan_18xx_43xx.d" -MT"src/ccan_18xx_43xx.o" -MT"src/ccan_18xx_43xx.d" -o "src/ccan_18xx_43xx.o" "../src/ccan_18xx_43xx.c"
+Finished building: ../src/ccan_18xx_43xx.c
+ 
+Building file: ../src/chip_18xx_43xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/chip_18xx_43xx.d" -MT"src/chip_18xx_43xx.o" -MT"src/chip_18xx_43xx.d" -o "src/chip_18xx_43xx.o" "../src/chip_18xx_43xx.c"
+Finished building: ../src/chip_18xx_43xx.c
+ 
+Building file: ../src/clock_18xx_43xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/clock_18xx_43xx.d" -MT"src/clock_18xx_43xx.o" -MT"src/clock_18xx_43xx.d" -o "src/clock_18xx_43xx.o" "../src/clock_18xx_43xx.c"
+Finished building: ../src/clock_18xx_43xx.c
+ 
+Building file: ../src/dac_18xx_43xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/dac_18xx_43xx.d" -MT"src/dac_18xx_43xx.o" -MT"src/dac_18xx_43xx.d" -o "src/dac_18xx_43xx.o" "../src/dac_18xx_43xx.c"
+Finished building: ../src/dac_18xx_43xx.c
+ 
+Building file: ../src/eeprom_18xx_43xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/eeprom_18xx_43xx.d" -MT"src/eeprom_18xx_43xx.o" -MT"src/eeprom_18xx_43xx.d" -o "src/eeprom_18xx_43xx.o" "../src/eeprom_18xx_43xx.c"
+Finished building: ../src/eeprom_18xx_43xx.c
+ 
+Building file: ../src/emc_18xx_43xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/emc_18xx_43xx.d" -MT"src/emc_18xx_43xx.o" -MT"src/emc_18xx_43xx.d" -o "src/emc_18xx_43xx.o" "../src/emc_18xx_43xx.c"
+Finished building: ../src/emc_18xx_43xx.c
+ 
+Building file: ../src/enet_18xx_43xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/enet_18xx_43xx.d" -MT"src/enet_18xx_43xx.o" -MT"src/enet_18xx_43xx.d" -o "src/enet_18xx_43xx.o" "../src/enet_18xx_43xx.c"
+Finished building: ../src/enet_18xx_43xx.c
+ 
+Building file: ../src/evrt_18xx_43xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/evrt_18xx_43xx.d" -MT"src/evrt_18xx_43xx.o" -MT"src/evrt_18xx_43xx.d" -o "src/evrt_18xx_43xx.o" "../src/evrt_18xx_43xx.c"
+Finished building: ../src/evrt_18xx_43xx.c
+ 
+Building file: ../src/fpu_init.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/fpu_init.d" -MT"src/fpu_init.o" -MT"src/fpu_init.d" -o "src/fpu_init.o" "../src/fpu_init.c"
+Finished building: ../src/fpu_init.c
+ 
+Building file: ../src/gpdma_18xx_43xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/gpdma_18xx_43xx.d" -MT"src/gpdma_18xx_43xx.o" -MT"src/gpdma_18xx_43xx.d" -o "src/gpdma_18xx_43xx.o" "../src/gpdma_18xx_43xx.c"
+Finished building: ../src/gpdma_18xx_43xx.c
+ 
+Building file: ../src/gpio_18xx_43xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/gpio_18xx_43xx.d" -MT"src/gpio_18xx_43xx.o" -MT"src/gpio_18xx_43xx.d" -o "src/gpio_18xx_43xx.o" "../src/gpio_18xx_43xx.c"
+Finished building: ../src/gpio_18xx_43xx.c
+ 
+Building file: ../src/gpiogroup_18xx_43xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/gpiogroup_18xx_43xx.d" -MT"src/gpiogroup_18xx_43xx.o" -MT"src/gpiogroup_18xx_43xx.d" -o "src/gpiogroup_18xx_43xx.o" "../src/gpiogroup_18xx_43xx.c"
+Finished building: ../src/gpiogroup_18xx_43xx.c
+ 
+Building file: ../src/hsadc_18xx_43xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/hsadc_18xx_43xx.d" -MT"src/hsadc_18xx_43xx.o" -MT"src/hsadc_18xx_43xx.d" -o "src/hsadc_18xx_43xx.o" "../src/hsadc_18xx_43xx.c"
+Finished building: ../src/hsadc_18xx_43xx.c
+ 
+Building file: ../src/i2c_18xx_43xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/i2c_18xx_43xx.d" -MT"src/i2c_18xx_43xx.o" -MT"src/i2c_18xx_43xx.d" -o "src/i2c_18xx_43xx.o" "../src/i2c_18xx_43xx.c"
+Finished building: ../src/i2c_18xx_43xx.c
+ 
+Building file: ../src/i2cm_18xx_43xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/i2cm_18xx_43xx.d" -MT"src/i2cm_18xx_43xx.o" -MT"src/i2cm_18xx_43xx.d" -o "src/i2cm_18xx_43xx.o" "../src/i2cm_18xx_43xx.c"
+Finished building: ../src/i2cm_18xx_43xx.c
+ 
+Building file: ../src/i2s_18xx_43xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/i2s_18xx_43xx.d" -MT"src/i2s_18xx_43xx.o" -MT"src/i2s_18xx_43xx.d" -o "src/i2s_18xx_43xx.o" "../src/i2s_18xx_43xx.c"
+Finished building: ../src/i2s_18xx_43xx.c
+ 
+Building file: ../src/iap_18xx_43xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/iap_18xx_43xx.d" -MT"src/iap_18xx_43xx.o" -MT"src/iap_18xx_43xx.d" -o "src/iap_18xx_43xx.o" "../src/iap_18xx_43xx.c"
+Finished building: ../src/iap_18xx_43xx.c
+ 
+Building file: ../src/lcd_18xx_43xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/lcd_18xx_43xx.d" -MT"src/lcd_18xx_43xx.o" -MT"src/lcd_18xx_43xx.d" -o "src/lcd_18xx_43xx.o" "../src/lcd_18xx_43xx.c"
+Finished building: ../src/lcd_18xx_43xx.c
+ 
+Building file: ../src/otp_18xx_43xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/otp_18xx_43xx.d" -MT"src/otp_18xx_43xx.o" -MT"src/otp_18xx_43xx.d" -o "src/otp_18xx_43xx.o" "../src/otp_18xx_43xx.c"
+Finished building: ../src/otp_18xx_43xx.c
+ 
+Building file: ../src/pinint_18xx_43xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/pinint_18xx_43xx.d" -MT"src/pinint_18xx_43xx.o" -MT"src/pinint_18xx_43xx.d" -o "src/pinint_18xx_43xx.o" "../src/pinint_18xx_43xx.c"
+Finished building: ../src/pinint_18xx_43xx.c
+ 
+Building file: ../src/pmc_18xx_43xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/pmc_18xx_43xx.d" -MT"src/pmc_18xx_43xx.o" -MT"src/pmc_18xx_43xx.d" -o "src/pmc_18xx_43xx.o" "../src/pmc_18xx_43xx.c"
+Finished building: ../src/pmc_18xx_43xx.c
+ 
+Building file: ../src/ring_buffer.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/ring_buffer.d" -MT"src/ring_buffer.o" -MT"src/ring_buffer.d" -o "src/ring_buffer.o" "../src/ring_buffer.c"
+Finished building: ../src/ring_buffer.c
+ 
+Building file: ../src/ritimer_18xx_43xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/ritimer_18xx_43xx.d" -MT"src/ritimer_18xx_43xx.o" -MT"src/ritimer_18xx_43xx.d" -o "src/ritimer_18xx_43xx.o" "../src/ritimer_18xx_43xx.c"
+Finished building: ../src/ritimer_18xx_43xx.c
+ 
+Building file: ../src/rtc_18xx_43xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/rtc_18xx_43xx.d" -MT"src/rtc_18xx_43xx.o" -MT"src/rtc_18xx_43xx.d" -o "src/rtc_18xx_43xx.o" "../src/rtc_18xx_43xx.c"
+Finished building: ../src/rtc_18xx_43xx.c
+ 
+Building file: ../src/sct_18xx_43xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/sct_18xx_43xx.d" -MT"src/sct_18xx_43xx.o" -MT"src/sct_18xx_43xx.d" -o "src/sct_18xx_43xx.o" "../src/sct_18xx_43xx.c"
+Finished building: ../src/sct_18xx_43xx.c
+ 
+Building file: ../src/sct_pwm_18xx_43xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/sct_pwm_18xx_43xx.d" -MT"src/sct_pwm_18xx_43xx.o" -MT"src/sct_pwm_18xx_43xx.d" -o "src/sct_pwm_18xx_43xx.o" "../src/sct_pwm_18xx_43xx.c"
+Finished building: ../src/sct_pwm_18xx_43xx.c
+ 
+Building file: ../src/sdif_18xx_43xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/sdif_18xx_43xx.d" -MT"src/sdif_18xx_43xx.o" -MT"src/sdif_18xx_43xx.d" -o "src/sdif_18xx_43xx.o" "../src/sdif_18xx_43xx.c"
+Finished building: ../src/sdif_18xx_43xx.c
+ 
+Building file: ../src/sdio_18xx_43xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/sdio_18xx_43xx.d" -MT"src/sdio_18xx_43xx.o" -MT"src/sdio_18xx_43xx.d" -o "src/sdio_18xx_43xx.o" "../src/sdio_18xx_43xx.c"
+Finished building: ../src/sdio_18xx_43xx.c
+ 
+Building file: ../src/sdmmc_18xx_43xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/sdmmc_18xx_43xx.d" -MT"src/sdmmc_18xx_43xx.o" -MT"src/sdmmc_18xx_43xx.d" -o "src/sdmmc_18xx_43xx.o" "../src/sdmmc_18xx_43xx.c"
+Finished building: ../src/sdmmc_18xx_43xx.c
+ 
+Building file: ../src/spi_18xx_43xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/spi_18xx_43xx.d" -MT"src/spi_18xx_43xx.o" -MT"src/spi_18xx_43xx.d" -o "src/spi_18xx_43xx.o" "../src/spi_18xx_43xx.c"
+../src/spi_18xx_43xx.c: In function 'Chip_SPI_Int_FlushData':
+../src/spi_18xx_43xx.c:138:20: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+  volatile uint32_t tmp;
+                    ^
+Finished building: ../src/spi_18xx_43xx.c
+ 
+Building file: ../src/ssp_18xx_43xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/ssp_18xx_43xx.d" -MT"src/ssp_18xx_43xx.o" -MT"src/ssp_18xx_43xx.d" -o "src/ssp_18xx_43xx.o" "../src/ssp_18xx_43xx.c"
+Finished building: ../src/ssp_18xx_43xx.c
+ 
+Building file: ../src/stopwatch_18xx_43xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/stopwatch_18xx_43xx.d" -MT"src/stopwatch_18xx_43xx.o" -MT"src/stopwatch_18xx_43xx.d" -o "src/stopwatch_18xx_43xx.o" "../src/stopwatch_18xx_43xx.c"
+Finished building: ../src/stopwatch_18xx_43xx.c
+ 
+Building file: ../src/sysinit_18xx_43xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/sysinit_18xx_43xx.d" -MT"src/sysinit_18xx_43xx.o" -MT"src/sysinit_18xx_43xx.d" -o "src/sysinit_18xx_43xx.o" "../src/sysinit_18xx_43xx.c"
+Finished building: ../src/sysinit_18xx_43xx.c
+ 
+Building file: ../src/timer_18xx_43xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/timer_18xx_43xx.d" -MT"src/timer_18xx_43xx.o" -MT"src/timer_18xx_43xx.d" -o "src/timer_18xx_43xx.o" "../src/timer_18xx_43xx.c"
+Finished building: ../src/timer_18xx_43xx.c
+ 
+Building file: ../src/uart_18xx_43xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/uart_18xx_43xx.d" -MT"src/uart_18xx_43xx.o" -MT"src/uart_18xx_43xx.d" -o "src/uart_18xx_43xx.o" "../src/uart_18xx_43xx.c"
+../src/uart_18xx_43xx.c: In function 'Chip_UART_Init':
+../src/uart_18xx_43xx.c:98:23: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+     volatile uint32_t tmp;
+                       ^
+Finished building: ../src/uart_18xx_43xx.c
+ 
+Building file: ../src/wwdt_18xx_43xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"src/wwdt_18xx_43xx.d" -MT"src/wwdt_18xx_43xx.o" -MT"src/wwdt_18xx_43xx.d" -o "src/wwdt_18xx_43xx.o" "../src/wwdt_18xx_43xx.c"
+Finished building: ../src/wwdt_18xx_43xx.c
+ 
+Building target: liblpc_chip_43xx.a
+Invoking: MCU Archiver
+arm-none-eabi-ar -r  "liblpc_chip_43xx.a"  ./src/adc_18xx_43xx.o ./src/aes_18xx_43xx.o ./src/atimer_18xx_43xx.o ./src/ccan_18xx_43xx.o ./src/chip_18xx_43xx.o ./src/clock_18xx_43xx.o ./src/dac_18xx_43xx.o ./src/eeprom_18xx_43xx.o ./src/emc_18xx_43xx.o ./src/enet_18xx_43xx.o ./src/evrt_18xx_43xx.o ./src/fpu_init.o ./src/gpdma_18xx_43xx.o ./src/gpio_18xx_43xx.o ./src/gpiogroup_18xx_43xx.o ./src/hsadc_18xx_43xx.o ./src/i2c_18xx_43xx.o ./src/i2cm_18xx_43xx.o ./src/i2s_18xx_43xx.o ./src/iap_18xx_43xx.o ./src/lcd_18xx_43xx.o ./src/otp_18xx_43xx.o ./src/pinint_18xx_43xx.o ./src/pmc_18xx_43xx.o ./src/ring_buffer.o ./src/ritimer_18xx_43xx.o ./src/rtc_18xx_43xx.o ./src/sct_18xx_43xx.o ./src/sct_pwm_18xx_43xx.o ./src/sdif_18xx_43xx.o ./src/sdio_18xx_43xx.o ./src/sdmmc_18xx_43xx.o ./src/spi_18xx_43xx.o ./src/ssp_18xx_43xx.o ./src/stopwatch_18xx_43xx.o ./src/sysinit_18xx_43xx.o ./src/timer_18xx_43xx.o ./src/uart_18xx_43xx.o ./src/wwdt_18xx_43xx.o   
+arm-none-eabi-ar: creating liblpc_chip_43xx.a
+Finished building target: liblpc_chip_43xx.a
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "liblpc_chip_43xx.a" ; # arm-none-eabi-objdump -h -S "liblpc_chip_43xx.a" >"liblpc_chip_43xx.lss"
+   text	   data	    bss	    dec	    hex	filename
+   1116	      0	      0	   1116	    45c	adc_18xx_43xx.o (ex liblpc_chip_43xx.a)
+    656	      0	     56	    712	    2c8	aes_18xx_43xx.o (ex liblpc_chip_43xx.a)
+    144	      0	      0	    144	     90	atimer_18xx_43xx.o (ex liblpc_chip_43xx.a)
+   2084	      0	      0	   2084	    824	ccan_18xx_43xx.o (ex liblpc_chip_43xx.a)
+    268	      0	      0	    268	    10c	chip_18xx_43xx.o (ex liblpc_chip_43xx.a)
+   4322	      0	      8	   4330	   10ea	clock_18xx_43xx.o (ex liblpc_chip_43xx.a)
+    164	      0	      0	    164	     a4	dac_18xx_43xx.o (ex liblpc_chip_43xx.a)
+    380	      0	      0	    380	    17c	eeprom_18xx_43xx.o (ex liblpc_chip_43xx.a)
+   1476	      0	      0	   1476	    5c4	emc_18xx_43xx.o (ex liblpc_chip_43xx.a)
+    848	      0	      4	    852	    354	enet_18xx_43xx.o (ex liblpc_chip_43xx.a)
+    428	      0	      0	    428	    1ac	evrt_18xx_43xx.o (ex liblpc_chip_43xx.a)
+    116	      0	      0	    116	     74	fpu_init.o (ex liblpc_chip_43xx.a)
+   2692	    120	      8	   2820	    b04	gpdma_18xx_43xx.o (ex liblpc_chip_43xx.a)
+    632	      0	      0	    632	    278	gpio_18xx_43xx.o (ex liblpc_chip_43xx.a)
+      0	      0	      0	      0	      0	gpiogroup_18xx_43xx.o (ex liblpc_chip_43xx.a)
+    832	      0	      0	    832	    340	hsadc_18xx_43xx.o (ex liblpc_chip_43xx.a)
+   3668	     56	     80	   3804	    edc	i2c_18xx_43xx.o (ex liblpc_chip_43xx.a)
+   1704	      0	      0	   1704	    6a8	i2cm_18xx_43xx.o (ex liblpc_chip_43xx.a)
+   1340	      0	      0	   1340	    53c	i2s_18xx_43xx.o (ex liblpc_chip_43xx.a)
+    652	      0	      0	    652	    28c	iap_18xx_43xx.o (ex liblpc_chip_43xx.a)
+    940	      1	      0	    941	    3ad	lcd_18xx_43xx.o (ex liblpc_chip_43xx.a)
+    464	      0	     40	    504	    1f8	otp_18xx_43xx.o (ex liblpc_chip_43xx.a)
+      0	      0	      0	      0	      0	pinint_18xx_43xx.o (ex liblpc_chip_43xx.a)
+     60	      0	      0	     60	     3c	pmc_18xx_43xx.o (ex liblpc_chip_43xx.a)
+    980	      0	      0	    980	    3d4	ring_buffer.o (ex liblpc_chip_43xx.a)
+    256	      0	      0	    256	    100	ritimer_18xx_43xx.o (ex liblpc_chip_43xx.a)
+   1016	      0	      0	   1016	    3f8	rtc_18xx_43xx.o (ex liblpc_chip_43xx.a)
+    196	      0	      0	    196	     c4	sct_18xx_43xx.o (ex liblpc_chip_43xx.a)
+    448	      0	      0	    448	    1c0	sct_pwm_18xx_43xx.o (ex liblpc_chip_43xx.a)
+    708	      0	      0	    708	    2c4	sdif_18xx_43xx.o (ex liblpc_chip_43xx.a)
+   2640	      4	    320	   2964	    b94	sdio_18xx_43xx.o (ex liblpc_chip_43xx.a)
+   3156	      0	      4	   3160	    c58	sdmmc_18xx_43xx.o (ex liblpc_chip_43xx.a)
+   1068	      0	      0	   1068	    42c	spi_18xx_43xx.o (ex liblpc_chip_43xx.a)
+   2344	      0	      0	   2344	    928	ssp_18xx_43xx.o (ex liblpc_chip_43xx.a)
+    388	      0	     12	    400	    190	stopwatch_18xx_43xx.o (ex liblpc_chip_43xx.a)
+    616	      0	      0	    616	    268	sysinit_18xx_43xx.o (ex liblpc_chip_43xx.a)
+    320	      0	      0	    320	    140	timer_18xx_43xx.o (ex liblpc_chip_43xx.a)
+   2196	      0	      1	   2197	    895	uart_18xx_43xx.o (ex liblpc_chip_43xx.a)
+    136	      0	      0	    136	     88	wwdt_18xx_43xx.o (ex liblpc_chip_43xx.a)
+ 
+12:19:18 **** Build of configuration Debug for project Prueba_FreeRTOS ****
+make -r all 
+Building file: ../freertos/src/FreeRTOSCommonHooks.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/Prueba_FreeRTOS/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/Prueba_FreeRTOS/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"freertos/src/FreeRTOSCommonHooks.d" -MT"freertos/src/FreeRTOSCommonHooks.o" -MT"freertos/src/FreeRTOSCommonHooks.d" -o "freertos/src/FreeRTOSCommonHooks.o" "../freertos/src/FreeRTOSCommonHooks.c"
+Finished building: ../freertos/src/FreeRTOSCommonHooks.c
+ 
+Building file: ../freertos/src/croutine.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/Prueba_FreeRTOS/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/Prueba_FreeRTOS/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"freertos/src/croutine.d" -MT"freertos/src/croutine.o" -MT"freertos/src/croutine.d" -o "freertos/src/croutine.o" "../freertos/src/croutine.c"
+Finished building: ../freertos/src/croutine.c
+ 
+Building file: ../freertos/src/event_groups.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/Prueba_FreeRTOS/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/Prueba_FreeRTOS/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"freertos/src/event_groups.d" -MT"freertos/src/event_groups.o" -MT"freertos/src/event_groups.d" -o "freertos/src/event_groups.o" "../freertos/src/event_groups.c"
+Finished building: ../freertos/src/event_groups.c
+ 
+Building file: ../freertos/src/heap_3.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/Prueba_FreeRTOS/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/Prueba_FreeRTOS/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"freertos/src/heap_3.d" -MT"freertos/src/heap_3.o" -MT"freertos/src/heap_3.d" -o "freertos/src/heap_3.o" "../freertos/src/heap_3.c"
+Finished building: ../freertos/src/heap_3.c
+ 
+Building file: ../freertos/src/list.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/Prueba_FreeRTOS/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/Prueba_FreeRTOS/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"freertos/src/list.d" -MT"freertos/src/list.o" -MT"freertos/src/list.d" -o "freertos/src/list.o" "../freertos/src/list.c"
+Finished building: ../freertos/src/list.c
+ 
+Building file: ../freertos/src/port.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/Prueba_FreeRTOS/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/Prueba_FreeRTOS/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"freertos/src/port.d" -MT"freertos/src/port.o" -MT"freertos/src/port.d" -o "freertos/src/port.o" "../freertos/src/port.c"
+Finished building: ../freertos/src/port.c
+ 
+Building file: ../freertos/src/queue.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/Prueba_FreeRTOS/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/Prueba_FreeRTOS/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"freertos/src/queue.d" -MT"freertos/src/queue.o" -MT"freertos/src/queue.d" -o "freertos/src/queue.o" "../freertos/src/queue.c"
+Finished building: ../freertos/src/queue.c
+ 
+Building file: ../freertos/src/redlib_memfix.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/Prueba_FreeRTOS/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/Prueba_FreeRTOS/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"freertos/src/redlib_memfix.d" -MT"freertos/src/redlib_memfix.o" -MT"freertos/src/redlib_memfix.d" -o "freertos/src/redlib_memfix.o" "../freertos/src/redlib_memfix.c"
+Finished building: ../freertos/src/redlib_memfix.c
+ 
+Building file: ../freertos/src/tasks.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/Prueba_FreeRTOS/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/Prueba_FreeRTOS/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"freertos/src/tasks.d" -MT"freertos/src/tasks.o" -MT"freertos/src/tasks.d" -o "freertos/src/tasks.o" "../freertos/src/tasks.c"
+Finished building: ../freertos/src/tasks.c
+ 
+Building file: ../freertos/src/timers.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/Prueba_FreeRTOS/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/Prueba_FreeRTOS/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"freertos/src/timers.d" -MT"freertos/src/timers.o" -MT"freertos/src/timers.d" -o "freertos/src/timers.o" "../freertos/src/timers.c"
+Finished building: ../freertos/src/timers.c
+ 
+Building file: ../example/src/cr_startup_lpc43xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/Prueba_FreeRTOS/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/Prueba_FreeRTOS/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"example/src/cr_startup_lpc43xx.d" -MT"example/src/cr_startup_lpc43xx.o" -MT"example/src/cr_startup_lpc43xx.d" -o "example/src/cr_startup_lpc43xx.o" "../example/src/cr_startup_lpc43xx.c"
+Finished building: ../example/src/cr_startup_lpc43xx.c
+ 
+Building file: ../example/src/prueba_freertos.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/Prueba_FreeRTOS/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/Prueba_FreeRTOS/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"example/src/prueba_freertos.d" -MT"example/src/prueba_freertos.o" -MT"example/src/prueba_freertos.d" -o "example/src/prueba_freertos.o" "../example/src/prueba_freertos.c"
+../example/src/prueba_freertos.c: In function 'ADC0_IRQHandler':
+../example/src/prueba_freertos.c:128:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC0, ADC_CH0,&adc_data); //Se hace una nueva lectura de la temperatura
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/prueba_freertos.c:32:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+Finished building: ../example/src/prueba_freertos.c
+ 
+Building file: ../example/src/sysinit.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/Prueba_FreeRTOS/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/Prueba_FreeRTOS/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"example/src/sysinit.d" -MT"example/src/sysinit.o" -MT"example/src/sysinit.d" -o "example/src/sysinit.o" "../example/src/sysinit.c"
+Finished building: ../example/src/sysinit.c
+ 
+Building target: Prueba_FreeRTOS.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="Prueba_FreeRTOS.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "Prueba_FreeRTOS_Debug.ld" -o "Prueba_FreeRTOS.axf"  ./freertos/src/FreeRTOSCommonHooks.o ./freertos/src/croutine.o ./freertos/src/event_groups.o ./freertos/src/heap_3.o ./freertos/src/list.o ./freertos/src/port.o ./freertos/src/queue.o ./freertos/src/redlib_memfix.o ./freertos/src/tasks.o ./freertos/src/timers.o  ./example/src/cr_startup_lpc43xx.o ./example/src/prueba_freertos.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+Finished building target: Prueba_FreeRTOS.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Prueba_FreeRTOS.axf"; # arm-none-eabi-objcopy -v -O binary "Prueba_FreeRTOS.axf" "Prueba_FreeRTOS.bin" ; # checksum -p LPC4337 -d "Prueba_FreeRTOS.bin";
+   text	   data	    bss	    dec	    hex	filename
+  17428	      8	    696	  18132	   46d4	Prueba_FreeRTOS.axf
+ 
+12:19:25 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+12:19:26 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+12:19:26 **** Incremental Build of configuration Debug for project Prueba_FreeRTOS ****
+make -r all 
+make: No se hace nada para 'all'.
+12:19:37 **** Incremental Build of configuration Debug for project Prueba_FreeRTOS ****
+make -r all 
+make: No se hace nada para 'all'.
+12:25:13 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+12:25:14 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+12:25:14 **** Incremental Build of configuration Debug for project Prueba_FreeRTOS ****
+make -r all 
+Building file: ../example/src/prueba_freertos.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/Prueba_FreeRTOS/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/Prueba_FreeRTOS/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"example/src/prueba_freertos.d" -MT"example/src/prueba_freertos.o" -MT"example/src/prueba_freertos.d" -o "example/src/prueba_freertos.o" "../example/src/prueba_freertos.c"
+../example/src/prueba_freertos.c: In function 'ADC0_IRQHandler':
+../example/src/prueba_freertos.c:128:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC0, ADC_CH0,&adc_data); //Se hace una nueva lectura de la temperatura
+                                       ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from ../example/src/prueba_freertos.c:32:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+Finished building: ../example/src/prueba_freertos.c
+ 
+Building target: Prueba_FreeRTOS.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_FreeRTOS/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="Prueba_FreeRTOS.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "Prueba_FreeRTOS_Debug.ld" -o "Prueba_FreeRTOS.axf"  ./freertos/src/FreeRTOSCommonHooks.o ./freertos/src/croutine.o ./freertos/src/event_groups.o ./freertos/src/heap_3.o ./freertos/src/list.o ./freertos/src/port.o ./freertos/src/queue.o ./freertos/src/redlib_memfix.o ./freertos/src/tasks.o ./freertos/src/timers.o  ./example/src/cr_startup_lpc43xx.o ./example/src/prueba_freertos.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: Prueba_FreeRTOS.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Prueba_FreeRTOS.axf"; # arm-none-eabi-objcopy -v -O binary "Prueba_FreeRTOS.axf" "Prueba_FreeRTOS.bin" ; # checksum -p LPC4337 -d "Prueba_FreeRTOS.bin";
+   text	   data	    bss	    dec	    hex	filename
+  17428	      8	    696	  18132	   46d4	Prueba_FreeRTOS.axf
+ 
+12:25:20 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+12:25:20 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+12:25:21 **** Incremental Build of configuration Debug for project Prueba_FreeRTOS ****
+make -r all 
+make: No se hace nada para 'all'.
+12:25:24 **** Incremental Build of configuration Debug for project Prueba_FreeRTOS ****
+make -r all 
+make: No se hace nada para 'all'.
