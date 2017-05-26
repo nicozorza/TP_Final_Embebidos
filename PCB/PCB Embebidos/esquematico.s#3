@@ -4153,37 +4153,6 @@ Es handelt sich hierbei um AK500 in horizontaler Ausführung.&lt;p&gt;
 <rectangle x1="-3.7846" y1="-2.54" x2="-1.2446" y2="0.254" layer="51"/>
 <rectangle x1="1.2192" y1="-2.54" x2="3.7592" y2="0.254" layer="51"/>
 </package>
-<package name="AK550/2">
-<description>&lt;b&gt;AK550/2-16DS-3.5V&lt;/b&gt; PTR- Meßtechnik&lt;p&gt;
-Conrad Elektronik Best. Nr. 729981 - 49</description>
-<wire x1="2.241" y1="0.872" x2="0.878" y2="-0.491" width="0.1524" layer="51"/>
-<wire x1="2.622" y1="0.491" x2="1.259" y2="-0.872" width="0.1524" layer="51"/>
-<wire x1="2.241" y1="0.491" x2="1.259" y2="-0.491" width="0.6096" layer="51"/>
-<wire x1="2.622" y1="0.491" x2="2.241" y2="0.872" width="0.1524" layer="51"/>
-<wire x1="1.259" y1="-0.872" x2="0.878" y2="-0.491" width="0.1524" layer="51"/>
-<wire x1="-1.259" y1="0.872" x2="-2.622" y2="-0.491" width="0.1524" layer="51"/>
-<wire x1="-0.878" y1="0.491" x2="-2.241" y2="-0.872" width="0.1524" layer="51"/>
-<wire x1="-1.259" y1="0.491" x2="-2.241" y2="-0.491" width="0.6096" layer="51"/>
-<wire x1="-0.878" y1="0.491" x2="-1.259" y2="0.872" width="0.1524" layer="51"/>
-<wire x1="-2.241" y1="-0.872" x2="-2.622" y2="-0.491" width="0.1524" layer="51"/>
-<wire x1="3.4" y1="2.6" x2="3.4" y2="-3.45" width="0.2032" layer="21"/>
-<wire x1="3.4" y1="-3.45" x2="-3.4" y2="-3.45" width="0.2032" layer="21"/>
-<wire x1="-3.4" y1="-3.45" x2="-3.4" y2="2.6" width="0.2032" layer="21"/>
-<wire x1="-3.4" y1="2.6" x2="3.4" y2="2.6" width="0.2032" layer="21"/>
-<wire x1="3.35" y1="1.8" x2="-3.3" y2="1.8" width="0.2032" layer="21"/>
-<wire x1="-3.3" y1="-3.15" x2="3.3" y2="-3.15" width="0.2032" layer="21"/>
-<wire x1="3.3" y1="-1.9" x2="-3.3" y2="-1.9" width="0.2032" layer="21"/>
-<wire x1="-2.75" y1="-2" x2="-2.75" y2="-3" width="0.1016" layer="21"/>
-<wire x1="-0.75" y1="-2" x2="-0.75" y2="-3" width="0.1016" layer="21"/>
-<wire x1="0.75" y1="-2" x2="0.75" y2="-3" width="0.1016" layer="21"/>
-<wire x1="2.75" y1="-2" x2="2.75" y2="-3" width="0.1016" layer="21"/>
-<circle x="1.75" y="0" radius="1.05" width="0.2032" layer="21"/>
-<circle x="-1.75" y="0" radius="1.05" width="0.2032" layer="21"/>
-<pad name="2" x="1.75" y="0" drill="1" diameter="1.5" shape="long" rot="R90"/>
-<pad name="1" x="-1.75" y="0" drill="1" diameter="1.5" shape="long" rot="R90"/>
-<text x="-3.175" y="3.175" size="1.778" layer="25">&gt;NAME</text>
-<text x="-3.175" y="-5.715" size="1.778" layer="27">&gt;VALUE</text>
-</package>
 </packages>
 <symbols>
 <symbol name="KL">
@@ -4207,29 +4176,6 @@ Conrad Elektronik Best. Nr. 729981 - 49</description>
 </gates>
 <devices>
 <device name="" package="AK300/2">
-<connects>
-<connect gate="-1" pin="KL" pad="1"/>
-<connect gate="-2" pin="KL" pad="2"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="MF" value="" constant="no"/>
-<attribute name="MPN" value="" constant="no"/>
-<attribute name="OC_FARNELL" value="unknown" constant="no"/>
-<attribute name="OC_NEWARK" value="unknown" constant="no"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="AK550/2" prefix="X">
-<description>&lt;b&gt;CONNECTOR&lt;/b&gt;</description>
-<gates>
-<gate name="-1" symbol="KLV" x="0" y="0" addlevel="always" swaplevel="1"/>
-<gate name="-2" symbol="KLV" x="0" y="-5.08" addlevel="always" swaplevel="1"/>
-</gates>
-<devices>
-<device name="" package="AK550/2">
 <connects>
 <connect gate="-1" pin="KL" pad="1"/>
 <connect gate="-2" pin="KL" pad="2"/>
@@ -12639,17 +12585,14 @@ Source: AVX .. aphvc.pdf</description>
 <part name="T1" library="triac" deviceset="BT138" device="-V"/>
 <part name="R1" library="resistor" deviceset="R-EU_" device="R1206"/>
 <part name="R2" library="resistor" deviceset="R-EU_" device="R1206"/>
-<part name="CARGA" library="resistor" deviceset="R-EU_" device="0207/10"/>
 <part name="R4" library="resistor" deviceset="R-EU_" device="R1206"/>
 <part name="SUPPLY1" library="supply2" deviceset="GND" device=""/>
-<part name="AC" library="con-ptr500" deviceset="AK550/2" device=""/>
 <part name="OK2" library="optocoupler" deviceset="PC817" device=""/>
 <part name="OK3" library="optocoupler" deviceset="MOC30*" device="" technology="31M"/>
 <part name="D1" library="diode" deviceset="1N4004" device=""/>
 <part name="R3" library="resistor" deviceset="R-EU_" device="0207/10"/>
 <part name="R5" library="resistor" deviceset="R-EU_" device="R1206"/>
 <part name="R6" library="resistor" deviceset="R-EU_" device="R1206"/>
-<part name="ALIMENTACION" library="con-ptr500" deviceset="AK300/2" device=""/>
 <part name="PWM-FASE" library="con-ptr500" deviceset="AK300/2" device=""/>
 <part name="TERMOCUPLA" library="con-ptr500" deviceset="AK300/2" device=""/>
 <part name="IC1" library="linear" deviceset="LM358" device="N"/>
@@ -12671,6 +12614,13 @@ Source: AVX .. aphvc.pdf</description>
 <part name="C6" library="eagle-ltspice" deviceset="C" device="C1206" value="100n"/>
 <part name="C1" library="eagle-ltspice" deviceset="C" device="C1206" value="100n"/>
 <part name="C2" library="eagle-ltspice" deviceset="C" device="C1206" value="100n"/>
+<part name="ALIMENTACION" library="con-ptr500" deviceset="AK300/2" device=""/>
+<part name="AC" library="con-ptr500" deviceset="AK300/2" device=""/>
+<part name="CARGA" library="con-ptr500" deviceset="AK300/2" device=""/>
+<part name="R10" library="resistor" deviceset="R-EU_" device="R1206" value="100"/>
+<part name="PT100" library="con-ptr500" deviceset="AK300/2" device=""/>
+<part name="SUPPLY10" library="supply2" deviceset="GND" device=""/>
+<part name="SAL_SENSORES" library="con-ptr500" deviceset="AK300/2" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -12680,19 +12630,14 @@ Source: AVX .. aphvc.pdf</description>
 <instance part="T1" gate="G$1" x="91.44" y="55.88"/>
 <instance part="R1" gate="G$1" x="83.82" y="68.58"/>
 <instance part="R2" gate="G$1" x="83.82" y="43.18"/>
-<instance part="CARGA" gate="G$1" x="99.06" y="43.18"/>
 <instance part="R4" gate="G$1" x="38.1" y="58.42"/>
 <instance part="SUPPLY1" gate="GND" x="93.98" y="88.9"/>
-<instance part="AC" gate="-1" x="119.38" y="68.58" rot="MR0"/>
-<instance part="AC" gate="-2" x="119.38" y="60.96" rot="MR0"/>
 <instance part="OK2" gate="A" x="63.5" y="106.68"/>
 <instance part="OK3" gate="-1" x="66.04" y="53.34"/>
 <instance part="D1" gate="1" x="50.8" y="96.52" rot="R270"/>
 <instance part="R3" gate="G$1" x="33.02" y="109.22"/>
 <instance part="R5" gate="G$1" x="71.12" y="119.38" rot="R90"/>
 <instance part="R6" gate="G$1" x="43.18" y="104.14" rot="R90"/>
-<instance part="ALIMENTACION" gate="-1" x="109.22" y="96.52" rot="MR0"/>
-<instance part="ALIMENTACION" gate="-2" x="109.22" y="91.44" rot="MR0"/>
 <instance part="PWM-FASE" gate="-1" x="109.22" y="111.76" rot="MR0"/>
 <instance part="PWM-FASE" gate="-2" x="109.22" y="106.68" rot="MR0"/>
 <instance part="TERMOCUPLA" gate="-1" x="200.66" y="124.46" rot="MR0"/>
@@ -12718,6 +12663,18 @@ Source: AVX .. aphvc.pdf</description>
 <instance part="C6" gate="G$1" x="167.64" y="91.44"/>
 <instance part="C1" gate="G$1" x="180.34" y="40.64"/>
 <instance part="C2" gate="G$1" x="223.52" y="40.64"/>
+<instance part="ALIMENTACION" gate="-1" x="109.22" y="96.52" rot="MR0"/>
+<instance part="ALIMENTACION" gate="-2" x="109.22" y="91.44" rot="MR0"/>
+<instance part="AC" gate="-1" x="119.38" y="68.58" rot="MR0"/>
+<instance part="AC" gate="-2" x="119.38" y="63.5" rot="MR0"/>
+<instance part="CARGA" gate="-1" x="114.3" y="43.18" rot="MR0"/>
+<instance part="CARGA" gate="-2" x="114.3" y="38.1" rot="MR0"/>
+<instance part="R10" gate="G$1" x="251.46" y="73.66" rot="R270"/>
+<instance part="PT100" gate="-1" x="256.54" y="63.5" rot="MR0"/>
+<instance part="PT100" gate="-2" x="256.54" y="58.42" rot="MR0"/>
+<instance part="SUPPLY10" gate="GND" x="251.46" y="53.34"/>
+<instance part="SAL_SENSORES" gate="-1" x="292.1" y="86.36" rot="MR0"/>
+<instance part="SAL_SENSORES" gate="-2" x="292.1" y="81.28" rot="MR0"/>
 </instances>
 <busses>
 </busses>
@@ -12740,12 +12697,14 @@ Source: AVX .. aphvc.pdf</description>
 <net name="N$4" class="0">
 <segment>
 <pinref part="R2" gate="G$1" pin="2"/>
-<pinref part="CARGA" gate="G$1" pin="1"/>
 <wire x1="88.9" y1="43.18" x2="91.44" y2="43.18" width="0.1524" layer="91"/>
 <pinref part="T1" gate="G$1" pin="A1"/>
 <wire x1="91.44" y1="43.18" x2="93.98" y2="43.18" width="0.1524" layer="91"/>
 <wire x1="91.44" y1="53.34" x2="91.44" y2="43.18" width="0.1524" layer="91"/>
 <junction x="91.44" y="43.18"/>
+<wire x1="93.98" y1="38.1" x2="93.98" y2="43.18" width="0.1524" layer="91"/>
+<pinref part="CARGA" gate="-2" pin="KL"/>
+<wire x1="109.22" y1="38.1" x2="93.98" y2="38.1" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="AC+" class="0">
@@ -12755,9 +12714,9 @@ Source: AVX .. aphvc.pdf</description>
 <pinref part="R1" gate="G$1" pin="2"/>
 <wire x1="91.44" y1="68.58" x2="88.9" y2="68.58" width="0.1524" layer="91"/>
 <junction x="91.44" y="68.58"/>
-<pinref part="AC" gate="-1" pin="KL"/>
 <wire x1="114.3" y1="68.58" x2="91.44" y2="68.58" width="0.1524" layer="91"/>
 <label x="101.6" y="68.58" size="1.778" layer="95"/>
+<pinref part="AC" gate="-1" pin="KL"/>
 </segment>
 <segment>
 <pinref part="R3" gate="G$1" pin="1"/>
@@ -12767,10 +12726,10 @@ Source: AVX .. aphvc.pdf</description>
 </net>
 <net name="GND" class="0">
 <segment>
-<pinref part="ALIMENTACION" gate="-2" pin="KL"/>
 <wire x1="104.14" y1="91.44" x2="93.98" y2="91.44" width="0.1524" layer="91"/>
 <label x="93.98" y="91.44" size="1.778" layer="95"/>
 <pinref part="SUPPLY1" gate="GND" pin="GND"/>
+<pinref part="ALIMENTACION" gate="-2" pin="KL"/>
 </segment>
 <segment>
 <pinref part="OK2" gate="A" pin="EMIT"/>
@@ -12825,6 +12784,11 @@ Source: AVX .. aphvc.pdf</description>
 <pinref part="SUPPLY6" gate="GND" pin="GND"/>
 <pinref part="C2" gate="G$1" pin="2"/>
 </segment>
+<segment>
+<pinref part="PT100" gate="-2" pin="KL"/>
+<pinref part="SUPPLY10" gate="GND" pin="GND"/>
+<wire x1="251.46" y1="58.42" x2="251.46" y2="55.88" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="PWM" class="0">
 <segment>
@@ -12840,12 +12804,10 @@ Source: AVX .. aphvc.pdf</description>
 </net>
 <net name="AC-" class="0">
 <segment>
-<pinref part="CARGA" gate="G$1" pin="2"/>
-<wire x1="104.14" y1="43.18" x2="109.22" y2="43.18" width="0.1524" layer="91"/>
-<wire x1="109.22" y1="43.18" x2="109.22" y2="60.96" width="0.1524" layer="91"/>
-<pinref part="AC" gate="-2" pin="KL"/>
-<wire x1="109.22" y1="60.96" x2="114.3" y2="60.96" width="0.1524" layer="91"/>
-<label x="109.22" y="60.96" size="1.778" layer="95"/>
+<wire x1="109.22" y1="43.18" x2="109.22" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="109.22" y1="63.5" x2="114.3" y2="63.5" width="0.1524" layer="91"/>
+<label x="109.22" y="63.5" size="1.778" layer="95"/>
+<pinref part="CARGA" gate="-1" pin="KL"/>
 </segment>
 <segment>
 <pinref part="D1" gate="1" pin="C"/>
@@ -12944,6 +12906,11 @@ Source: AVX .. aphvc.pdf</description>
 <wire x1="236.22" y1="81.28" x2="236.22" y2="88.9" width="0.1524" layer="91"/>
 <junction x="236.22" y="88.9"/>
 </segment>
+<segment>
+<pinref part="SAL_SENSORES" gate="-1" pin="KL"/>
+<wire x1="287.02" y1="86.36" x2="266.7" y2="86.36" width="0.1524" layer="91"/>
+<label x="266.7" y="86.36" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="N$5" class="0">
 <segment>
@@ -12997,9 +12964,9 @@ Source: AVX .. aphvc.pdf</description>
 </net>
 <net name="VCC_5V" class="0">
 <segment>
-<pinref part="ALIMENTACION" gate="-1" pin="KL"/>
 <wire x1="104.14" y1="96.52" x2="93.98" y2="96.52" width="0.1524" layer="91"/>
 <label x="93.98" y="96.52" size="1.778" layer="95"/>
+<pinref part="ALIMENTACION" gate="-1" pin="KL"/>
 </segment>
 <segment>
 <pinref part="IC2" gate="A1" pin="VI"/>
@@ -13011,6 +12978,30 @@ Source: AVX .. aphvc.pdf</description>
 <junction x="180.34" y="45.72"/>
 <label x="170.18" y="45.72" size="1.778" layer="95"/>
 <pinref part="C1" gate="G$1" pin="1"/>
+</segment>
+</net>
+<net name="SAL_PT100" class="0">
+<segment>
+<pinref part="R10" gate="G$1" pin="2"/>
+<pinref part="PT100" gate="-1" pin="KL"/>
+<wire x1="251.46" y1="68.58" x2="251.46" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="251.46" y1="68.58" x2="271.78" y2="68.58" width="0.1524" layer="91"/>
+<junction x="251.46" y="68.58"/>
+<label x="259.08" y="68.58" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="SAL_SENSORES" gate="-2" pin="KL"/>
+<wire x1="287.02" y1="81.28" x2="271.78" y2="81.28" width="0.1524" layer="91"/>
+<wire x1="271.78" y1="81.28" x2="269.24" y2="81.28" width="0.1524" layer="91"/>
+<wire x1="266.7" y1="81.28" x2="269.24" y2="81.28" width="0.1524" layer="91"/>
+<label x="266.7" y="81.28" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="N$11" class="0">
+<segment>
+<pinref part="R10" gate="G$1" pin="1"/>
+<wire x1="251.46" y1="78.74" x2="251.46" y2="81.28" width="0.1524" layer="91"/>
+<wire x1="251.46" y1="81.28" x2="256.54" y2="81.28" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
