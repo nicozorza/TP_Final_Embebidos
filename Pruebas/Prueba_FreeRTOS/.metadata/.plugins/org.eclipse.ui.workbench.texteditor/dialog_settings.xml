@@ -2,12 +2,13 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="mainSW_INTERRUPT_ID" key="selection"/>
+		<item value="ADC_INTERRUPT_PRIORITY" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="ADC_INTERRUPT_PRIORITY"/>
 			<item value="mainSW_INTERRUPT_ID"/>
 			<item value="priority"/>
 			<item value="vTaskDelayUntil"/>
@@ -15,7 +16,6 @@
 			<item value="preemptive"/>
 			<item value="cooperative"/>
 			<item value="timer"/>
-			<item value="TIMER_1"/>
 		</list>
 		<list key="replacehistory">
 		</list>
