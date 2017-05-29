@@ -92,7 +92,7 @@ int main(void)
 			systick_flag=false;
 
 			DEBUGOUT("Termocupla: %f°C\n\r",temp_termocupla);
-			DEBUGOUT("PT100: %f°C\n\r",temp_pt100);
+			//DEBUGOUT("PT100: %f°C\n\r",temp_pt100);
 		}
 	}
 }

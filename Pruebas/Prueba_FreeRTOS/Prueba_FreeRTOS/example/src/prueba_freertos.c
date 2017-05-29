@@ -99,15 +99,16 @@ uint8_t cycles_count=0;				//Cantidad de semiciclos contados
 /* Macros para el timer. Dado que el detector de cruce por cero no es inmediato, se deben
  * poner los margenes para evitar problemas. */
 #define TIMER_BASE 100000//380000
-#define TIMER_MAX 1900000//1800000
+#define TIMER_MAX 1910300//1800000
 #define TIMER_STEP (TIMER_MAX-TIMER_BASE)/1024
 #define TIMER_INTERRUPT_PRIORITY 5
 
 /* Variables y constantes para el controlador PID */
-#define KP	300
-#define KI	150
-#define KD	150
+#define KP	50	//300
+#define KI	10	//150
+#define KD	10	//150
 #define OPAMP_GAIN	245.4	//Ganancia del circuito amplificador de la termocupla
+#define MAX_TEMPERATURE 74	//Temperatura alcanzada con 220 eficaces
 
 const float reference=50;	//Valor de referencia para el PID
 float controller_output;	//Salida del controlador
@@ -347,13 +348,17 @@ static void vHandlerPID(void *pvParameters){
 		temp_termocupla /= OPAMP_GAIN;						//Lo divido por la ganancia del operacional
 		temp_termocupla=23376.525*temp_termocupla-1.574;	//Mapeo la temperatura
 
+		/*if( temp_termocupla >= reference )
+			controller_output = TIMER_MAX;
+		else
+			controller_output = TIMER_BASE;*/
         /* Aplicacion del PID */
 		err_prev=err;					//Error del paso previo
-		err=reference-temp_termocupla;	//Error de la salida
+		err=temp_termocupla-reference;	//Error de la salida
 		err_acum=err_acum+err;			//Integral del error (valor acumulado)
 		controller_output=pid(err,err_acum,err_prev);	//Se aplica el controlador
 
-		controller_output= TIMER_BASE+TIMER_STEP*controller_output;
+		controller_output= TIMER_MAX*(1-controller_output/MAX_TEMPERATURE);//TIMER_BASE+TIMER_STEP*controller_output;	//Se transforma la salida un valor de delay
 
 		if( controller_output > TIMER_MAX )
 			controller_output = TIMER_MAX;
