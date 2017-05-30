@@ -39,7 +39,8 @@
 /****************************************************************************
  * Prototipos de funciones
  ****************************************************************************/
-float pid(float err,float err_acum,float err_prev);		//Controlador PID
+float controller(float output,float reference);		//Controlador proporcional
+float get_temperature(uint16_t adc_value);	//Funcion que mapea la tension de la termocupla y la temperatura
 void SetupHardware(void);				//Configuracion del hardware
 void ConfigureADC(void);				//Configuracion del ADC
 void ConfigurePhaseDetector(void);	//Configuracion del detector de cruce por cero
@@ -47,7 +48,7 @@ void ConfigureTimerFireTrigger(void);			//Configuracion del timer que dispara el
 void ConfigureTimerTriggerOn(void);			//Configuracion del timer que regula la duracion del trigger
 static void vHandlerZeroCrossing(void *pvParameters);	//Tarea de deteccion de cruce por cero
 static void vHandlerFireTrigger(void *pvParameters);	//Tarea que dispara el trigger
-static void vHandlerPID(void *pvParameters);			//Tarea que aplica el PID
+static void vHandlerController(void *pvParameters);			//Tarea que aplica el controlador
 /************************************************************/
 
 /*************************************************************************
@@ -55,7 +56,7 @@ static void vHandlerPID(void *pvParameters);			//Tarea que aplica el PID
  *************************************************************************/
 xSemaphoreHandle xPhaseSemaphore;	//Semaforo para la deteccion de cruce por cero
 xSemaphoreHandle xFireTriggerSemaphore;	//Semaforo para la activacion del timer que dispara el trigger
-xSemaphoreHandle xPIDSemaphore;		//Semaforo para la ejecucion del PID
+xSemaphoreHandle xControllerSemaphore;		//Semaforo para la ejecucion del controlador
 
 volatile uint16_t adc_data;			//Valor leido en el ADC
 ADC_CLOCK_SETUP_T ADCSetup;			//Estructura de condiguracion del ADC
@@ -63,8 +64,7 @@ ADC_CLOCK_SETUP_T ADCSetup;			//Estructura de condiguracion del ADC
 
 /* Como el calentamiento de las resistencias es lento, es convieniento hacer
  * los muestreos del ADC a una velocidad relativamente baja. Por lo tanto,
- * cuento varios ciclos de la senoidal hasta hacer una nueva lectura.
- */
+ * cuento varios ciclos de la senoidal hasta hacer una nueva lectura. */
 uint8_t cycles_count=0;				//Cantidad de semiciclos contados
 #define MAX_CYCLES	50				//Cantidad de semiciclos de la senoidal hasta que se actualiza el ADC
 
@@ -103,14 +103,11 @@ uint8_t cycles_count=0;				//Cantidad de semiciclos contados
 #define TIMER_STEP (TIMER_MAX-TIMER_BASE)/1024
 #define TIMER_INTERRUPT_PRIORITY 5
 
-/* Variables y constantes para el controlador PID */
+/* Variables y constantes para el controlador */
 #define KP	5	//300
-#define KI	5	//150
-#define KD	5	//150
 #define OPAMP_GAIN	245.4	//Ganancia del circuito amplificador de la termocupla
-#define MAX_TEMPERATURE 74	//Temperatura alcanzada con 220 eficaces
 
-const float reference=50;	//Valor de referencia para el PID
+const float reference=35;	//Temperatura de referencia para el controladro
 float controller_output;	//Salida del controlador
 
 /*****************************************************************************/
@@ -130,19 +127,21 @@ void vApplicationIdleHook(void){
 		Chip_ADC_SetStartMode(LPC_ADC0, ADC_START_NOW, ADC_TRIGGERMODE_RISING);
 	}
 }
-/**
- * @name: pid
- * @description: Esta función aplica un controlador PID
- * @param err: Diferencia entre el valor actual y el de referencia
- * @param err_acum: Error acumulado (se utiliza para el control integral)
- * @param err_prev: Error del paso previo (se utiliza para el control derivativo)
- * @return: Retorna la salida del controlador
- */
-float pid( float err , float err_acum , float err_prev ){
-	return (KP*err);//+KI*(err_acum+err)+KD*(err-err_prev));
+/* Controlador proporcional */
+float controller( float output , float reference ){
+	return KP*(reference-output);
+}
+
+/* Funcion que mapea la temperatura a partir de la tension de la termocupla */
+float get_temperature( uint16_t adc_value ){
+	float temp=0;
+
+	temp = ((float)adc_value)*3.3/1024;		//Lo mapeo de 0-3.3v
+	temp /= OPAMP_GAIN;						//Lo divido por la ganancia del operacional
+	temp =23376.525*temp-1.574;				//Mapeo la temperatura
+return temp;
 }
 /*****************************************************************************/
-
 
 /*****************************************************************************
  * Handlers de interrupciones
@@ -153,7 +152,7 @@ void ADC0_IRQHandler(void){
 
 	Chip_ADC_ReadValue(LPC_ADC0, ADC_CH0,&adc_data);	//Se hace una nueva lectura de la temperatura
 
-	xSemaphoreGiveFromISR(xPIDSemaphore, &xHigherPriorityTaskWoken);	//Se otorga el semaforo
+	xSemaphoreGiveFromISR(xControllerSemaphore, &xHigherPriorityTaskWoken);	//Se otorga el semaforo
 	portEND_SWITCHING_ISR(xHigherPriorityTaskWoken);		//Se fuerza un cambio de contexto si es necesario
 }
 
@@ -185,7 +184,6 @@ void TRIGGER_ON_IRQ_HANDLER(void){
 	Chip_GPIO_SetPinState(LPC_GPIO_PORT, TRIGGER_GPIO_INT_PORT, TRIGGER_GPIO_INT_PIN, (bool) false);
 }
 /******************************************************************************/
-
 
 /*****************************************************************************
  * Funciones de configuracion
@@ -278,10 +276,8 @@ void ConfigureTimerTriggerOn( void ){
 
 	NVIC_EnableIRQ(TRIGGER_ON_IRQn);			//Se habilitan las interrupciones del timer
 	NVIC_ClearPendingIRQ(TRIGGER_ON_IRQn);		//Se limpian las interrupciones pendientes del timer
-
 }
 /*****************************************************************************/
-
 
 /*****************************************************************************
  * Definicion de las tareas
@@ -314,7 +310,6 @@ static void vHandlerFireTrigger(void *pvParameters){
     xSemaphoreTake(xFireTriggerSemaphore, (portTickType) 0);
 
 	while (1) {
-
 		/* La tarea permanece bloqueada hasta que el semaforo se libera */
         xSemaphoreTake(xFireTriggerSemaphore, portMAX_DELAY);
 
@@ -324,49 +319,34 @@ static void vHandlerFireTrigger(void *pvParameters){
 		/* Se activa el timer que controla la duracion del trigger */
 		Chip_TIMER_SetMatch(TRIGGER_ON_TIMER, TRIGGER_ON_CHANNEL,TRIGGER_ON_DELAY);
 		Chip_TIMER_Enable(TRIGGER_ON_TIMER);
-
     }
 }
 
-/* Esta tarea aplica el controlador PID a las lecturas del ADC .*/
-static void vHandlerPID(void *pvParameters){
+/* Esta tarea aplica el controlador a las lecturas del ADC .*/
+static void vHandlerController(void *pvParameters){
 
-	static float err=0;			//Error del PID
-	static float err_acum=0;	//Error acumulado para el PID
-	float err_prev=0;			//Error del paso previo del PID
-	float temp_termocupla;		//Temperatura medida con la termocupla
+	float temperature;		//Temperatura medida con la termocupla
 
 	/* Se toma el semaforo para vaciarlo antes de entrar al loop infinito */
-    xSemaphoreTake(xPIDSemaphore, (portTickType) 0);
+    xSemaphoreTake(xControllerSemaphore, (portTickType) 0);
 
 	while (1) {
 
 		/* La tarea permanece bloqueada hasta que el semaforo se libera */
-        xSemaphoreTake(xPIDSemaphore, portMAX_DELAY);
+        xSemaphoreTake(xControllerSemaphore, portMAX_DELAY);
 
-		temp_termocupla = ((float)adc_data)*3.3/1024;		//Lo mapeo de 0-3.3v
-		temp_termocupla /= OPAMP_GAIN;						//Lo divido por la ganancia del operacional
-		temp_termocupla=23376.525*temp_termocupla-1.574;	//Mapeo la temperatura
+		temperature = get_temperature( adc_data );	//Mapeo la temperatura
 
-		/*if( temp_termocupla >= reference )
-			controller_output = TIMER_MAX;
-		else
-			controller_output = TIMER_BASE;*/
-        /* Aplicacion del PID */
-		err_prev=err;					//Error del paso previo
-		err=reference-temp_termocupla;	//Error de la salida
-		err_acum=err_acum+err;			//Integral del error (valor acumulado)
-		controller_output=TIMER_STEP*pid(err,err_acum,err_prev);	//Se aplica el controlador
+        /* Aplicacion del controlador */
+		controller_output=TIMER_STEP*controller( temperature , reference );	//Se aplica el controlador
 
 		if( controller_output <= 0 )
-			controller_output = TIMER_MAX;
+			controller_output = TIMER_MAX;			//Si es negativa, es porque la temperatura es mayor a la referencia
 		else if( controller_output > TIMER_MAX )
-			controller_output = TIMER_MAX;
+			controller_output = TIMER_MAX;			//No puedo poner un delay mayor al máximo
 		else if( controller_output < TIMER_BASE )
-			controller_output = TIMER_BASE;
-
-		//controller_output= TIMER_BASE+TIMER_STEP*controller_output;//TIMER_MAX*(1-controller_output/MAX_TEMPERATURE);	//Se transforma la salida un valor de delay
-
+			controller_output = TIMER_BASE;		//Un delay menor al minimo provoca problemas con los retardos en el
+												//detector de cruces por cero
     }
 }
 /*****************************************************************************/
@@ -380,10 +360,10 @@ int main(void){
 
 	vSemaphoreCreateBinary(xPhaseSemaphore);	//Se crea el semaforo para la deteccion de cruces por cero
 	vSemaphoreCreateBinary(xFireTriggerSemaphore);	//Se crea el semaforo para la activacion del timer
-	vSemaphoreCreateBinary(xPIDSemaphore);		//Se crea el semaforo para el PID
+	vSemaphoreCreateBinary(xControllerSemaphore);		//Se crea el semaforo para el controlador
 
 	/* Se verifica que el semaforo haya sido creado correctamente */
-	if( (xPhaseSemaphore!=(xSemaphoreHandle)NULL)&&(xFireTriggerSemaphore!=(xSemaphoreHandle)NULL)&&(xPIDSemaphore!=(xSemaphoreHandle)NULL) ){
+	if( (xPhaseSemaphore!=(xSemaphoreHandle)NULL)&&(xFireTriggerSemaphore!=(xSemaphoreHandle)NULL)&&(xControllerSemaphore!=(xSemaphoreHandle)NULL) ){
 
 		/* Se crea la tarea que se encarga de detectar los cruces por cero */
 		xTaskCreate(vHandlerZeroCrossing, (char *) "ZeroCrossing", configMINIMAL_STACK_SIZE,
@@ -391,14 +371,12 @@ int main(void){
 		/* Se crea la tarea que se encarga de generar los disparos del trigger */
 		xTaskCreate(vHandlerFireTrigger, (char *) "FireTrigger", configMINIMAL_STACK_SIZE,
 							(void *) 0, (tskIDLE_PRIORITY + 2UL), (xTaskHandle *) NULL);
-		/* Se crea la tarea que se encarga de aplicar el PID */
-		xTaskCreate(vHandlerPID, (char *) "PID", configMINIMAL_STACK_SIZE,
+		/* Se crea la tarea que se encarga de aplicar el controlador */
+		xTaskCreate(vHandlerController, (char *) "Controller", configMINIMAL_STACK_SIZE,
 							(void *) 0, (tskIDLE_PRIORITY + 2UL), (xTaskHandle *) NULL);
-
 
 		vTaskStartScheduler(); /* Se comienzan a ejecutar las tareas. */
 	}
-
 	while (1);	//No se deberia llegar nunca a este punto.
 return ((int) NULL);
 }
