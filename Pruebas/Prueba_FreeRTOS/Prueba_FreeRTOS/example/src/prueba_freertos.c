@@ -98,8 +98,8 @@ uint8_t cycles_count=0;				//Cantidad de semiciclos contados
 
 /* Macros para el timer. Dado que el detector de cruce por cero no es inmediato, se deben
  * poner los margenes para evitar problemas. */
-#define TIMER_BASE 100000//380000
-#define TIMER_MAX 1910300//1800000
+#define TIMER_BASE 35000//380000
+#define TIMER_MAX 1901000//1800000
 #define TIMER_STEP (TIMER_MAX-TIMER_BASE)/1024
 #define TIMER_INTERRUPT_PRIORITY 5
 
@@ -107,7 +107,7 @@ uint8_t cycles_count=0;				//Cantidad de semiciclos contados
 #define KP	5	//300
 #define OPAMP_GAIN	245.4	//Ganancia del circuito amplificador de la termocupla
 
-const float reference=35;	//Temperatura de referencia para el controladro
+const float reference=55;	//Temperatura de referencia para el controladro
 float controller_output;	//Salida del controlador
 
 /*****************************************************************************/
