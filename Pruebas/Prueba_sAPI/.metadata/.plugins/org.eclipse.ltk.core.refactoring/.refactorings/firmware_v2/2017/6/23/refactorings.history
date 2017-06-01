@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;firmware_v2/projects/blinky&apos; to &apos;my_project&apos;" description="Rename resource &apos;blinky&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="projects/blinky" name="my_project" stamp="1496287381619" updateReferences="true"/>
-</session>
