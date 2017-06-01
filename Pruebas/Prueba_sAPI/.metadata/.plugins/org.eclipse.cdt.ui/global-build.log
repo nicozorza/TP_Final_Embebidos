@@ -38,3 +38,794 @@ make -r all
   17520	  16392	    320	  34232	   85b8	out/lpc4337_m4/my_project.axf
 copy from `out/lpc4337_m4/my_project.axf' [elf32-littlearm] to `out/lpc4337_m4/my_project.bin' [binary]
 *** post-build ***
+13:13:41 **** Incremental Build of configuration Debug for project firmware_edu-ciaa ****
+make -r all 
+*** compiling C file modules/lpc4337_m4/freertos/src/heap_4.c ***
+*** compiling C file modules/lpc4337_m4/freertos/src/queue.c ***
+*** compiling C file modules/lpc4337_m4/freertos/src/croutine.c ***
+*** compiling C file modules/lpc4337_m4/freertos/src/list.c ***
+*** compiling C file modules/lpc4337_m4/freertos/src/FreeRTOSCommonHooks.c ***
+*** compiling C file modules/lpc4337_m4/freertos/src/port.c ***
+*** compiling C file modules/lpc4337_m4/freertos/src/event_groups.c ***
+*** compiling C file modules/lpc4337_m4/freertos/src/tasks.c ***
+*** compiling C file modules/lpc4337_m4/freertos/src/timers.c ***
+*** archiving static library freertos ***
+   text	   data	    bss	    dec	    hex	filename
+    856	  16384	     24	  17264	   4370	heap_4.o (ex out/lpc4337_m4/libfreertos.a)
+      0	      0	      0	      0	      0	redlib_memfix.o (ex out/lpc4337_m4/libfreertos.a)
+   2600	      0	      0	   2600	    a28	queue.o (ex out/lpc4337_m4/libfreertos.a)
+   1056	      0	    128	   1184	    4a0	croutine.o (ex out/lpc4337_m4/libfreertos.a)
+    364	      0	      0	    364	    16c	list.o (ex out/lpc4337_m4/libfreertos.a)
+     96	      0	      0	     96	     60	FreeRTOSCommonHooks.o (ex out/lpc4337_m4/libfreertos.a)
+   1064	      4	     12	   1080	    438	port.o (ex out/lpc4337_m4/libfreertos.a)
+   1068	      0	      0	   1068	    42c	event_groups.o (ex out/lpc4337_m4/libfreertos.a)
+   5465	      4	    312	   5781	   1695	tasks.o (ex out/lpc4337_m4/libfreertos.a)
+      0	      0	      0	      0	      0	timers.o (ex out/lpc4337_m4/libfreertos.a)
+*** compiling C file projects/my_project/src/main.c ***
+projects/my_project/src/main.c: In function 'ADC0_IRQHandler':
+projects/my_project/src/main.c:153:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC0, ADC_CH0,&adc_data); //Se hace una nueva lectura de la temperatura
+                                       ^
+In file included from modules/lpc4337_m4/chip/inc/chip_lpc43xx.h:176:0,
+                 from modules/lpc4337_m4/chip/inc/chip.h:39,
+                 from modules/lpc4337_m4/board/inc/board.h:35,
+                 from projects/my_project/src/main.c:32:
+modules/lpc4337_m4/chip/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+*** linking project my_project ***
+   text	   data	    bss	    dec	    hex	filename
+  18144	  16392	    392	  34928	   8870	out/lpc4337_m4/my_project.axf
+copy from `out/lpc4337_m4/my_project.axf' [elf32-littlearm] to `out/lpc4337_m4/my_project.bin' [binary]
+*** post-build ***
+13:37:10 **** Incremental Build of configuration Debug for project firmware_edu-ciaa ****
+make -r all 
+*** linking project my_project ***
+   text	   data	    bss	    dec	    hex	filename
+  18144	  16392	    392	  34928	   8870	out/lpc4337_m4/my_project.axf
+copy from `out/lpc4337_m4/my_project.axf' [elf32-littlearm] to `out/lpc4337_m4/my_project.bin' [binary]
+*** post-build ***
+13:37:28 **** Incremental Build of configuration Debug for project firmware_edu-ciaa ****
+make -r all 
+*** linking project my_project ***
+   text	   data	    bss	    dec	    hex	filename
+  18144	  16392	    392	  34928	   8870	out/lpc4337_m4/my_project.axf
+copy from `out/lpc4337_m4/my_project.axf' [elf32-littlearm] to `out/lpc4337_m4/my_project.bin' [binary]
+*** post-build ***
+13:38:12 **** Incremental Build of configuration Debug for project firmware_edu-ciaa ****
+make -r all 
+*** linking project my_project ***
+   text	   data	    bss	    dec	    hex	filename
+  18144	  16392	    392	  34928	   8870	out/lpc4337_m4/my_project.axf
+copy from `out/lpc4337_m4/my_project.axf' [elf32-littlearm] to `out/lpc4337_m4/my_project.bin' [binary]
+*** post-build ***
+13:38:16 **** Incremental Build of configuration Debug for project firmware_edu-ciaa ****
+make -r all 
+*** linking project my_project ***
+   text	   data	    bss	    dec	    hex	filename
+  18144	  16392	    392	  34928	   8870	out/lpc4337_m4/my_project.axf
+copy from `out/lpc4337_m4/my_project.axf' [elf32-littlearm] to `out/lpc4337_m4/my_project.bin' [binary]
+*** post-build ***
+13:39:24 **** Incremental Build of configuration Debug for project firmware_edu-ciaa ****
+make -r all 
+*** linking project my_project ***
+   text	   data	    bss	    dec	    hex	filename
+  18144	  16392	    392	  34928	   8870	out/lpc4337_m4/my_project.axf
+copy from `out/lpc4337_m4/my_project.axf' [elf32-littlearm] to `out/lpc4337_m4/my_project.bin' [binary]
+*** post-build ***
+13:40:42 **** Incremental Build of configuration Debug for project firmware_edu-ciaa ****
+make -r all 
+*** linking project my_project ***
+   text	   data	    bss	    dec	    hex	filename
+  18144	  16392	    392	  34928	   8870	out/lpc4337_m4/my_project.axf
+copy from `out/lpc4337_m4/my_project.axf' [elf32-littlearm] to `out/lpc4337_m4/my_project.bin' [binary]
+*** post-build ***
+13:46:04 **** Incremental Build of configuration Debug for project firmware_edu-ciaa ****
+make -r all 
+*** compiling C file projects/my_project/src/main.c ***
+projects/my_project/src/main.c: In function 'ADC0_IRQHandler':
+projects/my_project/src/main.c:153:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC0, ADC_CH0,&adc_data); //Se hace una nueva lectura de la temperatura
+                                       ^
+In file included from modules/lpc4337_m4/chip/inc/chip_lpc43xx.h:176:0,
+                 from modules/lpc4337_m4/chip/inc/chip.h:39,
+                 from modules/lpc4337_m4/board/inc/board.h:35,
+                 from projects/my_project/src/main.c:32:
+modules/lpc4337_m4/chip/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+*** linking project my_project ***
+   text	   data	    bss	    dec	    hex	filename
+  18144	  16392	    392	  34928	   8870	out/lpc4337_m4/my_project.axf
+copy from `out/lpc4337_m4/my_project.axf' [elf32-littlearm] to `out/lpc4337_m4/my_project.bin' [binary]
+*** post-build ***
+13:46:55 **** Incremental Build of configuration Debug for project firmware_edu-ciaa ****
+make -r all 
+*** compiling C file projects/my_project/src/main.c ***
+projects/my_project/src/main.c: In function 'ADC0_IRQHandler':
+projects/my_project/src/main.c:153:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC0, ADC_CH0,&adc_data); //Se hace una nueva lectura de la temperatura
+                                       ^
+In file included from modules/lpc4337_m4/chip/inc/chip_lpc43xx.h:176:0,
+                 from modules/lpc4337_m4/chip/inc/chip.h:39,
+                 from modules/lpc4337_m4/board/inc/board.h:35,
+                 from projects/my_project/src/main.c:32:
+modules/lpc4337_m4/chip/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+*** linking project my_project ***
+   text	   data	    bss	    dec	    hex	filename
+  18144	  16392	    392	  34928	   8870	out/lpc4337_m4/my_project.axf
+copy from `out/lpc4337_m4/my_project.axf' [elf32-littlearm] to `out/lpc4337_m4/my_project.bin' [binary]
+*** post-build ***
+13:47:00 **** Incremental Build of configuration Debug for project firmware_edu-ciaa ****
+make -r all 
+*** linking project my_project ***
+   text	   data	    bss	    dec	    hex	filename
+  18144	  16392	    392	  34928	   8870	out/lpc4337_m4/my_project.axf
+copy from `out/lpc4337_m4/my_project.axf' [elf32-littlearm] to `out/lpc4337_m4/my_project.bin' [binary]
+*** post-build ***
+13:47:10 **** Incremental Build of configuration Debug for project firmware_edu-ciaa ****
+make -r all 
+*** linking project my_project ***
+   text	   data	    bss	    dec	    hex	filename
+  18144	  16392	    392	  34928	   8870	out/lpc4337_m4/my_project.axf
+copy from `out/lpc4337_m4/my_project.axf' [elf32-littlearm] to `out/lpc4337_m4/my_project.bin' [binary]
+*** post-build ***
+13:50:37 **** Incremental Build of configuration Debug for project firmware_edu-ciaa ****
+make -r all 
+*** compiling C file projects/my_project/src/main.c ***
+projects/my_project/src/main.c: In function 'ADC0_IRQHandler':
+projects/my_project/src/main.c:153:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC0, ADC_CH0,&adc_data); //Se hace una nueva lectura de la temperatura
+                                       ^
+In file included from modules/lpc4337_m4/chip/inc/chip_lpc43xx.h:176:0,
+                 from modules/lpc4337_m4/chip/inc/chip.h:39,
+                 from modules/lpc4337_m4/board/inc/board.h:35,
+                 from projects/my_project/src/main.c:32:
+modules/lpc4337_m4/chip/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+*** linking project my_project ***
+   text	   data	    bss	    dec	    hex	filename
+  18164	  16392	    392	  34948	   8884	out/lpc4337_m4/my_project.axf
+copy from `out/lpc4337_m4/my_project.axf' [elf32-littlearm] to `out/lpc4337_m4/my_project.bin' [binary]
+*** post-build ***
+13:50:40 **** Incremental Build of configuration Debug for project firmware_edu-ciaa ****
+make -r all 
+*** linking project my_project ***
+   text	   data	    bss	    dec	    hex	filename
+  18164	  16392	    392	  34948	   8884	out/lpc4337_m4/my_project.axf
+copy from `out/lpc4337_m4/my_project.axf' [elf32-littlearm] to `out/lpc4337_m4/my_project.bin' [binary]
+*** post-build ***
+13:50:53 **** Incremental Build of configuration Debug for project firmware_edu-ciaa ****
+make -r all 
+*** linking project my_project ***
+   text	   data	    bss	    dec	    hex	filename
+  18164	  16392	    392	  34948	   8884	out/lpc4337_m4/my_project.axf
+copy from `out/lpc4337_m4/my_project.axf' [elf32-littlearm] to `out/lpc4337_m4/my_project.bin' [binary]
+*** post-build ***
+13:57:21 **** Incremental Build of configuration Debug for project firmware_edu-ciaa ****
+make -r all 
+*** compiling C file projects/my_project/src/main.c ***
+projects/my_project/src/main.c: In function 'ADC0_IRQHandler':
+projects/my_project/src/main.c:153:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC0, ADC_CH0,&adc_data); //Se hace una nueva lectura de la temperatura
+                                       ^
+In file included from modules/lpc4337_m4/chip/inc/chip_lpc43xx.h:176:0,
+                 from modules/lpc4337_m4/chip/inc/chip.h:39,
+                 from modules/lpc4337_m4/board/inc/board.h:35,
+                 from projects/my_project/src/main.c:32:
+modules/lpc4337_m4/chip/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+*** linking project my_project ***
+   text	   data	    bss	    dec	    hex	filename
+  18164	  16392	    392	  34948	   8884	out/lpc4337_m4/my_project.axf
+copy from `out/lpc4337_m4/my_project.axf' [elf32-littlearm] to `out/lpc4337_m4/my_project.bin' [binary]
+*** post-build ***
+13:58:49 **** Incremental Build of configuration Debug for project firmware_edu-ciaa ****
+make -r all 
+*** linking project my_project ***
+   text	   data	    bss	    dec	    hex	filename
+  18164	  16392	    392	  34948	   8884	out/lpc4337_m4/my_project.axf
+copy from `out/lpc4337_m4/my_project.axf' [elf32-littlearm] to `out/lpc4337_m4/my_project.bin' [binary]
+*** post-build ***
+13:58:59 **** Incremental Build of configuration Debug for project firmware_edu-ciaa ****
+make -r all 
+*** linking project my_project ***
+   text	   data	    bss	    dec	    hex	filename
+  18164	  16392	    392	  34948	   8884	out/lpc4337_m4/my_project.axf
+copy from `out/lpc4337_m4/my_project.axf' [elf32-littlearm] to `out/lpc4337_m4/my_project.bin' [binary]
+*** post-build ***
+14:00:30 **** Incremental Build of configuration Debug for project firmware_edu-ciaa ****
+make -r all 
+*** linking project my_project ***
+   text	   data	    bss	    dec	    hex	filename
+  18164	  16392	    392	  34948	   8884	out/lpc4337_m4/my_project.axf
+copy from `out/lpc4337_m4/my_project.axf' [elf32-littlearm] to `out/lpc4337_m4/my_project.bin' [binary]
+*** post-build ***
+14:01:04 **** Incremental Build of configuration Debug for project firmware_edu-ciaa ****
+make -r all 
+*** linking project my_project ***
+   text	   data	    bss	    dec	    hex	filename
+  18164	  16392	    392	  34948	   8884	out/lpc4337_m4/my_project.axf
+copy from `out/lpc4337_m4/my_project.axf' [elf32-littlearm] to `out/lpc4337_m4/my_project.bin' [binary]
+*** post-build ***
+14:03:52 **** Clean-only build of configuration Debug for project firmware_edu-ciaa ****
+make -r clean 
+rm -f out/lpc4337_m4/obj/*.*
+rm -f out/lpc4337_m4/*.*
+rm -f *.launch
+14:03:52 **** Build of configuration Debug for project firmware_edu-ciaa ****
+make -r all 
+*** compiling C file modules/lpc4337_m4/freertos/src/heap_4.c ***
+*** compiling C file modules/lpc4337_m4/freertos/src/redlib_memfix.c ***
+*** compiling C file modules/lpc4337_m4/freertos/src/queue.c ***
+*** compiling C file modules/lpc4337_m4/freertos/src/croutine.c ***
+*** compiling C file modules/lpc4337_m4/freertos/src/list.c ***
+*** compiling C file modules/lpc4337_m4/freertos/src/FreeRTOSCommonHooks.c ***
+*** compiling C file modules/lpc4337_m4/freertos/src/port.c ***
+*** compiling C file modules/lpc4337_m4/freertos/src/event_groups.c ***
+*** compiling C file modules/lpc4337_m4/freertos/src/tasks.c ***
+*** compiling C file modules/lpc4337_m4/freertos/src/timers.c ***
+*** archiving static library freertos ***
+   text	   data	    bss	    dec	    hex	filename
+    856	  16384	     24	  17264	   4370	heap_4.o (ex out/lpc4337_m4/libfreertos.a)
+      0	      0	      0	      0	      0	redlib_memfix.o (ex out/lpc4337_m4/libfreertos.a)
+   2600	      0	      0	   2600	    a28	queue.o (ex out/lpc4337_m4/libfreertos.a)
+   1056	      0	    128	   1184	    4a0	croutine.o (ex out/lpc4337_m4/libfreertos.a)
+    364	      0	      0	    364	    16c	list.o (ex out/lpc4337_m4/libfreertos.a)
+     96	      0	      0	     96	     60	FreeRTOSCommonHooks.o (ex out/lpc4337_m4/libfreertos.a)
+   1064	      4	     12	   1080	    438	port.o (ex out/lpc4337_m4/libfreertos.a)
+   1068	      0	      0	   1068	    42c	event_groups.o (ex out/lpc4337_m4/libfreertos.a)
+   5465	      4	    312	   5781	   1695	tasks.o (ex out/lpc4337_m4/libfreertos.a)
+      0	      0	      0	      0	      0	timers.o (ex out/lpc4337_m4/libfreertos.a)
+*** compiling C file modules/lpc4337_m4/base/src/cr_startup_lpc43xx.c ***
+*** compiling C file modules/lpc4337_m4/base/src/sysinit.c ***
+*** compiling C file modules/lpc4337_m4/base/src/cr_start_m0.c ***
+*** archiving static library base ***
+   text	   data	    bss	    dec	    hex	filename
+    680	      0	      0	    680	    2a8	cr_startup_lpc43xx.o (ex out/lpc4337_m4/libbase.a)
+     40	      0	      0	     40	     28	sysinit.o (ex out/lpc4337_m4/libbase.a)
+    328	      0	      0	    328	    148	cr_start_m0.o (ex out/lpc4337_m4/libbase.a)
+*** compiling C file modules/lpc4337_m4/board/src/mem_tests.c ***
+*** compiling C file modules/lpc4337_m4/board/src/board.c ***
+modules/lpc4337_m4/board/src/board.c:50:17: warning: 'lcd_cfg_val' defined but not used [-Wunused-variable]
+ static uint32_t lcd_cfg_val;
+                 ^
+*** compiling C file modules/lpc4337_m4/board/src/board_sysinit.c ***
+*** compiling C file modules/lpc4337_m4/board/src/lpc_phy_smsc87x0.c ***
+*** archiving static library board ***
+   text	   data	    bss	    dec	    hex	filename
+   1080	      0	      0	   1080	    438	mem_tests.o (ex out/lpc4337_m4/libboard.a)
+   1814	      0	      4	   1818	    71a	board.o (ex out/lpc4337_m4/libboard.a)
+    396	      0	      0	    396	    18c	board_sysinit.o (ex out/lpc4337_m4/libboard.a)
+    876	      0	     18	    894	    37e	lpc_phy_smsc87x0.o (ex out/lpc4337_m4/libboard.a)
+*** compiling C file modules/lpc4337_m4/chip/src/ccan_18xx_43xx.c ***
+*** compiling C file modules/lpc4337_m4/chip/src/sysinit_18xx_43xx.c ***
+*** compiling C file modules/lpc4337_m4/chip/src/hsadc_18xx_43xx.c ***
+*** compiling C file modules/lpc4337_m4/chip/src/emc_18xx_43xx.c ***
+*** compiling C file modules/lpc4337_m4/chip/src/dac_18xx_43xx.c ***
+*** compiling C file modules/lpc4337_m4/chip/src/lcd_18xx_43xx.c ***
+*** compiling C file modules/lpc4337_m4/chip/src/sct_18xx_43xx.c ***
+*** compiling C file modules/lpc4337_m4/chip/src/wwdt_18xx_43xx.c ***
+*** compiling C file modules/lpc4337_m4/chip/src/eeprom_18xx_43xx.c ***
+*** compiling C file modules/lpc4337_m4/chip/src/atimer_18xx_43xx.c ***
+*** compiling C file modules/lpc4337_m4/chip/src/gpdma_18xx_43xx.c ***
+*** compiling C file modules/lpc4337_m4/chip/src/rtc_18xx_43xx.c ***
+*** compiling C file modules/lpc4337_m4/chip/src/stopwatch_18xx_43xx.c ***
+*** compiling C file modules/lpc4337_m4/chip/src/evrt_18xx_43xx.c ***
+*** compiling C file modules/lpc4337_m4/chip/src/i2c_18xx_43xx.c ***
+*** compiling C file modules/lpc4337_m4/chip/src/iap_18xx_43xx.c ***
+modules/lpc4337_m4/chip/src/iap_18xx_43xx.c: In function 'Chip_IAP_PreSectorForReadWrite':
+modules/lpc4337_m4/chip/src/iap_18xx_43xx.c:59:12: warning: passing argument 1 of 'iap_entry' from incompatible pointer type [-Wincompatible-pointer-types]
+  iap_entry(command, result);
+            ^
+In file included from modules/lpc4337_m4/chip/inc/chip_lpc43xx.h:210:0,
+                 from modules/lpc4337_m4/chip/inc/chip.h:39,
+                 from modules/lpc4337_m4/chip/src/iap_18xx_43xx.c:32:
+modules/lpc4337_m4/chip/inc/romapi_18xx_43xx.h:115:20: note: expected 'unsigned int *' but argument is of type 'uint32_t * {aka long unsigned int *}'
+ static INLINE void iap_entry(unsigned int cmd_param[], unsigned int status_result[])
+                    ^
+modules/lpc4337_m4/chip/src/iap_18xx_43xx.c:59:21: warning: passing argument 2 of 'iap_entry' from incompatible pointer type [-Wincompatible-pointer-types]
+  iap_entry(command, result);
+                     ^
+In file included from modules/lpc4337_m4/chip/inc/chip_lpc43xx.h:210:0,
+                 from modules/lpc4337_m4/chip/inc/chip.h:39,
+                 from modules/lpc4337_m4/chip/src/iap_18xx_43xx.c:32:
+modules/lpc4337_m4/chip/inc/romapi_18xx_43xx.h:115:20: note: expected 'unsigned int *' but argument is of type 'uint32_t * {aka long unsigned int *}'
+ static INLINE void iap_entry(unsigned int cmd_param[], unsigned int status_result[])
+                    ^
+modules/lpc4337_m4/chip/src/iap_18xx_43xx.c: In function 'Chip_IAP_CopyRamToFlash':
+modules/lpc4337_m4/chip/src/iap_18xx_43xx.c:74:12: warning: passing argument 1 of 'iap_entry' from incompatible pointer type [-Wincompatible-pointer-types]
+  iap_entry(command, result);
+            ^
+In file included from modules/lpc4337_m4/chip/inc/chip_lpc43xx.h:210:0,
+                 from modules/lpc4337_m4/chip/inc/chip.h:39,
+                 from modules/lpc4337_m4/chip/src/iap_18xx_43xx.c:32:
+modules/lpc4337_m4/chip/inc/romapi_18xx_43xx.h:115:20: note: expected 'unsigned int *' but argument is of type 'uint32_t * {aka long unsigned int *}'
+ static INLINE void iap_entry(unsigned int cmd_param[], unsigned int status_result[])
+                    ^
+modules/lpc4337_m4/chip/src/iap_18xx_43xx.c:74:21: warning: passing argument 2 of 'iap_entry' from incompatible pointer type [-Wincompatible-pointer-types]
+  iap_entry(command, result);
+                     ^
+In file included from modules/lpc4337_m4/chip/inc/chip_lpc43xx.h:210:0,
+                 from modules/lpc4337_m4/chip/inc/chip.h:39,
+                 from modules/lpc4337_m4/chip/src/iap_18xx_43xx.c:32:
+modules/lpc4337_m4/chip/inc/romapi_18xx_43xx.h:115:20: note: expected 'unsigned int *' but argument is of type 'uint32_t * {aka long unsigned int *}'
+ static INLINE void iap_entry(unsigned int cmd_param[], unsigned int status_result[])
+                    ^
+modules/lpc4337_m4/chip/src/iap_18xx_43xx.c: In function 'Chip_IAP_EraseSector':
+modules/lpc4337_m4/chip/src/iap_18xx_43xx.c:89:12: warning: passing argument 1 of 'iap_entry' from incompatible pointer type [-Wincompatible-pointer-types]
+  iap_entry(command, result);
+            ^
+In file included from modules/lpc4337_m4/chip/inc/chip_lpc43xx.h:210:0,
+                 from modules/lpc4337_m4/chip/inc/chip.h:39,
+                 from modules/lpc4337_m4/chip/src/iap_18xx_43xx.c:32:
+modules/lpc4337_m4/chip/inc/romapi_18xx_43xx.h:115:20: note: expected 'unsigned int *' but argument is of type 'uint32_t * {aka long unsigned int *}'
+ static INLINE void iap_entry(unsigned int cmd_param[], unsigned int status_result[])
+                    ^
+modules/lpc4337_m4/chip/src/iap_18xx_43xx.c:89:21: warning: passing argument 2 of 'iap_entry' from incompatible pointer type [-Wincompatible-pointer-types]
+  iap_entry(command, result);
+                     ^
+In file included from modules/lpc4337_m4/chip/inc/chip_lpc43xx.h:210:0,
+                 from modules/lpc4337_m4/chip/inc/chip.h:39,
+                 from modules/lpc4337_m4/chip/src/iap_18xx_43xx.c:32:
+modules/lpc4337_m4/chip/inc/romapi_18xx_43xx.h:115:20: note: expected 'unsigned int *' but argument is of type 'uint32_t * {aka long unsigned int *}'
+ static INLINE void iap_entry(unsigned int cmd_param[], unsigned int status_result[])
+                    ^
+modules/lpc4337_m4/chip/src/iap_18xx_43xx.c: In function 'Chip_IAP_BlankCheckSector':
+modules/lpc4337_m4/chip/src/iap_18xx_43xx.c:103:12: warning: passing argument 1 of 'iap_entry' from incompatible pointer type [-Wincompatible-pointer-types]
+  iap_entry(command, result);
+            ^
+In file included from modules/lpc4337_m4/chip/inc/chip_lpc43xx.h:210:0,
+                 from modules/lpc4337_m4/chip/inc/chip.h:39,
+                 from modules/lpc4337_m4/chip/src/iap_18xx_43xx.c:32:
+modules/lpc4337_m4/chip/inc/romapi_18xx_43xx.h:115:20: note: expected 'unsigned int *' but argument is of type 'uint32_t * {aka long unsigned int *}'
+ static INLINE void iap_entry(unsigned int cmd_param[], unsigned int status_result[])
+                    ^
+modules/lpc4337_m4/chip/src/iap_18xx_43xx.c:103:21: warning: passing argument 2 of 'iap_entry' from incompatible pointer type [-Wincompatible-pointer-types]
+  iap_entry(command, result);
+                     ^
+In file included from modules/lpc4337_m4/chip/inc/chip_lpc43xx.h:210:0,
+                 from modules/lpc4337_m4/chip/inc/chip.h:39,
+                 from modules/lpc4337_m4/chip/src/iap_18xx_43xx.c:32:
+modules/lpc4337_m4/chip/inc/romapi_18xx_43xx.h:115:20: note: expected 'unsigned int *' but argument is of type 'uint32_t * {aka long unsigned int *}'
+ static INLINE void iap_entry(unsigned int cmd_param[], unsigned int status_result[])
+                    ^
+modules/lpc4337_m4/chip/src/iap_18xx_43xx.c: In function 'Chip_IAP_ReadPID':
+modules/lpc4337_m4/chip/src/iap_18xx_43xx.c:114:12: warning: passing argument 1 of 'iap_entry' from incompatible pointer type [-Wincompatible-pointer-types]
+  iap_entry(command, result);
+            ^
+In file included from modules/lpc4337_m4/chip/inc/chip_lpc43xx.h:210:0,
+                 from modules/lpc4337_m4/chip/inc/chip.h:39,
+                 from modules/lpc4337_m4/chip/src/iap_18xx_43xx.c:32:
+modules/lpc4337_m4/chip/inc/romapi_18xx_43xx.h:115:20: note: expected 'unsigned int *' but argument is of type 'uint32_t * {aka long unsigned int *}'
+ static INLINE void iap_entry(unsigned int cmd_param[], unsigned int status_result[])
+                    ^
+modules/lpc4337_m4/chip/src/iap_18xx_43xx.c:114:21: warning: passing argument 2 of 'iap_entry' from incompatible pointer type [-Wincompatible-pointer-types]
+  iap_entry(command, result);
+                     ^
+In file included from modules/lpc4337_m4/chip/inc/chip_lpc43xx.h:210:0,
+                 from modules/lpc4337_m4/chip/inc/chip.h:39,
+                 from modules/lpc4337_m4/chip/src/iap_18xx_43xx.c:32:
+modules/lpc4337_m4/chip/inc/romapi_18xx_43xx.h:115:20: note: expected 'unsigned int *' but argument is of type 'uint32_t * {aka long unsigned int *}'
+ static INLINE void iap_entry(unsigned int cmd_param[], unsigned int status_result[])
+                    ^
+modules/lpc4337_m4/chip/src/iap_18xx_43xx.c: In function 'Chip_IAP_ReadBootCode':
+modules/lpc4337_m4/chip/src/iap_18xx_43xx.c:125:12: warning: passing argument 1 of 'iap_entry' from incompatible pointer type [-Wincompatible-pointer-types]
+  iap_entry(command, result);
+            ^
+In file included from modules/lpc4337_m4/chip/inc/chip_lpc43xx.h:210:0,
+                 from modules/lpc4337_m4/chip/inc/chip.h:39,
+                 from modules/lpc4337_m4/chip/src/iap_18xx_43xx.c:32:
+modules/lpc4337_m4/chip/inc/romapi_18xx_43xx.h:115:20: note: expected 'unsigned int *' but argument is of type 'uint32_t * {aka long unsigned int *}'
+ static INLINE void iap_entry(unsigned int cmd_param[], unsigned int status_result[])
+                    ^
+modules/lpc4337_m4/chip/src/iap_18xx_43xx.c:125:21: warning: passing argument 2 of 'iap_entry' from incompatible pointer type [-Wincompatible-pointer-types]
+  iap_entry(command, result);
+                     ^
+In file included from modules/lpc4337_m4/chip/inc/chip_lpc43xx.h:210:0,
+                 from modules/lpc4337_m4/chip/inc/chip.h:39,
+                 from modules/lpc4337_m4/chip/src/iap_18xx_43xx.c:32:
+modules/lpc4337_m4/chip/inc/romapi_18xx_43xx.h:115:20: note: expected 'unsigned int *' but argument is of type 'uint32_t * {aka long unsigned int *}'
+ static INLINE void iap_entry(unsigned int cmd_param[], unsigned int status_result[])
+                    ^
+modules/lpc4337_m4/chip/src/iap_18xx_43xx.c: In function 'Chip_IAP_Compare':
+modules/lpc4337_m4/chip/src/iap_18xx_43xx.c:139:12: warning: passing argument 1 of 'iap_entry' from incompatible pointer type [-Wincompatible-pointer-types]
+  iap_entry(command, result);
+            ^
+In file included from modules/lpc4337_m4/chip/inc/chip_lpc43xx.h:210:0,
+                 from modules/lpc4337_m4/chip/inc/chip.h:39,
+                 from modules/lpc4337_m4/chip/src/iap_18xx_43xx.c:32:
+modules/lpc4337_m4/chip/inc/romapi_18xx_43xx.h:115:20: note: expected 'unsigned int *' but argument is of type 'uint32_t * {aka long unsigned int *}'
+ static INLINE void iap_entry(unsigned int cmd_param[], unsigned int status_result[])
+                    ^
+modules/lpc4337_m4/chip/src/iap_18xx_43xx.c:139:21: warning: passing argument 2 of 'iap_entry' from incompatible pointer type [-Wincompatible-pointer-types]
+  iap_entry(command, result);
+                     ^
+In file included from modules/lpc4337_m4/chip/inc/chip_lpc43xx.h:210:0,
+                 from modules/lpc4337_m4/chip/inc/chip.h:39,
+                 from modules/lpc4337_m4/chip/src/iap_18xx_43xx.c:32:
+modules/lpc4337_m4/chip/inc/romapi_18xx_43xx.h:115:20: note: expected 'unsigned int *' but argument is of type 'uint32_t * {aka long unsigned int *}'
+ static INLINE void iap_entry(unsigned int cmd_param[], unsigned int status_result[])
+                    ^
+modules/lpc4337_m4/chip/src/iap_18xx_43xx.c: In function 'Chip_IAP_ReinvokeISP':
+modules/lpc4337_m4/chip/src/iap_18xx_43xx.c:150:12: warning: passing argument 1 of 'iap_entry' from incompatible pointer type [-Wincompatible-pointer-types]
+  iap_entry(command, result);
+            ^
+In file included from modules/lpc4337_m4/chip/inc/chip_lpc43xx.h:210:0,
+                 from modules/lpc4337_m4/chip/inc/chip.h:39,
+                 from modules/lpc4337_m4/chip/src/iap_18xx_43xx.c:32:
+modules/lpc4337_m4/chip/inc/romapi_18xx_43xx.h:115:20: note: expected 'unsigned int *' but argument is of type 'uint32_t * {aka long unsigned int *}'
+ static INLINE void iap_entry(unsigned int cmd_param[], unsigned int status_result[])
+                    ^
+modules/lpc4337_m4/chip/src/iap_18xx_43xx.c:150:21: warning: passing argument 2 of 'iap_entry' from incompatible pointer type [-Wincompatible-pointer-types]
+  iap_entry(command, result);
+                     ^
+In file included from modules/lpc4337_m4/chip/inc/chip_lpc43xx.h:210:0,
+                 from modules/lpc4337_m4/chip/inc/chip.h:39,
+                 from modules/lpc4337_m4/chip/src/iap_18xx_43xx.c:32:
+modules/lpc4337_m4/chip/inc/romapi_18xx_43xx.h:115:20: note: expected 'unsigned int *' but argument is of type 'uint32_t * {aka long unsigned int *}'
+ static INLINE void iap_entry(unsigned int cmd_param[], unsigned int status_result[])
+                    ^
+modules/lpc4337_m4/chip/src/iap_18xx_43xx.c: In function 'Chip_IAP_ReadUID':
+modules/lpc4337_m4/chip/src/iap_18xx_43xx.c:161:12: warning: passing argument 1 of 'iap_entry' from incompatible pointer type [-Wincompatible-pointer-types]
+  iap_entry(command, result);
+            ^
+In file included from modules/lpc4337_m4/chip/inc/chip_lpc43xx.h:210:0,
+                 from modules/lpc4337_m4/chip/inc/chip.h:39,
+                 from modules/lpc4337_m4/chip/src/iap_18xx_43xx.c:32:
+modules/lpc4337_m4/chip/inc/romapi_18xx_43xx.h:115:20: note: expected 'unsigned int *' but argument is of type 'uint32_t * {aka long unsigned int *}'
+ static INLINE void iap_entry(unsigned int cmd_param[], unsigned int status_result[])
+                    ^
+modules/lpc4337_m4/chip/src/iap_18xx_43xx.c:161:21: warning: passing argument 2 of 'iap_entry' from incompatible pointer type [-Wincompatible-pointer-types]
+  iap_entry(command, result);
+                     ^
+In file included from modules/lpc4337_m4/chip/inc/chip_lpc43xx.h:210:0,
+                 from modules/lpc4337_m4/chip/inc/chip.h:39,
+                 from modules/lpc4337_m4/chip/src/iap_18xx_43xx.c:32:
+modules/lpc4337_m4/chip/inc/romapi_18xx_43xx.h:115:20: note: expected 'unsigned int *' but argument is of type 'uint32_t * {aka long unsigned int *}'
+ static INLINE void iap_entry(unsigned int cmd_param[], unsigned int status_result[])
+                    ^
+modules/lpc4337_m4/chip/src/iap_18xx_43xx.c: In function 'Chip_IAP_ErasePage':
+modules/lpc4337_m4/chip/src/iap_18xx_43xx.c:175:12: warning: passing argument 1 of 'iap_entry' from incompatible pointer type [-Wincompatible-pointer-types]
+  iap_entry(command, result);
+            ^
+In file included from modules/lpc4337_m4/chip/inc/chip_lpc43xx.h:210:0,
+                 from modules/lpc4337_m4/chip/inc/chip.h:39,
+                 from modules/lpc4337_m4/chip/src/iap_18xx_43xx.c:32:
+modules/lpc4337_m4/chip/inc/romapi_18xx_43xx.h:115:20: note: expected 'unsigned int *' but argument is of type 'uint32_t * {aka long unsigned int *}'
+ static INLINE void iap_entry(unsigned int cmd_param[], unsigned int status_result[])
+                    ^
+modules/lpc4337_m4/chip/src/iap_18xx_43xx.c:175:21: warning: passing argument 2 of 'iap_entry' from incompatible pointer type [-Wincompatible-pointer-types]
+  iap_entry(command, result);
+                     ^
+In file included from modules/lpc4337_m4/chip/inc/chip_lpc43xx.h:210:0,
+                 from modules/lpc4337_m4/chip/inc/chip.h:39,
+                 from modules/lpc4337_m4/chip/src/iap_18xx_43xx.c:32:
+modules/lpc4337_m4/chip/inc/romapi_18xx_43xx.h:115:20: note: expected 'unsigned int *' but argument is of type 'uint32_t * {aka long unsigned int *}'
+ static INLINE void iap_entry(unsigned int cmd_param[], unsigned int status_result[])
+                    ^
+modules/lpc4337_m4/chip/src/iap_18xx_43xx.c: In function 'Chip_IAP_SetBootFlashBank':
+modules/lpc4337_m4/chip/src/iap_18xx_43xx.c:188:12: warning: passing argument 1 of 'iap_entry' from incompatible pointer type [-Wincompatible-pointer-types]
+  iap_entry(command, result);
+            ^
+In file included from modules/lpc4337_m4/chip/inc/chip_lpc43xx.h:210:0,
+                 from modules/lpc4337_m4/chip/inc/chip.h:39,
+                 from modules/lpc4337_m4/chip/src/iap_18xx_43xx.c:32:
+modules/lpc4337_m4/chip/inc/romapi_18xx_43xx.h:115:20: note: expected 'unsigned int *' but argument is of type 'uint32_t * {aka long unsigned int *}'
+ static INLINE void iap_entry(unsigned int cmd_param[], unsigned int status_result[])
+                    ^
+modules/lpc4337_m4/chip/src/iap_18xx_43xx.c:188:21: warning: passing argument 2 of 'iap_entry' from incompatible pointer type [-Wincompatible-pointer-types]
+  iap_entry(command, result);
+                     ^
+In file included from modules/lpc4337_m4/chip/inc/chip_lpc43xx.h:210:0,
+                 from modules/lpc4337_m4/chip/inc/chip.h:39,
+                 from modules/lpc4337_m4/chip/src/iap_18xx_43xx.c:32:
+modules/lpc4337_m4/chip/inc/romapi_18xx_43xx.h:115:20: note: expected 'unsigned int *' but argument is of type 'uint32_t * {aka long unsigned int *}'
+ static INLINE void iap_entry(unsigned int cmd_param[], unsigned int status_result[])
+                    ^
+*** compiling C file modules/lpc4337_m4/chip/src/aes_18xx_43xx.c ***
+*** compiling C file modules/lpc4337_m4/chip/src/sdio_18xx_43xx.c ***
+*** compiling C file modules/lpc4337_m4/chip/src/fpu_init.c ***
+*** compiling C file modules/lpc4337_m4/chip/src/sct_pwm_18xx_43xx.c ***
+*** compiling C file modules/lpc4337_m4/chip/src/gpiogroup_18xx_43xx.c ***
+*** compiling C file modules/lpc4337_m4/chip/src/ritimer_18xx_43xx.c ***
+*** compiling C file modules/lpc4337_m4/chip/src/timer_18xx_43xx.c ***
+*** compiling C file modules/lpc4337_m4/chip/src/sdmmc_18xx_43xx.c ***
+*** compiling C file modules/lpc4337_m4/chip/src/i2s_18xx_43xx.c ***
+*** compiling C file modules/lpc4337_m4/chip/src/enet_18xx_43xx.c ***
+*** compiling C file modules/lpc4337_m4/chip/src/uart_18xx_43xx.c ***
+modules/lpc4337_m4/chip/src/uart_18xx_43xx.c: In function 'Chip_UART_Init':
+modules/lpc4337_m4/chip/src/uart_18xx_43xx.c:98:23: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+     volatile uint32_t tmp;
+                       ^
+*** compiling C file modules/lpc4337_m4/chip/src/ssp_18xx_43xx.c ***
+*** compiling C file modules/lpc4337_m4/chip/src/ring_buffer.c ***
+*** compiling C file modules/lpc4337_m4/chip/src/clock_18xx_43xx.c ***
+*** compiling C file modules/lpc4337_m4/chip/src/i2cm_18xx_43xx.c ***
+*** compiling C file modules/lpc4337_m4/chip/src/spi_18xx_43xx.c ***
+modules/lpc4337_m4/chip/src/spi_18xx_43xx.c: In function 'Chip_SPI_Int_FlushData':
+modules/lpc4337_m4/chip/src/spi_18xx_43xx.c:138:20: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+  volatile uint32_t tmp;
+                    ^
+*** compiling C file modules/lpc4337_m4/chip/src/sdif_18xx_43xx.c ***
+*** compiling C file modules/lpc4337_m4/chip/src/adc_18xx_43xx.c ***
+*** compiling C file modules/lpc4337_m4/chip/src/chip_18xx_43xx.c ***
+*** compiling C file modules/lpc4337_m4/chip/src/pmc_18xx_43xx.c ***
+*** compiling C file modules/lpc4337_m4/chip/src/gpio_18xx_43xx.c ***
+*** compiling C file modules/lpc4337_m4/chip/src/otp_18xx_43xx.c ***
+*** compiling C file modules/lpc4337_m4/chip/src/pinint_18xx_43xx.c ***
+*** archiving static library chip ***
+   text	   data	    bss	    dec	    hex	filename
+   2084	      0	      0	   2084	    824	ccan_18xx_43xx.o (ex out/lpc4337_m4/libchip.a)
+    616	      0	      0	    616	    268	sysinit_18xx_43xx.o (ex out/lpc4337_m4/libchip.a)
+    832	      0	      0	    832	    340	hsadc_18xx_43xx.o (ex out/lpc4337_m4/libchip.a)
+   1476	      0	      0	   1476	    5c4	emc_18xx_43xx.o (ex out/lpc4337_m4/libchip.a)
+    164	      0	      0	    164	     a4	dac_18xx_43xx.o (ex out/lpc4337_m4/libchip.a)
+    940	      1	      0	    941	    3ad	lcd_18xx_43xx.o (ex out/lpc4337_m4/libchip.a)
+    196	      0	      0	    196	     c4	sct_18xx_43xx.o (ex out/lpc4337_m4/libchip.a)
+    136	      0	      0	    136	     88	wwdt_18xx_43xx.o (ex out/lpc4337_m4/libchip.a)
+    380	      0	      0	    380	    17c	eeprom_18xx_43xx.o (ex out/lpc4337_m4/libchip.a)
+    144	      0	      0	    144	     90	atimer_18xx_43xx.o (ex out/lpc4337_m4/libchip.a)
+   2692	    120	      8	   2820	    b04	gpdma_18xx_43xx.o (ex out/lpc4337_m4/libchip.a)
+   1016	      0	      0	   1016	    3f8	rtc_18xx_43xx.o (ex out/lpc4337_m4/libchip.a)
+    388	      0	     12	    400	    190	stopwatch_18xx_43xx.o (ex out/lpc4337_m4/libchip.a)
+    428	      0	      0	    428	    1ac	evrt_18xx_43xx.o (ex out/lpc4337_m4/libchip.a)
+   3668	     56	     80	   3804	    edc	i2c_18xx_43xx.o (ex out/lpc4337_m4/libchip.a)
+    652	      0	      0	    652	    28c	iap_18xx_43xx.o (ex out/lpc4337_m4/libchip.a)
+    656	      0	     56	    712	    2c8	aes_18xx_43xx.o (ex out/lpc4337_m4/libchip.a)
+   2640	      4	    320	   2964	    b94	sdio_18xx_43xx.o (ex out/lpc4337_m4/libchip.a)
+    116	      0	      0	    116	     74	fpu_init.o (ex out/lpc4337_m4/libchip.a)
+    448	      0	      0	    448	    1c0	sct_pwm_18xx_43xx.o (ex out/lpc4337_m4/libchip.a)
+      0	      0	      0	      0	      0	gpiogroup_18xx_43xx.o (ex out/lpc4337_m4/libchip.a)
+    256	      0	      0	    256	    100	ritimer_18xx_43xx.o (ex out/lpc4337_m4/libchip.a)
+    320	      0	      0	    320	    140	timer_18xx_43xx.o (ex out/lpc4337_m4/libchip.a)
+   3156	      0	      4	   3160	    c58	sdmmc_18xx_43xx.o (ex out/lpc4337_m4/libchip.a)
+   1340	      0	      0	   1340	    53c	i2s_18xx_43xx.o (ex out/lpc4337_m4/libchip.a)
+    696	      0	      4	    700	    2bc	enet_18xx_43xx.o (ex out/lpc4337_m4/libchip.a)
+   2196	      0	      1	   2197	    895	uart_18xx_43xx.o (ex out/lpc4337_m4/libchip.a)
+   2344	      0	      0	   2344	    928	ssp_18xx_43xx.o (ex out/lpc4337_m4/libchip.a)
+    980	      0	      0	    980	    3d4	ring_buffer.o (ex out/lpc4337_m4/libchip.a)
+   4322	      0	      8	   4330	   10ea	clock_18xx_43xx.o (ex out/lpc4337_m4/libchip.a)
+   1704	      0	      0	   1704	    6a8	i2cm_18xx_43xx.o (ex out/lpc4337_m4/libchip.a)
+   1068	      0	      0	   1068	    42c	spi_18xx_43xx.o (ex out/lpc4337_m4/libchip.a)
+    708	      0	      0	    708	    2c4	sdif_18xx_43xx.o (ex out/lpc4337_m4/libchip.a)
+   1116	      0	      0	   1116	    45c	adc_18xx_43xx.o (ex out/lpc4337_m4/libchip.a)
+    268	      0	      0	    268	    10c	chip_18xx_43xx.o (ex out/lpc4337_m4/libchip.a)
+     60	      0	      0	     60	     3c	pmc_18xx_43xx.o (ex out/lpc4337_m4/libchip.a)
+    632	      0	      0	    632	    278	gpio_18xx_43xx.o (ex out/lpc4337_m4/libchip.a)
+    464	      0	     40	    504	    1f8	otp_18xx_43xx.o (ex out/lpc4337_m4/libchip.a)
+      0	      0	      0	      0	      0	pinint_18xx_43xx.o (ex out/lpc4337_m4/libchip.a)
+*** compiling C file projects/my_project/src/newlib_stubs.c ***
+*** compiling C file projects/my_project/src/main.c ***
+projects/my_project/src/main.c: In function 'ADC0_IRQHandler':
+projects/my_project/src/main.c:153:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC0, ADC_CH0,&adc_data); //Se hace una nueva lectura de la temperatura
+                                       ^
+In file included from modules/lpc4337_m4/chip/inc/chip_lpc43xx.h:176:0,
+                 from modules/lpc4337_m4/chip/inc/chip.h:39,
+                 from modules/lpc4337_m4/board/inc/board.h:35,
+                 from projects/my_project/src/main.c:32:
+modules/lpc4337_m4/chip/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+*** linking project my_project ***
+   text	   data	    bss	    dec	    hex	filename
+  18164	  16392	    392	  34948	   8884	out/lpc4337_m4/my_project.axf
+copy from `out/lpc4337_m4/my_project.axf' [elf32-littlearm] to `out/lpc4337_m4/my_project.bin' [binary]
+*** post-build ***
+14:04:05 **** Incremental Build of configuration Debug for project firmware_edu-ciaa ****
+make -r all 
+*** linking project my_project ***
+   text	   data	    bss	    dec	    hex	filename
+  18164	  16392	    392	  34948	   8884	out/lpc4337_m4/my_project.axf
+copy from `out/lpc4337_m4/my_project.axf' [elf32-littlearm] to `out/lpc4337_m4/my_project.bin' [binary]
+*** post-build ***
+14:04:14 **** Incremental Build of configuration Debug for project firmware_edu-ciaa ****
+make -r all 
+*** linking project my_project ***
+   text	   data	    bss	    dec	    hex	filename
+  18164	  16392	    392	  34948	   8884	out/lpc4337_m4/my_project.axf
+copy from `out/lpc4337_m4/my_project.axf' [elf32-littlearm] to `out/lpc4337_m4/my_project.bin' [binary]
+*** post-build ***
+14:04:41 **** Incremental Build of configuration Debug for project firmware_edu-ciaa ****
+make -r all 
+*** linking project my_project ***
+   text	   data	    bss	    dec	    hex	filename
+  18164	  16392	    392	  34948	   8884	out/lpc4337_m4/my_project.axf
+copy from `out/lpc4337_m4/my_project.axf' [elf32-littlearm] to `out/lpc4337_m4/my_project.bin' [binary]
+*** post-build ***
+14:08:43 **** Incremental Build of configuration Debug for project firmware_edu-ciaa ****
+make -r all 
+*** linking project my_project ***
+   text	   data	    bss	    dec	    hex	filename
+  18164	  16392	    392	  34948	   8884	out/lpc4337_m4/my_project.axf
+copy from `out/lpc4337_m4/my_project.axf' [elf32-littlearm] to `out/lpc4337_m4/my_project.bin' [binary]
+*** post-build ***
+14:16:59 **** Incremental Build of configuration Debug for project firmware_edu-ciaa ****
+make -r all 
+*** compiling C file projects/my_project/src/main.c ***
+projects/my_project/src/main.c: In function 'ADC0_IRQHandler':
+projects/my_project/src/main.c:153:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC0, ADC_CH0,&adc_data); //Se hace una nueva lectura de la temperatura
+                                       ^
+In file included from modules/lpc4337_m4/chip/inc/chip_lpc43xx.h:176:0,
+                 from modules/lpc4337_m4/chip/inc/chip.h:39,
+                 from modules/lpc4337_m4/board/inc/board.h:35,
+                 from projects/my_project/src/main.c:32:
+modules/lpc4337_m4/chip/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+*** linking project my_project ***
+   text	   data	    bss	    dec	    hex	filename
+  18136	  16392	    392	  34920	   8868	out/lpc4337_m4/my_project.axf
+copy from `out/lpc4337_m4/my_project.axf' [elf32-littlearm] to `out/lpc4337_m4/my_project.bin' [binary]
+*** post-build ***
+14:17:08 **** Incremental Build of configuration Debug for project firmware_edu-ciaa ****
+make -r all 
+*** linking project my_project ***
+   text	   data	    bss	    dec	    hex	filename
+  18136	  16392	    392	  34920	   8868	out/lpc4337_m4/my_project.axf
+copy from `out/lpc4337_m4/my_project.axf' [elf32-littlearm] to `out/lpc4337_m4/my_project.bin' [binary]
+*** post-build ***
+14:19:21 **** Incremental Build of configuration Debug for project firmware_edu-ciaa ****
+make -r all 
+*** compiling C file projects/my_project/src/main.c ***
+projects/my_project/src/main.c: In function 'ADC0_IRQHandler':
+projects/my_project/src/main.c:153:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC0, ADC_CH0,&adc_data); //Se hace una nueva lectura de la temperatura
+                                       ^
+In file included from modules/lpc4337_m4/chip/inc/chip_lpc43xx.h:176:0,
+                 from modules/lpc4337_m4/chip/inc/chip.h:39,
+                 from modules/lpc4337_m4/board/inc/board.h:35,
+                 from projects/my_project/src/main.c:32:
+modules/lpc4337_m4/chip/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+*** linking project my_project ***
+   text	   data	    bss	    dec	    hex	filename
+  18136	  16392	    392	  34920	   8868	out/lpc4337_m4/my_project.axf
+copy from `out/lpc4337_m4/my_project.axf' [elf32-littlearm] to `out/lpc4337_m4/my_project.bin' [binary]
+*** post-build ***
+14:19:23 **** Incremental Build of configuration Debug for project firmware_edu-ciaa ****
+make -r all 
+*** linking project my_project ***
+   text	   data	    bss	    dec	    hex	filename
+  18136	  16392	    392	  34920	   8868	out/lpc4337_m4/my_project.axf
+copy from `out/lpc4337_m4/my_project.axf' [elf32-littlearm] to `out/lpc4337_m4/my_project.bin' [binary]
+*** post-build ***
+14:19:31 **** Incremental Build of configuration Debug for project firmware_edu-ciaa ****
+make -r all 
+*** linking project my_project ***
+   text	   data	    bss	    dec	    hex	filename
+  18136	  16392	    392	  34920	   8868	out/lpc4337_m4/my_project.axf
+copy from `out/lpc4337_m4/my_project.axf' [elf32-littlearm] to `out/lpc4337_m4/my_project.bin' [binary]
+*** post-build ***
+14:20:02 **** Incremental Build of configuration Debug for project firmware_edu-ciaa ****
+make -r all 
+*** compiling C file projects/my_project/src/main.c ***
+projects/my_project/src/main.c: In function 'ADC0_IRQHandler':
+projects/my_project/src/main.c:153:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC0, ADC_CH0,&adc_data); //Se hace una nueva lectura de la temperatura
+                                       ^
+In file included from modules/lpc4337_m4/chip/inc/chip_lpc43xx.h:176:0,
+                 from modules/lpc4337_m4/chip/inc/chip.h:39,
+                 from modules/lpc4337_m4/board/inc/board.h:35,
+                 from projects/my_project/src/main.c:32:
+modules/lpc4337_m4/chip/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+*** linking project my_project ***
+   text	   data	    bss	    dec	    hex	filename
+  18136	  16392	    392	  34920	   8868	out/lpc4337_m4/my_project.axf
+copy from `out/lpc4337_m4/my_project.axf' [elf32-littlearm] to `out/lpc4337_m4/my_project.bin' [binary]
+*** post-build ***
+14:20:03 **** Incremental Build of configuration Debug for project firmware_edu-ciaa ****
+make -r all 
+*** linking project my_project ***
+   text	   data	    bss	    dec	    hex	filename
+  18136	  16392	    392	  34920	   8868	out/lpc4337_m4/my_project.axf
+copy from `out/lpc4337_m4/my_project.axf' [elf32-littlearm] to `out/lpc4337_m4/my_project.bin' [binary]
+*** post-build ***
+14:20:09 **** Incremental Build of configuration Debug for project firmware_edu-ciaa ****
+make -r all 
+*** linking project my_project ***
+   text	   data	    bss	    dec	    hex	filename
+  18136	  16392	    392	  34920	   8868	out/lpc4337_m4/my_project.axf
+copy from `out/lpc4337_m4/my_project.axf' [elf32-littlearm] to `out/lpc4337_m4/my_project.bin' [binary]
+*** post-build ***
+14:22:55 **** Incremental Build of configuration Debug for project firmware_edu-ciaa ****
+make -r all 
+*** compiling C file projects/my_project/src/main.c ***
+projects/my_project/src/main.c: In function 'ADC0_IRQHandler':
+projects/my_project/src/main.c:153:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC0, ADC_CH0,&adc_data); //Se hace una nueva lectura de la temperatura
+                                       ^
+In file included from modules/lpc4337_m4/chip/inc/chip_lpc43xx.h:176:0,
+                 from modules/lpc4337_m4/chip/inc/chip.h:39,
+                 from modules/lpc4337_m4/board/inc/board.h:35,
+                 from projects/my_project/src/main.c:32:
+modules/lpc4337_m4/chip/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+*** linking project my_project ***
+   text	   data	    bss	    dec	    hex	filename
+  18136	  16392	    392	  34920	   8868	out/lpc4337_m4/my_project.axf
+copy from `out/lpc4337_m4/my_project.axf' [elf32-littlearm] to `out/lpc4337_m4/my_project.bin' [binary]
+*** post-build ***
+14:22:56 **** Incremental Build of configuration Debug for project firmware_edu-ciaa ****
+make -r all 
+*** linking project my_project ***
+   text	   data	    bss	    dec	    hex	filename
+  18136	  16392	    392	  34920	   8868	out/lpc4337_m4/my_project.axf
+copy from `out/lpc4337_m4/my_project.axf' [elf32-littlearm] to `out/lpc4337_m4/my_project.bin' [binary]
+*** post-build ***
+14:23:55 **** Incremental Build of configuration Debug for project firmware_edu-ciaa ****
+make -r all 
+*** compiling C file projects/my_project/src/main.c ***
+projects/my_project/src/main.c: In function 'ADC0_IRQHandler':
+projects/my_project/src/main.c:153:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC0, ADC_CH0,&adc_data); //Se hace una nueva lectura de la temperatura
+                                       ^
+In file included from modules/lpc4337_m4/chip/inc/chip_lpc43xx.h:176:0,
+                 from modules/lpc4337_m4/chip/inc/chip.h:39,
+                 from modules/lpc4337_m4/board/inc/board.h:35,
+                 from projects/my_project/src/main.c:32:
+modules/lpc4337_m4/chip/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+*** linking project my_project ***
+   text	   data	    bss	    dec	    hex	filename
+  18136	  16392	    392	  34920	   8868	out/lpc4337_m4/my_project.axf
+copy from `out/lpc4337_m4/my_project.axf' [elf32-littlearm] to `out/lpc4337_m4/my_project.bin' [binary]
+*** post-build ***
+14:23:57 **** Incremental Build of configuration Debug for project firmware_edu-ciaa ****
+make -r all 
+*** linking project my_project ***
+   text	   data	    bss	    dec	    hex	filename
+  18136	  16392	    392	  34920	   8868	out/lpc4337_m4/my_project.axf
+copy from `out/lpc4337_m4/my_project.axf' [elf32-littlearm] to `out/lpc4337_m4/my_project.bin' [binary]
+*** post-build ***
+14:24:05 **** Incremental Build of configuration Debug for project firmware_edu-ciaa ****
+make -r all 
+*** linking project my_project ***
+   text	   data	    bss	    dec	    hex	filename
+  18136	  16392	    392	  34920	   8868	out/lpc4337_m4/my_project.axf
+copy from `out/lpc4337_m4/my_project.axf' [elf32-littlearm] to `out/lpc4337_m4/my_project.bin' [binary]
+*** post-build ***
+14:24:41 **** Incremental Build of configuration Debug for project firmware_edu-ciaa ****
+make -r all 
+*** compiling C file projects/my_project/src/main.c ***
+projects/my_project/src/main.c: In function 'ADC0_IRQHandler':
+projects/my_project/src/main.c:153:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC0, ADC_CH0,&adc_data); //Se hace una nueva lectura de la temperatura
+                                       ^
+In file included from modules/lpc4337_m4/chip/inc/chip_lpc43xx.h:176:0,
+                 from modules/lpc4337_m4/chip/inc/chip.h:39,
+                 from modules/lpc4337_m4/board/inc/board.h:35,
+                 from projects/my_project/src/main.c:32:
+modules/lpc4337_m4/chip/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+*** linking project my_project ***
+   text	   data	    bss	    dec	    hex	filename
+  18136	  16392	    392	  34920	   8868	out/lpc4337_m4/my_project.axf
+copy from `out/lpc4337_m4/my_project.axf' [elf32-littlearm] to `out/lpc4337_m4/my_project.bin' [binary]
+*** post-build ***
+14:24:43 **** Incremental Build of configuration Debug for project firmware_edu-ciaa ****
+make -r all 
+*** linking project my_project ***
+   text	   data	    bss	    dec	    hex	filename
+  18136	  16392	    392	  34920	   8868	out/lpc4337_m4/my_project.axf
+copy from `out/lpc4337_m4/my_project.axf' [elf32-littlearm] to `out/lpc4337_m4/my_project.bin' [binary]
+*** post-build ***
+14:24:49 **** Incremental Build of configuration Debug for project firmware_edu-ciaa ****
+make -r all 
+*** linking project my_project ***
+   text	   data	    bss	    dec	    hex	filename
+  18136	  16392	    392	  34920	   8868	out/lpc4337_m4/my_project.axf
+copy from `out/lpc4337_m4/my_project.axf' [elf32-littlearm] to `out/lpc4337_m4/my_project.bin' [binary]
+*** post-build ***
