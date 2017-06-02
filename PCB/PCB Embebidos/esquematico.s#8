@@ -43,7 +43,7 @@
 <layer number="47" name="Measures" color="7" fill="1" visible="yes" active="no"/>
 <layer number="48" name="Document" color="7" fill="1" visible="yes" active="no"/>
 <layer number="49" name="Reference" color="7" fill="1" visible="yes" active="no"/>
-<layer number="51" name="tDocu" color="6" fill="1" visible="yes" active="no"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="no"/>
 <layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="no"/>
 <layer number="90" name="Modules" color="5" fill="1" visible="yes" active="yes"/>
 <layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
@@ -12621,6 +12621,8 @@ Source: AVX .. aphvc.pdf</description>
 <part name="PT100" library="con-ptr500" deviceset="AK300/2" device=""/>
 <part name="SUPPLY10" library="supply2" deviceset="GND" device=""/>
 <part name="SAL_SENSORES" library="con-ptr500" deviceset="AK300/2" device=""/>
+<part name="C3" library="eagle-ltspice" deviceset="C" device="C1206" value="100n"/>
+<part name="R12" library="resistor" deviceset="R-EU_" device="R1206" value="1k"/>
 </parts>
 <sheets>
 <sheet>
@@ -12675,6 +12677,8 @@ Source: AVX .. aphvc.pdf</description>
 <instance part="SUPPLY10" gate="GND" x="223.52" y="33.02"/>
 <instance part="SAL_SENSORES" gate="-1" x="119.38" y="106.68" rot="MR0"/>
 <instance part="SAL_SENSORES" gate="-2" x="119.38" y="101.6" rot="MR0"/>
+<instance part="C3" gate="G$1" x="198.12" y="119.38" rot="R90"/>
+<instance part="R12" gate="G$1" x="76.2" y="81.28" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -12928,6 +12932,10 @@ Source: AVX .. aphvc.pdf</description>
 <wire x1="190.5" y1="111.76" x2="187.96" y2="111.76" width="0.1524" layer="91"/>
 <wire x1="187.96" y1="111.76" x2="187.96" y2="93.98" width="0.1524" layer="91"/>
 <junction x="187.96" y="93.98"/>
+<pinref part="C3" gate="G$1" pin="1"/>
+<wire x1="195.58" y1="119.38" x2="187.96" y2="119.38" width="0.1524" layer="91"/>
+<wire x1="187.96" y1="119.38" x2="187.96" y2="111.76" width="0.1524" layer="91"/>
+<junction x="187.96" y="111.76"/>
 </segment>
 </net>
 <net name="N$7" class="0">
@@ -12940,6 +12948,10 @@ Source: AVX .. aphvc.pdf</description>
 <pinref part="IC1" gate="B" pin="+IN"/>
 <wire x1="215.9" y1="91.44" x2="210.82" y2="91.44" width="0.1524" layer="91"/>
 <junction x="210.82" y="91.44"/>
+<pinref part="C3" gate="G$1" pin="2"/>
+<wire x1="203.2" y1="119.38" x2="210.82" y2="119.38" width="0.1524" layer="91"/>
+<wire x1="210.82" y1="119.38" x2="210.82" y2="111.76" width="0.1524" layer="91"/>
+<junction x="210.82" y="111.76"/>
 </segment>
 </net>
 <net name="TERMOCUPLA" class="0">
@@ -12970,11 +12982,6 @@ Source: AVX .. aphvc.pdf</description>
 </net>
 <net name="VCC_5V" class="0">
 <segment>
-<wire x1="106.68" y1="124.46" x2="96.52" y2="124.46" width="0.1524" layer="91"/>
-<label x="96.52" y="124.46" size="1.778" layer="95"/>
-<pinref part="ALIMENTACION" gate="-1" pin="KL"/>
-</segment>
-<segment>
 <pinref part="IC2" gate="A1" pin="VI"/>
 <wire x1="160.02" y1="55.88" x2="152.4" y2="55.88" width="0.1524" layer="91"/>
 <wire x1="152.4" y1="55.88" x2="152.4" y2="53.34" width="0.1524" layer="91"/>
@@ -12984,6 +12991,11 @@ Source: AVX .. aphvc.pdf</description>
 <junction x="152.4" y="55.88"/>
 <label x="142.24" y="55.88" size="1.778" layer="95"/>
 <pinref part="C1" gate="G$1" pin="1"/>
+</segment>
+<segment>
+<wire x1="106.68" y1="124.46" x2="96.52" y2="124.46" width="0.1524" layer="91"/>
+<label x="96.52" y="124.46" size="1.778" layer="95"/>
+<pinref part="ALIMENTACION" gate="-1" pin="KL"/>
 </segment>
 </net>
 <net name="SAL_PT100" class="0">

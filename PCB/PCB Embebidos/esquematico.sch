@@ -12664,12 +12664,12 @@ Source: AVX .. aphvc.pdf</description>
 <instance part="C6" gate="G$1" x="167.64" y="91.44"/>
 <instance part="C1" gate="G$1" x="152.4" y="50.8"/>
 <instance part="C2" gate="G$1" x="195.58" y="50.8"/>
-<instance part="ALIMENTACION" gate="-1" x="111.76" y="124.46" rot="MR0"/>
-<instance part="ALIMENTACION" gate="-2" x="111.76" y="119.38" rot="MR0"/>
+<instance part="ALIMENTACION" gate="-1" x="111.76" y="119.38" rot="MR0"/>
+<instance part="ALIMENTACION" gate="-2" x="111.76" y="124.46" rot="MR0"/>
 <instance part="AC" gate="-1" x="119.38" y="68.58" rot="MR0"/>
 <instance part="AC" gate="-2" x="119.38" y="63.5" rot="MR0"/>
-<instance part="CARGA" gate="-1" x="114.3" y="43.18" rot="MR0"/>
-<instance part="CARGA" gate="-2" x="114.3" y="38.1" rot="MR0"/>
+<instance part="CARGA" gate="-1" x="114.3" y="38.1" rot="MR0"/>
+<instance part="CARGA" gate="-2" x="114.3" y="43.18" rot="MR0"/>
 <instance part="R10" gate="G$1" x="223.52" y="53.34" rot="R270"/>
 <instance part="PT100" gate="-1" x="228.6" y="43.18" rot="MR0"/>
 <instance part="PT100" gate="-2" x="228.6" y="38.1" rot="MR0"/>
@@ -12705,7 +12705,7 @@ Source: AVX .. aphvc.pdf</description>
 <wire x1="91.44" y1="53.34" x2="91.44" y2="43.18" width="0.1524" layer="91"/>
 <junction x="91.44" y="43.18"/>
 <wire x1="93.98" y1="38.1" x2="93.98" y2="43.18" width="0.1524" layer="91"/>
-<pinref part="CARGA" gate="-2" pin="KL"/>
+<pinref part="CARGA" gate="-1" pin="KL"/>
 <wire x1="109.22" y1="38.1" x2="93.98" y2="38.1" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -12728,19 +12728,9 @@ Source: AVX .. aphvc.pdf</description>
 </net>
 <net name="GND" class="0">
 <segment>
-<wire x1="106.68" y1="119.38" x2="96.52" y2="119.38" width="0.1524" layer="91"/>
-<label x="96.52" y="119.38" size="1.778" layer="95"/>
-<pinref part="SUPPLY1" gate="GND" pin="GND"/>
-<pinref part="ALIMENTACION" gate="-2" pin="KL"/>
-</segment>
-<segment>
 <pinref part="OK2" gate="A" pin="EMIT"/>
 <wire x1="71.12" y1="104.14" x2="78.74" y2="104.14" width="0.1524" layer="91"/>
 <label x="73.66" y="104.14" size="1.778" layer="95"/>
-</segment>
-<segment>
-<wire x1="48.26" y1="48.26" x2="76.2" y2="48.26" width="0.1524" layer="91"/>
-<label x="48.26" y="48.26" size="1.778" layer="95"/>
 </segment>
 <segment>
 <wire x1="167.64" y1="81.28" x2="167.64" y2="83.82" width="0.1524" layer="91"/>
@@ -12791,6 +12781,17 @@ Source: AVX .. aphvc.pdf</description>
 <pinref part="SUPPLY10" gate="GND" pin="GND"/>
 <wire x1="223.52" y1="38.1" x2="223.52" y2="35.56" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="OK3" gate="-1" pin="C"/>
+<wire x1="55.88" y1="48.26" x2="35.56" y2="48.26" width="0.1524" layer="91"/>
+<label x="35.56" y="48.26" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="ALIMENTACION" gate="-1" pin="KL"/>
+<pinref part="SUPPLY1" gate="GND" pin="GND"/>
+<wire x1="106.68" y1="119.38" x2="96.52" y2="119.38" width="0.1524" layer="91"/>
+<label x="96.52" y="119.38" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="PWM" class="0">
 <segment>
@@ -12806,10 +12807,11 @@ Source: AVX .. aphvc.pdf</description>
 </net>
 <net name="AC-" class="0">
 <segment>
-<wire x1="109.22" y1="43.18" x2="109.22" y2="63.5" width="0.1524" layer="91"/>
-<wire x1="109.22" y1="63.5" x2="114.3" y2="63.5" width="0.1524" layer="91"/>
 <label x="109.22" y="63.5" size="1.778" layer="95"/>
-<pinref part="CARGA" gate="-1" pin="KL"/>
+<pinref part="AC" gate="-2" pin="KL"/>
+<wire x1="114.3" y1="63.5" x2="109.22" y2="63.5" width="0.1524" layer="91"/>
+<pinref part="CARGA" gate="-2" pin="KL"/>
+<wire x1="109.22" y1="43.18" x2="109.22" y2="63.5" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="D1" gate="1" pin="C"/>
@@ -12886,9 +12888,9 @@ Source: AVX .. aphvc.pdf</description>
 <label x="223.52" y="60.96" size="1.778" layer="95"/>
 </segment>
 <segment>
+<pinref part="ALIMENTACION" gate="-2" pin="KL"/>
 <wire x1="106.68" y1="124.46" x2="96.52" y2="124.46" width="0.1524" layer="91"/>
 <label x="96.52" y="124.46" size="1.778" layer="95"/>
-<pinref part="ALIMENTACION" gate="-1" pin="KL"/>
 </segment>
 </net>
 <net name="FASE" class="0">
