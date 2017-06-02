@@ -829,3 +829,331 @@ make -r all
   18136	  16392	    392	  34920	   8868	out/lpc4337_m4/my_project.axf
 copy from `out/lpc4337_m4/my_project.axf' [elf32-littlearm] to `out/lpc4337_m4/my_project.bin' [binary]
 *** post-build ***
+15:06:22 **** Build of configuration Debug for project firmware_edu-ciaa ****
+make -r all 
+*** linking project my_project ***
+   text	   data	    bss	    dec	    hex	filename
+  18136	  16392	    392	  34920	   8868	out/lpc4337_m4/my_project.axf
+copy from `out/lpc4337_m4/my_project.axf' [elf32-littlearm] to `out/lpc4337_m4/my_project.bin' [binary]
+*** post-build ***
+15:06:50 **** Incremental Build of configuration Debug for project firmware_edu-ciaa ****
+make -r all 
+Makefile:38: /Makefile: No existe el archivo o el directorio
+make: *** No hay ninguna regla para construir el objetivo '/Makefile'.  Alto.
+15:07:04 **** Incremental Build of configuration Debug for project firmware_edu-ciaa ****
+make -r all 
+*** compiling C file projects/on_off/src/main.c ***
+projects/on_off/src/main.c: In function 'ADC0_IRQHandler':
+projects/on_off/src/main.c:153:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC0, ADC_CH0,&adc_data); //Se hace una nueva lectura de la temperatura
+                                       ^
+In file included from modules/lpc4337_m4/chip/inc/chip_lpc43xx.h:176:0,
+                 from modules/lpc4337_m4/chip/inc/chip.h:39,
+                 from modules/lpc4337_m4/board/inc/board.h:35,
+                 from projects/on_off/src/main.c:32:
+modules/lpc4337_m4/chip/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+*** linking project on_off ***
+   text	   data	    bss	    dec	    hex	filename
+  18136	  16392	    392	  34920	   8868	out/lpc4337_m4/on_off.axf
+copy from `out/lpc4337_m4/on_off.axf' [elf32-littlearm] to `out/lpc4337_m4/on_off.bin' [binary]
+*** post-build ***
+15:07:20 **** Incremental Build of configuration Debug for project firmware_edu-ciaa ****
+make -r all 
+*** compiling C file projects/on_off/src/main.c ***
+projects/on_off/src/main.c: In function 'controller':
+projects/on_off/src/main.c:49:13: error: storage class specified for parameter 'vHandlerZeroCrossing'
+ static void vHandlerZeroCrossing(void *pvParameters); //Tarea de deteccion de cruce por cero
+             ^
+projects/on_off/src/main.c:50:13: error: storage class specified for parameter 'vHandlerFireTrigger'
+ static void vHandlerFireTrigger(void *pvParameters); //Tarea que dispara el trigger
+             ^
+projects/on_off/src/main.c:51:13: error: storage class specified for parameter 'vHandlerController'
+ static void vHandlerController(void *pvParameters);   //Tarea que aplica el controlador
+             ^
+projects/on_off/src/main.c:68:1: error: parameter 'cycles_count' is initialized
+ uint8_t cycles_count=0;    //Cantidad de semiciclos contados
+ ^
+projects/on_off/src/main.c:110:1: error: parameter 'reference' is initialized
+ const float reference=58; //Temperatura de referencia para el controladro
+ ^
+projects/on_off/src/main.c:121:32: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ void vApplicationIdleHook(void){
+                                ^
+projects/on_off/src/main.c:131:51: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ float controller( float output , float reference ){
+                                                   ^
+projects/on_off/src/main.c:136:44: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ float get_temperature( uint16_t adc_value ){
+                                            ^
+projects/on_off/src/main.c:150:27: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ void ADC0_IRQHandler(void){
+                           ^
+projects/on_off/src/main.c:160:28: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ void GPIO0_IRQHandler(void){
+                            ^
+projects/on_off/src/main.c:170:36: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ void FIRE_TRIGGER_IRQ_HANDLER(void){
+                                    ^
+projects/on_off/src/main.c:181:34: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ void TRIGGER_ON_IRQ_HANDLER(void){
+                                  ^
+projects/on_off/src/main.c:192:25: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ void SetupHardware(void){
+                         ^
+projects/on_off/src/main.c:203:26: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ void ConfigureADC( void ){
+                          ^
+projects/on_off/src/main.c:212:36: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ void ConfigurePhaseDetector( void ){
+                                    ^
+projects/on_off/src/main.c:235:39: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ void ConfigureTimerFireTrigger( void ){
+                                       ^
+projects/on_off/src/main.c:261:37: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ void ConfigureTimerTriggerOn( void ){
+                                     ^
+projects/on_off/src/main.c:286:53: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ static void vHandlerZeroCrossing(void *pvParameters){
+                                                     ^
+projects/on_off/src/main.c:307:52: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ static void vHandlerFireTrigger(void *pvParameters){
+                                                    ^
+projects/on_off/src/main.c:326:51: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ static void vHandlerController(void *pvParameters){
+                                                   ^
+projects/on_off/src/main.c:359:15: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ int main(void){
+               ^
+projects/on_off/src/main.c:42:7: error: old-style parameter declarations in prototyped function definition
+ float controller(float output,float reference) //Controlador proporcional
+       ^
+projects/on_off/src/main.c:383:1: error: expected '{' at end of input
+ }
+ ^
+projects/on_off/src/main.c:383:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [main.o] Error 1
+Makefile:72: fallo en las instrucciones para el objetivo 'main.o'
+15:07:25 **** Incremental Build of configuration Debug for project firmware_edu-ciaa ****
+make -r all 
+*** compiling C file projects/on_off/src/main.c ***
+projects/on_off/src/main.c: In function 'ADC0_IRQHandler':
+projects/on_off/src/main.c:153:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC0, ADC_CH0,&adc_data); //Se hace una nueva lectura de la temperatura
+                                       ^
+In file included from modules/lpc4337_m4/chip/inc/chip_lpc43xx.h:176:0,
+                 from modules/lpc4337_m4/chip/inc/chip.h:39,
+                 from modules/lpc4337_m4/board/inc/board.h:35,
+                 from projects/on_off/src/main.c:32:
+modules/lpc4337_m4/chip/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+*** linking project on_off ***
+   text	   data	    bss	    dec	    hex	filename
+  18136	  16392	    392	  34920	   8868	out/lpc4337_m4/on_off.axf
+copy from `out/lpc4337_m4/on_off.axf' [elf32-littlearm] to `out/lpc4337_m4/on_off.bin' [binary]
+*** post-build ***
+15:22:32 **** Incremental Build of configuration Debug for project firmware_edu-ciaa ****
+make -r all 
+*** compiling C file projects/on_off/src/main.c ***
+projects/on_off/src/main.c: In function 'ADC0_IRQHandler':
+projects/on_off/src/main.c:126:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC0, ADC_CH0,&adc_data); //Se hace una nueva lectura de la temperatura
+                                       ^
+In file included from modules/lpc4337_m4/chip/inc/chip_lpc43xx.h:176:0,
+                 from modules/lpc4337_m4/chip/inc/chip.h:39,
+                 from modules/lpc4337_m4/board/inc/board.h:35,
+                 from projects/on_off/src/main.c:32:
+modules/lpc4337_m4/chip/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+*** linking project on_off ***
+   text	   data	    bss	    dec	    hex	filename
+  16868	  16392	    384	  33644	   836c	out/lpc4337_m4/on_off.axf
+copy from `out/lpc4337_m4/on_off.axf' [elf32-littlearm] to `out/lpc4337_m4/on_off.bin' [binary]
+*** post-build ***
+15:22:40 **** Incremental Build of configuration Debug for project firmware_edu-ciaa ****
+make -r all 
+*** compiling C file projects/on_off/src/main.c ***
+projects/on_off/src/main.c: In function 'get_temperature':
+projects/on_off/src/main.c:47:13: error: storage class specified for parameter 'vHandlerZeroCrossing'
+ static void vHandlerZeroCrossing(void *pvParameters); //Tarea de deteccion de cruce por cero
+             ^
+projects/on_off/src/main.c:48:13: error: storage class specified for parameter 'vHandlerController'
+Makefile:72: fallo en las instrucciones para el objetivo 'main.o'
+ static void vHandlerController(void *pvParameters);   //Tarea que aplica el controlador
+             ^
+projects/on_off/src/main.c:64:1: error: parameter 'cycles_count' is initialized
+ uint8_t cycles_count=0;    //Cantidad de semiciclos contados
+ ^
+projects/on_off/src/main.c:88:1: error: parameter 'reference' is initialized
+ const float reference=58; //Temperatura de referencia para el controladro
+ ^
+projects/on_off/src/main.c:89:1: error: parameter 'trigger_state' is initialized
+ bool trigger_state=false;
+ ^
+projects/on_off/src/main.c:98:32: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ void vApplicationIdleHook(void){
+                                ^
+projects/on_off/src/main.c:109:44: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ float get_temperature( uint16_t adc_value ){
+                                            ^
+projects/on_off/src/main.c:123:27: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ void ADC0_IRQHandler(void){
+                           ^
+projects/on_off/src/main.c:133:28: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ void GPIO0_IRQHandler(void){
+                            ^
+projects/on_off/src/main.c:148:25: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ void SetupHardware(void){
+                         ^
+projects/on_off/src/main.c:158:26: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ void ConfigureADC( void ){
+                          ^
+projects/on_off/src/main.c:167:36: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ void ConfigurePhaseDetector( void ){
+                                    ^
+projects/on_off/src/main.c:190:30: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ void ConfigureTrigger( void ){
+                              ^
+projects/on_off/src/main.c:203:53: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ static void vHandlerZeroCrossing(void *pvParameters){
+                                                     ^
+projects/on_off/src/main.c:221:51: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ static void vHandlerController(void *pvParameters){
+                                                   ^
+projects/on_off/src/main.c:248:15: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ int main(void){
+               ^
+projects/on_off/src/main.c:42:7: error: old-style parameter declarations in prototyped function definition
+ float get_temperature(uint16_t adc_value) //Funcion que mapea la tension de la termocupla y la temperatura
+       ^
+projects/on_off/src/main.c:268:1: error: expected '{' at end of input
+ }
+ ^
+projects/on_off/src/main.c:268:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [main.o] Error 1
+15:22:44 **** Incremental Build of configuration Debug for project firmware_edu-ciaa ****
+make -r all 
+*** compiling C file projects/on_off/src/main.c ***
+projects/on_off/src/main.c: In function 'ADC0_IRQHandler':
+projects/on_off/src/main.c:126:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC0, ADC_CH0,&adc_data); //Se hace una nueva lectura de la temperatura
+                                       ^
+In file included from modules/lpc4337_m4/chip/inc/chip_lpc43xx.h:176:0,
+                 from modules/lpc4337_m4/chip/inc/chip.h:39,
+                 from modules/lpc4337_m4/board/inc/board.h:35,
+                 from projects/on_off/src/main.c:32:
+modules/lpc4337_m4/chip/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+*** linking project on_off ***
+   text	   data	    bss	    dec	    hex	filename
+  16868	  16392	    384	  33644	   836c	out/lpc4337_m4/on_off.axf
+copy from `out/lpc4337_m4/on_off.axf' [elf32-littlearm] to `out/lpc4337_m4/on_off.bin' [binary]
+*** post-build ***
+15:59:03 **** Incremental Build of configuration Debug for project firmware_edu-ciaa ****
+make -r all 
+*** compiling C file projects/on_off/src/main.c ***
+projects/on_off/src/main.c: In function 'vApplicationIdleHook':
+projects/on_off/src/main.c:96:6: error: 'cycles_count' undeclared (first use in this function)
+  if( cycles_count >= MAX_CYCLES ){
+      ^
+projects/on_off/src/main.c:96:6: note: each undeclared identifier is reported only once for each function it appears in
+projects/on_off/src/main.c:96:22: error: 'MAX_CYCLES' undeclared (first use in this function)
+  if( cycles_count >= MAX_CYCLES ){
+                      ^
+projects/on_off/src/main.c: In function 'ADC0_IRQHandler':
+projects/on_off/src/main.c:120:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC0, ADC_CH0,&adc_data); //Se hace una nueva lectura de la temperatura
+                                       ^
+In file included from modules/lpc4337_m4/chip/inc/chip_lpc43xx.h:176:0,
+                 from modules/lpc4337_m4/chip/inc/chip.h:39,
+                 from modules/lpc4337_m4/board/inc/board.h:35,
+                 from projects/on_off/src/main.c:32:
+modules/lpc4337_m4/chip/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+In file included from projects/on_off/src/main.c:36:0:
+projects/on_off/src/main.c:122:24: error: 'xADCSemaphore' undeclared (first use in this function)
+  xSemaphoreGiveFromISR(xADCSemaphore, &xHigherPriorityTaskWoken); //Se otorga el semaforo
+                        ^
+modules/lpc4337_m4/freertos/inc/semphr.h:608:118: note: in definition of macro 'xSemaphoreGiveFromISR'
+ #define xSemaphoreGiveFromISR( xSemaphore, pxHigherPriorityTaskWoken ) xQueueGenericSendFromISR( ( QueueHandle_t ) ( xSemaphore ), NULL, ( pxHigherPriorityTaskWoken ), queueSEND_TO_BACK )
+                                                                                                                      ^
+projects/on_off/src/main.c: In function 'vHandlerGetTemperature':
+projects/on_off/src/main.c:204:18: error: 'xADCSemaphore' undeclared (first use in this function)
+   xSemaphoreTake(xADCSemaphore, portMAX_DELAY);
+                  ^
+modules/lpc4337_m4/freertos/inc/semphr.h:248:93: note: in definition of macro 'xSemaphoreTake'
+ #define xSemaphoreTake( xSemaphore, xBlockTime )  xQueueGenericReceive( ( QueueHandle_t ) ( xSemaphore ), NULL, ( xBlockTime ), pdFALSE )
+                                                                                             ^
+Makefile:72: fallo en las instrucciones para el objetivo 'main.o'
+make: *** [main.o] Error 1
+16:00:17 **** Incremental Build of configuration Debug for project firmware_edu-ciaa ****
+make -r all 
+*** compiling C file projects/on_off/src/main.c ***
+projects/on_off/src/main.c: In function 'vApplicationIdleHook':
+projects/on_off/src/main.c:97:6: error: 'cycles_count' undeclared (first use in this function)
+  if( cycles_count >= MAX_CYCLES ){
+      ^
+projects/on_off/src/main.c:97:6: note: each undeclared identifier is reported only once for each function it appears in
+projects/on_off/src/main.c:97:22: error: 'MAX_CYCLES' undeclared (first use in this function)
+Makefile:72: fallo en las instrucciones para el objetivo 'main.o'
+  if( cycles_count >= MAX_CYCLES ){
+                      ^
+projects/on_off/src/main.c: In function 'ADC0_IRQHandler':
+projects/on_off/src/main.c:121:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC0, ADC_CH0,&adc_data); //Se hace una nueva lectura de la temperatura
+                                       ^
+In file included from modules/lpc4337_m4/chip/inc/chip_lpc43xx.h:176:0,
+                 from modules/lpc4337_m4/chip/inc/chip.h:39,
+                 from modules/lpc4337_m4/board/inc/board.h:35,
+                 from projects/on_off/src/main.c:32:
+modules/lpc4337_m4/chip/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+make: *** [main.o] Error 1
+16:00:43 **** Incremental Build of configuration Debug for project firmware_edu-ciaa ****
+make -r all 
+*** compiling C file projects/on_off/src/main.c ***
+projects/on_off/src/main.c: In function 'ADC0_IRQHandler':
+projects/on_off/src/main.c:108:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC0, ADC_CH0,&adc_data); //Se hace una nueva lectura de la temperatura
+                                       ^
+In file included from modules/lpc4337_m4/chip/inc/chip_lpc43xx.h:176:0,
+                 from modules/lpc4337_m4/chip/inc/chip.h:39,
+                 from modules/lpc4337_m4/board/inc/board.h:35,
+                 from projects/on_off/src/main.c:32:
+modules/lpc4337_m4/chip/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+*** linking project on_off ***
+   text	   data	    bss	    dec	    hex	filename
+  17128	  16392	    392	  33912	   8478	out/lpc4337_m4/on_off.axf
+copy from `out/lpc4337_m4/on_off.axf' [elf32-littlearm] to `out/lpc4337_m4/on_off.bin' [binary]
+*** post-build ***
+16:02:38 **** Incremental Build of configuration Debug for project firmware_edu-ciaa ****
+make -r all 
+*** compiling C file projects/on_off/src/main.c ***
+projects/on_off/src/main.c: In function 'ADC0_IRQHandler':
+projects/on_off/src/main.c:108:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(LPC_ADC0, ADC_CH0,&adc_data); //Se hace una nueva lectura de la temperatura
+                                       ^
+In file included from modules/lpc4337_m4/chip/inc/chip_lpc43xx.h:176:0,
+                 from modules/lpc4337_m4/chip/inc/chip.h:39,
+                 from modules/lpc4337_m4/board/inc/board.h:35,
+                 from projects/on_off/src/main.c:32:
+modules/lpc4337_m4/chip/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+*** linking project on_off ***
+   text	   data	    bss	    dec	    hex	filename
+  17132	  16392	    392	  33916	   847c	out/lpc4337_m4/on_off.axf
+copy from `out/lpc4337_m4/on_off.axf' [elf32-littlearm] to `out/lpc4337_m4/on_off.bin' [binary]
+*** post-build ***

@@ -31,7 +31,7 @@
 
 -include project.mk
 
-PROJECT ?= projects/my_project
+PROJECT ?= projects/on_off
 TARGET ?= lpc4337_m4
 BOARD ?= edu_ciaa_nxp
 
