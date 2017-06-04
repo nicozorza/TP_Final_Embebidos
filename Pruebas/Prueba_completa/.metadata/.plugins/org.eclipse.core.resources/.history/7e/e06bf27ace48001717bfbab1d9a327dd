@@ -1,0 +1,10 @@
+#include "Configure.h"
+
+
+/* Sets up system hardware */
+void SetupHardware(void){
+	SystemCoreClockUpdate();
+	Board_Init();
+
+}
+

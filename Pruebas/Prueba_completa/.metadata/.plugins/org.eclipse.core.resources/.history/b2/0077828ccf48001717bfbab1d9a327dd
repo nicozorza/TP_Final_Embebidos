@@ -1,0 +1,16 @@
+#include "StartStop.h"
+
+
+/* Esta tarea enciende el horno */
+static void vHandlerStart(void *pvParameters){
+
+	/* Se toma el semaforo para vaciarlo antes de entrar al loop infinito */
+    xSemaphoreTake(xStartSemaphore, (portTickType) 0);
+
+	while (1) {
+
+		/* La tarea permanece bloqueada hasta que el semaforo se libera */
+        xSemaphoreTake(xStartSemaphore, portMAX_DELAY);
+
+    }
+}

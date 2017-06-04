@@ -1,0 +1,15 @@
+#ifndef _MAIN_H_
+#define _MAIN_H_
+
+#include "board.h"
+#include "FreeRTOS.h"
+#include "task.h"
+#include "semphr.h"
+#include <stdlib.h>
+
+#include "Configure.h"
+
+xSemaphoreHandle xStartSemaphore;	//Semaforo para el encendido del horno
+TaskHandle_t StartTaskHandle;	//Handler de la tarea de encendido
+
+#endif

@@ -31,7 +31,7 @@
 
 -include project.mk
 
-PROJECT ?= projects/on_off
+PROJECT ?= projects/on_off_controller
 TARGET ?= lpc4337_m4
 BOARD ?= edu_ciaa_nxp
 

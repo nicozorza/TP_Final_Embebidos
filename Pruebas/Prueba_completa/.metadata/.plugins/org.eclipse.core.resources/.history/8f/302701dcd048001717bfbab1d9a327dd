@@ -1,0 +1,26 @@
+#ifndef _CONFIGURE_H_
+#endif _CONFIGURE_H_
+
+/* Pin de deteccion de fase */
+#define PHASE_SCU_INT_PORT	6			//Puerto del SCU usado para la deteccion de fase
+#define PHASE_SCU_INT_PIN	1			//Pin del SCU usado para la deteccion de fase
+#define PHASE_GPIO_INT_PORT	3			//Puerto del GPIO usado para la deteccion de fase
+#define PHASE_GPIO_INT_PIN	0			//Pin del GPIO usado para la deteccion de fase
+#define PHASE_PININT_INDEX	0			//Canal de las interrupciones para el cruce por cero
+#define PHASE_INTERRUPT_PRIORITY	5	//Prioridad de la interrupcion del detector de cruce por cero
+
+/* Pin de trigger del triac */
+#define TRIGGER_SCU_INT_PORT	6			//Puerto del SCU usado para el trigger del triac
+#define TRIGGER_SCU_INT_PIN		5			//Pin del SCU usado para el trigger del triac
+#define TRIGGER_GPIO_INT_PORT	3			//Puerto del GPIO usado para el trigger del triac
+#define TRIGGER_GPIO_INT_PIN	4			//Pin del GPIO usado para el trigger del triac
+
+/* Pin de deteccion de fase */
+#define START_SCU_INT_PORT	6			//Puerto del SCU usado para la deteccion de fase
+#define START_SCU_INT_PIN	1			//Pin del SCU usado para la deteccion de fase
+#define START_GPIO_INT_PORT	3			//Puerto del GPIO usado para la deteccion de fase
+#define START_GPIO_INT_PIN	0			//Pin del GPIO usado para la deteccion de fase
+#define START_PININT_INDEX	1			//Canal de las interrupciones para el cruce por cero
+#define START_INTERRUPT_PRIORITY	5	//Prioridad de la interrupcion del detector de cruce por cero
+
+#endif

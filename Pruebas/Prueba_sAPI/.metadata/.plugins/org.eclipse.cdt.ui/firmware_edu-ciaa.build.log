@@ -1,22 +1,10 @@
-16:02:38 **** Incremental Build of configuration Debug for project firmware_edu-ciaa ****
+22:48:03 **** Incremental Build of configuration Debug for project firmware_edu-ciaa ****
 make -r all 
-*** compiling C file projects/on_off/src/main.c ***
-projects/on_off/src/main.c: In function 'ADC0_IRQHandler':
-projects/on_off/src/main.c:108:39: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
-  Chip_ADC_ReadValue(LPC_ADC0, ADC_CH0,&adc_data); //Se hace una nueva lectura de la temperatura
-                                       ^
-In file included from modules/lpc4337_m4/chip/inc/chip_lpc43xx.h:176:0,
-                 from modules/lpc4337_m4/chip/inc/chip.h:39,
-                 from modules/lpc4337_m4/board/inc/board.h:35,
-                 from projects/on_off/src/main.c:32:
-modules/lpc4337_m4/chip/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
- Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
-        ^
-*** linking project on_off ***
+*** linking project on_off_controller ***
    text	   data	    bss	    dec	    hex	filename
-  17132	  16392	    392	  33916	   847c	out/lpc4337_m4/on_off.axf
-copy from `out/lpc4337_m4/on_off.axf' [elf32-littlearm] to `out/lpc4337_m4/on_off.bin' [binary]
+  17520	  16392	    320	  34232	   85b8	out/lpc4337_m4/on_off_controller.axf
+copy from `out/lpc4337_m4/on_off_controller.axf' [elf32-littlearm] to `out/lpc4337_m4/on_off_controller.bin' [binary]
 *** post-build ***
 
-16:02:38 Build Finished (took 320ms)
+22:48:03 Build Finished (took 112ms)
 

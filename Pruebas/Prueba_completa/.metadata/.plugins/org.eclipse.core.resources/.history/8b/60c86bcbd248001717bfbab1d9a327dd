@@ -1,0 +1,12 @@
+#ifndef _MAIN_H_
+#endif _MAIN_H_
+
+#include "board.h"
+#include "FreeRTOS.h"
+#include "task.h"
+#include "semphr.h"
+#include <stdlib.h>
+
+#include "Configure.h"
+
+#endif

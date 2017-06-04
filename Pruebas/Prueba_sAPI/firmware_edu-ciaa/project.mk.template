@@ -34,7 +34,7 @@
 # POSSIBILITY OF SUCH DAMAGE.
 
 # current project
-PROJECT = projects/on_off
+PROJECT = projects/on_off_controller
 #PROJECT = examples/blinky
 #PROJECT = examples/blinky_rit
 #PROJECT = examples/adc_fir_dac

@@ -1,0 +1,14 @@
+#ifndef _STARTSTOP_H_
+#define _STARTSTOP_H_
+
+#include "board.h"
+#include "FreeRTOS.h"
+#include "task.h"
+#include "semphr.h"
+#include <stdlib.h>
+
+xSemaphoreHandle xStartSemaphore;	//Semaforo de la tarea de encendido
+xTaskHandle StartTaskHandle;	//Handler de la tarea de encendido
+
+
+#endif

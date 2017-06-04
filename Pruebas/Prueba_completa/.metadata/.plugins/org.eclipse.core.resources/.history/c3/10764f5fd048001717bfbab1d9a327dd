@@ -1,0 +1,37 @@
+#include "board.h"
+#include "FreeRTOS.h"
+#include "task.h"
+#include "semphr.h"
+#include <stdlib.h>
+
+
+
+
+/*****************************************************************************
+ * Funcion main
+ ****************************************************************************/
+int main(void){
+	SetupHardware();	//Se inicializa el hardware
+
+	vSemaphoreCreateBinary(xPhaseSemaphore);	//Se crea el semaforo para la deteccion de cruces por cero
+	vSemaphoreCreateBinary(xFireTriggerSemaphore);	//Se crea el semaforo para la activacion del timer
+	vSemaphoreCreateBinary(xControllerSemaphore);		//Se crea el semaforo para el controlador
+
+	/* Se verifica que el semaforo haya sido creado correctamente */
+	if( (xPhaseSemaphore!=(xSemaphoreHandle)NULL)&&(xFireTriggerSemaphore!=(xSemaphoreHandle)NULL)&&(xControllerSemaphore!=(xSemaphoreHandle)NULL) ){
+
+		/* Se crea la tarea que se encarga de detectar los cruces por cero */
+		xTaskCreate(vHandlerZeroCrossing, (char *) "ZeroCrossing", configMINIMAL_STACK_SIZE,
+							(void *) 0, (tskIDLE_PRIORITY + 1UL), (xTaskHandle *) NULL);
+		/* Se crea la tarea que se encarga de generar los disparos del trigger */
+		xTaskCreate(vHandlerFireTrigger, (char *) "FireTrigger", configMINIMAL_STACK_SIZE,
+							(void *) 0, (tskIDLE_PRIORITY + 2UL), (xTaskHandle *) NULL);
+		/* Se crea la tarea que se encarga de aplicar el controlador */
+		xTaskCreate(vHandlerController, (char *) "Controller", configMINIMAL_STACK_SIZE,
+							(void *) 0, (tskIDLE_PRIORITY + 2UL), (xTaskHandle *) NULL);
+
+		vTaskStartScheduler(); /* Se comienzan a ejecutar las tareas. */
+	}
+	while (1);	//No se deberia llegar nunca a este punto.
+return ((int) NULL);
+}

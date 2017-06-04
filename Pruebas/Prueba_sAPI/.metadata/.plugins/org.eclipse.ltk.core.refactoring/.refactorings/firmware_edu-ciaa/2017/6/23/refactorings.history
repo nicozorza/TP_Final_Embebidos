@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;firmware_edu-ciaa/projects/freertos_blinky&apos; to &apos;on_off_controller&apos;" description="Rename resource &apos;freertos_blinky&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="projects/freertos_blinky" name="on_off_controller" stamp="1496537987349" updateReferences="true"/>
+</session>

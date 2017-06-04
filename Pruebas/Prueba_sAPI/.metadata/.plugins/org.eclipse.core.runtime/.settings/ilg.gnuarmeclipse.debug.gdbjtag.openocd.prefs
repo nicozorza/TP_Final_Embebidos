@@ -12,4 +12,4 @@ gdb.openocd.preRun.other=
 gdb.openocd.preRunReset.type=halt
 gdb.server.doStart=true
 gdb.server.executable=/usr/bin/openocd
-gdb.server.other=-f etc/openocd/lpc4337.cfg
+gdb.server.other=\u00AD-f etc/openocd/lpc4337.cfg
