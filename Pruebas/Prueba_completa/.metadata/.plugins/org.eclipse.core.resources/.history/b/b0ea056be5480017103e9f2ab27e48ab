@@ -108,9 +108,6 @@ static void vHandlerStart(void *pvParameters){
 			NVIC_DisableIRQ(START_IRQN);	//Deshabilito las interrupciones del boton de encendido
 	        NVIC_EnableIRQ(STOP_IRQN);	//Habilito las interrupciones del boton de apagado
 
-	        NVIC_EnableIRQ(ADC_IRQN);		//Habilito las interrupciones del ADC
-	        NVIC_EnableIRQ(PHASE_IRQN);		//Habilito las interrupciones del detector de fase
-
 			vTaskResume(StopTaskHandle);	//Se desbloquean las tareas
 			vTaskResume(ADCTaskHandle);
 			vTaskResume(ControllerTaskHandle);

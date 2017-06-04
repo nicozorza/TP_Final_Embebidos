@@ -96,7 +96,7 @@ static void vHandlerStart(void *pvParameters){
 
 	vTaskSuspend( StartTaskHandle );	//Se suspende la tarea de encendido
 
-	while(1){	//Las tareas y semaforos no deben ser creadas nuevamente
+	while(1){
 			/* La tarea permanece bloqueada hasta que el semaforo se libera */
 			xSemaphoreTake(xStartSemaphore, portMAX_DELAY);
 
@@ -107,9 +107,6 @@ static void vHandlerStart(void *pvParameters){
 
 			NVIC_DisableIRQ(START_IRQN);	//Deshabilito las interrupciones del boton de encendido
 	        NVIC_EnableIRQ(STOP_IRQN);	//Habilito las interrupciones del boton de apagado
-
-	        NVIC_EnableIRQ(ADC_IRQN);		//Habilito las interrupciones del ADC
-	        NVIC_EnableIRQ(PHASE_IRQN);		//Habilito las interrupciones del detector de fase
 
 			vTaskResume(StopTaskHandle);	//Se desbloquean las tareas
 			vTaskResume(ADCTaskHandle);
