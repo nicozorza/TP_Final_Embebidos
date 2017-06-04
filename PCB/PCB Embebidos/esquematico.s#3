@@ -12739,10 +12739,6 @@ Source: AVX .. aphvc.pdf</description>
 <label x="73.66" y="104.14" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="48.26" y1="48.26" x2="76.2" y2="48.26" width="0.1524" layer="91"/>
-<label x="48.26" y="48.26" size="1.778" layer="95"/>
-</segment>
-<segment>
 <wire x1="167.64" y1="81.28" x2="167.64" y2="83.82" width="0.1524" layer="91"/>
 <pinref part="SUPPLY2" gate="GND" pin="GND"/>
 <pinref part="C6" gate="G$1" pin="2"/>
@@ -12790,6 +12786,11 @@ Source: AVX .. aphvc.pdf</description>
 <pinref part="PT100" gate="-2" pin="KL"/>
 <pinref part="SUPPLY10" gate="GND" pin="GND"/>
 <wire x1="223.52" y1="38.1" x2="223.52" y2="35.56" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="OK3" gate="-1" pin="C"/>
+<wire x1="55.88" y1="48.26" x2="35.56" y2="48.26" width="0.1524" layer="91"/>
+<label x="35.56" y="48.26" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="PWM" class="0">

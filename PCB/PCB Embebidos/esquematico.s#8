@@ -12622,7 +12622,6 @@ Source: AVX .. aphvc.pdf</description>
 <part name="SUPPLY10" library="supply2" deviceset="GND" device=""/>
 <part name="SAL_SENSORES" library="con-ptr500" deviceset="AK300/2" device=""/>
 <part name="C3" library="eagle-ltspice" deviceset="C" device="C1206" value="100n"/>
-<part name="R12" library="resistor" deviceset="R-EU_" device="R1206" value="1k"/>
 </parts>
 <sheets>
 <sheet>
@@ -12678,7 +12677,6 @@ Source: AVX .. aphvc.pdf</description>
 <instance part="SAL_SENSORES" gate="-1" x="119.38" y="106.68" rot="MR0"/>
 <instance part="SAL_SENSORES" gate="-2" x="119.38" y="101.6" rot="MR0"/>
 <instance part="C3" gate="G$1" x="198.12" y="119.38" rot="R90"/>
-<instance part="R12" gate="G$1" x="76.2" y="81.28" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -12887,6 +12885,11 @@ Source: AVX .. aphvc.pdf</description>
 <wire x1="223.52" y1="60.96" x2="228.6" y2="60.96" width="0.1524" layer="91"/>
 <label x="223.52" y="60.96" size="1.778" layer="95"/>
 </segment>
+<segment>
+<wire x1="106.68" y1="124.46" x2="96.52" y2="124.46" width="0.1524" layer="91"/>
+<label x="96.52" y="124.46" size="1.778" layer="95"/>
+<pinref part="ALIMENTACION" gate="-1" pin="KL"/>
+</segment>
 </net>
 <net name="FASE" class="0">
 <segment>
@@ -12991,11 +12994,6 @@ Source: AVX .. aphvc.pdf</description>
 <junction x="152.4" y="55.88"/>
 <label x="142.24" y="55.88" size="1.778" layer="95"/>
 <pinref part="C1" gate="G$1" pin="1"/>
-</segment>
-<segment>
-<wire x1="106.68" y1="124.46" x2="96.52" y2="124.46" width="0.1524" layer="91"/>
-<label x="96.52" y="124.46" size="1.778" layer="95"/>
-<pinref part="ALIMENTACION" gate="-1" pin="KL"/>
 </segment>
 </net>
 <net name="SAL_PT100" class="0">
