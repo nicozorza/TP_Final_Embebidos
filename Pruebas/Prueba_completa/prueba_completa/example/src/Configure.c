@@ -86,7 +86,5 @@ void ConfigureStopButton( void ){
 	NVIC_SetPriority(STOP_IRQN, STOP_INTERRUPT_PRIORITY);	//Se setea la prioridad de la interrupcion
 	NVIC_ClearPendingIRQ(STOP_IRQN);						//Se limpian las interrupciones pendientes
 	NVIC_EnableIRQ(STOP_IRQN);								//Se habilitan las interrupciones para el pin
-
-    Board_LED_Set(1, true);		//Se enciende el led de apagado
 }
 /*****************************************************************************/

@@ -1,6 +1,6 @@
-02:19:58 **** Incremental Build of configuration Debug for project prueba_completa ****
+02:54:44 **** Incremental Build of configuration Debug for project prueba_completa ****
 make -r all 
 make: No se hace nada para 'all'.
 
-02:19:58 Build Finished (took 62ms)
+02:54:44 Build Finished (took 76ms)
 

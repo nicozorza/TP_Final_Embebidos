@@ -30,16 +30,19 @@ TaskHandle_t ControllerTaskHandle;		//Handler de la tarea del controlador
 xSemaphoreHandle xPhaseSemaphore;		//Semaforo para la deteccion de cruces por cero
 TaskHandle_t PhaseTaskHandle;			//Handler de la tarea del detector de fase
 
+TaskHandle_t UpdateReferenceTaskHandle; //Handler de la tarea que actualiza la referencia de temperatura
 
 float thermocouple_temp=0;		//Temperatura de la termocupla
 bool trigger_state=false;		//Estado del trigger
 
-float reference=55;				//Temperatura de referencia
+#define REFERENCE_INTERVAL (50000/(portTICK_RATE_MS))	//Intervalo de tiempo para la actualizacion de la referencia
+float reference=0;				//Temperatura de referencia
 
 static void vHandlerStart(void *pvParameters);	//Tarea donde se espera que se presione el boton de encendido
 static void vHandlerStop(void *pvParameters);	//Tarea donde se espera que se presione el boton de apagado
 static void vHandlerGetTemperature(void *pvParameters);	//Tarea que mide la temperatura
 static void vHandlerController(void *pvParameters);		//Tarea que controla la resistencia
 static void vHandlerZeroCrossing(void *pvParameters);	//Tarea que se ejecuta con los cruces por cero
+static void vHandlerUpdateTemperatureReference(void *pvParameters);	//Tarea que actualiza la referencia de temperatura
 
 #endif

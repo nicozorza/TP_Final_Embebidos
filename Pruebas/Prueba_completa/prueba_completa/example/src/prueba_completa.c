@@ -1,4 +1,5 @@
 #include "main.h"
+
 /*****************************************************************************
  * Interrupciones
  ****************************************************************************/
@@ -41,6 +42,7 @@ void PHASE_IRQN_HANDLER(void){
 	xSemaphoreGiveFromISR(xPhaseSemaphore, &xHigherPriorityTaskWoken);	//Se otorga el semaforo
 	portEND_SWITCHING_ISR(xHigherPriorityTaskWoken);		//Se fuerza un cambio de contexto si es necesario
 }
+
 /*****************************************************************************
  * Tareas
  ****************************************************************************/
@@ -86,12 +88,15 @@ static void vHandlerStart(void *pvParameters){
 		/* Se crea la tarea que mide la temperatura */
 		xTaskCreate(vHandlerGetTemperature, (char *) "GetTemperature", configMINIMAL_STACK_SIZE,
 							(void *) 0, (tskIDLE_PRIORITY + 1UL), &ADCTaskHandle );
-		/* Se crea la tarea que mide la temperatura */
+		/* Se crea la tarea que controla la resistencia */
 		xTaskCreate(vHandlerController, (char *) "Controller", configMINIMAL_STACK_SIZE,
 							(void *) 0, (tskIDLE_PRIORITY + 1UL), &ControllerTaskHandle );
-		/* Se crea la tarea que mide la temperatura */
+		/* Se crea la tarea que detecta los cruces por cero */
 		xTaskCreate(vHandlerZeroCrossing, (char *) "ZeroCrossing", configMINIMAL_STACK_SIZE,
 							(void *) 0, (tskIDLE_PRIORITY + 2UL), &PhaseTaskHandle );
+		/* Se crea la tarea que actualiza la temperatura de referencia */
+		xTaskCreate(vHandlerUpdateTemperatureReference, (char *) "UpdateReference", configMINIMAL_STACK_SIZE,
+							(void *) 0, (tskIDLE_PRIORITY + 4UL), &UpdateReferenceTaskHandle );
 	}
 
 	vTaskSuspend( StartTaskHandle );	//Se suspende la tarea de encendido
@@ -115,6 +120,7 @@ static void vHandlerStart(void *pvParameters){
 			vTaskResume(ADCTaskHandle);
 			vTaskResume(ControllerTaskHandle);
 			vTaskResume(PhaseTaskHandle);
+			vTaskResume(UpdateReferenceTaskHandle);
 
 			vTaskSuspend( StartTaskHandle );	//Se suspende la tarea de encendido
 	}
@@ -147,6 +153,7 @@ static void vHandlerStop(void *pvParameters){
         vTaskSuspend( ADCTaskHandle );
         vTaskSuspend( ControllerTaskHandle );
         vTaskSuspend( PhaseTaskHandle );
+        vTaskSuspend( UpdateReferenceTaskHandle );
 
         /* Se apaga la resistencia calentadora */
         Chip_GPIO_SetPinState(LPC_GPIO_PORT, TRIGGER_GPIO_INT_PORT, TRIGGER_GPIO_INT_PIN, false);
@@ -217,6 +224,26 @@ static void vHandlerZeroCrossing(void *pvParameters){
         Chip_GPIO_SetPinState(LPC_GPIO_PORT, TRIGGER_GPIO_INT_PORT, TRIGGER_GPIO_INT_PIN, trigger_state);
     }
 }
+
+/* Esta tarea actualiza el valor de referencia */
+static void vHandlerUpdateTemperatureReference(void *pvParameters){
+	float vec[]={35, 40, 50};
+	uint8_t i=0;
+	portTickType xLastExecutionTime;
+
+	xLastExecutionTime = xTaskGetTickCount();
+
+	while (1) {
+
+		if( i < 3 ){
+			reference=vec[i];
+			i++;
+		}
+		vTaskDelayUntil(&xLastExecutionTime, REFERENCE_INTERVAL);
+
+    }
+}
+
 
 /*****************************************************************************
  * Funcion main
