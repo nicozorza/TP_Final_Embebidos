@@ -227,7 +227,7 @@ static void vHandlerZeroCrossing(void *pvParameters){
 
 /* Esta tarea actualiza el valor de referencia */
 static void vHandlerUpdateTemperatureReference(void *pvParameters){
-	float vec[]={35, 40, 50};
+	float vec[]={45, 40, 50};
 	uint8_t i=0;
 	portTickType xLastExecutionTime;
 

@@ -12578,19 +12578,20 @@ Source: AVX .. aphvc.pdf</description>
 <variantdefs>
 </variantdefs>
 <classes>
-<class number="0" name="default" width="0" drill="0">
+<class number="0" name="default" width="0.9906" drill="0.9906">
+<clearance class="0" value="0.762"/>
 </class>
 </classes>
 <parts>
 <part name="T1" library="triac" deviceset="BT138" device="-V"/>
-<part name="R1" library="resistor" deviceset="R-EU_" device="R1206" value="330"/>
-<part name="R2" library="resistor" deviceset="R-EU_" device="R1206" value="330"/>
+<part name="R1" library="resistor" deviceset="R-EU_" device="R1206" value="560"/>
+<part name="R2" library="resistor" deviceset="R-EU_" device="R1206" value="560"/>
 <part name="R4" library="resistor" deviceset="R-EU_" device="R1206" value="680"/>
 <part name="SUPPLY1" library="supply2" deviceset="GND" device=""/>
 <part name="OK2" library="optocoupler" deviceset="PC817" device=""/>
 <part name="OK3" library="optocoupler" deviceset="MOC30*" device="" technology="31M"/>
 <part name="D1" library="diode" deviceset="1N4004" device=""/>
-<part name="R3" library="resistor" deviceset="R-EU_" device="0207/10" value="20k"/>
+<part name="R3" library="resistor" deviceset="R-EU_" device="0207/10" value="100k"/>
 <part name="R5" library="resistor" deviceset="R-EU_" device="R1206" value="1k"/>
 <part name="R6" library="resistor" deviceset="R-EU_" device="R1206" value="100k"/>
 <part name="PWM-FASE" library="con-ptr500" deviceset="AK300/2" device=""/>
@@ -12621,8 +12622,8 @@ Source: AVX .. aphvc.pdf</description>
 <part name="C3" library="eagle-ltspice" deviceset="C" device="C1206" value="100n"/>
 <part name="OK1" library="optocoupler" deviceset="MOC30*" device="" technology="31M"/>
 <part name="R10" library="resistor" deviceset="R-EU_" device="R1206" value="680"/>
-<part name="R12" library="resistor" deviceset="R-EU_" device="R1206" value="330"/>
-<part name="R13" library="resistor" deviceset="R-EU_" device="R1206" value="330"/>
+<part name="R12" library="resistor" deviceset="R-EU_" device="R1206" value="560"/>
+<part name="R13" library="resistor" deviceset="R-EU_" device="R1206" value="560"/>
 <part name="T2" library="triac" deviceset="BT138" device="-V"/>
 <part name="COOLER" library="con-ptr500" deviceset="AK300/2" device=""/>
 </parts>

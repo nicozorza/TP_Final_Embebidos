@@ -1,4 +1,5 @@
 #include "main.h"
+
 /*****************************************************************************
  * Interrupciones
  ****************************************************************************/
@@ -41,6 +42,7 @@ void PHASE_IRQN_HANDLER(void){
 	xSemaphoreGiveFromISR(xPhaseSemaphore, &xHigherPriorityTaskWoken);	//Se otorga el semaforo
 	portEND_SWITCHING_ISR(xHigherPriorityTaskWoken);		//Se fuerza un cambio de contexto si es necesario
 }
+
 /*****************************************************************************
  * Tareas
  ****************************************************************************/
@@ -50,51 +52,79 @@ void PHASE_IRQN_HANDLER(void){
 static void vHandlerStart(void *pvParameters){
 
 	ConfigureStartButton();		//Se configura el boton de encendido
+    Board_LED_Set(4, false);		//Se apaga el led de encendido
+    Board_LED_Set(5, true);			//Se enciende el led de apagado
 
 	/* Se toma el semaforo para vaciarlo antes de entrar al loop infinito */
     xSemaphoreTake(xStartSemaphore, (portTickType) 0);
 
-	while (1) {
-		/* La tarea permanece bloqueada hasta que el semaforo se libera */
-        xSemaphoreTake(xStartSemaphore, portMAX_DELAY);
+	/* La tarea permanece bloqueada hasta que el semaforo se libera */
+	xSemaphoreTake(xStartSemaphore, portMAX_DELAY);
 
-        /* Cuando se presiona el boton de encendido, se le da el semaforo a la tarea. */
+	/* Cuando se presiona el boton de encendido, se le da el semaforo a la tarea. */
 
-        Board_LED_Set(1, false);		//Se enciende un led para indicar que esta encendido
-        Board_LED_Set(0, true);		//Se apaga el led de apagado
+	Board_LED_Set(4, true);			//Se enciende un led para indicar que esta encendido
+	Board_LED_Set(5, false);		//Se apaga el led de apagado
 
-        NVIC_DisableIRQ(START_IRQN);	//Deshabilito las interrupciones del boton de encendido
+	NVIC_DisableIRQ(START_IRQN);	//Deshabilito las interrupciones del boton de encendido
 
-        ConfigureStopButton();		//Se configura el boton de apagado
-        ConfigureADC();				//Configuracion del ADC
-        ConfigurePhaseDetector();	//Configuracion del detector de cruce por cero
-        ConfigureTriggerResistor();	//Configuracion del trigger que controla la resistencia
+	ConfigureStopButton();		//Se configura el boton de apagado
+	ConfigureADC();				//Configuracion del ADC
+	ConfigurePhaseDetector();	//Configuracion del detector de cruce por cero
+	ConfigureTriggerResistor();	//Configuracion del trigger que controla la resistencia
 
-        vSemaphoreCreateBinary(xStopSemaphore);		//Se crea el semaforo para el boton de apagado
-        vSemaphoreCreateBinary(xADCSemaphore);		//Se crea el semaforo de la tarea que mide la temperatura
-        vSemaphoreCreateBinary(xControllerSemaphore);	//Se crea el semaforo del controlador
-        vSemaphoreCreateBinary(xPhaseSemaphore);	//Se crea el semaforo para detectar la fase
+	vSemaphoreCreateBinary(xStopSemaphore);		//Se crea el semaforo para el boton de apagado
+	vSemaphoreCreateBinary(xADCSemaphore);		//Se crea el semaforo de la tarea que mide la temperatura
+	vSemaphoreCreateBinary(xControllerSemaphore);	//Se crea el semaforo del controlador
+	vSemaphoreCreateBinary(xPhaseSemaphore);	//Se crea el semaforo para detectar la fase
 
-    	/* Se verifica que el semaforo haya sido creado correctamente */
-    	if( (xStopSemaphore!=(xSemaphoreHandle)NULL)&&(xADCSemaphore!=(xSemaphoreHandle)NULL)
-    			&&(xControllerSemaphore!=(xSemaphoreHandle)NULL)&&(xPhaseSemaphore!=(xSemaphoreHandle)NULL) ){
+	/* Se verifica que el semaforo haya sido creado correctamente */
+	if( (xStopSemaphore!=(xSemaphoreHandle)NULL)&&(xADCSemaphore!=(xSemaphoreHandle)NULL)
+			&&(xControllerSemaphore!=(xSemaphoreHandle)NULL)&&(xPhaseSemaphore!=(xSemaphoreHandle)NULL) ){
 
-    		/* Se crea la tarea de encendido */
-    		xTaskCreate(vHandlerStop, (char *) "Stop", configMINIMAL_STACK_SIZE,
-    							(void *) 0, (tskIDLE_PRIORITY + 3UL), &StopTaskHandle );
-    		/* Se crea la tarea que mide la temperatura */
-    		xTaskCreate(vHandlerGetTemperature, (char *) "GetTemperature", configMINIMAL_STACK_SIZE,
-    							(void *) 0, (tskIDLE_PRIORITY + 1UL), &ADCTaskHandle );
-    		/* Se crea la tarea que mide la temperatura */
-    		xTaskCreate(vHandlerController, (char *) "Controller", configMINIMAL_STACK_SIZE,
-    							(void *) 0, (tskIDLE_PRIORITY + 1UL), &ControllerTaskHandle );
-    		/* Se crea la tarea que mide la temperatura */
-			xTaskCreate(vHandlerZeroCrossing, (char *) "ZeroCrossing", configMINIMAL_STACK_SIZE,
-								(void *) 0, (tskIDLE_PRIORITY + 2UL), &PhaseTaskHandle );
-    	}
+		/* Se crea la tarea de encendido */
+		xTaskCreate(vHandlerStop, (char *) "Stop", configMINIMAL_STACK_SIZE,
+							(void *) 0, (tskIDLE_PRIORITY + 3UL), &StopTaskHandle );
+		/* Se crea la tarea que mide la temperatura */
+		xTaskCreate(vHandlerGetTemperature, (char *) "GetTemperature", configMINIMAL_STACK_SIZE,
+							(void *) 0, (tskIDLE_PRIORITY + 1UL), &ADCTaskHandle );
+		/* Se crea la tarea que controla la resistencia */
+		xTaskCreate(vHandlerController, (char *) "Controller", configMINIMAL_STACK_SIZE,
+							(void *) 0, (tskIDLE_PRIORITY + 1UL), &ControllerTaskHandle );
+		/* Se crea la tarea que detecta los cruces por cero */
+		xTaskCreate(vHandlerZeroCrossing, (char *) "ZeroCrossing", configMINIMAL_STACK_SIZE,
+							(void *) 0, (tskIDLE_PRIORITY + 2UL), &PhaseTaskHandle );
+		/* Se crea la tarea que actualiza la temperatura de referencia */
+		xTaskCreate(vHandlerUpdateTemperatureReference, (char *) "UpdateReference", configMINIMAL_STACK_SIZE,
+							(void *) 0, (tskIDLE_PRIORITY + 4UL), &UpdateReferenceTaskHandle );
+	}
 
-        vTaskSuspend( StartTaskHandle );	//Se suspende la tarea de encendido
-    }
+	vTaskSuspend( StartTaskHandle );	//Se suspende la tarea de encendido
+
+	while(1){	//Las tareas y semaforos no deben ser creadas nuevamente
+			/* La tarea permanece bloqueada hasta que el semaforo se libera */
+			xSemaphoreTake(xStartSemaphore, portMAX_DELAY);
+
+			/* Cuando se presiona el boton de encendido, se le da el semaforo a la tarea. */
+
+			Board_LED_Set(4, true);			//Se enciende un led para indicar que esta encendido
+			Board_LED_Set(5, false);		//Se apaga el led de apagado
+
+			NVIC_DisableIRQ(START_IRQN);	//Deshabilito las interrupciones del boton de encendido
+	        NVIC_EnableIRQ(STOP_IRQN);	//Habilito las interrupciones del boton de apagado
+
+	        NVIC_EnableIRQ(ADC_IRQN);		//Habilito las interrupciones del ADC
+	        NVIC_EnableIRQ(PHASE_IRQN);		//Habilito las interrupciones del detector de fase
+
+			vTaskResume(StopTaskHandle);	//Se desbloquean las tareas
+			vTaskResume(ADCTaskHandle);
+			vTaskResume(ControllerTaskHandle);
+			vTaskResume(PhaseTaskHandle);
+			vTaskResume(UpdateReferenceTaskHandle);
+
+			vTaskSuspend( StartTaskHandle );	//Se suspende la tarea de encendido
+	}
+
 }
 
 /* Esta tarea se encarga de apagar el horno cuando se presiona el boton
@@ -110,8 +140,8 @@ static void vHandlerStop(void *pvParameters){
 
         /* Cuando se presiona el boton de encendido, se le da el semaforo a la tarea. */
 
-        Board_LED_Set(1, true);	//Se apaga el led de encendido
-        Board_LED_Set(0, false);		//Se enciende el led de apagado
+        Board_LED_Set(4, false);	//Se apaga el led de encendido
+        Board_LED_Set(5, true);		//Se enciende el led de apagado
 
         NVIC_EnableIRQ(START_IRQN);	//Habilito las interrupciones del boton de encendido
         NVIC_DisableIRQ(STOP_IRQN);	//Deshabilito las interrupciones del boton de apagado
@@ -123,6 +153,7 @@ static void vHandlerStop(void *pvParameters){
         vTaskSuspend( ADCTaskHandle );
         vTaskSuspend( ControllerTaskHandle );
         vTaskSuspend( PhaseTaskHandle );
+        vTaskSuspend( UpdateReferenceTaskHandle );
 
         /* Se apaga la resistencia calentadora */
         Chip_GPIO_SetPinState(LPC_GPIO_PORT, TRIGGER_GPIO_INT_PORT, TRIGGER_GPIO_INT_PIN, false);
@@ -171,7 +202,7 @@ static void vHandlerController(void *pvParameters){
 		temperature = get_temperature( thermocouple_temp );	//Mapeo la temperatura
 
 		if( temperature >= reference-TEMPERATURE_INERTIA )
-			trigger_state = FALSE;	//Si la temperatura es mayor, se apaga la potencia
+			trigger_state = TRUE;// FALSE;	//Si la temperatura es mayor, se apaga la potencia
 		else
 			trigger_state = TRUE;	//Si la temperatura es menor, se mantiene encendida la potencia
 
@@ -193,6 +224,26 @@ static void vHandlerZeroCrossing(void *pvParameters){
         Chip_GPIO_SetPinState(LPC_GPIO_PORT, TRIGGER_GPIO_INT_PORT, TRIGGER_GPIO_INT_PIN, trigger_state);
     }
 }
+
+/* Esta tarea actualiza el valor de referencia */
+static void vHandlerUpdateTemperatureReference(void *pvParameters){
+	float vec[]={35, 40, 50};
+	uint8_t i=0;
+	portTickType xLastExecutionTime;
+
+	xLastExecutionTime = xTaskGetTickCount();
+
+	while (1) {
+
+		if( i < 3 ){
+			reference=vec[i];
+			i++;
+		}
+		vTaskDelayUntil(&xLastExecutionTime, REFERENCE_INTERVAL);
+
+    }
+}
+
 
 /*****************************************************************************
  * Funcion main
