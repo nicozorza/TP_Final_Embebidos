@@ -35,7 +35,7 @@ ADC_CLOCK_SETUP_T ADCSetup;			//Estructura de condiguracion del ADC
 #define START_GPIO_INT_PORT	0			//Puerto del GPIO usado para el boton de encendido
 #define START_GPIO_INT_PIN	4			//Pin del GPIO usado para el boton de encendido
 #define START_PININT_INDEX	1			//Canal de las interrupciones para el boton de encendido
-#define START_INTERRUPT_PRIORITY	5	//Prioridad de la interrupcion para el boton de encendido
+#define START_INTERRUPT_PRIORITY	6	//Prioridad de la interrupcion para el boton de encendido
 #define START_IRQN_HANDLER	GPIO1_IRQHandler	//Handler de la interrupcion
 #define START_IRQN			PIN_INT1_IRQn		//Interrupcion
 
@@ -45,7 +45,7 @@ ADC_CLOCK_SETUP_T ADCSetup;			//Estructura de condiguracion del ADC
 #define STOP_GPIO_INT_PORT	0			//Puerto del GPIO usado para el boton de apagado
 #define STOP_GPIO_INT_PIN	8			//Pin del GPIO usado para el boton de apagado
 #define STOP_PININT_INDEX	2			//Canal de las interrupciones para el boton de apagado
-#define STOP_INTERRUPT_PRIORITY	5		//Prioridad de la interrupcion para el boton de apagado
+#define STOP_INTERRUPT_PRIORITY	6		//Prioridad de la interrupcion para el boton de apagado
 #define STOP_IRQN_HANDLER	GPIO2_IRQHandler	//Handler de la interrupcion
 #define STOP_IRQN			PIN_INT2_IRQn		//Interrupcion
 

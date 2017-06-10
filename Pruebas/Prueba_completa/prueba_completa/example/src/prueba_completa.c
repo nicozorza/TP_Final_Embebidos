@@ -227,7 +227,6 @@ static void vHandlerZeroCrossing(void *pvParameters){
 
 /* Esta tarea actualiza el valor de referencia */
 static void vHandlerUpdateTemperatureReference(void *pvParameters){
-	float vec[]={45, 40, 50};
 	uint8_t i=0;
 	portTickType xLastExecutionTime;
 
@@ -235,9 +234,13 @@ static void vHandlerUpdateTemperatureReference(void *pvParameters){
 
 	while (1) {
 
-		if( i < 3 ){
-			reference=vec[i];
+		if( i < sizeof(temperature_profile)/sizeof(float) ){
+			reference=temperature_profile[i];
 			i++;
+		}
+		else{
+			xSemaphoreGive(xStopSemaphore);	//Se otorga el semaforo para apagar el horno
+			i=0;
 		}
 		vTaskDelayUntil(&xLastExecutionTime, REFERENCE_INTERVAL);
 
