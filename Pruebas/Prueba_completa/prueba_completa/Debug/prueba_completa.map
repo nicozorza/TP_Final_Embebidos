@@ -3835,7 +3835,7 @@ END GROUP
  *(.rodata.$Flash2*)
  *(.rodata.$MFlashB512*)
 
-.text           0x1a000000     0x4a44
+.text           0x1a000000     0x4aa8
  FILL mask 0xff
                 0x1a000000                __vectors_start__ = ABSOLUTE (.)
  *(.isr_vector)
@@ -3844,19 +3844,19 @@ END GROUP
                 0x1a000114                . = ALIGN (0x4)
                 0x1a000114                __section_table_start = .
                 0x1a000114                __data_section_table = .
-                0x1a000114        0x4 LONG 0x1a004a44 LOADADDR (.data)
+                0x1a000114        0x4 LONG 0x1a004aa8 LOADADDR (.data)
                 0x1a000118        0x4 LONG 0x10000000 ADDR (.data)
                 0x1a00011c        0x4 LONG 0x8 SIZEOF (.data)
-                0x1a000120        0x4 LONG 0x1a004a44 LOADADDR (.data_RAM2)
+                0x1a000120        0x4 LONG 0x1a004aa8 LOADADDR (.data_RAM2)
                 0x1a000124        0x4 LONG 0x10080000 ADDR (.data_RAM2)
                 0x1a000128        0x4 LONG 0x0 SIZEOF (.data_RAM2)
-                0x1a00012c        0x4 LONG 0x1a004a44 LOADADDR (.data_RAM3)
+                0x1a00012c        0x4 LONG 0x1a004aa8 LOADADDR (.data_RAM3)
                 0x1a000130        0x4 LONG 0x20000000 ADDR (.data_RAM3)
                 0x1a000134        0x4 LONG 0x0 SIZEOF (.data_RAM3)
-                0x1a000138        0x4 LONG 0x1a004a44 LOADADDR (.data_RAM4)
+                0x1a000138        0x4 LONG 0x1a004aa8 LOADADDR (.data_RAM4)
                 0x1a00013c        0x4 LONG 0x20008000 ADDR (.data_RAM4)
                 0x1a000140        0x4 LONG 0x0 SIZEOF (.data_RAM4)
-                0x1a000144        0x4 LONG 0x1a004a44 LOADADDR (.data_RAM5)
+                0x1a000144        0x4 LONG 0x1a004aa8 LOADADDR (.data_RAM5)
                 0x1a000148        0x4 LONG 0x2000c000 ADDR (.data_RAM5)
                 0x1a00014c        0x4 LONG 0x0 SIZEOF (.data_RAM5)
                 0x1a000150                __data_section_table_end = .
@@ -4440,68 +4440,68 @@ END GROUP
  .rodata        0x1a00484c        0x5 ./freertos/src/tasks.o
  *fill*         0x1a004851        0x3 ff
  .rodata.temperature_profile
-                0x1a004854       0x64 ./example/src/prueba_completa.o
+                0x1a004854       0xc8 ./example/src/prueba_completa.o
                 0x1a004854                temperature_profile
- .rodata        0x1a0048b8       0x4a ./example/src/prueba_completa.o
- *fill*         0x1a004902        0x2 ff
+ .rodata        0x1a00491c       0x4a ./example/src/prueba_completa.o
+ *fill*         0x1a004966        0x2 ff
  .rodata.ExtRateIn
-                0x1a004904        0x4 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
-                0x1a004904                ExtRateIn
+                0x1a004968        0x4 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+                0x1a004968                ExtRateIn
  .rodata.OscRateIn
-                0x1a004908        0x4 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
-                0x1a004908                OscRateIn
+                0x1a00496c        0x4 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+                0x1a00496c                OscRateIn
  .rodata.gpioLEDBits
-                0x1a00490c        0xc /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+                0x1a004970        0xc /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
  .rodata.gpioButtonBits
-                0x1a004918        0x8 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+                0x1a00497c        0x8 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
  .rodata.InitClkStates
-                0x1a004920        0xc /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
+                0x1a004984        0xc /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
  .rodata.pinmuxing
-                0x1a00492c       0x2c /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
+                0x1a004990       0x2c /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
  .rodata.periph_to_base
-                0x1a004958       0x6c /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
- .rodata        0x1a0049c4        0xa /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
- *fill*         0x1a0049ce        0x2 ff
+                0x1a0049bc       0x6c /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
+ .rodata        0x1a004a28        0xa /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
+ *fill*         0x1a004a32        0x2 ff
  .rodata.InitClkStates
-                0x1a0049d0       0x48 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
+                0x1a004a34       0x48 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
  .rodata.UART_PClock
-                0x1a004a18        0x8 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
+                0x1a004a7c        0x8 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
  .rodata.UART_BClock
-                0x1a004a20        0x8 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
+                0x1a004a84        0x8 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
  .rodata.str1.1
-                0x1a004a28       0x18 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(alloc.o)
+                0x1a004a8c       0x18 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(alloc.o)
  .rodata.str1.1
-                0x1a004a40        0x4 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(initio.o)
-                0x1a004a44                . = ALIGN (0x4)
+                0x1a004aa4        0x4 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(initio.o)
+                0x1a004aa8                . = ALIGN (0x4)
 
-.glue_7         0x1a004a44        0x0
- .glue_7        0x1a004a44        0x0 linker stubs
+.glue_7         0x1a004aa8        0x0
+ .glue_7        0x1a004aa8        0x0 linker stubs
 
-.glue_7t        0x1a004a44        0x0
- .glue_7t       0x1a004a44        0x0 linker stubs
+.glue_7t        0x1a004aa8        0x0
+ .glue_7t       0x1a004aa8        0x0 linker stubs
 
-.vfp11_veneer   0x1a004a44        0x0
- .vfp11_veneer  0x1a004a44        0x0 linker stubs
+.vfp11_veneer   0x1a004aa8        0x0
+ .vfp11_veneer  0x1a004aa8        0x0 linker stubs
 
-.v4_bx          0x1a004a44        0x0
- .v4_bx         0x1a004a44        0x0 linker stubs
+.v4_bx          0x1a004aa8        0x0
+ .v4_bx         0x1a004aa8        0x0 linker stubs
 
-.iplt           0x1a004a44        0x0
- .iplt          0x1a004a44        0x0 ./freertos/src/FreeRTOSCommonHooks.o
+.iplt           0x1a004aa8        0x0
+ .iplt          0x1a004aa8        0x0 ./freertos/src/FreeRTOSCommonHooks.o
 
-.rel.dyn        0x1a004a44        0x0
- .rel.iplt      0x1a004a44        0x0 ./freertos/src/FreeRTOSCommonHooks.o
+.rel.dyn        0x1a004aa8        0x0
+ .rel.iplt      0x1a004aa8        0x0 ./freertos/src/FreeRTOSCommonHooks.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x1a004a44                __exidx_start = .
+                0x1a004aa8                __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x1a004a44                __exidx_end = .
-                0x1a004a44                _etext = .
+                0x1a004aa8                __exidx_end = .
+                0x1a004aa8                _etext = .
 
-.data_RAM2      0x10080000        0x0 load address 0x1a004a44
+.data_RAM2      0x10080000        0x0 load address 0x1a004aa8
  FILL mask 0xff
                 [!provide]                PROVIDE (__start_data_RAM2, .)
  *(.ramfunc.$RAM2)
@@ -4511,7 +4511,7 @@ END GROUP
                 0x10080000                . = ALIGN (0x4)
                 [!provide]                PROVIDE (__end_data_RAM2, .)
 
-.data_RAM3      0x20000000        0x0 load address 0x1a004a44
+.data_RAM3      0x20000000        0x0 load address 0x1a004aa8
  FILL mask 0xff
                 [!provide]                PROVIDE (__start_data_RAM3, .)
  *(.ramfunc.$RAM3)
@@ -4521,7 +4521,7 @@ END GROUP
                 0x20000000                . = ALIGN (0x4)
                 [!provide]                PROVIDE (__end_data_RAM3, .)
 
-.data_RAM4      0x20008000        0x0 load address 0x1a004a44
+.data_RAM4      0x20008000        0x0 load address 0x1a004aa8
  FILL mask 0xff
                 [!provide]                PROVIDE (__start_data_RAM4, .)
  *(.ramfunc.$RAM4)
@@ -4531,7 +4531,7 @@ END GROUP
                 0x20008000                . = ALIGN (0x4)
                 [!provide]                PROVIDE (__end_data_RAM4, .)
 
-.data_RAM5      0x2000c000        0x0 load address 0x1a004a44
+.data_RAM5      0x2000c000        0x0 load address 0x1a004aa8
  FILL mask 0xff
                 [!provide]                PROVIDE (__start_data_RAM5, .)
  *(.ramfunc.$RAM5)
@@ -4547,7 +4547,7 @@ END GROUP
                 0x10000000                . = ALIGN (0x4)
                 0x10000000                _end_uninit_RESERVED = .
 
-.data           0x10000000        0x8 load address 0x1a004a44
+.data           0x10000000        0x8 load address 0x1a004aa8
  FILL mask 0xff
                 0x10000000                _data = .
  *(vtable)
@@ -4560,7 +4560,7 @@ END GROUP
                 0x10000008                . = ALIGN (0x4)
                 0x10000008                _edata = .
 
-.igot.plt       0x10000008        0x0 load address 0x1a004a4c
+.igot.plt       0x10000008        0x0 load address 0x1a004ab0
  .igot.plt      0x10000008        0x0 ./freertos/src/FreeRTOSCommonHooks.o
 
 .bss_RAM2       0x10080000        0x0
@@ -4952,7 +4952,7 @@ OUTPUT(prueba_completa.axf elf32-littlearm)
  .debug_line    0x00009018      0x6ca /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
  .debug_line    0x000096e2      0x939 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
 
-.debug_str      0x00000000    0x1fba5
+.debug_str      0x00000000    0x1fba4
  .debug_str     0x00000000    0x17f24 ./freertos/src/FreeRTOSCommonHooks.o
                               0x18046 (size before relaxing)
  .debug_str     0x00017f24      0x103 ./freertos/src/heap_3.o
@@ -4971,29 +4971,29 @@ OUTPUT(prueba_completa.axf elf32-littlearm)
                               0x16bda (size before relaxing)
  .debug_str     0x0001c54b      0x1bb ./example/src/cr_startup_lpc43xx.o
                                0x2773 (size before relaxing)
- .debug_str     0x0001c706      0xac8 ./example/src/prueba_completa.o
-                              0x1a7de (size before relaxing)
- .debug_str     0x0001d1ce       0x23 ./example/src/sysinit.o
+ .debug_str     0x0001c706      0xac7 ./example/src/prueba_completa.o
+                              0x1a7dd (size before relaxing)
+ .debug_str     0x0001d1cd       0x23 ./example/src/sysinit.o
                               0x15793 (size before relaxing)
- .debug_str     0x0001d1f1       0x31 ./example/src/utils.o
+ .debug_str     0x0001d1f0       0x31 ./example/src/utils.o
                               0x191eb (size before relaxing)
- .debug_str     0x0001d222     0x195c /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+ .debug_str     0x0001d221     0x195c /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
                               0x17c28 (size before relaxing)
- .debug_str     0x0001eb7e      0x125 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
+ .debug_str     0x0001eb7d      0x125 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
                               0x1652a (size before relaxing)
- .debug_str     0x0001eca3      0x311 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(adc_18xx_43xx.o)
+ .debug_str     0x0001eca2      0x311 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(adc_18xx_43xx.o)
                               0x158e4 (size before relaxing)
- .debug_str     0x0001efb4       0xa1 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(chip_18xx_43xx.o)
+ .debug_str     0x0001efb3       0xa1 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(chip_18xx_43xx.o)
                               0x15dcc (size before relaxing)
- .debug_str     0x0001f055      0x5d8 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
+ .debug_str     0x0001f054      0x5d8 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
                               0x1634f (size before relaxing)
- .debug_str     0x0001f62d       0xb5 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(fpu_init.o)
+ .debug_str     0x0001f62c       0xb5 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(fpu_init.o)
                                0x9965 (size before relaxing)
- .debug_str     0x0001f6e2       0xe4 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(gpio_18xx_43xx.o)
+ .debug_str     0x0001f6e1       0xe4 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(gpio_18xx_43xx.o)
                               0x151ce (size before relaxing)
- .debug_str     0x0001f7c6       0xb4 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
+ .debug_str     0x0001f7c5       0xb4 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
                               0x15d9b (size before relaxing)
- .debug_str     0x0001f87a      0x32b /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
+ .debug_str     0x0001f879      0x32b /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
                               0x15eff (size before relaxing)
 
 .comment        0x00000000       0xdc

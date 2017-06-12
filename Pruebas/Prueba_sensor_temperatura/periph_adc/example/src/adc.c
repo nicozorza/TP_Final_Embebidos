@@ -55,17 +55,13 @@ int main(void)
 	while (1) {
 		__WFI();
 		if( adc_flag==true){									//Medicion de la termocupla
-			/*temp_termocupla = ((float)adc_data0)*3.3/1023;		//Lo mapeo de 0-3.3v
+			temp_termocupla = ((float)adc_data)*3.3/1023;		//Lo mapeo de 0-3.3v
 			temp_termocupla /= OPAMP_GAIN;						//Lo divido por la ganancia del operacional
-			temp_termocupla=23376.525*temp_termocupla-1.574;	//Mapeo la temperatura
+			temp_termocupla=23701.6*temp_termocupla-8.75;	//Mapeo la temperatura
 
-			adc_flag0=false;
-			Chip_ADC_SetStartMode(LPC_ADC0, ADC_START_NOW, ADC_TRIGGERMODE_RISING);*/
-		//	temp_termocupla = ((float)adc_data)*3.3/1023;		//Lo mapeo de 0-3.3v
-			//temp_termocupla /= OPAMP_GAIN;						//Lo divido por la ganancia del operacional
-			temp_termocupla = (float)adc_data;
 			adc_flag=false;
 			Chip_ADC_SetStartMode(LPC_ADC0, ADC_START_NOW, ADC_TRIGGERMODE_RISING);
+
 		}
 
 		if( systick_flag == true ){

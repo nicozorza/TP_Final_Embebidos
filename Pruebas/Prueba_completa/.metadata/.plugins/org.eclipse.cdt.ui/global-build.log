@@ -5982,3 +5982,1049 @@ make: No se hace nada para 'all'.
 13:33:03 **** Incremental Build of configuration Debug for project prueba_completa ****
 make -r all 
 make: No se hace nada para 'all'.
+10:32:23 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+10:32:24 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+10:32:25 **** Incremental Build of configuration Debug for project prueba_completa ****
+make -r all 
+Building target: prueba_completa.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="prueba_completa.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "freertos_examples_1_to_9_Debug.ld" -o "prueba_completa.axf"  ./freertos/src/FreeRTOSCommonHooks.o ./freertos/src/croutine.o ./freertos/src/event_groups.o ./freertos/src/heap_3.o ./freertos/src/list.o ./freertos/src/port.o ./freertos/src/queue.o ./freertos/src/redlib_memfix.o ./freertos/src/tasks.o ./freertos/src/timers.o  ./example/src/Configure.o ./example/src/cr_startup_lpc43xx.o ./example/src/prueba_completa.o ./example/src/sysinit.o ./example/src/utils.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: prueba_completa.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "prueba_completa.axf"; # arm-none-eabi-objcopy -v -O binary "prueba_completa.axf" "prueba_completa.bin" ; # checksum -p LPC4337 -d "prueba_completa.bin";
+   text	   data	    bss	    dec	    hex	filename
+  19012	      8	    740	  19760	   4d30	prueba_completa.axf
+ 
+10:32:53 **** Incremental Build of configuration Debug for project prueba_completa ****
+make -r all 
+make: No se hace nada para 'all'.
+10:52:58 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+10:52:59 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+10:52:59 **** Incremental Build of configuration Debug for project prueba_completa ****
+make -r all 
+make: No se hace nada para 'all'.
+10:53:18 **** Incremental Build of configuration Debug for project prueba_completa ****
+make -r all 
+make: No se hace nada para 'all'.
+10:56:09 **** Incremental Build of configuration Debug for project prueba_completa ****
+make -r all 
+make: No se hace nada para 'all'.
+11:02:24 **** Incremental Build of configuration Debug for project prueba_completa ****
+make -r all 
+make: No se hace nada para 'all'.
+11:02:44 **** Incremental Build of configuration Debug for project prueba_completa ****
+make -r all 
+make: No se hace nada para 'all'.
+11:11:26 **** Incremental Build of configuration Debug for project prueba_completa ****
+make -r all 
+Building file: ../example/src/prueba_completa.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/prueba_completa.d" -MT"example/src/prueba_completa.o" -MT"example/src/prueba_completa.d" -o "example/src/prueba_completa.o" "../example/src/prueba_completa.c"
+../example/src/prueba_completa.c: In function 'ADC0_IRQHandler':
+../example/src/prueba_completa.c:30:50: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(ADC_TEMPERATURE, ADC_CHANNEL,&adc_data); //Se hace una nueva lectura de la temperatura
+                                                  ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/example/inc/main.h:6,
+                 from ../example/src/prueba_completa.c:1:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+Finished building: ../example/src/prueba_completa.c
+ 
+Building target: prueba_completa.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="prueba_completa.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "freertos_examples_1_to_9_Debug.ld" -o "prueba_completa.axf"  ./freertos/src/FreeRTOSCommonHooks.o ./freertos/src/croutine.o ./freertos/src/event_groups.o ./freertos/src/heap_3.o ./freertos/src/list.o ./freertos/src/port.o ./freertos/src/queue.o ./freertos/src/redlib_memfix.o ./freertos/src/tasks.o ./freertos/src/timers.o  ./example/src/Configure.o ./example/src/cr_startup_lpc43xx.o ./example/src/prueba_completa.o ./example/src/sysinit.o ./example/src/utils.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: prueba_completa.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "prueba_completa.axf"; # arm-none-eabi-objcopy -v -O binary "prueba_completa.axf" "prueba_completa.bin" ; # checksum -p LPC4337 -d "prueba_completa.bin";
+   text	   data	    bss	    dec	    hex	filename
+  19012	      8	    740	  19760	   4d30	prueba_completa.axf
+ 
+11:12:04 **** Incremental Build of configuration Debug for project prueba_completa ****
+make -r all 
+make: No se hace nada para 'all'.
+11:15:13 **** Incremental Build of configuration Debug for project prueba_completa ****
+make -r all 
+make: No se hace nada para 'all'.
+11:26:35 **** Incremental Build of configuration Debug for project prueba_completa ****
+make -r all 
+make: No se hace nada para 'all'.
+11:27:32 **** Incremental Build of configuration Debug for project prueba_completa ****
+make -r all 
+make: No se hace nada para 'all'.
+11:37:32 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+11:37:32 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+11:37:33 **** Incremental Build of configuration Debug for project prueba_completa ****
+make -r all 
+Building file: ../example/src/prueba_completa.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/prueba_completa.d" -MT"example/src/prueba_completa.o" -MT"example/src/prueba_completa.d" -o "example/src/prueba_completa.o" "../example/src/prueba_completa.c"
+../example/src/prueba_completa.c: In function 'ADC0_IRQHandler':
+../example/src/prueba_completa.c:30:50: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(ADC_TEMPERATURE, ADC_CHANNEL,&adc_data); //Se hace una nueva lectura de la temperatura
+                                                  ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/example/inc/main.h:6,
+                 from ../example/src/prueba_completa.c:1:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+Finished building: ../example/src/prueba_completa.c
+ 
+Building target: prueba_completa.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="prueba_completa.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "freertos_examples_1_to_9_Debug.ld" -o "prueba_completa.axf"  ./freertos/src/FreeRTOSCommonHooks.o ./freertos/src/croutine.o ./freertos/src/event_groups.o ./freertos/src/heap_3.o ./freertos/src/list.o ./freertos/src/port.o ./freertos/src/queue.o ./freertos/src/redlib_memfix.o ./freertos/src/tasks.o ./freertos/src/timers.o  ./example/src/Configure.o ./example/src/cr_startup_lpc43xx.o ./example/src/prueba_completa.o ./example/src/sysinit.o ./example/src/utils.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: prueba_completa.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "prueba_completa.axf"; # arm-none-eabi-objcopy -v -O binary "prueba_completa.axf" "prueba_completa.bin" ; # checksum -p LPC4337 -d "prueba_completa.bin";
+   text	   data	    bss	    dec	    hex	filename
+  19012	      8	    740	  19760	   4d30	prueba_completa.axf
+ 
+11:37:36 **** Incremental Build of configuration Debug for project prueba_completa ****
+make -r all 
+make: No se hace nada para 'all'.
+11:38:45 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+11:38:45 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+11:38:46 **** Incremental Build of configuration Debug for project prueba_completa ****
+make -r all 
+Building file: ../example/src/prueba_completa.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/prueba_completa.d" -MT"example/src/prueba_completa.o" -MT"example/src/prueba_completa.d" -o "example/src/prueba_completa.o" "../example/src/prueba_completa.c"
+../example/src/prueba_completa.c: In function 'ADC0_IRQHandler':
+../example/src/prueba_completa.c:30:50: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(ADC_TEMPERATURE, ADC_CHANNEL,&adc_data); //Se hace una nueva lectura de la temperatura
+                                                  ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/example/inc/main.h:6,
+                 from ../example/src/prueba_completa.c:1:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+Finished building: ../example/src/prueba_completa.c
+ 
+Building target: prueba_completa.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="prueba_completa.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "freertos_examples_1_to_9_Debug.ld" -o "prueba_completa.axf"  ./freertos/src/FreeRTOSCommonHooks.o ./freertos/src/croutine.o ./freertos/src/event_groups.o ./freertos/src/heap_3.o ./freertos/src/list.o ./freertos/src/port.o ./freertos/src/queue.o ./freertos/src/redlib_memfix.o ./freertos/src/tasks.o ./freertos/src/timers.o  ./example/src/Configure.o ./example/src/cr_startup_lpc43xx.o ./example/src/prueba_completa.o ./example/src/sysinit.o ./example/src/utils.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: prueba_completa.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "prueba_completa.axf"; # arm-none-eabi-objcopy -v -O binary "prueba_completa.axf" "prueba_completa.bin" ; # checksum -p LPC4337 -d "prueba_completa.bin";
+   text	   data	    bss	    dec	    hex	filename
+  19012	      8	    740	  19760	   4d30	prueba_completa.axf
+ 
+11:38:48 **** Incremental Build of configuration Debug for project prueba_completa ****
+make -r all 
+make: No se hace nada para 'all'.
+11:39:26 **** Incremental Build of configuration Debug for project prueba_completa ****
+make -r all 
+make: No se hace nada para 'all'.
+11:39:59 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+11:39:59 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+11:40:00 **** Incremental Build of configuration Debug for project prueba_completa ****
+make -r all 
+Building file: ../example/src/prueba_completa.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/prueba_completa.d" -MT"example/src/prueba_completa.o" -MT"example/src/prueba_completa.d" -o "example/src/prueba_completa.o" "../example/src/prueba_completa.c"
+../example/src/prueba_completa.c: In function 'ADC0_IRQHandler':
+../example/src/prueba_completa.c:30:50: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(ADC_TEMPERATURE, ADC_CHANNEL,&adc_data); //Se hace una nueva lectura de la temperatura
+                                                  ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/example/inc/main.h:6,
+                 from ../example/src/prueba_completa.c:1:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+Finished building: ../example/src/prueba_completa.c
+ 
+Building target: prueba_completa.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="prueba_completa.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "freertos_examples_1_to_9_Debug.ld" -o "prueba_completa.axf"  ./freertos/src/FreeRTOSCommonHooks.o ./freertos/src/croutine.o ./freertos/src/event_groups.o ./freertos/src/heap_3.o ./freertos/src/list.o ./freertos/src/port.o ./freertos/src/queue.o ./freertos/src/redlib_memfix.o ./freertos/src/tasks.o ./freertos/src/timers.o  ./example/src/Configure.o ./example/src/cr_startup_lpc43xx.o ./example/src/prueba_completa.o ./example/src/sysinit.o ./example/src/utils.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: prueba_completa.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "prueba_completa.axf"; # arm-none-eabi-objcopy -v -O binary "prueba_completa.axf" "prueba_completa.bin" ; # checksum -p LPC4337 -d "prueba_completa.bin";
+   text	   data	    bss	    dec	    hex	filename
+  19012	      8	    740	  19760	   4d30	prueba_completa.axf
+ 
+11:40:29 **** Incremental Build of configuration Debug for project prueba_completa ****
+make -r all 
+make: No se hace nada para 'all'.
+11:41:09 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+11:41:10 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+11:41:11 **** Incremental Build of configuration Debug for project prueba_completa ****
+make -r all 
+Building file: ../example/src/prueba_completa.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/prueba_completa.d" -MT"example/src/prueba_completa.o" -MT"example/src/prueba_completa.d" -o "example/src/prueba_completa.o" "../example/src/prueba_completa.c"
+../example/src/prueba_completa.c: In function 'ADC0_IRQHandler':
+../example/src/prueba_completa.c:30:50: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(ADC_TEMPERATURE, ADC_CHANNEL,&adc_data); //Se hace una nueva lectura de la temperatura
+                                                  ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/example/inc/main.h:6,
+                 from ../example/src/prueba_completa.c:1:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+Finished building: ../example/src/prueba_completa.c
+ 
+Building target: prueba_completa.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="prueba_completa.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "freertos_examples_1_to_9_Debug.ld" -o "prueba_completa.axf"  ./freertos/src/FreeRTOSCommonHooks.o ./freertos/src/croutine.o ./freertos/src/event_groups.o ./freertos/src/heap_3.o ./freertos/src/list.o ./freertos/src/port.o ./freertos/src/queue.o ./freertos/src/redlib_memfix.o ./freertos/src/tasks.o ./freertos/src/timers.o  ./example/src/Configure.o ./example/src/cr_startup_lpc43xx.o ./example/src/prueba_completa.o ./example/src/sysinit.o ./example/src/utils.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: prueba_completa.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "prueba_completa.axf"; # arm-none-eabi-objcopy -v -O binary "prueba_completa.axf" "prueba_completa.bin" ; # checksum -p LPC4337 -d "prueba_completa.bin";
+   text	   data	    bss	    dec	    hex	filename
+  19012	      8	    740	  19760	   4d30	prueba_completa.axf
+ 
+11:41:13 **** Incremental Build of configuration Debug for project prueba_completa ****
+make -r all 
+make: No se hace nada para 'all'.
+11:44:11 **** Incremental Build of configuration Debug for project prueba_completa ****
+make -r all 
+make: No se hace nada para 'all'.
+11:46:30 **** Incremental Build of configuration Debug for project prueba_completa ****
+make -r all 
+make: No se hace nada para 'all'.
+11:53:12 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+11:53:13 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+11:53:14 **** Incremental Build of configuration Debug for project prueba_completa ****
+make -r all 
+Building file: ../example/src/prueba_completa.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/prueba_completa.d" -MT"example/src/prueba_completa.o" -MT"example/src/prueba_completa.d" -o "example/src/prueba_completa.o" "../example/src/prueba_completa.c"
+../example/src/prueba_completa.c: In function 'ADC0_IRQHandler':
+../example/src/prueba_completa.c:30:50: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(ADC_TEMPERATURE, ADC_CHANNEL,&adc_data); //Se hace una nueva lectura de la temperatura
+                                                  ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/example/inc/main.h:6,
+                 from ../example/src/prueba_completa.c:1:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+Finished building: ../example/src/prueba_completa.c
+ 
+Building target: prueba_completa.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="prueba_completa.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "freertos_examples_1_to_9_Debug.ld" -o "prueba_completa.axf"  ./freertos/src/FreeRTOSCommonHooks.o ./freertos/src/croutine.o ./freertos/src/event_groups.o ./freertos/src/heap_3.o ./freertos/src/list.o ./freertos/src/port.o ./freertos/src/queue.o ./freertos/src/redlib_memfix.o ./freertos/src/tasks.o ./freertos/src/timers.o  ./example/src/Configure.o ./example/src/cr_startup_lpc43xx.o ./example/src/prueba_completa.o ./example/src/sysinit.o ./example/src/utils.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: prueba_completa.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "prueba_completa.axf"; # arm-none-eabi-objcopy -v -O binary "prueba_completa.axf" "prueba_completa.bin" ; # checksum -p LPC4337 -d "prueba_completa.bin";
+   text	   data	    bss	    dec	    hex	filename
+  19012	      8	    740	  19760	   4d30	prueba_completa.axf
+ 
+11:53:18 **** Incremental Build of configuration Debug for project prueba_completa ****
+make -r all 
+make: No se hace nada para 'all'.
+11:57:41 **** Incremental Build of configuration Debug for project prueba_completa ****
+make -r all 
+make: No se hace nada para 'all'.
+12:07:25 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+12:07:25 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+12:07:26 **** Incremental Build of configuration Debug for project prueba_completa ****
+make -r all 
+Building file: ../example/src/prueba_completa.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/prueba_completa.d" -MT"example/src/prueba_completa.o" -MT"example/src/prueba_completa.d" -o "example/src/prueba_completa.o" "../example/src/prueba_completa.c"
+../example/src/prueba_completa.c: In function 'ADC0_IRQHandler':
+../example/src/prueba_completa.c:30:50: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(ADC_TEMPERATURE, ADC_CHANNEL,&adc_data); //Se hace una nueva lectura de la temperatura
+                                                  ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/example/inc/main.h:6,
+                 from ../example/src/prueba_completa.c:1:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+Finished building: ../example/src/prueba_completa.c
+ 
+Building target: prueba_completa.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="prueba_completa.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "freertos_examples_1_to_9_Debug.ld" -o "prueba_completa.axf"  ./freertos/src/FreeRTOSCommonHooks.o ./freertos/src/croutine.o ./freertos/src/event_groups.o ./freertos/src/heap_3.o ./freertos/src/list.o ./freertos/src/port.o ./freertos/src/queue.o ./freertos/src/redlib_memfix.o ./freertos/src/tasks.o ./freertos/src/timers.o  ./example/src/Configure.o ./example/src/cr_startup_lpc43xx.o ./example/src/prueba_completa.o ./example/src/sysinit.o ./example/src/utils.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: prueba_completa.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "prueba_completa.axf"; # arm-none-eabi-objcopy -v -O binary "prueba_completa.axf" "prueba_completa.bin" ; # checksum -p LPC4337 -d "prueba_completa.bin";
+   text	   data	    bss	    dec	    hex	filename
+  19112	      8	    740	  19860	   4d94	prueba_completa.axf
+ 
+12:07:53 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+12:07:54 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+12:07:54 **** Incremental Build of configuration Debug for project prueba_completa ****
+make -r all 
+Building file: ../example/src/prueba_completa.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/prueba_completa.d" -MT"example/src/prueba_completa.o" -MT"example/src/prueba_completa.d" -o "example/src/prueba_completa.o" "../example/src/prueba_completa.c"
+../example/src/prueba_completa.c: In function 'ADC0_IRQHandler':
+../example/src/prueba_completa.c:30:50: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(ADC_TEMPERATURE, ADC_CHANNEL,&adc_data); //Se hace una nueva lectura de la temperatura
+                                                  ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/example/inc/main.h:6,
+                 from ../example/src/prueba_completa.c:1:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+Finished building: ../example/src/prueba_completa.c
+ 
+Building target: prueba_completa.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="prueba_completa.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "freertos_examples_1_to_9_Debug.ld" -o "prueba_completa.axf"  ./freertos/src/FreeRTOSCommonHooks.o ./freertos/src/croutine.o ./freertos/src/event_groups.o ./freertos/src/heap_3.o ./freertos/src/list.o ./freertos/src/port.o ./freertos/src/queue.o ./freertos/src/redlib_memfix.o ./freertos/src/tasks.o ./freertos/src/timers.o  ./example/src/Configure.o ./example/src/cr_startup_lpc43xx.o ./example/src/prueba_completa.o ./example/src/sysinit.o ./example/src/utils.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: prueba_completa.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "prueba_completa.axf"; # arm-none-eabi-objcopy -v -O binary "prueba_completa.axf" "prueba_completa.bin" ; # checksum -p LPC4337 -d "prueba_completa.bin";
+   text	   data	    bss	    dec	    hex	filename
+  19112	      8	    740	  19860	   4d94	prueba_completa.axf
+ 
+12:07:58 **** Incremental Build of configuration Debug for project prueba_completa ****
+make -r all 
+make: No se hace nada para 'all'.
+12:13:20 **** Incremental Build of configuration Debug for project prueba_completa ****
+make -r all 
+make: No se hace nada para 'all'.
+12:28:03 **** Incremental Build of configuration Debug for project prueba_completa ****
+make -r all 
+make: No se hace nada para 'all'.
+12:33:26 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+12:33:26 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+12:33:27 **** Incremental Build of configuration Debug for project prueba_completa ****
+make -r all 
+Building file: ../example/src/prueba_completa.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/prueba_completa.d" -MT"example/src/prueba_completa.o" -MT"example/src/prueba_completa.d" -o "example/src/prueba_completa.o" "../example/src/prueba_completa.c"
+../example/src/prueba_completa.c: In function 'ADC0_IRQHandler':
+../example/src/prueba_completa.c:30:50: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(ADC_TEMPERATURE, ADC_CHANNEL,&adc_data); //Se hace una nueva lectura de la temperatura
+                                                  ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/example/inc/main.h:6,
+                 from ../example/src/prueba_completa.c:1:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+Finished building: ../example/src/prueba_completa.c
+ 
+Building target: prueba_completa.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="prueba_completa.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "freertos_examples_1_to_9_Debug.ld" -o "prueba_completa.axf"  ./freertos/src/FreeRTOSCommonHooks.o ./freertos/src/croutine.o ./freertos/src/event_groups.o ./freertos/src/heap_3.o ./freertos/src/list.o ./freertos/src/port.o ./freertos/src/queue.o ./freertos/src/redlib_memfix.o ./freertos/src/tasks.o ./freertos/src/timers.o  ./example/src/Configure.o ./example/src/cr_startup_lpc43xx.o ./example/src/prueba_completa.o ./example/src/sysinit.o ./example/src/utils.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: prueba_completa.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "prueba_completa.axf"; # arm-none-eabi-objcopy -v -O binary "prueba_completa.axf" "prueba_completa.bin" ; # checksum -p LPC4337 -d "prueba_completa.bin";
+   text	   data	    bss	    dec	    hex	filename
+  19112	      8	    740	  19860	   4d94	prueba_completa.axf
+ 
+12:33:30 **** Incremental Build of configuration Debug for project prueba_completa ****
+make -r all 
+make: No se hace nada para 'all'.
+12:38:55 **** Incremental Build of configuration Debug for project prueba_completa ****
+make -r all 
+make: No se hace nada para 'all'.
+12:51:45 **** Incremental Build of configuration Debug for project prueba_completa ****
+make -r all 
+make: No se hace nada para 'all'.
+12:54:03 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+12:54:04 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+12:54:04 **** Incremental Build of configuration Debug for project prueba_completa ****
+make -r all 
+Building file: ../freertos/src/FreeRTOSCommonHooks.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"freertos/src/FreeRTOSCommonHooks.d" -MT"freertos/src/FreeRTOSCommonHooks.o" -MT"freertos/src/FreeRTOSCommonHooks.d" -o "freertos/src/FreeRTOSCommonHooks.o" "../freertos/src/FreeRTOSCommonHooks.c"
+Finished building: ../freertos/src/FreeRTOSCommonHooks.c
+ 
+Building file: ../freertos/src/croutine.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"freertos/src/croutine.d" -MT"freertos/src/croutine.o" -MT"freertos/src/croutine.d" -o "freertos/src/croutine.o" "../freertos/src/croutine.c"
+Finished building: ../freertos/src/croutine.c
+ 
+Building file: ../freertos/src/event_groups.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"freertos/src/event_groups.d" -MT"freertos/src/event_groups.o" -MT"freertos/src/event_groups.d" -o "freertos/src/event_groups.o" "../freertos/src/event_groups.c"
+Finished building: ../freertos/src/event_groups.c
+ 
+Building file: ../freertos/src/heap_3.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"freertos/src/heap_3.d" -MT"freertos/src/heap_3.o" -MT"freertos/src/heap_3.d" -o "freertos/src/heap_3.o" "../freertos/src/heap_3.c"
+Finished building: ../freertos/src/heap_3.c
+ 
+Building file: ../freertos/src/list.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"freertos/src/list.d" -MT"freertos/src/list.o" -MT"freertos/src/list.d" -o "freertos/src/list.o" "../freertos/src/list.c"
+Finished building: ../freertos/src/list.c
+ 
+Building file: ../freertos/src/port.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"freertos/src/port.d" -MT"freertos/src/port.o" -MT"freertos/src/port.d" -o "freertos/src/port.o" "../freertos/src/port.c"
+Finished building: ../freertos/src/port.c
+ 
+Building file: ../freertos/src/queue.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"freertos/src/queue.d" -MT"freertos/src/queue.o" -MT"freertos/src/queue.d" -o "freertos/src/queue.o" "../freertos/src/queue.c"
+Finished building: ../freertos/src/queue.c
+ 
+Building file: ../freertos/src/tasks.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"freertos/src/tasks.d" -MT"freertos/src/tasks.o" -MT"freertos/src/tasks.d" -o "freertos/src/tasks.o" "../freertos/src/tasks.c"
+Finished building: ../freertos/src/tasks.c
+ 
+Building file: ../freertos/src/timers.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"freertos/src/timers.d" -MT"freertos/src/timers.o" -MT"freertos/src/timers.d" -o "freertos/src/timers.o" "../freertos/src/timers.c"
+Finished building: ../freertos/src/timers.c
+ 
+Building file: ../example/src/prueba_completa.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/prueba_completa.d" -MT"example/src/prueba_completa.o" -MT"example/src/prueba_completa.d" -o "example/src/prueba_completa.o" "../example/src/prueba_completa.c"
+../example/src/prueba_completa.c: In function 'ADC0_IRQHandler':
+../example/src/prueba_completa.c:30:50: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(ADC_TEMPERATURE, ADC_CHANNEL,&adc_data); //Se hace una nueva lectura de la temperatura
+                                                  ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/example/inc/main.h:6,
+                 from ../example/src/prueba_completa.c:1:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+Finished building: ../example/src/prueba_completa.c
+ 
+Building file: ../example/src/utils.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/utils.d" -MT"example/src/utils.o" -MT"example/src/utils.d" -o "example/src/utils.o" "../example/src/utils.c"
+Finished building: ../example/src/utils.c
+ 
+Building target: prueba_completa.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="prueba_completa.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "freertos_examples_1_to_9_Debug.ld" -o "prueba_completa.axf"  ./freertos/src/FreeRTOSCommonHooks.o ./freertos/src/croutine.o ./freertos/src/event_groups.o ./freertos/src/heap_3.o ./freertos/src/list.o ./freertos/src/port.o ./freertos/src/queue.o ./freertos/src/redlib_memfix.o ./freertos/src/tasks.o ./freertos/src/timers.o  ./example/src/Configure.o ./example/src/cr_startup_lpc43xx.o ./example/src/prueba_completa.o ./example/src/sysinit.o ./example/src/utils.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: prueba_completa.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "prueba_completa.axf"; # arm-none-eabi-objcopy -v -O binary "prueba_completa.axf" "prueba_completa.bin" ; # checksum -p LPC4337 -d "prueba_completa.bin";
+   text	   data	    bss	    dec	    hex	filename
+  19092	      8	    740	  19840	   4d80	prueba_completa.axf
+ 
+12:54:08 **** Incremental Build of configuration Debug for project prueba_completa ****
+make -r all 
+make: No se hace nada para 'all'.
+12:55:44 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+12:55:45 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+12:55:46 **** Incremental Build of configuration Debug for project prueba_completa ****
+make -r all 
+Building target: prueba_completa.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="prueba_completa.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "freertos_examples_1_to_9_Debug.ld" -o "prueba_completa.axf"  ./freertos/src/FreeRTOSCommonHooks.o ./freertos/src/croutine.o ./freertos/src/event_groups.o ./freertos/src/heap_3.o ./freertos/src/list.o ./freertos/src/port.o ./freertos/src/queue.o ./freertos/src/redlib_memfix.o ./freertos/src/tasks.o ./freertos/src/timers.o  ./example/src/Configure.o ./example/src/cr_startup_lpc43xx.o ./example/src/prueba_completa.o ./example/src/sysinit.o ./example/src/utils.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: prueba_completa.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "prueba_completa.axf"; # arm-none-eabi-objcopy -v -O binary "prueba_completa.axf" "prueba_completa.bin" ; # checksum -p LPC4337 -d "prueba_completa.bin";
+   text	   data	    bss	    dec	    hex	filename
+  19092	      8	    740	  19840	   4d80	prueba_completa.axf
+ 
+12:55:49 **** Incremental Build of configuration Debug for project prueba_completa ****
+make -r all 
+make: No se hace nada para 'all'.
+12:58:27 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+12:58:28 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+12:58:28 **** Incremental Build of configuration Debug for project prueba_completa ****
+make -r all 
+Building file: ../freertos/src/FreeRTOSCommonHooks.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"freertos/src/FreeRTOSCommonHooks.d" -MT"freertos/src/FreeRTOSCommonHooks.o" -MT"freertos/src/FreeRTOSCommonHooks.d" -o "freertos/src/FreeRTOSCommonHooks.o" "../freertos/src/FreeRTOSCommonHooks.c"
+Finished building: ../freertos/src/FreeRTOSCommonHooks.c
+ 
+Building file: ../freertos/src/croutine.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"freertos/src/croutine.d" -MT"freertos/src/croutine.o" -MT"freertos/src/croutine.d" -o "freertos/src/croutine.o" "../freertos/src/croutine.c"
+Finished building: ../freertos/src/croutine.c
+ 
+Building file: ../freertos/src/event_groups.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"freertos/src/event_groups.d" -MT"freertos/src/event_groups.o" -MT"freertos/src/event_groups.d" -o "freertos/src/event_groups.o" "../freertos/src/event_groups.c"
+Finished building: ../freertos/src/event_groups.c
+ 
+Building file: ../freertos/src/heap_3.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"freertos/src/heap_3.d" -MT"freertos/src/heap_3.o" -MT"freertos/src/heap_3.d" -o "freertos/src/heap_3.o" "../freertos/src/heap_3.c"
+Finished building: ../freertos/src/heap_3.c
+ 
+Building file: ../freertos/src/list.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"freertos/src/list.d" -MT"freertos/src/list.o" -MT"freertos/src/list.d" -o "freertos/src/list.o" "../freertos/src/list.c"
+Finished building: ../freertos/src/list.c
+ 
+Building file: ../freertos/src/port.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"freertos/src/port.d" -MT"freertos/src/port.o" -MT"freertos/src/port.d" -o "freertos/src/port.o" "../freertos/src/port.c"
+Finished building: ../freertos/src/port.c
+ 
+Building file: ../freertos/src/queue.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"freertos/src/queue.d" -MT"freertos/src/queue.o" -MT"freertos/src/queue.d" -o "freertos/src/queue.o" "../freertos/src/queue.c"
+Finished building: ../freertos/src/queue.c
+ 
+Building file: ../freertos/src/tasks.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"freertos/src/tasks.d" -MT"freertos/src/tasks.o" -MT"freertos/src/tasks.d" -o "freertos/src/tasks.o" "../freertos/src/tasks.c"
+Finished building: ../freertos/src/tasks.c
+ 
+Building file: ../freertos/src/timers.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"freertos/src/timers.d" -MT"freertos/src/timers.o" -MT"freertos/src/timers.d" -o "freertos/src/timers.o" "../freertos/src/timers.c"
+Finished building: ../freertos/src/timers.c
+ 
+Building file: ../example/src/prueba_completa.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/prueba_completa.d" -MT"example/src/prueba_completa.o" -MT"example/src/prueba_completa.d" -o "example/src/prueba_completa.o" "../example/src/prueba_completa.c"
+../example/src/prueba_completa.c: In function 'ADC0_IRQHandler':
+../example/src/prueba_completa.c:30:50: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(ADC_TEMPERATURE, ADC_CHANNEL,&adc_data); //Se hace una nueva lectura de la temperatura
+                                                  ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/example/inc/main.h:6,
+                 from ../example/src/prueba_completa.c:1:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+Finished building: ../example/src/prueba_completa.c
+ 
+Building file: ../example/src/utils.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/utils.d" -MT"example/src/utils.o" -MT"example/src/utils.d" -o "example/src/utils.o" "../example/src/utils.c"
+Finished building: ../example/src/utils.c
+ 
+Building target: prueba_completa.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="prueba_completa.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "freertos_examples_1_to_9_Debug.ld" -o "prueba_completa.axf"  ./freertos/src/FreeRTOSCommonHooks.o ./freertos/src/croutine.o ./freertos/src/event_groups.o ./freertos/src/heap_3.o ./freertos/src/list.o ./freertos/src/port.o ./freertos/src/queue.o ./freertos/src/redlib_memfix.o ./freertos/src/tasks.o ./freertos/src/timers.o  ./example/src/Configure.o ./example/src/cr_startup_lpc43xx.o ./example/src/prueba_completa.o ./example/src/sysinit.o ./example/src/utils.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: prueba_completa.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "prueba_completa.axf"; # arm-none-eabi-objcopy -v -O binary "prueba_completa.axf" "prueba_completa.bin" ; # checksum -p LPC4337 -d "prueba_completa.bin";
+   text	   data	    bss	    dec	    hex	filename
+  18960	      8	    740	  19708	   4cfc	prueba_completa.axf
+ 
+12:58:31 **** Incremental Build of configuration Debug for project prueba_completa ****
+make -r all 
+make: No se hace nada para 'all'.
+13:00:16 **** Incremental Build of configuration Debug for project prueba_completa ****
+make -r all 
+make: No se hace nada para 'all'.
+14:33:43 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+14:33:43 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+14:33:44 **** Incremental Build of configuration Debug for project prueba_completa ****
+make -r all 
+Building file: ../freertos/src/FreeRTOSCommonHooks.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"freertos/src/FreeRTOSCommonHooks.d" -MT"freertos/src/FreeRTOSCommonHooks.o" -MT"freertos/src/FreeRTOSCommonHooks.d" -o "freertos/src/FreeRTOSCommonHooks.o" "../freertos/src/FreeRTOSCommonHooks.c"
+Finished building: ../freertos/src/FreeRTOSCommonHooks.c
+ 
+Building file: ../freertos/src/croutine.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"freertos/src/croutine.d" -MT"freertos/src/croutine.o" -MT"freertos/src/croutine.d" -o "freertos/src/croutine.o" "../freertos/src/croutine.c"
+Finished building: ../freertos/src/croutine.c
+ 
+Building file: ../freertos/src/event_groups.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"freertos/src/event_groups.d" -MT"freertos/src/event_groups.o" -MT"freertos/src/event_groups.d" -o "freertos/src/event_groups.o" "../freertos/src/event_groups.c"
+Finished building: ../freertos/src/event_groups.c
+ 
+Building file: ../freertos/src/heap_3.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"freertos/src/heap_3.d" -MT"freertos/src/heap_3.o" -MT"freertos/src/heap_3.d" -o "freertos/src/heap_3.o" "../freertos/src/heap_3.c"
+Finished building: ../freertos/src/heap_3.c
+ 
+Building file: ../freertos/src/list.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"freertos/src/list.d" -MT"freertos/src/list.o" -MT"freertos/src/list.d" -o "freertos/src/list.o" "../freertos/src/list.c"
+Finished building: ../freertos/src/list.c
+ 
+Building file: ../freertos/src/port.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"freertos/src/port.d" -MT"freertos/src/port.o" -MT"freertos/src/port.d" -o "freertos/src/port.o" "../freertos/src/port.c"
+Finished building: ../freertos/src/port.c
+ 
+Building file: ../freertos/src/queue.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"freertos/src/queue.d" -MT"freertos/src/queue.o" -MT"freertos/src/queue.d" -o "freertos/src/queue.o" "../freertos/src/queue.c"
+Finished building: ../freertos/src/queue.c
+ 
+Building file: ../freertos/src/tasks.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"freertos/src/tasks.d" -MT"freertos/src/tasks.o" -MT"freertos/src/tasks.d" -o "freertos/src/tasks.o" "../freertos/src/tasks.c"
+Finished building: ../freertos/src/tasks.c
+ 
+Building file: ../freertos/src/timers.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"freertos/src/timers.d" -MT"freertos/src/timers.o" -MT"freertos/src/timers.d" -o "freertos/src/timers.o" "../freertos/src/timers.c"
+Finished building: ../freertos/src/timers.c
+ 
+Building file: ../example/src/prueba_completa.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/prueba_completa.d" -MT"example/src/prueba_completa.o" -MT"example/src/prueba_completa.d" -o "example/src/prueba_completa.o" "../example/src/prueba_completa.c"
+../example/src/prueba_completa.c: In function 'ADC0_IRQHandler':
+../example/src/prueba_completa.c:30:50: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(ADC_TEMPERATURE, ADC_CHANNEL,&adc_data); //Se hace una nueva lectura de la temperatura
+                                                  ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/example/inc/main.h:6,
+                 from ../example/src/prueba_completa.c:1:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+Finished building: ../example/src/prueba_completa.c
+ 
+Building file: ../example/src/utils.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/utils.d" -MT"example/src/utils.o" -MT"example/src/utils.d" -o "example/src/utils.o" "../example/src/utils.c"
+Finished building: ../example/src/utils.c
+ 
+Building target: prueba_completa.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="prueba_completa.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "freertos_examples_1_to_9_Debug.ld" -o "prueba_completa.axf"  ./freertos/src/FreeRTOSCommonHooks.o ./freertos/src/croutine.o ./freertos/src/event_groups.o ./freertos/src/heap_3.o ./freertos/src/list.o ./freertos/src/port.o ./freertos/src/queue.o ./freertos/src/redlib_memfix.o ./freertos/src/tasks.o ./freertos/src/timers.o  ./example/src/Configure.o ./example/src/cr_startup_lpc43xx.o ./example/src/prueba_completa.o ./example/src/sysinit.o ./example/src/utils.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: prueba_completa.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "prueba_completa.axf"; # arm-none-eabi-objcopy -v -O binary "prueba_completa.axf" "prueba_completa.bin" ; # checksum -p LPC4337 -d "prueba_completa.bin";
+   text	   data	    bss	    dec	    hex	filename
+  19112	      8	    740	  19860	   4d94	prueba_completa.axf
+ 
+14:33:48 **** Incremental Build of configuration Debug for project prueba_completa ****
+make -r all 
+make: No se hace nada para 'all'.
+14:33:59 **** Incremental Build of configuration Debug for project prueba_completa ****
+make -r all 
+make: No se hace nada para 'all'.
+14:35:11 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+14:35:12 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+14:35:12 **** Incremental Build of configuration Debug for project prueba_completa ****
+make -r all 
+Building file: ../example/src/prueba_completa.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/prueba_completa.d" -MT"example/src/prueba_completa.o" -MT"example/src/prueba_completa.d" -o "example/src/prueba_completa.o" "../example/src/prueba_completa.c"
+../example/src/prueba_completa.c: In function 'ADC0_IRQHandler':
+../example/src/prueba_completa.c:30:50: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(ADC_TEMPERATURE, ADC_CHANNEL,&adc_data); //Se hace una nueva lectura de la temperatura
+                                                  ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/example/inc/main.h:6,
+                 from ../example/src/prueba_completa.c:1:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+Finished building: ../example/src/prueba_completa.c
+ 
+Building target: prueba_completa.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="prueba_completa.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "freertos_examples_1_to_9_Debug.ld" -o "prueba_completa.axf"  ./freertos/src/FreeRTOSCommonHooks.o ./freertos/src/croutine.o ./freertos/src/event_groups.o ./freertos/src/heap_3.o ./freertos/src/list.o ./freertos/src/port.o ./freertos/src/queue.o ./freertos/src/redlib_memfix.o ./freertos/src/tasks.o ./freertos/src/timers.o  ./example/src/Configure.o ./example/src/cr_startup_lpc43xx.o ./example/src/prueba_completa.o ./example/src/sysinit.o ./example/src/utils.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: prueba_completa.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "prueba_completa.axf"; # arm-none-eabi-objcopy -v -O binary "prueba_completa.axf" "prueba_completa.bin" ; # checksum -p LPC4337 -d "prueba_completa.bin";
+   text	   data	    bss	    dec	    hex	filename
+  19112	      8	    740	  19860	   4d94	prueba_completa.axf
+ 
+14:35:54 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+14:35:54 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+14:35:55 **** Incremental Build of configuration Debug for project prueba_completa ****
+make -r all 
+Building file: ../example/src/prueba_completa.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/prueba_completa.d" -MT"example/src/prueba_completa.o" -MT"example/src/prueba_completa.d" -o "example/src/prueba_completa.o" "../example/src/prueba_completa.c"
+../example/src/prueba_completa.c: In function 'ADC0_IRQHandler':
+../example/src/prueba_completa.c:30:50: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(ADC_TEMPERATURE, ADC_CHANNEL,&adc_data); //Se hace una nueva lectura de la temperatura
+                                                  ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/example/inc/main.h:6,
+                 from ../example/src/prueba_completa.c:1:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+Finished building: ../example/src/prueba_completa.c
+ 
+Building target: prueba_completa.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="prueba_completa.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "freertos_examples_1_to_9_Debug.ld" -o "prueba_completa.axf"  ./freertos/src/FreeRTOSCommonHooks.o ./freertos/src/croutine.o ./freertos/src/event_groups.o ./freertos/src/heap_3.o ./freertos/src/list.o ./freertos/src/port.o ./freertos/src/queue.o ./freertos/src/redlib_memfix.o ./freertos/src/tasks.o ./freertos/src/timers.o  ./example/src/Configure.o ./example/src/cr_startup_lpc43xx.o ./example/src/prueba_completa.o ./example/src/sysinit.o ./example/src/utils.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: prueba_completa.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "prueba_completa.axf"; # arm-none-eabi-objcopy -v -O binary "prueba_completa.axf" "prueba_completa.bin" ; # checksum -p LPC4337 -d "prueba_completa.bin";
+   text	   data	    bss	    dec	    hex	filename
+  19112	      8	    740	  19860	   4d94	prueba_completa.axf
+ 
+14:35:57 **** Incremental Build of configuration Debug for project prueba_completa ****
+make -r all 
+make: No se hace nada para 'all'.
+14:53:39 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+14:53:40 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+14:53:40 **** Incremental Build of configuration Debug for project prueba_completa ****
+make -r all 
+Building file: ../example/src/prueba_completa.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/prueba_completa.d" -MT"example/src/prueba_completa.o" -MT"example/src/prueba_completa.d" -o "example/src/prueba_completa.o" "../example/src/prueba_completa.c"
+../example/src/prueba_completa.c: In function 'ADC0_IRQHandler':
+../example/src/prueba_completa.c:30:50: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(ADC_TEMPERATURE, ADC_CHANNEL,&adc_data); //Se hace una nueva lectura de la temperatura
+                                                  ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/example/inc/main.h:6,
+                 from ../example/src/prueba_completa.c:1:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+Finished building: ../example/src/prueba_completa.c
+ 
+Building target: prueba_completa.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="prueba_completa.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "freertos_examples_1_to_9_Debug.ld" -o "prueba_completa.axf"  ./freertos/src/FreeRTOSCommonHooks.o ./freertos/src/croutine.o ./freertos/src/event_groups.o ./freertos/src/heap_3.o ./freertos/src/list.o ./freertos/src/port.o ./freertos/src/queue.o ./freertos/src/redlib_memfix.o ./freertos/src/tasks.o ./freertos/src/timers.o  ./example/src/Configure.o ./example/src/cr_startup_lpc43xx.o ./example/src/prueba_completa.o ./example/src/sysinit.o ./example/src/utils.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: prueba_completa.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "prueba_completa.axf"; # arm-none-eabi-objcopy -v -O binary "prueba_completa.axf" "prueba_completa.bin" ; # checksum -p LPC4337 -d "prueba_completa.bin";
+   text	   data	    bss	    dec	    hex	filename
+  19116	      8	    740	  19864	   4d98	prueba_completa.axf
+ 
+14:53:49 **** Incremental Build of configuration Debug for project prueba_completa ****
+make -r all 
+make: No se hace nada para 'all'.
+15:00:26 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+15:00:26 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+15:00:27 **** Incremental Build of configuration Debug for project prueba_completa ****
+make -r all 
+Building file: ../example/src/prueba_completa.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/prueba_completa.d" -MT"example/src/prueba_completa.o" -MT"example/src/prueba_completa.d" -o "example/src/prueba_completa.o" "../example/src/prueba_completa.c"
+../example/src/prueba_completa.c: In function 'ADC0_IRQHandler':
+../example/src/prueba_completa.c:30:50: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(ADC_TEMPERATURE, ADC_CHANNEL,&adc_data); //Se hace una nueva lectura de la temperatura
+                                                  ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/example/inc/main.h:6,
+                 from ../example/src/prueba_completa.c:1:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+Finished building: ../example/src/prueba_completa.c
+ 
+Building target: prueba_completa.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="prueba_completa.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "freertos_examples_1_to_9_Debug.ld" -o "prueba_completa.axf"  ./freertos/src/FreeRTOSCommonHooks.o ./freertos/src/croutine.o ./freertos/src/event_groups.o ./freertos/src/heap_3.o ./freertos/src/list.o ./freertos/src/port.o ./freertos/src/queue.o ./freertos/src/redlib_memfix.o ./freertos/src/tasks.o ./freertos/src/timers.o  ./example/src/Configure.o ./example/src/cr_startup_lpc43xx.o ./example/src/prueba_completa.o ./example/src/sysinit.o ./example/src/utils.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: prueba_completa.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "prueba_completa.axf"; # arm-none-eabi-objcopy -v -O binary "prueba_completa.axf" "prueba_completa.bin" ; # checksum -p LPC4337 -d "prueba_completa.bin";
+   text	   data	    bss	    dec	    hex	filename
+  19116	      8	    740	  19864	   4d98	prueba_completa.axf
+ 
+15:00:29 **** Incremental Build of configuration Debug for project prueba_completa ****
+make -r all 
+make: No se hace nada para 'all'.
+15:04:43 **** Incremental Build of configuration Debug for project prueba_completa ****
+make -r all 
+make: No se hace nada para 'all'.
+15:05:11 **** Incremental Build of configuration Debug for project prueba_completa ****
+make -r all 
+make: No se hace nada para 'all'.
+15:38:22 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+15:38:22 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+15:38:23 **** Incremental Build of configuration Debug for project prueba_completa ****
+make -r all 
+make: No se hace nada para 'all'.
+15:38:25 **** Incremental Build of configuration Debug for project prueba_completa ****
+make -r all 
+make: No se hace nada para 'all'.
+15:39:04 **** Incremental Build of configuration Debug for project prueba_completa ****
+make -r all 
+make: No se hace nada para 'all'.
+15:47:21 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+15:47:22 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+15:47:22 **** Incremental Build of configuration Debug for project prueba_completa ****
+make -r all 
+Building file: ../example/src/prueba_completa.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/prueba_completa.d" -MT"example/src/prueba_completa.o" -MT"example/src/prueba_completa.d" -o "example/src/prueba_completa.o" "../example/src/prueba_completa.c"
+../example/src/prueba_completa.c: In function 'ADC0_IRQHandler':
+../example/src/prueba_completa.c:30:50: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(ADC_TEMPERATURE, ADC_CHANNEL,&adc_data); //Se hace una nueva lectura de la temperatura
+                                                  ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/example/inc/main.h:6,
+                 from ../example/src/prueba_completa.c:1:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+Finished building: ../example/src/prueba_completa.c
+ 
+Building target: prueba_completa.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="prueba_completa.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "freertos_examples_1_to_9_Debug.ld" -o "prueba_completa.axf"  ./freertos/src/FreeRTOSCommonHooks.o ./freertos/src/croutine.o ./freertos/src/event_groups.o ./freertos/src/heap_3.o ./freertos/src/list.o ./freertos/src/port.o ./freertos/src/queue.o ./freertos/src/redlib_memfix.o ./freertos/src/tasks.o ./freertos/src/timers.o  ./example/src/Configure.o ./example/src/cr_startup_lpc43xx.o ./example/src/prueba_completa.o ./example/src/sysinit.o ./example/src/utils.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: prueba_completa.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "prueba_completa.axf"; # arm-none-eabi-objcopy -v -O binary "prueba_completa.axf" "prueba_completa.bin" ; # checksum -p LPC4337 -d "prueba_completa.bin";
+   text	   data	    bss	    dec	    hex	filename
+  19116	      8	    740	  19864	   4d98	prueba_completa.axf
+ 
+15:53:22 **** Incremental Build of configuration Debug for project prueba_completa ****
+make -r all 
+make: No se hace nada para 'all'.
+15:53:44 **** Incremental Build of configuration Debug for project prueba_completa ****
+make -r all 
+make: No se hace nada para 'all'.
+16:06:24 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+16:06:25 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+16:06:25 **** Incremental Build of configuration Debug for project prueba_completa ****
+make -r all 
+Building file: ../example/src/prueba_completa.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/prueba_completa.d" -MT"example/src/prueba_completa.o" -MT"example/src/prueba_completa.d" -o "example/src/prueba_completa.o" "../example/src/prueba_completa.c"
+../example/src/prueba_completa.c: In function 'ADC0_IRQHandler':
+../example/src/prueba_completa.c:30:50: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(ADC_TEMPERATURE, ADC_CHANNEL,&adc_data); //Se hace una nueva lectura de la temperatura
+                                                  ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/example/inc/main.h:6,
+                 from ../example/src/prueba_completa.c:1:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+Finished building: ../example/src/prueba_completa.c
+ 
+Building target: prueba_completa.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="prueba_completa.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "freertos_examples_1_to_9_Debug.ld" -o "prueba_completa.axf"  ./freertos/src/FreeRTOSCommonHooks.o ./freertos/src/croutine.o ./freertos/src/event_groups.o ./freertos/src/heap_3.o ./freertos/src/list.o ./freertos/src/port.o ./freertos/src/queue.o ./freertos/src/redlib_memfix.o ./freertos/src/tasks.o ./freertos/src/timers.o  ./example/src/Configure.o ./example/src/cr_startup_lpc43xx.o ./example/src/prueba_completa.o ./example/src/sysinit.o ./example/src/utils.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: prueba_completa.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "prueba_completa.axf"; # arm-none-eabi-objcopy -v -O binary "prueba_completa.axf" "prueba_completa.bin" ; # checksum -p LPC4337 -d "prueba_completa.bin";
+   text	   data	    bss	    dec	    hex	filename
+  19116	      8	    740	  19864	   4d98	prueba_completa.axf
+ 
+16:06:27 **** Incremental Build of configuration Debug for project prueba_completa ****
+make -r all 
+make: No se hace nada para 'all'.
+16:14:46 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+16:14:47 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+16:14:48 **** Incremental Build of configuration Debug for project prueba_completa ****
+make -r all 
+Building file: ../example/src/prueba_completa.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/prueba_completa.d" -MT"example/src/prueba_completa.o" -MT"example/src/prueba_completa.d" -o "example/src/prueba_completa.o" "../example/src/prueba_completa.c"
+../example/src/prueba_completa.c: In function 'ADC0_IRQHandler':
+../example/src/prueba_completa.c:30:50: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(ADC_TEMPERATURE, ADC_CHANNEL,&adc_data); //Se hace una nueva lectura de la temperatura
+                                                  ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/example/inc/main.h:6,
+                 from ../example/src/prueba_completa.c:1:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+Finished building: ../example/src/prueba_completa.c
+ 
+Building target: prueba_completa.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="prueba_completa.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "freertos_examples_1_to_9_Debug.ld" -o "prueba_completa.axf"  ./freertos/src/FreeRTOSCommonHooks.o ./freertos/src/croutine.o ./freertos/src/event_groups.o ./freertos/src/heap_3.o ./freertos/src/list.o ./freertos/src/port.o ./freertos/src/queue.o ./freertos/src/redlib_memfix.o ./freertos/src/tasks.o ./freertos/src/timers.o  ./example/src/Configure.o ./example/src/cr_startup_lpc43xx.o ./example/src/prueba_completa.o ./example/src/sysinit.o ./example/src/utils.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: prueba_completa.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "prueba_completa.axf"; # arm-none-eabi-objcopy -v -O binary "prueba_completa.axf" "prueba_completa.bin" ; # checksum -p LPC4337 -d "prueba_completa.bin";
+   text	   data	    bss	    dec	    hex	filename
+  19116	      8	    740	  19864	   4d98	prueba_completa.axf
+ 
+16:15:16 **** Incremental Build of configuration Debug for project prueba_completa ****
+make -r all 
+make: No se hace nada para 'all'.
+16:23:25 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+16:23:26 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+16:23:26 **** Incremental Build of configuration Debug for project prueba_completa ****
+make -r all 
+Building file: ../example/src/prueba_completa.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/prueba_completa.d" -MT"example/src/prueba_completa.o" -MT"example/src/prueba_completa.d" -o "example/src/prueba_completa.o" "../example/src/prueba_completa.c"
+../example/src/prueba_completa.c: In function 'ADC0_IRQHandler':
+../example/src/prueba_completa.c:30:50: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(ADC_TEMPERATURE, ADC_CHANNEL,&adc_data); //Se hace una nueva lectura de la temperatura
+                                                  ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/prueba_completa/example/inc/main.h:6,
+                 from ../example/src/prueba_completa.c:1:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+Finished building: ../example/src/prueba_completa.c
+ 
+Building target: prueba_completa.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_completa/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="prueba_completa.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "freertos_examples_1_to_9_Debug.ld" -o "prueba_completa.axf"  ./freertos/src/FreeRTOSCommonHooks.o ./freertos/src/croutine.o ./freertos/src/event_groups.o ./freertos/src/heap_3.o ./freertos/src/list.o ./freertos/src/port.o ./freertos/src/queue.o ./freertos/src/redlib_memfix.o ./freertos/src/tasks.o ./freertos/src/timers.o  ./example/src/Configure.o ./example/src/cr_startup_lpc43xx.o ./example/src/prueba_completa.o ./example/src/sysinit.o ./example/src/utils.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: prueba_completa.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "prueba_completa.axf"; # arm-none-eabi-objcopy -v -O binary "prueba_completa.axf" "prueba_completa.bin" ; # checksum -p LPC4337 -d "prueba_completa.bin";
+   text	   data	    bss	    dec	    hex	filename
+  19112	      8	    740	  19860	   4d94	prueba_completa.axf
+ 
+16:23:28 **** Incremental Build of configuration Debug for project prueba_completa ****
+make -r all 
+make: No se hace nada para 'all'.

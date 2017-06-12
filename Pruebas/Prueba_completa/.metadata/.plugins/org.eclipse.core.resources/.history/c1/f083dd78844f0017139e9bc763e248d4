@@ -1,0 +1,99 @@
+#ifndef _MAIN_H_
+#define _MAIN_H_
+
+#define BOARD_EDU_CIAA_NXP
+
+#include "board.h"
+#include "FreeRTOS.h"
+#include "task.h"
+#include "semphr.h"
+#include <stdlib.h>
+
+#include "Configure.h"
+#include "utils.h"
+
+#define TEMPERATURE_INERTIA 1		//Inercia de temperatura del horno
+
+xSemaphoreHandle xStartSemaphore;	//Semaforo para el encendido del horno
+TaskHandle_t StartTaskHandle;		//Handler de la tarea de encendido
+
+xSemaphoreHandle xStopSemaphore;	//Semaforo para el apagado del horno
+TaskHandle_t StopTaskHandle;		//Handler de la tarea de apagado
+
+xSemaphoreHandle xADCSemaphore;	//Semaforo para el ADC
+TaskHandle_t ADCTaskHandle;		//Handler de la tarea del ADC
+volatile uint16_t adc_data=0;	//Variable global donde se almacenan las mediciones del ADC
+
+xSemaphoreHandle xControllerSemaphore;	//Semaforo para el controlador
+TaskHandle_t ControllerTaskHandle;		//Handler de la tarea del controlador
+
+xSemaphoreHandle xPhaseSemaphore;		//Semaforo para la deteccion de cruces por cero
+TaskHandle_t PhaseTaskHandle;			//Handler de la tarea del detector de fase
+
+TaskHandle_t UpdateReferenceTaskHandle; //Handler de la tarea que actualiza la referencia de temperatura
+
+float thermocouple_temp=0;		//Temperatura de la termocupla
+bool trigger_state=false;		//Estado del trigger
+
+#define REFERENCE_INTERVAL (5000/(portTICK_RATE_MS))	//Intervalo de tiempo para la actualizacion de la referencia
+float reference=0;				//Temperatura de referencia
+
+/* Curva de temperatura que se debe seguir */
+const float temperature_profile[]={25, 27.041,
+   27.098,
+   27.471,
+   28.093,
+   28.902,
+   29.845,
+   30.875,
+   31.951,
+   33.038,
+   34.107,
+   35.134,
+   36.099,
+   36.988,
+   37.792,
+   38.502,
+   39.117,
+   39.637,
+   40.064,
+   40.404,
+   40.666,
+   40.858,
+   40.991,
+   41.077,
+   41.130,
+   41.162,
+   41.187,
+   41.217,
+   41.264,
+   41.341,
+   41.457,
+   41.621,
+   41.839,
+   42.114,
+   42.449,
+   42.841,
+   43.284,
+   43.772,
+   44.289,
+   44.819,
+   45.339,
+   45.822,
+   46.235,
+   46.540,
+   46.691,
+   46.637,
+   46.320,
+   45.674,
+   44.627,
+   43.097};
+
+static void vHandlerStart(void *pvParameters);	//Tarea donde se espera que se presione el boton de encendido
+static void vHandlerStop(void *pvParameters);	//Tarea donde se espera que se presione el boton de apagado
+static void vHandlerGetTemperature(void *pvParameters);	//Tarea que mide la temperatura
+static void vHandlerController(void *pvParameters);		//Tarea que controla la resistencia
+static void vHandlerZeroCrossing(void *pvParameters);	//Tarea que se ejecuta con los cruces por cero
+static void vHandlerUpdateTemperatureReference(void *pvParameters);	//Tarea que actualiza la referencia de temperatura
+
+#endif

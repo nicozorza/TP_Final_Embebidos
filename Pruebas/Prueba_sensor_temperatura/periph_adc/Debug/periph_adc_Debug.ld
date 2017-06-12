@@ -5,7 +5,7 @@
  * Generated linker script file for LPC4337
  * Created from linkscript.ldt by FMCreateLinkLibraries
  * Using Freemarker v2.3.23
- * LPCXpresso v8.2.2 [Build 650] [2016-09-09]  on 11/06/2017 12:29:14
+ * LPCXpresso v8.2.2 [Build 650] [2016-09-09]  on 12/06/2017 10:06:05
  */
 
 INCLUDE "periph_adc_Debug_library.ld"
