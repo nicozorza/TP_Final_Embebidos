@@ -1,4 +1,4 @@
-20:26:17 **** Incremental Build of configuration Debug for project periph_adc ****
+12:29:14 **** Incremental Build of configuration Debug for project periph_adc ****
 make -r all 
 Building target: periph_adc.axf
 Invoking: MCU Linker
@@ -9,8 +9,8 @@ make --no-print-directory post-build
 Performing post-build steps
 arm-none-eabi-size "periph_adc.axf"; # arm-none-eabi-objcopy -v -O binary "periph_adc.axf" "periph_adc.bin" ; # checksum -p LPC4337 -d "periph_adc.bin";
    text	   data	    bss	    dec	    hex	filename
-  18320	      0	    376	  18696	   4908	periph_adc.axf
+  17968	      0	    364	  18332	   479c	periph_adc.axf
  
 
-20:26:17 Build Finished (took 109ms)
+12:29:14 Build Finished (took 127ms)
 

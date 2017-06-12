@@ -1,9 +1,0 @@
-#ifndef _STARTSTOP_H_
-#define _STARTSTOP_H_
-
-xSemaphoreHandle xStartSemaphore;	//Semaforo de la tarea de encendido
-xTaskHandle StartTaskHandle;	//Handler de la tarea de encendido
-
-static void vHandlerStart(void *pvParameters);	//Tarea de encendido
-
-#endif

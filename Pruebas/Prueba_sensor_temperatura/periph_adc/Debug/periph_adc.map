@@ -115,8 +115,7 @@ Allocating common symbols
 Common symbol       size              file
 
 SystemCoreClock     0x4               /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(chip_18xx_43xx.o)
-ADCSetup1           0x8               ./example/src/adc.o
-ADCSetup0           0x8               ./example/src/adc.o
+ADCSetup            0x8               ./example/src/adc.o
 
 Discarded input sections
 
@@ -2230,7 +2229,7 @@ END GROUP
  *(.rodata.$Flash2*)
  *(.rodata.$MFlashB512*)
 
-.text           0x1a000000     0x4790
+.text           0x1a000000     0x4630
  FILL mask 0xff
                 0x1a000000                __vectors_start__ = ABSOLUTE (.)
  *(.isr_vector)
@@ -2239,25 +2238,25 @@ END GROUP
                 0x1a000114                . = ALIGN (0x4)
                 0x1a000114                __section_table_start = .
                 0x1a000114                __data_section_table = .
-                0x1a000114        0x4 LONG 0x1a004790 LOADADDR (.data)
+                0x1a000114        0x4 LONG 0x1a004630 LOADADDR (.data)
                 0x1a000118        0x4 LONG 0x10000000 ADDR (.data)
                 0x1a00011c        0x4 LONG 0x0 SIZEOF (.data)
-                0x1a000120        0x4 LONG 0x1a004790 LOADADDR (.data_RAM2)
+                0x1a000120        0x4 LONG 0x1a004630 LOADADDR (.data_RAM2)
                 0x1a000124        0x4 LONG 0x10080000 ADDR (.data_RAM2)
                 0x1a000128        0x4 LONG 0x0 SIZEOF (.data_RAM2)
-                0x1a00012c        0x4 LONG 0x1a004790 LOADADDR (.data_RAM3)
+                0x1a00012c        0x4 LONG 0x1a004630 LOADADDR (.data_RAM3)
                 0x1a000130        0x4 LONG 0x20000000 ADDR (.data_RAM3)
                 0x1a000134        0x4 LONG 0x0 SIZEOF (.data_RAM3)
-                0x1a000138        0x4 LONG 0x1a004790 LOADADDR (.data_RAM4)
+                0x1a000138        0x4 LONG 0x1a004630 LOADADDR (.data_RAM4)
                 0x1a00013c        0x4 LONG 0x20008000 ADDR (.data_RAM4)
                 0x1a000140        0x4 LONG 0x0 SIZEOF (.data_RAM4)
-                0x1a000144        0x4 LONG 0x1a004790 LOADADDR (.data_RAM5)
+                0x1a000144        0x4 LONG 0x1a004630 LOADADDR (.data_RAM5)
                 0x1a000148        0x4 LONG 0x2000c000 ADDR (.data_RAM5)
                 0x1a00014c        0x4 LONG 0x0 SIZEOF (.data_RAM5)
                 0x1a000150                __data_section_table_end = .
                 0x1a000150                __bss_section_table = .
                 0x1a000150        0x4 LONG 0x10000000 ADDR (.bss)
-                0x1a000154        0x4 LONG 0x178 SIZEOF (.bss)
+                0x1a000154        0x4 LONG 0x16c SIZEOF (.bss)
                 0x1a000158        0x4 LONG 0x10080000 ADDR (.bss_RAM2)
                 0x1a00015c        0x4 LONG 0x0 SIZEOF (.bss_RAM2)
                 0x1a000160        0x4 LONG 0x20000000 ADDR (.bss_RAM3)
@@ -2301,6 +2300,7 @@ END GROUP
                 0x1a00023c                IntDefaultHandler
                 0x1a00023c                GPIO1_IRQHandler
                 0x1a00023c                SSP0_IRQHandler
+                0x1a00023c                ADC1_IRQHandler
                 0x1a00023c                RTC_IRQHandler
                 0x1a00023c                TIMER0_IRQHandler
                 0x1a00023c                SPI_IRQHandler
@@ -2343,385 +2343,383 @@ END GROUP
  .text.ADC0_IRQHandler
                 0x1a000354       0x24 ./example/src/adc.o
                 0x1a000354                ADC0_IRQHandler
- .text.ADC1_IRQHandler
-                0x1a000378       0x24 ./example/src/adc.o
-                0x1a000378                ADC1_IRQHandler
- .text.main     0x1a00039c      0x1fc ./example/src/adc.o
-                0x1a00039c                main
+ .text.main     0x1a000378       0xc0 ./example/src/adc.o
+                0x1a000378                main
  .text.ResetISR
-                0x1a000598       0xc4 ./example/src/cr_startup_lpc43xx.o
-                0x1a000598                ResetISR
+                0x1a000438       0xc4 ./example/src/cr_startup_lpc43xx.o
+                0x1a000438                ResetISR
  .text.SystemInit
-                0x1a00065c       0x28 ./example/src/sysinit.o
-                0x1a00065c                SystemInit
+                0x1a0004fc       0x28 ./example/src/sysinit.o
+                0x1a0004fc                SystemInit
  .text.Chip_SCU_PinMuxSet
-                0x1a000684       0x34 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+                0x1a000524       0x34 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
  .text.Chip_ENET_RMIIEnable
-                0x1a0006b8       0x28 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+                0x1a000558       0x28 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
  .text.Chip_GPIO_SetPinState
-                0x1a0006e0       0x38 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+                0x1a000580       0x38 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
  .text.Chip_GPIO_SetPinDIROutput
-                0x1a000718       0x40 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+                0x1a0005b8       0x40 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
  .text.Chip_GPIO_SetPinDIRInput
-                0x1a000758       0x40 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+                0x1a0005f8       0x40 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
  .text.Chip_UART_TXEnable
-                0x1a000798       0x1c /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+                0x1a000638       0x1c /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
  .text.Chip_UART_SendByte
-                0x1a0007b4       0x20 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+                0x1a000654       0x20 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
  .text.Chip_UART_ConfigData
-                0x1a0007d4       0x1c /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+                0x1a000674       0x1c /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
  .text.Chip_UART_ReadLineStatus
-                0x1a0007f0       0x18 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+                0x1a000690       0x18 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
  .text.__sys_write
-                0x1a000808       0x38 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
-                0x1a000808                __sys_write
+                0x1a0006a8       0x38 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+                0x1a0006a8                __sys_write
  .text.Board_UART_Init
-                0x1a000840       0x24 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
-                0x1a000840                Board_UART_Init
+                0x1a0006e0       0x24 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+                0x1a0006e0                Board_UART_Init
  .text.Board_Debug_Init
-                0x1a000864       0x30 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
-                0x1a000864                Board_Debug_Init
+                0x1a000704       0x30 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+                0x1a000704                Board_Debug_Init
  .text.Board_UARTPutChar
-                0x1a000894       0x34 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
-                0x1a000894                Board_UARTPutChar
+                0x1a000734       0x34 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+                0x1a000734                Board_UARTPutChar
  .text.Board_LED_Init
-                0x1a0008c8       0x5c /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+                0x1a000768       0x5c /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
  .text.Board_Buttons_Init
-                0x1a000924       0x44 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
-                0x1a000924                Board_Buttons_Init
+                0x1a0007c4       0x44 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+                0x1a0007c4                Board_Buttons_Init
  .text.Board_Init
-                0x1a000968       0x28 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
-                0x1a000968                Board_Init
+                0x1a000808       0x28 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+                0x1a000808                Board_Init
  .text.Chip_SCU_PinMuxSet
-                0x1a000990       0x34 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
+                0x1a000830       0x34 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
  .text.Chip_SCU_SetPinMuxing
-                0x1a0009c4       0x4c /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
+                0x1a000864       0x4c /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
  .text.Chip_CREG_SetFlashAcceleration
-                0x1a000a10       0x54 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
+                0x1a0008b0       0x54 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
  .text.Board_SetupMuxing
-                0x1a000a64       0x14 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
-                0x1a000a64                Board_SetupMuxing
+                0x1a000904       0x14 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
+                0x1a000904                Board_SetupMuxing
  .text.Board_SetupClocking
-                0x1a000a78       0x84 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
-                0x1a000a78                Board_SetupClocking
+                0x1a000918       0x84 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
+                0x1a000918                Board_SetupClocking
  .text.Board_SystemInit
-                0x1a000afc       0x10 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
-                0x1a000afc                Board_SystemInit
+                0x1a00099c       0x10 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
+                0x1a00099c                Board_SystemInit
  .text.getFullConvClk
-                0x1a000b0c       0x10 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(adc_18xx_43xx.o)
+                0x1a0009ac       0x10 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(adc_18xx_43xx.o)
  .text.Chip_ADC_GetClockIndex
-                0x1a000b1c       0x2c /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(adc_18xx_43xx.o)
+                0x1a0009bc       0x2c /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(adc_18xx_43xx.o)
  .text.getClkDiv
-                0x1a000b48       0x68 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(adc_18xx_43xx.o)
+                0x1a0009e8       0x68 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(adc_18xx_43xx.o)
  .text.setStartMode
-                0x1a000bb0       0x30 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(adc_18xx_43xx.o)
-                0x1a000bb0                setStartMode
+                0x1a000a50       0x30 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(adc_18xx_43xx.o)
+                0x1a000a50                setStartMode
  .text.readAdcVal
-                0x1a000be0       0x44 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(adc_18xx_43xx.o)
-                0x1a000be0                readAdcVal
+                0x1a000a80       0x44 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(adc_18xx_43xx.o)
+                0x1a000a80                readAdcVal
  .text.Chip_ADC_Init
-                0x1a000c24       0x88 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(adc_18xx_43xx.o)
-                0x1a000c24                Chip_ADC_Init
+                0x1a000ac4       0x88 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(adc_18xx_43xx.o)
+                0x1a000ac4                Chip_ADC_Init
  .text.Chip_ADC_ReadValue
-                0x1a000cac       0x24 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(adc_18xx_43xx.o)
-                0x1a000cac                Chip_ADC_ReadValue
+                0x1a000b4c       0x24 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(adc_18xx_43xx.o)
+                0x1a000b4c                Chip_ADC_ReadValue
  .text.Chip_ADC_Int_SetChannelCmd
-                0x1a000cd0       0x4c /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(adc_18xx_43xx.o)
-                0x1a000cd0                Chip_ADC_Int_SetChannelCmd
+                0x1a000b70       0x4c /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(adc_18xx_43xx.o)
+                0x1a000b70                Chip_ADC_Int_SetChannelCmd
  .text.Chip_ADC_SetStartMode
-                0x1a000d1c       0x50 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(adc_18xx_43xx.o)
-                0x1a000d1c                Chip_ADC_SetStartMode
+                0x1a000bbc       0x50 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(adc_18xx_43xx.o)
+                0x1a000bbc                Chip_ADC_SetStartMode
  .text.Chip_ADC_EnableChannel
-                0x1a000d6c       0x58 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(adc_18xx_43xx.o)
-                0x1a000d6c                Chip_ADC_EnableChannel
+                0x1a000c0c       0x58 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(adc_18xx_43xx.o)
+                0x1a000c0c                Chip_ADC_EnableChannel
  .text.SystemCoreClockUpdate
-                0x1a000dc4       0x18 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(chip_18xx_43xx.o)
-                0x1a000dc4                SystemCoreClockUpdate
- .text.ABS      0x1a000ddc       0x24 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
+                0x1a000c64       0x18 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(chip_18xx_43xx.o)
+                0x1a000c64                SystemCoreClockUpdate
+ .text.ABS      0x1a000c7c       0x24 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
  .text.pll_calc_divs
-                0x1a000e00      0x124 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
+                0x1a000ca0      0x124 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
  .text.pll_get_frac
-                0x1a000f24      0x178 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
+                0x1a000dc4      0x178 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
  .text.Chip_Clock_GetDivRate
-                0x1a00109c       0x40 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
+                0x1a000f3c       0x40 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
  .text.Chip_Clock_FindBaseClock
-                0x1a0010dc       0x90 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
+                0x1a000f7c       0x90 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
  .text.Chip_Clock_EnableCrystal
-                0x1a00116c       0x70 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
-                0x1a00116c                Chip_Clock_EnableCrystal
+                0x1a00100c       0x70 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
+                0x1a00100c                Chip_Clock_EnableCrystal
  .text.Chip_Clock_CalcMainPLLValue
-                0x1a0011dc       0xd8 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
-                0x1a0011dc                Chip_Clock_CalcMainPLLValue
+                0x1a00107c       0xd8 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
+                0x1a00107c                Chip_Clock_CalcMainPLLValue
  .text.Chip_Clock_GetMainPLLHz
-                0x1a0012b4       0xc0 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
-                0x1a0012b4                Chip_Clock_GetMainPLLHz
+                0x1a001154       0xc0 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
+                0x1a001154                Chip_Clock_GetMainPLLHz
  .text.Chip_Clock_GetDividerSource
-                0x1a001374       0x40 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
-                0x1a001374                Chip_Clock_GetDividerSource
+                0x1a001214       0x40 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
+                0x1a001214                Chip_Clock_GetDividerSource
  .text.Chip_Clock_GetDividerDivisor
-                0x1a0013b4       0x38 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
-                0x1a0013b4                Chip_Clock_GetDividerDivisor
+                0x1a001254       0x38 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
+                0x1a001254                Chip_Clock_GetDividerDivisor
  .text.Chip_Clock_GetClockInputHz
-                0x1a0013ec      0x140 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
-                0x1a0013ec                Chip_Clock_GetClockInputHz
+                0x1a00128c      0x140 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
+                0x1a00128c                Chip_Clock_GetClockInputHz
  .text.Chip_Clock_GetBaseClocktHz
-                0x1a00152c       0x24 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
-                0x1a00152c                Chip_Clock_GetBaseClocktHz
+                0x1a0013cc       0x24 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
+                0x1a0013cc                Chip_Clock_GetBaseClocktHz
  .text.Chip_Clock_SetBaseClock
-                0x1a001550       0x9c /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
-                0x1a001550                Chip_Clock_SetBaseClock
+                0x1a0013f0       0x9c /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
+                0x1a0013f0                Chip_Clock_SetBaseClock
  .text.Chip_Clock_GetBaseClock
-                0x1a0015ec       0x4c /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
-                0x1a0015ec                Chip_Clock_GetBaseClock
+                0x1a00148c       0x4c /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
+                0x1a00148c                Chip_Clock_GetBaseClock
  .text.Chip_Clock_EnableOpts
-                0x1a001638       0x7c /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
-                0x1a001638                Chip_Clock_EnableOpts
+                0x1a0014d8       0x7c /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
+                0x1a0014d8                Chip_Clock_EnableOpts
  .text.Chip_Clock_GetRate
-                0x1a0016b4       0x88 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
-                0x1a0016b4                Chip_Clock_GetRate
- .text.fpuInit  0x1a00173c       0x74 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(fpu_init.o)
-                0x1a00173c                fpuInit
+                0x1a001554       0x88 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
+                0x1a001554                Chip_Clock_GetRate
+ .text.fpuInit  0x1a0015dc       0x74 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(fpu_init.o)
+                0x1a0015dc                fpuInit
  .text.Chip_GPIO_Init
-                0x1a0017b0       0x14 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(gpio_18xx_43xx.o)
-                0x1a0017b0                Chip_GPIO_Init
+                0x1a001650       0x14 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(gpio_18xx_43xx.o)
+                0x1a001650                Chip_GPIO_Init
  .text.Chip_Clock_DisableMainPLL
-                0x1a0017c4       0x20 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
+                0x1a001664       0x20 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
  .text.Chip_Clock_SetupMainPLL
-                0x1a0017e4       0x44 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
+                0x1a001684       0x44 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
  .text.Chip_Clock_MainPLLLocked
-                0x1a001828       0x24 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
+                0x1a0016c8       0x24 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
  .text.Chip_SetupCoreClock
-                0x1a00184c      0x15c /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
-                0x1a00184c                Chip_SetupCoreClock
+                0x1a0016ec      0x15c /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
+                0x1a0016ec                Chip_SetupCoreClock
  .text.Chip_UART_TXDisable
-                0x1a0019a8       0x1c /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
+                0x1a001848       0x1c /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
  .text.Chip_UART_SetupFIFOS
-                0x1a0019c4       0x1c /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
+                0x1a001864       0x1c /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
  .text.Chip_UART_ConfigData
-                0x1a0019e0       0x1c /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
+                0x1a001880       0x1c /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
  .text.Chip_UART_EnableDivisorAccess
-                0x1a0019fc       0x20 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
+                0x1a00189c       0x20 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
  .text.Chip_UART_DisableDivisorAccess
-                0x1a001a1c       0x20 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
+                0x1a0018bc       0x20 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
  .text.Chip_UART_SetDivisorLatches
-                0x1a001a3c       0x28 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
+                0x1a0018dc       0x28 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
  .text.Chip_UART_GetIndex
-                0x1a001a64       0x60 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
+                0x1a001904       0x60 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
  .text.Chip_UART_Init
-                0x1a001ac4       0x84 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
-                0x1a001ac4                Chip_UART_Init
+                0x1a001964       0x84 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
+                0x1a001964                Chip_UART_Init
  .text.Chip_UART_SetBaudFDR
-                0x1a001b48      0x170 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
-                0x1a001b48                Chip_UART_SetBaudFDR
- .text.__main   0x1a001cb8       0x14 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_nohost.a(_cr__main.o)
-                0x1a001cb8                __main
- .text.memset   0x1a001ccc        0x4 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(memset.o)
-                0x1a001ccc                memset
+                0x1a0019e8      0x170 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
+                0x1a0019e8                Chip_UART_SetBaudFDR
+ .text.__main   0x1a001b58       0x14 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_nohost.a(_cr__main.o)
+                0x1a001b58                __main
+ .text.memset   0x1a001b6c        0x4 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(memset.o)
+                0x1a001b6c                memset
  .text.fp_round
-                0x1a001cd0       0x4e /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(fpprintf.o)
+                0x1a001b70       0x4e /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(fpprintf.o)
  .text.pr_dec.constprop.1
-                0x1a001d1e       0x26 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(fpprintf.o)
- .text.sprintf  0x1a001d44       0x6c /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(fpprintf.o)
-                0x1a001d44                sprintf
+                0x1a001bbe       0x26 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(fpprintf.o)
+ .text.sprintf  0x1a001be4       0x6c /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(fpprintf.o)
+                0x1a001be4                sprintf
  .text.fp_display
-                0x1a001db0      0x8f8 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(fpprintf.o)
+                0x1a001c50      0x8f8 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(fpprintf.o)
  .text.vsnprintf
-                0x1a0026a8       0x5c /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(fpprintf.o)
-                0x1a0026a8                vsnprintf
- .text.printf   0x1a002704       0x54 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(fpprintf.o)
-                0x1a002704                printf
- .text._initio  0x1a002758       0xa4 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(initio.o)
-                0x1a002758                _initio
+                0x1a002548       0x5c /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(fpprintf.o)
+                0x1a002548                vsnprintf
+ .text.printf   0x1a0025a4       0x54 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(fpprintf.o)
+                0x1a0025a4                printf
+ .text._initio  0x1a0025f8       0xa4 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(initio.o)
+                0x1a0025f8                _initio
  .text.__vfprintf
-                0x1a0027fc      0xd48 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(printf.o)
-                0x1a0027fc                __vfprintf
- .text.setvbuf  0x1a003544       0x40 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(setvbuf.o)
-                0x1a003544                setvbuf
- .text.strlen   0x1a003584       0x4a /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(strlen.o)
-                0x1a003584                strlen
+                0x1a00269c      0xd48 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(printf.o)
+                0x1a00269c                __vfprintf
+ .text.setvbuf  0x1a0033e4       0x40 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(setvbuf.o)
+                0x1a0033e4                setvbuf
+ .text.strlen   0x1a003424       0x4a /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(strlen.o)
+                0x1a003424                strlen
  .text._deferredlazyseek
-                0x1a0035ce       0x44 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(_deferredlazyseek.o)
-                0x1a0035ce                _deferredlazyseek
+                0x1a00346e       0x44 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(_deferredlazyseek.o)
+                0x1a00346e                _deferredlazyseek
  .text.__flsbuf
-                0x1a003612      0x140 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(_deferredlazyseek.o)
-                0x1a003612                __flsbuf
- .text._fdopen  0x1a003752       0x6a /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(_fdopen.o)
-                0x1a003752                _fdopen
- .text._fflush  0x1a0037bc       0x58 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(_fflush.o)
-                0x1a0037bc                _fflush
- .text._frexpl  0x1a003814       0x5a /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(_frexpl.o)
-                0x1a003814                _frexpl
- *fill*         0x1a00386e        0x2 ff
- .text._ldexpl  0x1a003870       0x4c /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(_ldexpl.o)
-                0x1a003870                _ldexpl
+                0x1a0034b2      0x140 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(_deferredlazyseek.o)
+                0x1a0034b2                __flsbuf
+ .text._fdopen  0x1a0035f2       0x6a /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(_fdopen.o)
+                0x1a0035f2                _fdopen
+ .text._fflush  0x1a00365c       0x58 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(_fflush.o)
+                0x1a00365c                _fflush
+ .text._frexpl  0x1a0036b4       0x5a /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(_frexpl.o)
+                0x1a0036b4                _frexpl
+ *fill*         0x1a00370e        0x2 ff
+ .text._ldexpl  0x1a003710       0x4c /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(_ldexpl.o)
+                0x1a003710                _ldexpl
  .text._Cwritebuf
-                0x1a0038bc       0x68 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(_writebuf.o)
-                0x1a0038bc                _Cwritebuf
- .text.malloc   0x1a003924       0xc8 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(alloc.o)
-                0x1a003924                malloc
- .text.free     0x1a0039ec       0x30 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(alloc.o)
-                0x1a0039ec                free
+                0x1a00375c       0x68 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(_writebuf.o)
+                0x1a00375c                _Cwritebuf
+ .text.malloc   0x1a0037c4       0xc8 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(alloc.o)
+                0x1a0037c4                malloc
+ .text.free     0x1a00388c       0x30 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(alloc.o)
+                0x1a00388c                free
  .text._Csys_alloc
-                0x1a003a1c       0x20 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(alloc.o)
-                0x1a003a1c                _Csys_alloc
- .text.fclose   0x1a003a3c       0x6c /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(fclose.o)
-                0x1a003a3c                fclose
- .text.fflush   0x1a003aa8       0x30 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(fflush.o)
-                0x1a003aa8                fflush
- .text.fseek    0x1a003ad8      0x110 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(fseek.o)
-                0x1a003ad8                fseek
- .text.ftell    0x1a003be8       0x4c /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(ftell.o)
-                0x1a003be8                ftell
- .text.remove   0x1a003c34       0x14 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(remove.o)
-                0x1a003c34                remove
- .text._sbrk    0x1a003c48       0x40 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(_cr_sbrk.o)
-                0x1a003c48                _sbrk
+                0x1a0038bc       0x20 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(alloc.o)
+                0x1a0038bc                _Csys_alloc
+ .text.fclose   0x1a0038dc       0x6c /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(fclose.o)
+                0x1a0038dc                fclose
+ .text.fflush   0x1a003948       0x30 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(fflush.o)
+                0x1a003948                fflush
+ .text.fseek    0x1a003978      0x110 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(fseek.o)
+                0x1a003978                fseek
+ .text.ftell    0x1a003a88       0x4c /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(ftell.o)
+                0x1a003a88                ftell
+ .text.remove   0x1a003ad4       0x14 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(remove.o)
+                0x1a003ad4                remove
+ .text._sbrk    0x1a003ae8       0x40 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(_cr_sbrk.o)
+                0x1a003ae8                _sbrk
  .text._do_fflush
-                0x1a003c88       0x44 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(_do_fflush.o)
-                0x1a003c88                _do_fflush
+                0x1a003b28       0x44 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(_do_fflush.o)
+                0x1a003b28                _do_fflush
  .text.__check_heap_overflow
-                0x1a003ccc       0x18 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(_cr_check_heap.o)
-                0x1a003ccc                __check_heap_overflow
+                0x1a003b6c       0x18 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(_cr_check_heap.o)
+                0x1a003b6c                __check_heap_overflow
  .text.__aeabi_division_uldivmod
-                0x1a003ce4      0x174 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/softfp/libcr_eabihelpers.a(division_64.o)
-                0x1a003ce4                __aeabi_uldivmod
-                0x1a003ce8                __bhs_ldivmod1
+                0x1a003b84      0x174 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/softfp/libcr_eabihelpers.a(division_64.o)
+                0x1a003b84                __aeabi_uldivmod
+                0x1a003b88                __bhs_ldivmod1
  .text.__aeabi_division_idiv0
-                0x1a003e58        0x2 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/softfp/libcr_eabihelpers.a(division_idiv0.o)
-                0x1a003e58                __aeabi_idiv0
- *fill*         0x1a003e5a        0x2 ff
+                0x1a003cf8        0x2 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/softfp/libcr_eabihelpers.a(division_idiv0.o)
+                0x1a003cf8                __aeabi_idiv0
+ *fill*         0x1a003cfa        0x2 ff
  .text.__aeabi_dmul
-                0x1a003e5c      0x110 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/softfp/libcr_eabihelpers.a(double.o)
-                0x1a003e5c                __aeabi_dmul
+                0x1a003cfc      0x110 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/softfp/libcr_eabihelpers.a(double.o)
+                0x1a003cfc                __aeabi_dmul
  .text.__aeabi_ddiv
-                0x1a003f6c      0x13c /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/softfp/libcr_eabihelpers.a(double.o)
-                0x1a003f6c                __aeabi_ddiv
+                0x1a003e0c      0x13c /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/softfp/libcr_eabihelpers.a(double.o)
+                0x1a003e0c                __aeabi_ddiv
  .text.__aeabi_dsub
-                0x1a0040a8      0x1b4 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/softfp/libcr_eabihelpers.a(double.o)
-                0x1a0040a8                __aeabi_dsub
+                0x1a003f48      0x1b4 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/softfp/libcr_eabihelpers.a(double.o)
+                0x1a003f48                __aeabi_dsub
  .text.__aeabi_dadd
-                0x1a00425c      0x114 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/softfp/libcr_eabihelpers.a(double.o)
-                0x1a00425c                __aeabi_dadd
+                0x1a0040fc      0x114 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/softfp/libcr_eabihelpers.a(double.o)
+                0x1a0040fc                __aeabi_dadd
  .text.__aeabi_d2iz
-                0x1a004370       0x40 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/softfp/libcr_eabihelpers.a(double.o)
-                0x1a004370                __aeabi_d2iz
+                0x1a004210       0x40 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/softfp/libcr_eabihelpers.a(double.o)
+                0x1a004210                __aeabi_d2iz
  .text.__bhs_ui2d
-                0x1a0043b0       0x46 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/softfp/libcr_eabihelpers.a(double.o)
-                0x1a0043b0                __bhs_ui2d
+                0x1a004250       0x46 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/softfp/libcr_eabihelpers.a(double.o)
+                0x1a004250                __bhs_ui2d
  .text.__aeabi_i2d
-                0x1a0043f6       0x10 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/softfp/libcr_eabihelpers.a(double.o)
-                0x1a0043f6                __aeabi_i2d
+                0x1a004296       0x10 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/softfp/libcr_eabihelpers.a(double.o)
+                0x1a004296                __aeabi_i2d
  .text.__aeabi_dcmpeq
-                0x1a004406       0x30 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/softfp/libcr_eabihelpers.a(double.o)
-                0x1a004406                __aeabi_dcmpeq
+                0x1a0042a6       0x30 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/softfp/libcr_eabihelpers.a(double.o)
+                0x1a0042a6                __aeabi_dcmpeq
  .text.__aeabi_dcmplt
-                0x1a004436       0x58 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/softfp/libcr_eabihelpers.a(double.o)
-                0x1a004436                __aeabi_dcmplt
+                0x1a0042d6       0x58 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/softfp/libcr_eabihelpers.a(double.o)
+                0x1a0042d6                __aeabi_dcmplt
  .text.__aeabi_dcmple
-                0x1a00448e       0x54 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/softfp/libcr_eabihelpers.a(double.o)
-                0x1a00448e                __aeabi_dcmple
+                0x1a00432e       0x54 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/softfp/libcr_eabihelpers.a(double.o)
+                0x1a00432e                __aeabi_dcmple
  .text.__aeabi_dcmpge
-                0x1a0044e2       0x54 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/softfp/libcr_eabihelpers.a(double.o)
-                0x1a0044e2                __aeabi_dcmpge
- *fill*         0x1a004536        0x2 ff
+                0x1a004382       0x54 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/softfp/libcr_eabihelpers.a(double.o)
+                0x1a004382                __aeabi_dcmpge
+ *fill*         0x1a0043d6        0x2 ff
  .text.__aeabi_f2d
-                0x1a004538       0x38 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/softfp/libcr_eabihelpers.a(float.o)
-                0x1a004538                __aeabi_f2d
+                0x1a0043d8       0x38 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/softfp/libcr_eabihelpers.a(float.o)
+                0x1a0043d8                __aeabi_f2d
  .text.__aeabi_memset_lowlevel
-                0x1a004570       0x32 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/softfp/libcr_eabihelpers.a(memcpy.o)
-                0x1a004570                __aeabi_lowlevel_memset
+                0x1a004410       0x32 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7e-m/softfp/libcr_eabihelpers.a(memcpy.o)
+                0x1a004410                __aeabi_lowlevel_memset
  .text.__sys_appexit
-                0x1a0045a2        0x2 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_nohost.a(__sys_appexit.o)
-                0x1a0045a2                __exit
-                0x1a0045a2                __sys_appexit
+                0x1a004442        0x2 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_nohost.a(__sys_appexit.o)
+                0x1a004442                __exit
+                0x1a004442                __sys_appexit
  .text.__sys_close
-                0x1a0045a4        0x6 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_nohost.a(__sys_close.o)
-                0x1a0045a4                __sys_close
+                0x1a004444        0x6 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_nohost.a(__sys_close.o)
+                0x1a004444                __sys_close
  .text.__sys_flen
-                0x1a0045aa        0x6 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_nohost.a(__sys_flen.o)
-                0x1a0045aa                __sys_flen
+                0x1a00444a        0x6 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_nohost.a(__sys_flen.o)
+                0x1a00444a                __sys_flen
  .text.__sys_istty
-                0x1a0045b0        0x6 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_nohost.a(__sys_istty.o)
-                0x1a0045b0                __sys_istty
+                0x1a004450        0x6 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_nohost.a(__sys_istty.o)
+                0x1a004450                __sys_istty
  .text.__sys_remove
-                0x1a0045b6        0x6 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_nohost.a(__sys_remove.o)
-                0x1a0045b6                __sys_remove
+                0x1a004456        0x6 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_nohost.a(__sys_remove.o)
+                0x1a004456                __sys_remove
  .text.__sys_seek
-                0x1a0045bc        0x6 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_nohost.a(__sys_seek.o)
-                0x1a0045bc                __sys_seek
+                0x1a00445c        0x6 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_nohost.a(__sys_seek.o)
+                0x1a00445c                __sys_seek
  .text.__sys_tmpnam
-                0x1a0045c2        0x6 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_nohost.a(__sys_tmpnam.o)
-                0x1a0045c2                __sys_tmpnam
+                0x1a004462        0x6 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_nohost.a(__sys_tmpnam.o)
+                0x1a004462                __sys_tmpnam
  *(.rodata .rodata.* .constdata .constdata.*)
- .rodata        0x1a0045c8       0x14 ./example/src/adc.o
+ .rodata        0x1a004468       0x11 ./example/src/adc.o
+ *fill*         0x1a004479        0x3 ff
  .rodata.ExtRateIn
-                0x1a0045dc        0x4 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
-                0x1a0045dc                ExtRateIn
+                0x1a00447c        0x4 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+                0x1a00447c                ExtRateIn
  .rodata.OscRateIn
-                0x1a0045e0        0x4 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
-                0x1a0045e0                OscRateIn
+                0x1a004480        0x4 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+                0x1a004480                OscRateIn
  .rodata.gpioLEDBits
-                0x1a0045e4        0xc /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+                0x1a004484        0xc /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
  .rodata.gpioButtonBits
-                0x1a0045f0        0x8 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+                0x1a004490        0x8 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
  .rodata.InitClkStates
-                0x1a0045f8        0xc /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
+                0x1a004498        0xc /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
  .rodata.pinmuxing
-                0x1a004604       0x2c /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
+                0x1a0044a4       0x2c /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
  .rodata.periph_to_base
-                0x1a004630       0x6c /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
- .rodata        0x1a00469c        0xa /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
- *fill*         0x1a0046a6        0x2 ff
+                0x1a0044d0       0x6c /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
+ .rodata        0x1a00453c        0xa /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
+ *fill*         0x1a004546        0x2 ff
  .rodata.InitClkStates
-                0x1a0046a8       0x48 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
+                0x1a004548       0x48 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
  .rodata.UART_PClock
-                0x1a0046f0        0x8 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
+                0x1a004590        0x8 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
  .rodata.UART_BClock
-                0x1a0046f8        0x8 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
+                0x1a004598        0x8 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
  .rodata.str1.1
-                0x1a004700       0x34 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(fpprintf.o)
+                0x1a0045a0       0x34 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(fpprintf.o)
                                  0x35 (size before relaxing)
  .rodata.str1.1
-                0x1a004734        0x4 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(initio.o)
+                0x1a0045d4        0x4 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(initio.o)
  .rodata.str1.1
-                0x1a004738       0x31 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(printf.o)
+                0x1a0045d8       0x31 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(printf.o)
                                  0x38 (size before relaxing)
  .rodata.str1.1
-                0x1a004769       0x18 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(alloc.o)
- *fill*         0x1a004781        0x7 ff
+                0x1a004609       0x18 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(alloc.o)
+ *fill*         0x1a004621        0x7 ff
  .rodata.__huge_vall
-                0x1a004788        0x8 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(_hugeval.o)
-                0x1a004788                __huge_vall
-                0x1a004790                . = ALIGN (0x4)
+                0x1a004628        0x8 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(_hugeval.o)
+                0x1a004628                __huge_vall
+                0x1a004630                . = ALIGN (0x4)
 
-.glue_7         0x1a004790        0x0
- .glue_7        0x1a004790        0x0 linker stubs
+.glue_7         0x1a004630        0x0
+ .glue_7        0x1a004630        0x0 linker stubs
 
-.glue_7t        0x1a004790        0x0
- .glue_7t       0x1a004790        0x0 linker stubs
+.glue_7t        0x1a004630        0x0
+ .glue_7t       0x1a004630        0x0 linker stubs
 
-.vfp11_veneer   0x1a004790        0x0
- .vfp11_veneer  0x1a004790        0x0 linker stubs
+.vfp11_veneer   0x1a004630        0x0
+ .vfp11_veneer  0x1a004630        0x0 linker stubs
 
-.v4_bx          0x1a004790        0x0
- .v4_bx         0x1a004790        0x0 linker stubs
+.v4_bx          0x1a004630        0x0
+ .v4_bx         0x1a004630        0x0 linker stubs
 
-.iplt           0x1a004790        0x0
- .iplt          0x1a004790        0x0 ./example/src/adc.o
+.iplt           0x1a004630        0x0
+ .iplt          0x1a004630        0x0 ./example/src/adc.o
 
-.rel.dyn        0x1a004790        0x0
- .rel.iplt      0x1a004790        0x0 ./example/src/adc.o
+.rel.dyn        0x1a004630        0x0
+ .rel.iplt      0x1a004630        0x0 ./example/src/adc.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x1a004790                __exidx_start = .
+                0x1a004630                __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x1a004790                __exidx_end = .
-                0x1a004790                _etext = .
+                0x1a004630                __exidx_end = .
+                0x1a004630                _etext = .
 
-.data_RAM2      0x10080000        0x0 load address 0x1a004790
+.data_RAM2      0x10080000        0x0 load address 0x1a004630
  FILL mask 0xff
                 [!provide]                PROVIDE (__start_data_RAM2, .)
  *(.ramfunc.$RAM2)
@@ -2731,7 +2729,7 @@ END GROUP
                 0x10080000                . = ALIGN (0x4)
                 [!provide]                PROVIDE (__end_data_RAM2, .)
 
-.data_RAM3      0x20000000        0x0 load address 0x1a004790
+.data_RAM3      0x20000000        0x0 load address 0x1a004630
  FILL mask 0xff
                 [!provide]                PROVIDE (__start_data_RAM3, .)
  *(.ramfunc.$RAM3)
@@ -2741,7 +2739,7 @@ END GROUP
                 0x20000000                . = ALIGN (0x4)
                 [!provide]                PROVIDE (__end_data_RAM3, .)
 
-.data_RAM4      0x20008000        0x0 load address 0x1a004790
+.data_RAM4      0x20008000        0x0 load address 0x1a004630
  FILL mask 0xff
                 [!provide]                PROVIDE (__start_data_RAM4, .)
  *(.ramfunc.$RAM4)
@@ -2751,7 +2749,7 @@ END GROUP
                 0x20008000                . = ALIGN (0x4)
                 [!provide]                PROVIDE (__end_data_RAM4, .)
 
-.data_RAM5      0x2000c000        0x0 load address 0x1a004790
+.data_RAM5      0x2000c000        0x0 load address 0x1a004630
  FILL mask 0xff
                 [!provide]                PROVIDE (__start_data_RAM5, .)
  *(.ramfunc.$RAM5)
@@ -2767,7 +2765,7 @@ END GROUP
                 0x10000000                . = ALIGN (0x4)
                 0x10000000                _end_uninit_RESERVED = .
 
-.data           0x10000000        0x0 load address 0x1a004790
+.data           0x10000000        0x0 load address 0x1a004630
  FILL mask 0xff
                 0x10000000                _data = .
  *(vtable)
@@ -2776,7 +2774,7 @@ END GROUP
                 0x10000000                . = ALIGN (0x4)
                 0x10000000                _edata = .
 
-.igot.plt       0x10000000        0x0 load address 0x1a004790
+.igot.plt       0x10000000        0x0 load address 0x1a004630
  .igot.plt      0x10000000        0x0 ./example/src/adc.o
 
 .bss_RAM2       0x10080000        0x0
@@ -2807,47 +2805,37 @@ END GROUP
                 0x2000c000                . = ALIGN ((. != 0x0)?0x4:0x1)
                 [!provide]                PROVIDE (__end_bss_RAM5, .)
 
-.bss            0x10000000      0x178
+.bss            0x10000000      0x16c
                 0x10000000                _bss = .
  *(.bss*)
  .bss.systick_flag
                 0x10000000        0x1 ./example/src/adc.o
                 0x10000000                systick_flag
- .bss.adc_flag0
-                0x10000001        0x1 ./example/src/adc.o
-                0x10000001                adc_flag0
- .bss.adc_flag1
-                0x10000002        0x1 ./example/src/adc.o
-                0x10000002                adc_flag1
- *fill*         0x10000003        0x1 
- .bss.adc_data0
-                0x10000004        0x2 ./example/src/adc.o
-                0x10000004                adc_data0
- .bss.adc_data1
-                0x10000006        0x2 ./example/src/adc.o
-                0x10000006                adc_data1
- .bss.tick_ct   0x10000008        0x4 ./example/src/adc.o
+ .bss.adc_flag  0x10000001        0x1 ./example/src/adc.o
+                0x10000001                adc_flag
+ .bss.adc_data  0x10000002        0x2 ./example/src/adc.o
+                0x10000002                adc_data
+ .bss.tick_ct   0x10000004        0x4 ./example/src/adc.o
  .bss.audio_usb_pll_freq
-                0x1000000c        0x8 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
- .bss._extra    0x10000014        0x4 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(initio.o)
-                0x10000014                _extra
- .bss.__Ciob    0x10000018      0x140 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(stdio.o)
-                0x10000018                __Ciob
- .bss.errno     0x10000158        0x4 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(errno.o)
-                0x10000158                errno
- .bss.__heaps   0x1000015c        0x4 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(__init_alloc.o)
-                0x1000015c                __heaps
+                0x10000008        0x8 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
+ .bss._extra    0x10000010        0x4 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(initio.o)
+                0x10000010                _extra
+ .bss.__Ciob    0x10000014      0x140 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(stdio.o)
+                0x10000014                __Ciob
+ .bss.errno     0x10000154        0x4 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(errno.o)
+                0x10000154                errno
+ .bss.__heaps   0x10000158        0x4 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(__init_alloc.o)
+                0x10000158                __heaps
  .bss.__end_of_heap
-                0x10000160        0x4 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(__init_alloc.o)
-                0x10000160                __end_of_heap
+                0x1000015c        0x4 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_c.a(__init_alloc.o)
+                0x1000015c                __end_of_heap
  *(COMMON)
- COMMON         0x10000164       0x10 ./example/src/adc.o
-                0x10000164                ADCSetup1
-                0x1000016c                ADCSetup0
- COMMON         0x10000174        0x4 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(chip_18xx_43xx.o)
-                0x10000174                SystemCoreClock
-                0x10000178                . = ALIGN (0x4)
-                0x10000178                _ebss = .
+ COMMON         0x10000160        0x8 ./example/src/adc.o
+                0x10000160                ADCSetup
+ COMMON         0x10000168        0x4 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(chip_18xx_43xx.o)
+                0x10000168                SystemCoreClock
+                0x1000016c                . = ALIGN (0x4)
+                0x1000016c                _ebss = .
                 [!provide]                PROVIDE (end, .)
 
 .noinit_RAM2    0x10080000        0x0
@@ -2870,29 +2858,29 @@ END GROUP
  *(.noinit.$RamAHB_ETB16*)
                 0x2000c000                . = ALIGN (0x4)
 
-.noinit         0x10000178        0x0
-                0x10000178                _noinit = .
+.noinit         0x1000016c        0x0
+                0x1000016c                _noinit = .
  *(.noinit*)
-                0x10000178                . = ALIGN (0x4)
-                0x10000178                _end_noinit = .
-                0x10000178                PROVIDE (_pvHeapStart, DEFINED (__user_heap_base)?__user_heap_base:.)
+                0x1000016c                . = ALIGN (0x4)
+                0x1000016c                _end_noinit = .
+                0x1000016c                PROVIDE (_pvHeapStart, DEFINED (__user_heap_base)?__user_heap_base:.)
                 0x10008000                PROVIDE (_vStackTop, DEFINED (__user_stack_top)?__user_stack_top:(__top_RamLoc32 - 0x0))
                 [!provide]                PROVIDE (__valid_user_code_checksum, (0x0 - ((((((_vStackTop + (ResetISR + 0x1)) + (NMI_Handler + 0x1)) + (HardFault_Handler + 0x1)) + (DEFINED (MemManage_Handler)?MemManage_Handler:0x0 + 0x1)) + (DEFINED (BusFault_Handler)?BusFault_Handler:0x0 + 0x1)) + (DEFINED (UsageFault_Handler)?UsageFault_Handler:0x0 + 0x1))))
 OUTPUT(periph_adc.axf elf32-littlearm)
 
-.debug_info     0x00000000     0x7e37
- .debug_info    0x00000000      0xd3d ./example/src/adc.o
- .debug_info    0x00000d3d      0x297 ./example/src/cr_startup_lpc43xx.o
- .debug_info    0x00000fd4       0xea ./example/src/sysinit.o
- .debug_info    0x000010be     0x1a09 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
- .debug_info    0x00002ac7      0xb56 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
- .debug_info    0x0000361d      0x952 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(adc_18xx_43xx.o)
- .debug_info    0x00003f6f      0xa31 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(chip_18xx_43xx.o)
- .debug_info    0x000049a0     0x1590 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
- .debug_info    0x00005f30      0x128 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(fpu_init.o)
- .debug_info    0x00006058      0x435 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(gpio_18xx_43xx.o)
- .debug_info    0x0000648d      0x8fd /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
- .debug_info    0x00006d8a     0x10ad /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
+.debug_info     0x00000000     0x7de5
+ .debug_info    0x00000000      0xceb ./example/src/adc.o
+ .debug_info    0x00000ceb      0x297 ./example/src/cr_startup_lpc43xx.o
+ .debug_info    0x00000f82       0xea ./example/src/sysinit.o
+ .debug_info    0x0000106c     0x1a09 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+ .debug_info    0x00002a75      0xb56 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
+ .debug_info    0x000035cb      0x952 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(adc_18xx_43xx.o)
+ .debug_info    0x00003f1d      0xa31 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(chip_18xx_43xx.o)
+ .debug_info    0x0000494e     0x1590 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
+ .debug_info    0x00005ede      0x128 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(fpu_init.o)
+ .debug_info    0x00006006      0x435 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(gpio_18xx_43xx.o)
+ .debug_info    0x0000643b      0x8fd /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
+ .debug_info    0x00006d38     0x10ad /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
 
 .debug_abbrev   0x00000000     0x141c
  .debug_abbrev  0x00000000      0x219 ./example/src/adc.o
@@ -2908,154 +2896,154 @@ OUTPUT(periph_adc.axf elf32-littlearm)
  .debug_abbrev  0x00000fce      0x18e /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
  .debug_abbrev  0x0000115c      0x2c0 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
 
-.debug_aranges  0x00000000      0x6a8
+.debug_aranges  0x00000000      0x6a0
  .debug_aranges
-                0x00000000       0x50 ./example/src/adc.o
+                0x00000000       0x48 ./example/src/adc.o
  .debug_aranges
-                0x00000050       0x80 ./example/src/cr_startup_lpc43xx.o
+                0x00000048       0x80 ./example/src/cr_startup_lpc43xx.o
  .debug_aranges
-                0x000000d0       0x20 ./example/src/sysinit.o
+                0x000000c8       0x20 ./example/src/sysinit.o
  .debug_aranges
-                0x000000f0      0x170 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+                0x000000e8      0x170 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
  .debug_aranges
-                0x00000260       0x48 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
+                0x00000258       0x48 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
  .debug_aranges
-                0x000002a8       0x98 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(adc_18xx_43xx.o)
+                0x000002a0       0x98 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(adc_18xx_43xx.o)
  .debug_aranges
-                0x00000340       0x40 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(chip_18xx_43xx.o)
+                0x00000338       0x40 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(chip_18xx_43xx.o)
  .debug_aranges
-                0x00000380      0x138 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
+                0x00000378      0x138 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
  .debug_aranges
-                0x000004b8       0x20 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(fpu_init.o)
+                0x000004b0       0x20 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(fpu_init.o)
  .debug_aranges
-                0x000004d8       0x68 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(gpio_18xx_43xx.o)
+                0x000004d0       0x68 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(gpio_18xx_43xx.o)
  .debug_aranges
-                0x00000540       0x50 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
+                0x00000538       0x50 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
  .debug_aranges
-                0x00000590      0x118 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
+                0x00000588      0x118 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
 
-.debug_ranges   0x00000000      0x618
- .debug_ranges  0x00000000       0x40 ./example/src/adc.o
- .debug_ranges  0x00000040       0x70 ./example/src/cr_startup_lpc43xx.o
- .debug_ranges  0x000000b0       0x10 ./example/src/sysinit.o
- .debug_ranges  0x000000c0      0x160 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
- .debug_ranges  0x00000220       0x38 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
- .debug_ranges  0x00000258       0x88 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(adc_18xx_43xx.o)
- .debug_ranges  0x000002e0       0x30 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(chip_18xx_43xx.o)
- .debug_ranges  0x00000310      0x140 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
- .debug_ranges  0x00000450       0x10 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(fpu_init.o)
- .debug_ranges  0x00000460       0x58 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(gpio_18xx_43xx.o)
- .debug_ranges  0x000004b8       0x40 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
- .debug_ranges  0x000004f8      0x120 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
+.debug_ranges   0x00000000      0x610
+ .debug_ranges  0x00000000       0x38 ./example/src/adc.o
+ .debug_ranges  0x00000038       0x70 ./example/src/cr_startup_lpc43xx.o
+ .debug_ranges  0x000000a8       0x10 ./example/src/sysinit.o
+ .debug_ranges  0x000000b8      0x160 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+ .debug_ranges  0x00000218       0x38 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
+ .debug_ranges  0x00000250       0x88 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(adc_18xx_43xx.o)
+ .debug_ranges  0x000002d8       0x30 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(chip_18xx_43xx.o)
+ .debug_ranges  0x00000308      0x140 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
+ .debug_ranges  0x00000448       0x10 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(fpu_init.o)
+ .debug_ranges  0x00000458       0x58 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(gpio_18xx_43xx.o)
+ .debug_ranges  0x000004b0       0x40 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
+ .debug_ranges  0x000004f0      0x120 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
 
-.debug_macro    0x00000000     0x71d2
- .debug_macro   0x00000000      0x322 ./example/src/adc.o
- .debug_macro   0x00000322      0x8a4 ./example/src/adc.o
- .debug_macro   0x00000bc6       0x10 ./example/src/adc.o
- .debug_macro   0x00000bd6       0x10 ./example/src/adc.o
- .debug_macro   0x00000be6      0x12d ./example/src/adc.o
- .debug_macro   0x00000d13      0x5b2 ./example/src/adc.o
- .debug_macro   0x000012c5       0x22 ./example/src/adc.o
- .debug_macro   0x000012e7       0x7b ./example/src/adc.o
- .debug_macro   0x00001362       0x28 ./example/src/adc.o
- .debug_macro   0x0000138a       0x3b ./example/src/adc.o
- .debug_macro   0x000013c5       0x2d ./example/src/adc.o
- .debug_macro   0x000013f2       0x42 ./example/src/adc.o
- .debug_macro   0x00001434      0xd39 ./example/src/adc.o
- .debug_macro   0x0000216d      0x2bc ./example/src/adc.o
- .debug_macro   0x00002429      0x112 ./example/src/adc.o
- .debug_macro   0x0000253b       0x11 ./example/src/adc.o
- .debug_macro   0x0000254c       0x2a ./example/src/adc.o
- .debug_macro   0x00002576       0x16 ./example/src/adc.o
- .debug_macro   0x0000258c      0x2e6 ./example/src/adc.o
- .debug_macro   0x00002872       0x82 ./example/src/adc.o
- .debug_macro   0x000028f4      0x13d ./example/src/adc.o
- .debug_macro   0x00002a31      0x198 ./example/src/adc.o
- .debug_macro   0x00002bc9       0x34 ./example/src/adc.o
- .debug_macro   0x00002bfd       0x58 ./example/src/adc.o
- .debug_macro   0x00002c55      0x236 ./example/src/adc.o
- .debug_macro   0x00002e8b      0x572 ./example/src/adc.o
- .debug_macro   0x000033fd       0x16 ./example/src/adc.o
- .debug_macro   0x00003413      0x18a ./example/src/adc.o
- .debug_macro   0x0000359d       0x88 ./example/src/adc.o
- .debug_macro   0x00003625      0x1b9 ./example/src/adc.o
- .debug_macro   0x000037de      0x1da ./example/src/adc.o
- .debug_macro   0x000039b8       0x40 ./example/src/adc.o
- .debug_macro   0x000039f8       0x1c ./example/src/adc.o
- .debug_macro   0x00003a14       0x2e ./example/src/adc.o
- .debug_macro   0x00003a42       0x2e ./example/src/adc.o
- .debug_macro   0x00003a70       0x22 ./example/src/adc.o
- .debug_macro   0x00003a92      0x201 ./example/src/adc.o
- .debug_macro   0x00003c93       0xe0 ./example/src/adc.o
- .debug_macro   0x00003d73      0x34c ./example/src/adc.o
- .debug_macro   0x000040bf       0xdc ./example/src/adc.o
- .debug_macro   0x0000419b       0xc4 ./example/src/adc.o
- .debug_macro   0x0000425f       0x94 ./example/src/adc.o
- .debug_macro   0x000042f3       0xb8 ./example/src/adc.o
- .debug_macro   0x000043ab       0x4c ./example/src/adc.o
- .debug_macro   0x000043f7       0x16 ./example/src/adc.o
- .debug_macro   0x0000440d      0x328 ./example/src/adc.o
- .debug_macro   0x00004735       0x3a ./example/src/adc.o
- .debug_macro   0x0000476f       0xd0 ./example/src/adc.o
- .debug_macro   0x0000483f       0x18 ./example/src/adc.o
- .debug_macro   0x00004857       0x22 ./example/src/adc.o
- .debug_macro   0x00004879       0x40 ./example/src/adc.o
- .debug_macro   0x000048b9      0x121 ./example/src/adc.o
- .debug_macro   0x000049da       0x9a ./example/src/adc.o
- .debug_macro   0x00004a74       0x20 ./example/src/adc.o
- .debug_macro   0x00004a94       0x1d ./example/src/cr_startup_lpc43xx.o
- .debug_macro   0x00004ab1      0x310 ./example/src/sysinit.o
- .debug_macro   0x00004dc1      0x336 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
- .debug_macro   0x000050f7      0x89e /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
- .debug_macro   0x00005995       0x12 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
- .debug_macro   0x000059a7      0x339 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
- .debug_macro   0x00005ce0      0x310 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
- .debug_macro   0x00005ff0      0x2da /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(adc_18xx_43xx.o)
- .debug_macro   0x000062ca      0x2da /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(chip_18xx_43xx.o)
- .debug_macro   0x000065a4      0x2e0 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
- .debug_macro   0x00006884       0xc0 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(fpu_init.o)
- .debug_macro   0x00006944      0x2da /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(gpio_18xx_43xx.o)
- .debug_macro   0x00006c1e      0x2da /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
- .debug_macro   0x00006ef8      0x2da /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
+.debug_macro    0x00000000     0x71cc
+ .debug_macro   0x00000000      0x31c ./example/src/adc.o
+ .debug_macro   0x0000031c      0x8a4 ./example/src/adc.o
+ .debug_macro   0x00000bc0       0x10 ./example/src/adc.o
+ .debug_macro   0x00000bd0       0x10 ./example/src/adc.o
+ .debug_macro   0x00000be0      0x12d ./example/src/adc.o
+ .debug_macro   0x00000d0d      0x5b2 ./example/src/adc.o
+ .debug_macro   0x000012bf       0x22 ./example/src/adc.o
+ .debug_macro   0x000012e1       0x7b ./example/src/adc.o
+ .debug_macro   0x0000135c       0x28 ./example/src/adc.o
+ .debug_macro   0x00001384       0x3b ./example/src/adc.o
+ .debug_macro   0x000013bf       0x2d ./example/src/adc.o
+ .debug_macro   0x000013ec       0x42 ./example/src/adc.o
+ .debug_macro   0x0000142e      0xd39 ./example/src/adc.o
+ .debug_macro   0x00002167      0x2bc ./example/src/adc.o
+ .debug_macro   0x00002423      0x112 ./example/src/adc.o
+ .debug_macro   0x00002535       0x11 ./example/src/adc.o
+ .debug_macro   0x00002546       0x2a ./example/src/adc.o
+ .debug_macro   0x00002570       0x16 ./example/src/adc.o
+ .debug_macro   0x00002586      0x2e6 ./example/src/adc.o
+ .debug_macro   0x0000286c       0x82 ./example/src/adc.o
+ .debug_macro   0x000028ee      0x13d ./example/src/adc.o
+ .debug_macro   0x00002a2b      0x198 ./example/src/adc.o
+ .debug_macro   0x00002bc3       0x34 ./example/src/adc.o
+ .debug_macro   0x00002bf7       0x58 ./example/src/adc.o
+ .debug_macro   0x00002c4f      0x236 ./example/src/adc.o
+ .debug_macro   0x00002e85      0x572 ./example/src/adc.o
+ .debug_macro   0x000033f7       0x16 ./example/src/adc.o
+ .debug_macro   0x0000340d      0x18a ./example/src/adc.o
+ .debug_macro   0x00003597       0x88 ./example/src/adc.o
+ .debug_macro   0x0000361f      0x1b9 ./example/src/adc.o
+ .debug_macro   0x000037d8      0x1da ./example/src/adc.o
+ .debug_macro   0x000039b2       0x40 ./example/src/adc.o
+ .debug_macro   0x000039f2       0x1c ./example/src/adc.o
+ .debug_macro   0x00003a0e       0x2e ./example/src/adc.o
+ .debug_macro   0x00003a3c       0x2e ./example/src/adc.o
+ .debug_macro   0x00003a6a       0x22 ./example/src/adc.o
+ .debug_macro   0x00003a8c      0x201 ./example/src/adc.o
+ .debug_macro   0x00003c8d       0xe0 ./example/src/adc.o
+ .debug_macro   0x00003d6d      0x34c ./example/src/adc.o
+ .debug_macro   0x000040b9       0xdc ./example/src/adc.o
+ .debug_macro   0x00004195       0xc4 ./example/src/adc.o
+ .debug_macro   0x00004259       0x94 ./example/src/adc.o
+ .debug_macro   0x000042ed       0xb8 ./example/src/adc.o
+ .debug_macro   0x000043a5       0x4c ./example/src/adc.o
+ .debug_macro   0x000043f1       0x16 ./example/src/adc.o
+ .debug_macro   0x00004407      0x328 ./example/src/adc.o
+ .debug_macro   0x0000472f       0x3a ./example/src/adc.o
+ .debug_macro   0x00004769       0xd0 ./example/src/adc.o
+ .debug_macro   0x00004839       0x18 ./example/src/adc.o
+ .debug_macro   0x00004851       0x22 ./example/src/adc.o
+ .debug_macro   0x00004873       0x40 ./example/src/adc.o
+ .debug_macro   0x000048b3      0x121 ./example/src/adc.o
+ .debug_macro   0x000049d4       0x9a ./example/src/adc.o
+ .debug_macro   0x00004a6e       0x20 ./example/src/adc.o
+ .debug_macro   0x00004a8e       0x1d ./example/src/cr_startup_lpc43xx.o
+ .debug_macro   0x00004aab      0x310 ./example/src/sysinit.o
+ .debug_macro   0x00004dbb      0x336 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+ .debug_macro   0x000050f1      0x89e /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+ .debug_macro   0x0000598f       0x12 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+ .debug_macro   0x000059a1      0x339 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+ .debug_macro   0x00005cda      0x310 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
+ .debug_macro   0x00005fea      0x2da /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(adc_18xx_43xx.o)
+ .debug_macro   0x000062c4      0x2da /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(chip_18xx_43xx.o)
+ .debug_macro   0x0000659e      0x2e0 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
+ .debug_macro   0x0000687e       0xc0 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(fpu_init.o)
+ .debug_macro   0x0000693e      0x2da /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(gpio_18xx_43xx.o)
+ .debug_macro   0x00006c18      0x2da /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
+ .debug_macro   0x00006ef2      0x2da /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
 
-.debug_line     0x00000000     0x5161
- .debug_line    0x00000000      0x736 ./example/src/adc.o
- .debug_line    0x00000736      0x102 ./example/src/cr_startup_lpc43xx.o
- .debug_line    0x00000838      0x690 ./example/src/sysinit.o
- .debug_line    0x00000ec8      0xa8c /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
- .debug_line    0x00001954      0x717 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
- .debug_line    0x0000206b      0x74d /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(adc_18xx_43xx.o)
- .debug_line    0x000027b8      0x666 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(chip_18xx_43xx.o)
- .debug_line    0x00002e1e      0xa63 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
- .debug_line    0x00003881      0x212 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(fpu_init.o)
- .debug_line    0x00003a93      0x6b7 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(gpio_18xx_43xx.o)
- .debug_line    0x0000414a      0x6d4 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
- .debug_line    0x0000481e      0x943 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
+.debug_line     0x00000000     0x513c
+ .debug_line    0x00000000      0x711 ./example/src/adc.o
+ .debug_line    0x00000711      0x102 ./example/src/cr_startup_lpc43xx.o
+ .debug_line    0x00000813      0x690 ./example/src/sysinit.o
+ .debug_line    0x00000ea3      0xa8c /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+ .debug_line    0x0000192f      0x717 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
+ .debug_line    0x00002046      0x74d /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(adc_18xx_43xx.o)
+ .debug_line    0x00002793      0x666 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(chip_18xx_43xx.o)
+ .debug_line    0x00002df9      0xa63 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
+ .debug_line    0x0000385c      0x212 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(fpu_init.o)
+ .debug_line    0x00003a6e      0x6b7 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(gpio_18xx_43xx.o)
+ .debug_line    0x00004125      0x6d4 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
+ .debug_line    0x000047f9      0x943 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
 
-.debug_str      0x00000000    0x193aa
- .debug_str     0x00000000    0x16702 ./example/src/adc.o
-                              0x16849 (size before relaxing)
- .debug_str     0x00016702      0x1d6 ./example/src/cr_startup_lpc43xx.o
+.debug_str      0x00000000    0x1934d
+ .debug_str     0x00000000    0x166b3 ./example/src/adc.o
+                              0x167fa (size before relaxing)
+ .debug_str     0x000166b3      0x1d6 ./example/src/cr_startup_lpc43xx.o
                                0x276f (size before relaxing)
- .debug_str     0x000168d8       0x23 ./example/src/sysinit.o
+ .debug_str     0x00016889       0x23 ./example/src/sysinit.o
                               0x1578f (size before relaxing)
- .debug_str     0x000168fb     0x1a70 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+ .debug_str     0x000168ac     0x1a6b /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
                               0x17c32 (size before relaxing)
- .debug_str     0x0001836b      0x125 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
+ .debug_str     0x00018317      0x125 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
                               0x16534 (size before relaxing)
- .debug_str     0x00018490      0x329 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(adc_18xx_43xx.o)
+ .debug_str     0x0001843c      0x320 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(adc_18xx_43xx.o)
                               0x158ee (size before relaxing)
- .debug_str     0x000187b9       0xa1 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(chip_18xx_43xx.o)
+ .debug_str     0x0001875c       0xa1 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(chip_18xx_43xx.o)
                               0x15dd6 (size before relaxing)
- .debug_str     0x0001885a      0x5d8 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
+ .debug_str     0x000187fd      0x5d8 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
                               0x16359 (size before relaxing)
- .debug_str     0x00018e32       0xb5 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(fpu_init.o)
+ .debug_str     0x00018dd5       0xb5 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(fpu_init.o)
                                0x996f (size before relaxing)
- .debug_str     0x00018ee7       0xe4 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(gpio_18xx_43xx.o)
+ .debug_str     0x00018e8a       0xe4 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(gpio_18xx_43xx.o)
                               0x151d8 (size before relaxing)
- .debug_str     0x00018fcb       0xb4 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
+ .debug_str     0x00018f6e       0xb4 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
                               0x15da5 (size before relaxing)
- .debug_str     0x0001907f      0x32b /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
+ .debug_str     0x00019022      0x32b /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
                               0x15f09 (size before relaxing)
 
 .comment        0x00000000       0xdc
@@ -3212,16 +3200,16 @@ OUTPUT(periph_adc.axf elf32-littlearm)
  .ARM.attributes
                 0x00000a51       0x37 /usr/local/lpcxpresso_8.2.2_650/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7e-m/softfp/libcr_nohost.a(__sys_tmpnam.o)
 
-.debug_frame    0x00000000     0x19cc
- .debug_frame   0x00000000       0xfc ./example/src/adc.o
- .debug_frame   0x000000fc      0x170 ./example/src/cr_startup_lpc43xx.o
- .debug_frame   0x0000026c       0x34 ./example/src/sysinit.o
- .debug_frame   0x000002a0      0x634 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
- .debug_frame   0x000008d4       0xe4 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
- .debug_frame   0x000009b8      0x264 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(adc_18xx_43xx.o)
- .debug_frame   0x00000c1c       0xa0 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(chip_18xx_43xx.o)
- .debug_frame   0x00000cbc      0x568 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
- .debug_frame   0x00001224       0x38 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(fpu_init.o)
- .debug_frame   0x0000125c      0x198 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(gpio_18xx_43xx.o)
- .debug_frame   0x000013f4       0xf4 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
- .debug_frame   0x000014e8      0x4e4 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)
+.debug_frame    0x00000000     0x19b0
+ .debug_frame   0x00000000       0xe0 ./example/src/adc.o
+ .debug_frame   0x000000e0      0x170 ./example/src/cr_startup_lpc43xx.o
+ .debug_frame   0x00000250       0x34 ./example/src/sysinit.o
+ .debug_frame   0x00000284      0x634 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board.o)
+ .debug_frame   0x000008b8       0xe4 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_board_nxp_lpcxpresso_4337/Debug/liblpc_board_nxp_lpcxpresso_4337.a(board_sysinit.o)
+ .debug_frame   0x0000099c      0x264 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(adc_18xx_43xx.o)
+ .debug_frame   0x00000c00       0xa0 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(chip_18xx_43xx.o)
+ .debug_frame   0x00000ca0      0x568 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(clock_18xx_43xx.o)
+ .debug_frame   0x00001208       0x38 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(fpu_init.o)
+ .debug_frame   0x00001240      0x198 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(gpio_18xx_43xx.o)
+ .debug_frame   0x000013d8       0xf4 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(sysinit_18xx_43xx.o)
+ .debug_frame   0x000014cc      0x4e4 /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Prueba_sensor_temperatura/lpc_chip_43xx/Debug/liblpc_chip_43xx.a(uart_18xx_43xx.o)

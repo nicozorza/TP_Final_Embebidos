@@ -6,6 +6,6 @@ float get_temperature( uint16_t adc_value ){
 
 	temp = ((float)adc_value)*3.3/1024;		//Lo mapeo de 0-3.3v
 	temp /= OPAMP_GAIN;						//Lo divido por la ganancia del operacional
-	temp =23376.525*temp-1.574;				//Mapeo la temperatura
+	temp = 23701.6*temp-8.75; //23376.525*temp-1.574;				//Mapeo la temperatura
 return temp;
 }
