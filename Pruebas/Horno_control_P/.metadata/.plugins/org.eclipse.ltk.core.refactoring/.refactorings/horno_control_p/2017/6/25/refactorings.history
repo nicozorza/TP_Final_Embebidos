@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;horno_control_p/example/src/freertos_examples_1_to_9.c&apos; to &apos;main.c&apos;" description="Rename resource &apos;freertos_examples_1_to_9.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="example/src/freertos_examples_1_to_9.c" name="main.c" stamp="1497362714185" updateReferences="true"/>
+</session>
