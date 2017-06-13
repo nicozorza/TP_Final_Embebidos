@@ -33,6 +33,14 @@ TaskHandle_t UpdateReferenceTaskHandle; //Handler de la tarea que actualiza la r
 float thermocouple_temp=0;		//Temperatura de la termocupla
 bool trigger_state=false;		//Estado del trigger
 
+/* Prioridades de las distintas tareas */
+#define START_PRIORITY					4UL
+#define STOP_PRIORITY					3UL
+#define GET_TEMPERATURE_PRIORITY		1UL
+#define CONTROLLER_PRIORITY				1UL
+#define ZERO_CROSSING_PRIORITY			2UL
+#define UPDATE_TEMPERATURE_PRIORITY		8UL
+
 int cycles_count=0;					//Cantodad de ciclos de la senoidal para el control por ciclos enteros
 
 #define TEMPERATURE_INERTIA 5		//Inercia de temperatura del horno

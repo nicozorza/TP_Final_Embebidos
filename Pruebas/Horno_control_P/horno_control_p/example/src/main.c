@@ -84,19 +84,19 @@ static void vHandlerStart(void *pvParameters){
 
 		/* Se crea la tarea de encendido */
 		xTaskCreate(vHandlerStop, (char *) "Stop", configMINIMAL_STACK_SIZE,
-							(void *) 0, (tskIDLE_PRIORITY + 3UL), &StopTaskHandle );
+							(void *) 0, (tskIDLE_PRIORITY + STOP_PRIORITY), &StopTaskHandle );
 		/* Se crea la tarea que mide la temperatura */
 		xTaskCreate(vHandlerGetTemperature, (char *) "GetTemperature", configMINIMAL_STACK_SIZE,
-							(void *) 0, (tskIDLE_PRIORITY + 1UL), &ADCTaskHandle );
+							(void *) 0, (tskIDLE_PRIORITY + GET_TEMPERATURE_PRIORITY), &ADCTaskHandle );
 		/* Se crea la tarea que controla la resistencia */
 		xTaskCreate(vHandlerController, (char *) "Controller", configMINIMAL_STACK_SIZE,
-							(void *) 0, (tskIDLE_PRIORITY + 1UL), &ControllerTaskHandle );
+							(void *) 0, (tskIDLE_PRIORITY + CONTROLLER_PRIORITY), &ControllerTaskHandle );
 		/* Se crea la tarea que detecta los cruces por cero */
 		xTaskCreate(vHandlerZeroCrossing, (char *) "ZeroCrossing", configMINIMAL_STACK_SIZE,
-							(void *) 0, (tskIDLE_PRIORITY + 2UL), &PhaseTaskHandle );
+							(void *) 0, (tskIDLE_PRIORITY + ZERO_CROSSING_PRIORITY), &PhaseTaskHandle );
 		/* Se crea la tarea que actualiza la temperatura de referencia */
 		xTaskCreate(vHandlerUpdateTemperatureReference, (char *) "UpdateReference", configMINIMAL_STACK_SIZE,
-							(void *) 0, (tskIDLE_PRIORITY + 8UL), &UpdateReferenceTaskHandle );
+							(void *) 0, (tskIDLE_PRIORITY + UPDATE_TEMPERATURE_PRIORITY), &UpdateReferenceTaskHandle );
 	}
 
 	vTaskSuspend( StartTaskHandle );	//Se suspende la tarea de encendido
@@ -106,6 +106,8 @@ static void vHandlerStart(void *pvParameters){
 			xSemaphoreTake(xStartSemaphore, portMAX_DELAY);
 
 			/* Cuando se presiona el boton de encendido, se le da el semaforo a la tarea. */
+
+			taskENTER_CRITICAL();
 
 			Board_LED_Set(4, true);			//Se enciende un led para indicar que esta encendido
 			Board_LED_Set(5, false);		//Se apaga el led de apagado
@@ -123,6 +125,8 @@ static void vHandlerStart(void *pvParameters){
 			vTaskResume(UpdateReferenceTaskHandle);
 
 			vTaskSuspend( StartTaskHandle );	//Se suspende la tarea de encendido
+
+			taskEXIT_CRITICAL();
 	}
 
 }
@@ -139,6 +143,8 @@ static void vHandlerStop(void *pvParameters){
         xSemaphoreTake(xStopSemaphore, portMAX_DELAY);
 
         /* Cuando se presiona el boton de encendido, se le da el semaforo a la tarea. */
+
+        taskENTER_CRITICAL();
 
         Board_LED_Set(4, false);	//Se apaga el led de encendido
         Board_LED_Set(5, true);		//Se enciende el led de apagado
@@ -159,6 +165,9 @@ static void vHandlerStop(void *pvParameters){
         Chip_GPIO_SetPinState(LPC_GPIO_PORT, TRIGGER_GPIO_INT_PORT, TRIGGER_GPIO_INT_PIN, false);
 
         vTaskResume( StartTaskHandle );	//Se vuelve a iniciar la tarea de encendido. Se espera que se presione el boton
+
+        taskEXIT_CRITICAL();
+
         vTaskSuspend( StopTaskHandle );	//Se suspende la tarea de encendido
     }
 }
@@ -265,7 +274,7 @@ int main(void){
 
 		/* Se crea la tarea de encendido */
 		xTaskCreate(vHandlerStart, (char *) "Start", configMINIMAL_STACK_SIZE,
-							(void *) 0, (tskIDLE_PRIORITY + 4UL), &StartTaskHandle );
+							(void *) 0, (tskIDLE_PRIORITY + START_PRIORITY), &StartTaskHandle );
 
 		vTaskStartScheduler(); /* Se comienzan a ejecutar las tareas. */
 	}
