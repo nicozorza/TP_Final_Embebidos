@@ -255,8 +255,8 @@ static void vHandlerUpdateTemperatureReference(void *pvParameters){
 			index++;
 		}
 		else{
-			index=0;
-			NVIC_SetPendingIRQ(STOP_IRQN);	//Se llama a la tarea que apaga el horno
+			index=0;	//Si se recorrio toda la curva, se apaga el horno
+			xSemaphoreGive(xStopSemaphore);
 		}
 		vTaskDelay(REFERENCE_INTERVAL);
     }

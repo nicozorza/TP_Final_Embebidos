@@ -34,8 +34,8 @@ float thermocouple_temp=0;		//Temperatura de la termocupla
 bool trigger_state=false;		//Estado del trigger
 
 /* Prioridades de las distintas tareas */
-#define START_PRIORITY					4UL
-#define STOP_PRIORITY					4UL
+#define START_PRIORITY					10UL
+#define STOP_PRIORITY					9UL
 #define GET_TEMPERATURE_PRIORITY		1UL
 #define CONTROLLER_PRIORITY				1UL
 #define ZERO_CROSSING_PRIORITY			2UL
