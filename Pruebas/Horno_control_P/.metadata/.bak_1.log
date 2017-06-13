@@ -1,4 +1,4 @@
-!SESSION 2017-06-13 11:02:37.510 -----------------------------------------------
+!SESSION 2017-06-13 18:06:22.743 -----------------------------------------------
 eclipse.buildId=unknown
 java.version=1.8.0_65
 java.vendor=Oracle Corporation
@@ -6,9 +6,319 @@ BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=es_AR
 Command-line arguments:  -os linux -ws gtk -arch x86
 
 This is a continuation of log file /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/.metadata/.bak_0.log
-Created Time: 2017-06-13 13:24:05.209
+Created Time: 2017-06-13 18:24:51.585
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 13:24:05.209
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:24:51.586
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NullPointerException
+	at org.yakindu.sct.simulation.ui.model.presenter.SCTSourceDisplayDispatcher.displaySource(SCTSourceDisplayDispatcher.java:51)
+	at org.eclipse.debug.internal.ui.sourcelookup.SourceLookupService.displaySource(SourceLookupService.java:96)
+	at org.eclipse.debug.internal.ui.sourcelookup.SourceLookupService.displaySource(SourceLookupService.java:77)
+	at org.eclipse.debug.internal.ui.sourcelookup.SourceLookupService.debugContextChanged(SourceLookupService.java:52)
+	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService$1.run(DebugWindowContextService.java:223)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService.notify(DebugWindowContextService.java:220)
+	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService.notify(DebugWindowContextService.java:195)
+	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService.debugContextChanged(DebugWindowContextService.java:436)
+	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider$1.run(AbstractDebugContextProvider.java:83)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider.fire(AbstractDebugContextProvider.java:80)
+	at org.eclipse.debug.internal.ui.views.launch.LaunchView$ContextProviderProxy.debugContextChanged(LaunchView.java:519)
+	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider$1.run(AbstractDebugContextProvider.java:83)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider.fire(AbstractDebugContextProvider.java:80)
+	at org.eclipse.debug.internal.ui.views.launch.LaunchView$TreeViewerContextProvider.possibleChange(LaunchView.java:405)
+	at org.eclipse.debug.internal.ui.views.launch.LaunchView$TreeViewerContextProvider$Visitor.visit(LaunchView.java:327)
+	at org.eclipse.cdt.dsf.ui.viewmodel.VMDelta.doAccept(VMDelta.java:359)
+	at org.eclipse.cdt.dsf.ui.viewmodel.VMDelta.doAccept(VMDelta.java:362)
+	at org.eclipse.cdt.dsf.ui.viewmodel.VMDelta.accept(VMDelta.java:354)
+	at org.eclipse.debug.internal.ui.views.launch.LaunchView$TreeViewerContextProvider.modelChanged(LaunchView.java:435)
+	at org.eclipse.debug.internal.ui.viewers.model.TreeModelContentProvider.doModelChanged(TreeModelContentProvider.java:432)
+	at org.eclipse.debug.internal.ui.viewers.model.TreeModelContentProvider.modelChanged(TreeModelContentProvider.java:400)
+	at org.eclipse.cdt.dsf.ui.viewmodel.DefaultVMModelProxyStrategy$1.run(DefaultVMModelProxyStrategy.java:154)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.cdt.dsf.ui.viewmodel.DefaultVMModelProxyStrategy.fireModelChanged(DefaultVMModelProxyStrategy.java:158)
+	at org.eclipse.cdt.dsf.ui.viewmodel.update.AbstractCachingVMProvider$6.handleSuccess(AbstractCachingVMProvider.java:900)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:385)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:312)
+	at org.eclipse.cdt.dsf.ui.concurrent.SimpleDisplayExecutor.runInSwtThread(SimpleDisplayExecutor.java:117)
+	at org.eclipse.cdt.dsf.ui.concurrent.SimpleDisplayExecutor$1.run(SimpleDisplayExecutor.java:80)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3794)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3433)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:694)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:606)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:24:51.590
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
+!STACK 0
+java.lang.NullPointerException
+	at org.yakindu.sct.simulation.ui.model.presenter.SCTSourceDisplayDispatcher.displaySource(SCTSourceDisplayDispatcher.java:51)
+	at org.eclipse.debug.internal.ui.sourcelookup.SourceLookupService.displaySource(SourceLookupService.java:96)
+	at org.eclipse.debug.internal.ui.sourcelookup.SourceLookupService.displaySource(SourceLookupService.java:77)
+	at org.eclipse.debug.internal.ui.sourcelookup.SourceLookupService.debugContextChanged(SourceLookupService.java:52)
+	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService$1.run(DebugWindowContextService.java:223)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService.notify(DebugWindowContextService.java:220)
+	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService.notify(DebugWindowContextService.java:195)
+	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService.debugContextChanged(DebugWindowContextService.java:436)
+	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider$1.run(AbstractDebugContextProvider.java:83)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider.fire(AbstractDebugContextProvider.java:80)
+	at org.eclipse.debug.internal.ui.views.launch.LaunchView$ContextProviderProxy.debugContextChanged(LaunchView.java:519)
+	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider$1.run(AbstractDebugContextProvider.java:83)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider.fire(AbstractDebugContextProvider.java:80)
+	at org.eclipse.debug.internal.ui.views.launch.LaunchView$TreeViewerContextProvider.possibleChange(LaunchView.java:405)
+	at org.eclipse.debug.internal.ui.views.launch.LaunchView$TreeViewerContextProvider$Visitor.visit(LaunchView.java:327)
+	at org.eclipse.cdt.dsf.ui.viewmodel.VMDelta.doAccept(VMDelta.java:359)
+	at org.eclipse.cdt.dsf.ui.viewmodel.VMDelta.doAccept(VMDelta.java:362)
+	at org.eclipse.cdt.dsf.ui.viewmodel.VMDelta.accept(VMDelta.java:354)
+	at org.eclipse.debug.internal.ui.views.launch.LaunchView$TreeViewerContextProvider.modelChanged(LaunchView.java:435)
+	at org.eclipse.debug.internal.ui.viewers.model.TreeModelContentProvider.doModelChanged(TreeModelContentProvider.java:432)
+	at org.eclipse.debug.internal.ui.viewers.model.TreeModelContentProvider.modelChanged(TreeModelContentProvider.java:400)
+	at org.eclipse.cdt.dsf.ui.viewmodel.DefaultVMModelProxyStrategy$1.run(DefaultVMModelProxyStrategy.java:154)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.cdt.dsf.ui.viewmodel.DefaultVMModelProxyStrategy.fireModelChanged(DefaultVMModelProxyStrategy.java:158)
+	at org.eclipse.cdt.dsf.ui.viewmodel.update.AbstractCachingVMProvider$6.handleSuccess(AbstractCachingVMProvider.java:900)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:385)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:312)
+	at org.eclipse.cdt.dsf.ui.concurrent.SimpleDisplayExecutor.runInSwtThread(SimpleDisplayExecutor.java:117)
+	at org.eclipse.cdt.dsf.ui.concurrent.SimpleDisplayExecutor$1.run(SimpleDisplayExecutor.java:80)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3794)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3433)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:694)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:606)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:24:51.591
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NullPointerException
+	at org.yakindu.sct.simulation.ui.model.presenter.SCTSourceDisplayDispatcher.displaySource(SCTSourceDisplayDispatcher.java:51)
+	at org.eclipse.debug.internal.ui.sourcelookup.SourceLookupService.displaySource(SourceLookupService.java:96)
+	at org.eclipse.debug.internal.ui.sourcelookup.SourceLookupService.displaySource(SourceLookupService.java:77)
+	at org.eclipse.debug.internal.ui.sourcelookup.SourceLookupService.debugContextChanged(SourceLookupService.java:52)
+	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService$1.run(DebugWindowContextService.java:223)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService.notify(DebugWindowContextService.java:220)
+	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService.notify(DebugWindowContextService.java:195)
+	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService.debugContextChanged(DebugWindowContextService.java:436)
+	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider$1.run(AbstractDebugContextProvider.java:83)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider.fire(AbstractDebugContextProvider.java:80)
+	at org.eclipse.debug.internal.ui.views.launch.LaunchView$ContextProviderProxy.debugContextChanged(LaunchView.java:519)
+	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider$1.run(AbstractDebugContextProvider.java:83)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider.fire(AbstractDebugContextProvider.java:80)
+	at org.eclipse.debug.internal.ui.views.launch.LaunchView$TreeViewerContextProvider.possibleChange(LaunchView.java:405)
+	at org.eclipse.debug.internal.ui.views.launch.LaunchView$TreeViewerContextProvider$Visitor.visit(LaunchView.java:327)
+	at org.eclipse.cdt.dsf.ui.viewmodel.VMDelta.doAccept(VMDelta.java:359)
+	at org.eclipse.cdt.dsf.ui.viewmodel.VMDelta.doAccept(VMDelta.java:362)
+	at org.eclipse.cdt.dsf.ui.viewmodel.VMDelta.accept(VMDelta.java:354)
+	at org.eclipse.debug.internal.ui.views.launch.LaunchView$TreeViewerContextProvider.modelChanged(LaunchView.java:435)
+	at org.eclipse.debug.internal.ui.viewers.model.TreeModelContentProvider.doModelChanged(TreeModelContentProvider.java:432)
+	at org.eclipse.debug.internal.ui.viewers.model.TreeModelContentProvider.modelChanged(TreeModelContentProvider.java:400)
+	at org.eclipse.cdt.dsf.ui.viewmodel.DefaultVMModelProxyStrategy$1.run(DefaultVMModelProxyStrategy.java:154)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.cdt.dsf.ui.viewmodel.DefaultVMModelProxyStrategy.fireModelChanged(DefaultVMModelProxyStrategy.java:158)
+	at org.eclipse.cdt.dsf.ui.viewmodel.update.AbstractCachingVMProvider$6.handleSuccess(AbstractCachingVMProvider.java:900)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:385)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:312)
+	at org.eclipse.cdt.dsf.ui.concurrent.SimpleDisplayExecutor.runInSwtThread(SimpleDisplayExecutor.java:117)
+	at org.eclipse.cdt.dsf.ui.concurrent.SimpleDisplayExecutor$1.run(SimpleDisplayExecutor.java:80)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3794)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3433)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:694)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:606)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:24:51.595
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
+!STACK 0
+java.lang.NullPointerException
+	at org.yakindu.sct.simulation.ui.model.presenter.SCTSourceDisplayDispatcher.displaySource(SCTSourceDisplayDispatcher.java:51)
+	at org.eclipse.debug.internal.ui.sourcelookup.SourceLookupService.displaySource(SourceLookupService.java:96)
+	at org.eclipse.debug.internal.ui.sourcelookup.SourceLookupService.displaySource(SourceLookupService.java:77)
+	at org.eclipse.debug.internal.ui.sourcelookup.SourceLookupService.debugContextChanged(SourceLookupService.java:52)
+	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService$1.run(DebugWindowContextService.java:223)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService.notify(DebugWindowContextService.java:220)
+	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService.notify(DebugWindowContextService.java:195)
+	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService.debugContextChanged(DebugWindowContextService.java:436)
+	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider$1.run(AbstractDebugContextProvider.java:83)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider.fire(AbstractDebugContextProvider.java:80)
+	at org.eclipse.debug.internal.ui.views.launch.LaunchView$ContextProviderProxy.debugContextChanged(LaunchView.java:519)
+	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider$1.run(AbstractDebugContextProvider.java:83)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider.fire(AbstractDebugContextProvider.java:80)
+	at org.eclipse.debug.internal.ui.views.launch.LaunchView$TreeViewerContextProvider.possibleChange(LaunchView.java:405)
+	at org.eclipse.debug.internal.ui.views.launch.LaunchView$TreeViewerContextProvider$Visitor.visit(LaunchView.java:327)
+	at org.eclipse.cdt.dsf.ui.viewmodel.VMDelta.doAccept(VMDelta.java:359)
+	at org.eclipse.cdt.dsf.ui.viewmodel.VMDelta.doAccept(VMDelta.java:362)
+	at org.eclipse.cdt.dsf.ui.viewmodel.VMDelta.accept(VMDelta.java:354)
+	at org.eclipse.debug.internal.ui.views.launch.LaunchView$TreeViewerContextProvider.modelChanged(LaunchView.java:435)
+	at org.eclipse.debug.internal.ui.viewers.model.TreeModelContentProvider.doModelChanged(TreeModelContentProvider.java:432)
+	at org.eclipse.debug.internal.ui.viewers.model.TreeModelContentProvider.modelChanged(TreeModelContentProvider.java:400)
+	at org.eclipse.cdt.dsf.ui.viewmodel.DefaultVMModelProxyStrategy$1.run(DefaultVMModelProxyStrategy.java:154)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.cdt.dsf.ui.viewmodel.DefaultVMModelProxyStrategy.fireModelChanged(DefaultVMModelProxyStrategy.java:158)
+	at org.eclipse.cdt.dsf.ui.viewmodel.update.AbstractCachingVMProvider$6.handleSuccess(AbstractCachingVMProvider.java:900)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:385)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:312)
+	at org.eclipse.cdt.dsf.ui.concurrent.SimpleDisplayExecutor.runInSwtThread(SimpleDisplayExecutor.java:117)
+	at org.eclipse.cdt.dsf.ui.concurrent.SimpleDisplayExecutor$1.run(SimpleDisplayExecutor.java:80)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3794)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3433)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:694)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:606)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:24:51.596
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NullPointerException
+	at org.yakindu.sct.simulation.ui.model.presenter.SCTSourceDisplayDispatcher.displaySource(SCTSourceDisplayDispatcher.java:51)
+	at org.eclipse.debug.internal.ui.sourcelookup.SourceLookupService.displaySource(SourceLookupService.java:96)
+	at org.eclipse.debug.internal.ui.sourcelookup.SourceLookupService.displaySource(SourceLookupService.java:77)
+	at org.eclipse.debug.internal.ui.sourcelookup.SourceLookupService.debugContextChanged(SourceLookupService.java:52)
+	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService$1.run(DebugWindowContextService.java:223)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService.notify(DebugWindowContextService.java:220)
+	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService.notify(DebugWindowContextService.java:195)
+	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService.debugContextChanged(DebugWindowContextService.java:436)
+	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider$1.run(AbstractDebugContextProvider.java:83)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider.fire(AbstractDebugContextProvider.java:80)
+	at org.eclipse.debug.internal.ui.views.launch.LaunchView$ContextProviderProxy.debugContextChanged(LaunchView.java:519)
+	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider$1.run(AbstractDebugContextProvider.java:83)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider.fire(AbstractDebugContextProvider.java:80)
+	at org.eclipse.debug.internal.ui.views.launch.LaunchView$TreeViewerContextProvider.possibleChange(LaunchView.java:405)
+	at org.eclipse.debug.internal.ui.views.launch.LaunchView$TreeViewerContextProvider$Visitor.visit(LaunchView.java:327)
+	at org.eclipse.cdt.dsf.ui.viewmodel.VMDelta.doAccept(VMDelta.java:359)
+	at org.eclipse.cdt.dsf.ui.viewmodel.VMDelta.doAccept(VMDelta.java:362)
+	at org.eclipse.cdt.dsf.ui.viewmodel.VMDelta.accept(VMDelta.java:354)
+	at org.eclipse.debug.internal.ui.views.launch.LaunchView$TreeViewerContextProvider.modelChanged(LaunchView.java:435)
+	at org.eclipse.debug.internal.ui.viewers.model.TreeModelContentProvider.doModelChanged(TreeModelContentProvider.java:432)
+	at org.eclipse.debug.internal.ui.viewers.model.TreeModelContentProvider.modelChanged(TreeModelContentProvider.java:400)
+	at org.eclipse.cdt.dsf.ui.viewmodel.DefaultVMModelProxyStrategy$1.run(DefaultVMModelProxyStrategy.java:154)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.cdt.dsf.ui.viewmodel.DefaultVMModelProxyStrategy.fireModelChanged(DefaultVMModelProxyStrategy.java:158)
+	at org.eclipse.cdt.dsf.ui.viewmodel.update.AbstractCachingVMProvider$6.handleSuccess(AbstractCachingVMProvider.java:900)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:385)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:312)
+	at org.eclipse.cdt.dsf.ui.concurrent.SimpleDisplayExecutor.runInSwtThread(SimpleDisplayExecutor.java:117)
+	at org.eclipse.cdt.dsf.ui.concurrent.SimpleDisplayExecutor$1.run(SimpleDisplayExecutor.java:80)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3794)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3433)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:694)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:606)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:24:57.310
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -79,7 +389,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 13:24:05.211
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:24:57.311
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -150,7 +460,283 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 13:24:05.746
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:25:02.274
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
+!STACK 0
+java.lang.NullPointerException
+	at org.yakindu.sct.simulation.ui.model.presenter.SCTSourceDisplayDispatcher.displaySource(SCTSourceDisplayDispatcher.java:51)
+	at org.eclipse.debug.internal.ui.sourcelookup.SourceLookupService.displaySource(SourceLookupService.java:96)
+	at org.eclipse.debug.internal.ui.sourcelookup.SourceLookupService.displaySource(SourceLookupService.java:77)
+	at org.eclipse.debug.internal.ui.sourcelookup.SourceLookupService.debugContextChanged(SourceLookupService.java:52)
+	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService$1.run(DebugWindowContextService.java:223)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService.notify(DebugWindowContextService.java:220)
+	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService.notify(DebugWindowContextService.java:195)
+	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService.debugContextChanged(DebugWindowContextService.java:436)
+	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider$1.run(AbstractDebugContextProvider.java:83)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider.fire(AbstractDebugContextProvider.java:80)
+	at org.eclipse.debug.internal.ui.views.launch.LaunchView$ContextProviderProxy.debugContextChanged(LaunchView.java:519)
+	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider$1.run(AbstractDebugContextProvider.java:83)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider.fire(AbstractDebugContextProvider.java:80)
+	at org.eclipse.debug.internal.ui.views.launch.LaunchView$TreeViewerContextProvider.activate(LaunchView.java:379)
+	at org.eclipse.debug.internal.ui.views.launch.LaunchView$1.selectionChanged(LaunchView.java:479)
+	at org.eclipse.jface.viewers.Viewer$2.run(Viewer.java:163)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.JFaceUtil$1.run(JFaceUtil.java:50)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:173)
+	at org.eclipse.jface.viewers.Viewer.fireSelectionChanged(Viewer.java:160)
+	at org.eclipse.jface.viewers.StructuredViewer.updateSelection(StructuredViewer.java:2197)
+	at org.eclipse.jface.viewers.StructuredViewer.handleInvalidSelection(StructuredViewer.java:1191)
+	at org.eclipse.debug.internal.ui.viewers.model.InternalTreeModelViewer.handleInvalidSelection(InternalTreeModelViewer.java:403)
+	at org.eclipse.jface.viewers.TreeViewer.replace(TreeViewer.java:500)
+	at org.eclipse.debug.internal.ui.viewers.model.ChildrenUpdate.performUpdate(ChildrenUpdate.java:87)
+	at org.eclipse.debug.internal.ui.viewers.model.ChildrenUpdate.performUpdate(ChildrenUpdate.java:114)
+	at org.eclipse.debug.internal.ui.viewers.model.TreeModelContentProvider.performUpdates(TreeModelContentProvider.java:1742)
+	at org.eclipse.debug.internal.ui.viewers.model.TreeModelContentProvider.scheduleViewerUpdate(TreeModelContentProvider.java:1713)
+	at org.eclipse.debug.internal.ui.viewers.model.ViewerUpdateMonitor.scheduleViewerUpdate(ViewerUpdateMonitor.java:147)
+	at org.eclipse.debug.internal.ui.viewers.model.ViewerUpdateMonitor.done(ViewerUpdateMonitor.java:134)
+	at org.eclipse.cdt.dsf.ui.viewmodel.DefaultVMContentProviderStrategy$7.handleCompleted(DefaultVMContentProviderStrategy.java:305)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:312)
+	at org.eclipse.cdt.dsf.ui.concurrent.SimpleDisplayExecutor.runInSwtThread(SimpleDisplayExecutor.java:117)
+	at org.eclipse.cdt.dsf.ui.concurrent.SimpleDisplayExecutor$1.run(SimpleDisplayExecutor.java:80)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3794)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3433)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:694)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:606)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:25:02.275
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NullPointerException
+	at org.yakindu.sct.simulation.ui.model.presenter.SCTSourceDisplayDispatcher.displaySource(SCTSourceDisplayDispatcher.java:51)
+	at org.eclipse.debug.internal.ui.sourcelookup.SourceLookupService.displaySource(SourceLookupService.java:96)
+	at org.eclipse.debug.internal.ui.sourcelookup.SourceLookupService.displaySource(SourceLookupService.java:77)
+	at org.eclipse.debug.internal.ui.sourcelookup.SourceLookupService.debugContextChanged(SourceLookupService.java:52)
+	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService$1.run(DebugWindowContextService.java:223)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService.notify(DebugWindowContextService.java:220)
+	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService.notify(DebugWindowContextService.java:195)
+	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService.debugContextChanged(DebugWindowContextService.java:436)
+	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider$1.run(AbstractDebugContextProvider.java:83)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider.fire(AbstractDebugContextProvider.java:80)
+	at org.eclipse.debug.internal.ui.views.launch.LaunchView$ContextProviderProxy.debugContextChanged(LaunchView.java:519)
+	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider$1.run(AbstractDebugContextProvider.java:83)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider.fire(AbstractDebugContextProvider.java:80)
+	at org.eclipse.debug.internal.ui.views.launch.LaunchView$TreeViewerContextProvider.activate(LaunchView.java:379)
+	at org.eclipse.debug.internal.ui.views.launch.LaunchView$1.selectionChanged(LaunchView.java:479)
+	at org.eclipse.jface.viewers.Viewer$2.run(Viewer.java:163)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.JFaceUtil$1.run(JFaceUtil.java:50)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:173)
+	at org.eclipse.jface.viewers.Viewer.fireSelectionChanged(Viewer.java:160)
+	at org.eclipse.jface.viewers.StructuredViewer.updateSelection(StructuredViewer.java:2197)
+	at org.eclipse.jface.viewers.StructuredViewer.handleInvalidSelection(StructuredViewer.java:1191)
+	at org.eclipse.debug.internal.ui.viewers.model.InternalTreeModelViewer.handleInvalidSelection(InternalTreeModelViewer.java:403)
+	at org.eclipse.jface.viewers.TreeViewer.replace(TreeViewer.java:500)
+	at org.eclipse.debug.internal.ui.viewers.model.ChildrenUpdate.performUpdate(ChildrenUpdate.java:87)
+	at org.eclipse.debug.internal.ui.viewers.model.ChildrenUpdate.performUpdate(ChildrenUpdate.java:114)
+	at org.eclipse.debug.internal.ui.viewers.model.TreeModelContentProvider.performUpdates(TreeModelContentProvider.java:1742)
+	at org.eclipse.debug.internal.ui.viewers.model.TreeModelContentProvider.scheduleViewerUpdate(TreeModelContentProvider.java:1713)
+	at org.eclipse.debug.internal.ui.viewers.model.ViewerUpdateMonitor.scheduleViewerUpdate(ViewerUpdateMonitor.java:147)
+	at org.eclipse.debug.internal.ui.viewers.model.ViewerUpdateMonitor.done(ViewerUpdateMonitor.java:134)
+	at org.eclipse.cdt.dsf.ui.viewmodel.DefaultVMContentProviderStrategy$7.handleCompleted(DefaultVMContentProviderStrategy.java:305)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:312)
+	at org.eclipse.cdt.dsf.ui.concurrent.SimpleDisplayExecutor.runInSwtThread(SimpleDisplayExecutor.java:117)
+	at org.eclipse.cdt.dsf.ui.concurrent.SimpleDisplayExecutor$1.run(SimpleDisplayExecutor.java:80)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3794)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3433)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:694)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:606)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:25:09.566
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
+!STACK 0
+java.lang.NullPointerException
+	at org.yakindu.sct.simulation.ui.model.presenter.SCTSourceDisplayDispatcher.displaySource(SCTSourceDisplayDispatcher.java:51)
+	at org.eclipse.debug.internal.ui.sourcelookup.SourceLookupService.displaySource(SourceLookupService.java:96)
+	at org.eclipse.debug.internal.ui.sourcelookup.SourceLookupService.displaySource(SourceLookupService.java:77)
+	at org.eclipse.debug.internal.ui.sourcelookup.SourceLookupService.debugContextChanged(SourceLookupService.java:52)
+	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService$1.run(DebugWindowContextService.java:223)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService.notify(DebugWindowContextService.java:220)
+	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService.notify(DebugWindowContextService.java:195)
+	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService.debugContextChanged(DebugWindowContextService.java:436)
+	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider$1.run(AbstractDebugContextProvider.java:83)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider.fire(AbstractDebugContextProvider.java:80)
+	at org.eclipse.debug.internal.ui.views.launch.LaunchView$ContextProviderProxy.debugContextChanged(LaunchView.java:519)
+	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider$1.run(AbstractDebugContextProvider.java:83)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider.fire(AbstractDebugContextProvider.java:80)
+	at org.eclipse.debug.internal.ui.views.launch.LaunchView$TreeViewerContextProvider.activate(LaunchView.java:379)
+	at org.eclipse.debug.internal.ui.views.launch.LaunchView$1.selectionChanged(LaunchView.java:479)
+	at org.eclipse.jface.viewers.Viewer$2.run(Viewer.java:163)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.JFaceUtil$1.run(JFaceUtil.java:50)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:173)
+	at org.eclipse.jface.viewers.Viewer.fireSelectionChanged(Viewer.java:160)
+	at org.eclipse.jface.viewers.StructuredViewer.updateSelection(StructuredViewer.java:2197)
+	at org.eclipse.jface.viewers.StructuredViewer.setSelection(StructuredViewer.java:1733)
+	at org.eclipse.jface.viewers.TreeViewer.setSelection(TreeViewer.java:1093)
+	at org.eclipse.debug.internal.ui.viewers.model.InternalTreeModelViewer.trySelection(InternalTreeModelViewer.java:1066)
+	at org.eclipse.debug.internal.ui.viewers.model.TreeModelContentProvider.handleSelect(TreeModelContentProvider.java:1570)
+	at org.eclipse.debug.internal.ui.viewers.model.TreeModelContentProvider.updateNodes(TreeModelContentProvider.java:1200)
+	at org.eclipse.debug.internal.ui.viewers.model.TreeModelContentProvider.updateNodes(TreeModelContentProvider.java:1205)
+	at org.eclipse.debug.internal.ui.viewers.model.TreeModelContentProvider.updateModel(TreeModelContentProvider.java:460)
+	at org.eclipse.debug.internal.ui.viewers.model.TreeModelContentProvider.doModelChanged(TreeModelContentProvider.java:424)
+	at org.eclipse.debug.internal.ui.viewers.model.TreeModelContentProvider.modelChanged(TreeModelContentProvider.java:400)
+	at org.eclipse.cdt.dsf.ui.viewmodel.DefaultVMModelProxyStrategy$1.run(DefaultVMModelProxyStrategy.java:154)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.cdt.dsf.ui.viewmodel.DefaultVMModelProxyStrategy.fireModelChanged(DefaultVMModelProxyStrategy.java:158)
+	at org.eclipse.cdt.dsf.ui.viewmodel.update.AbstractCachingVMProvider$6.handleSuccess(AbstractCachingVMProvider.java:900)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:385)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:312)
+	at org.eclipse.cdt.dsf.ui.concurrent.SimpleDisplayExecutor.runInSwtThread(SimpleDisplayExecutor.java:117)
+	at org.eclipse.cdt.dsf.ui.concurrent.SimpleDisplayExecutor$1.run(SimpleDisplayExecutor.java:80)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3794)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3433)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:694)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:606)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:25:09.567
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NullPointerException
+	at org.yakindu.sct.simulation.ui.model.presenter.SCTSourceDisplayDispatcher.displaySource(SCTSourceDisplayDispatcher.java:51)
+	at org.eclipse.debug.internal.ui.sourcelookup.SourceLookupService.displaySource(SourceLookupService.java:96)
+	at org.eclipse.debug.internal.ui.sourcelookup.SourceLookupService.displaySource(SourceLookupService.java:77)
+	at org.eclipse.debug.internal.ui.sourcelookup.SourceLookupService.debugContextChanged(SourceLookupService.java:52)
+	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService$1.run(DebugWindowContextService.java:223)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService.notify(DebugWindowContextService.java:220)
+	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService.notify(DebugWindowContextService.java:195)
+	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService.debugContextChanged(DebugWindowContextService.java:436)
+	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider$1.run(AbstractDebugContextProvider.java:83)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider.fire(AbstractDebugContextProvider.java:80)
+	at org.eclipse.debug.internal.ui.views.launch.LaunchView$ContextProviderProxy.debugContextChanged(LaunchView.java:519)
+	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider$1.run(AbstractDebugContextProvider.java:83)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider.fire(AbstractDebugContextProvider.java:80)
+	at org.eclipse.debug.internal.ui.views.launch.LaunchView$TreeViewerContextProvider.activate(LaunchView.java:379)
+	at org.eclipse.debug.internal.ui.views.launch.LaunchView$1.selectionChanged(LaunchView.java:479)
+	at org.eclipse.jface.viewers.Viewer$2.run(Viewer.java:163)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.JFaceUtil$1.run(JFaceUtil.java:50)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:173)
+	at org.eclipse.jface.viewers.Viewer.fireSelectionChanged(Viewer.java:160)
+	at org.eclipse.jface.viewers.StructuredViewer.updateSelection(StructuredViewer.java:2197)
+	at org.eclipse.jface.viewers.StructuredViewer.setSelection(StructuredViewer.java:1733)
+	at org.eclipse.jface.viewers.TreeViewer.setSelection(TreeViewer.java:1093)
+	at org.eclipse.debug.internal.ui.viewers.model.InternalTreeModelViewer.trySelection(InternalTreeModelViewer.java:1066)
+	at org.eclipse.debug.internal.ui.viewers.model.TreeModelContentProvider.handleSelect(TreeModelContentProvider.java:1570)
+	at org.eclipse.debug.internal.ui.viewers.model.TreeModelContentProvider.updateNodes(TreeModelContentProvider.java:1200)
+	at org.eclipse.debug.internal.ui.viewers.model.TreeModelContentProvider.updateNodes(TreeModelContentProvider.java:1205)
+	at org.eclipse.debug.internal.ui.viewers.model.TreeModelContentProvider.updateModel(TreeModelContentProvider.java:460)
+	at org.eclipse.debug.internal.ui.viewers.model.TreeModelContentProvider.doModelChanged(TreeModelContentProvider.java:424)
+	at org.eclipse.debug.internal.ui.viewers.model.TreeModelContentProvider.modelChanged(TreeModelContentProvider.java:400)
+	at org.eclipse.cdt.dsf.ui.viewmodel.DefaultVMModelProxyStrategy$1.run(DefaultVMModelProxyStrategy.java:154)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.cdt.dsf.ui.viewmodel.DefaultVMModelProxyStrategy.fireModelChanged(DefaultVMModelProxyStrategy.java:158)
+	at org.eclipse.cdt.dsf.ui.viewmodel.update.AbstractCachingVMProvider$6.handleSuccess(AbstractCachingVMProvider.java:900)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:385)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:312)
+	at org.eclipse.cdt.dsf.ui.concurrent.SimpleDisplayExecutor.runInSwtThread(SimpleDisplayExecutor.java:117)
+	at org.eclipse.cdt.dsf.ui.concurrent.SimpleDisplayExecutor$1.run(SimpleDisplayExecutor.java:80)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3794)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3433)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:694)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:606)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:25:10.027
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -212,7 +798,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 13:24:05.747
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:25:10.028
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -274,13 +860,13 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.qemu 4 1 2017-06-13 13:24:05.792
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.openocd 4 1 2017-06-13 18:25:10.033
 !MESSAGE /usr/bin/openocd -c gdb_port 3333 -c telnet_port 4444 -f example/lpc4337.cfg -c echo "Started by GNU ARM Eclipse"
 
-!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.qemu 4 1 2017-06-13 13:24:05.856
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.openocd 4 1 2017-06-13 18:25:10.076
 !MESSAGE arm-none-eabi-gdb --interpreter=mi2 --nx
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 13:24:06.141
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:25:10.156
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -342,7 +928,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 13:24:06.144
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:25:10.157
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -404,7 +990,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 13:24:06.147
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:25:10.160
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -466,7 +1052,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 13:24:06.148
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:25:10.160
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -528,7 +1114,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 13:24:06.151
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:25:10.163
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -590,7 +1176,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 13:24:06.153
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:25:10.164
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -652,7 +1238,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 13:24:06.158
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:25:10.166
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -714,7 +1300,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 13:24:06.159
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:25:10.167
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -776,7 +1362,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 13:24:12.052
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:25:15.915
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -847,7 +1433,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 13:24:12.052
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:25:15.916
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -918,7 +1504,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 13:29:03.420
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:25:22.178
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -985,7 +1571,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 13:29:03.421
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:25:22.179
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -1052,7 +1638,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 13:29:29.763
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:25:43.623
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -1123,7 +1709,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 13:29:29.764
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:25:43.624
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -1194,7 +1780,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 13:29:30.304
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:25:44.095
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -1256,7 +1842,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 13:29:30.305
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:25:44.096
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -1318,13 +1904,13 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.qemu 4 1 2017-06-13 13:29:30.336
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.openocd 4 1 2017-06-13 18:25:44.104
 !MESSAGE /usr/bin/openocd -c gdb_port 3333 -c telnet_port 4444 -f example/lpc4337.cfg -c echo "Started by GNU ARM Eclipse"
 
-!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.qemu 4 1 2017-06-13 13:29:30.396
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.openocd 4 1 2017-06-13 18:25:44.157
 !MESSAGE arm-none-eabi-gdb --interpreter=mi2 --nx
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 13:29:30.600
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:25:44.223
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -1386,7 +1972,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 13:29:30.600
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:25:44.224
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -1448,7 +2034,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 13:29:30.607
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:25:44.227
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -1510,7 +2096,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 13:29:30.610
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:25:44.228
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -1572,7 +2158,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 13:29:30.615
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:25:44.331
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -1634,7 +2220,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 13:29:30.617
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:25:44.331
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -1696,7 +2282,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 13:29:30.621
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:25:44.334
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -1758,7 +2344,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 13:29:30.623
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:25:44.334
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -1820,7 +2406,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 13:29:36.617
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:25:50.007
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -1891,7 +2477,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 13:29:36.619
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:25:50.009
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -1962,10 +2548,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY ilg.gnuarmeclipse.debug.gdbjtag 4 0 2017-06-13 13:30:06.563
-!MESSAGE Debug session 'horno_control_p Debug' already started. Terminate the first one before restarting.
-
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 13:30:12.740
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:25:56.152
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -2032,7 +2615,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 13:30:12.741
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:25:56.153
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -2099,7 +2682,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 13:30:14.375
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:28:16.869
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -2170,7 +2753,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 13:30:14.376
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:28:16.870
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -2241,7 +2824,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 13:30:14.905
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:28:17.411
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -2303,7 +2886,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 13:30:14.906
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:28:17.411
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -2365,13 +2948,13 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.qemu 4 1 2017-06-13 13:30:14.943
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.openocd 4 1 2017-06-13 18:28:17.418
 !MESSAGE /usr/bin/openocd -c gdb_port 3333 -c telnet_port 4444 -f example/lpc4337.cfg -c echo "Started by GNU ARM Eclipse"
 
-!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.qemu 4 1 2017-06-13 13:30:14.998
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.openocd 4 1 2017-06-13 18:28:17.461
 !MESSAGE arm-none-eabi-gdb --interpreter=mi2 --nx
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 13:30:15.211
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:28:17.553
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -2433,7 +3016,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 13:30:15.212
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:28:17.554
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -2495,7 +3078,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 13:30:15.215
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:28:17.558
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -2557,7 +3140,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 13:30:15.216
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:28:17.561
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -2619,7 +3202,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 13:30:15.220
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:28:17.593
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -2681,7 +3264,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 13:30:15.221
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:28:17.595
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -2743,7 +3326,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 13:30:15.224
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:28:17.613
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -2805,7 +3388,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 13:30:15.225
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:28:17.614
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -2867,157 +3450,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 13:30:21.120
-!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
-!STACK 0
-java.lang.NullPointerException
-	at org.yakindu.sct.simulation.ui.model.presenter.SCTSourceDisplayDispatcher.displaySource(SCTSourceDisplayDispatcher.java:51)
-	at org.eclipse.debug.internal.ui.sourcelookup.SourceLookupService.displaySource(SourceLookupService.java:96)
-	at org.eclipse.debug.internal.ui.sourcelookup.SourceLookupService.displaySource(SourceLookupService.java:77)
-	at org.eclipse.debug.internal.ui.sourcelookup.SourceLookupService.debugContextChanged(SourceLookupService.java:52)
-	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService$1.run(DebugWindowContextService.java:223)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
-	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService.notify(DebugWindowContextService.java:220)
-	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService.notify(DebugWindowContextService.java:195)
-	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService.debugContextChanged(DebugWindowContextService.java:436)
-	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider$1.run(AbstractDebugContextProvider.java:83)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
-	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider.fire(AbstractDebugContextProvider.java:80)
-	at org.eclipse.debug.internal.ui.views.launch.LaunchView$ContextProviderProxy.debugContextChanged(LaunchView.java:519)
-	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider$1.run(AbstractDebugContextProvider.java:83)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
-	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider.fire(AbstractDebugContextProvider.java:80)
-	at org.eclipse.debug.internal.ui.views.launch.LaunchView$TreeViewerContextProvider.activate(LaunchView.java:379)
-	at org.eclipse.debug.internal.ui.views.launch.LaunchView$1.selectionChanged(LaunchView.java:479)
-	at org.eclipse.jface.viewers.Viewer$2.run(Viewer.java:163)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
-	at org.eclipse.ui.internal.JFaceUtil$1.run(JFaceUtil.java:50)
-	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:173)
-	at org.eclipse.jface.viewers.Viewer.fireSelectionChanged(Viewer.java:160)
-	at org.eclipse.jface.viewers.StructuredViewer.updateSelection(StructuredViewer.java:2197)
-	at org.eclipse.jface.viewers.StructuredViewer.setSelection(StructuredViewer.java:1733)
-	at org.eclipse.jface.viewers.TreeViewer.setSelection(TreeViewer.java:1093)
-	at org.eclipse.debug.internal.ui.viewers.model.InternalTreeModelViewer.trySelection(InternalTreeModelViewer.java:1066)
-	at org.eclipse.debug.internal.ui.viewers.model.TreeModelContentProvider.handleSelect(TreeModelContentProvider.java:1570)
-	at org.eclipse.debug.internal.ui.viewers.model.TreeModelContentProvider.updateNodes(TreeModelContentProvider.java:1200)
-	at org.eclipse.debug.internal.ui.viewers.model.TreeModelContentProvider.updateNodes(TreeModelContentProvider.java:1205)
-	at org.eclipse.debug.internal.ui.viewers.model.TreeModelContentProvider.updateModel(TreeModelContentProvider.java:460)
-	at org.eclipse.debug.internal.ui.viewers.model.TreeModelContentProvider.doModelChanged(TreeModelContentProvider.java:424)
-	at org.eclipse.debug.internal.ui.viewers.model.TreeModelContentProvider.modelChanged(TreeModelContentProvider.java:400)
-	at org.eclipse.cdt.dsf.ui.viewmodel.DefaultVMModelProxyStrategy$1.run(DefaultVMModelProxyStrategy.java:154)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
-	at org.eclipse.cdt.dsf.ui.viewmodel.DefaultVMModelProxyStrategy.fireModelChanged(DefaultVMModelProxyStrategy.java:158)
-	at org.eclipse.cdt.dsf.ui.viewmodel.update.AbstractCachingVMProvider$6.handleSuccess(AbstractCachingVMProvider.java:900)
-	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:385)
-	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:312)
-	at org.eclipse.cdt.dsf.ui.concurrent.SimpleDisplayExecutor.runInSwtThread(SimpleDisplayExecutor.java:117)
-	at org.eclipse.cdt.dsf.ui.concurrent.SimpleDisplayExecutor$1.run(SimpleDisplayExecutor.java:80)
-	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
-	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
-	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3794)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3433)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
-	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:694)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:606)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:497)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
-
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 13:30:21.121
-!MESSAGE Error logged from Debug UI: 
-!STACK 0
-java.lang.NullPointerException
-	at org.yakindu.sct.simulation.ui.model.presenter.SCTSourceDisplayDispatcher.displaySource(SCTSourceDisplayDispatcher.java:51)
-	at org.eclipse.debug.internal.ui.sourcelookup.SourceLookupService.displaySource(SourceLookupService.java:96)
-	at org.eclipse.debug.internal.ui.sourcelookup.SourceLookupService.displaySource(SourceLookupService.java:77)
-	at org.eclipse.debug.internal.ui.sourcelookup.SourceLookupService.debugContextChanged(SourceLookupService.java:52)
-	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService$1.run(DebugWindowContextService.java:223)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
-	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService.notify(DebugWindowContextService.java:220)
-	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService.notify(DebugWindowContextService.java:195)
-	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService.debugContextChanged(DebugWindowContextService.java:436)
-	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider$1.run(AbstractDebugContextProvider.java:83)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
-	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider.fire(AbstractDebugContextProvider.java:80)
-	at org.eclipse.debug.internal.ui.views.launch.LaunchView$ContextProviderProxy.debugContextChanged(LaunchView.java:519)
-	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider$1.run(AbstractDebugContextProvider.java:83)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
-	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider.fire(AbstractDebugContextProvider.java:80)
-	at org.eclipse.debug.internal.ui.views.launch.LaunchView$TreeViewerContextProvider.activate(LaunchView.java:379)
-	at org.eclipse.debug.internal.ui.views.launch.LaunchView$1.selectionChanged(LaunchView.java:479)
-	at org.eclipse.jface.viewers.Viewer$2.run(Viewer.java:163)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
-	at org.eclipse.ui.internal.JFaceUtil$1.run(JFaceUtil.java:50)
-	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:173)
-	at org.eclipse.jface.viewers.Viewer.fireSelectionChanged(Viewer.java:160)
-	at org.eclipse.jface.viewers.StructuredViewer.updateSelection(StructuredViewer.java:2197)
-	at org.eclipse.jface.viewers.StructuredViewer.setSelection(StructuredViewer.java:1733)
-	at org.eclipse.jface.viewers.TreeViewer.setSelection(TreeViewer.java:1093)
-	at org.eclipse.debug.internal.ui.viewers.model.InternalTreeModelViewer.trySelection(InternalTreeModelViewer.java:1066)
-	at org.eclipse.debug.internal.ui.viewers.model.TreeModelContentProvider.handleSelect(TreeModelContentProvider.java:1570)
-	at org.eclipse.debug.internal.ui.viewers.model.TreeModelContentProvider.updateNodes(TreeModelContentProvider.java:1200)
-	at org.eclipse.debug.internal.ui.viewers.model.TreeModelContentProvider.updateNodes(TreeModelContentProvider.java:1205)
-	at org.eclipse.debug.internal.ui.viewers.model.TreeModelContentProvider.updateModel(TreeModelContentProvider.java:460)
-	at org.eclipse.debug.internal.ui.viewers.model.TreeModelContentProvider.doModelChanged(TreeModelContentProvider.java:424)
-	at org.eclipse.debug.internal.ui.viewers.model.TreeModelContentProvider.modelChanged(TreeModelContentProvider.java:400)
-	at org.eclipse.cdt.dsf.ui.viewmodel.DefaultVMModelProxyStrategy$1.run(DefaultVMModelProxyStrategy.java:154)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
-	at org.eclipse.cdt.dsf.ui.viewmodel.DefaultVMModelProxyStrategy.fireModelChanged(DefaultVMModelProxyStrategy.java:158)
-	at org.eclipse.cdt.dsf.ui.viewmodel.update.AbstractCachingVMProvider$6.handleSuccess(AbstractCachingVMProvider.java:900)
-	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:385)
-	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:312)
-	at org.eclipse.cdt.dsf.ui.concurrent.SimpleDisplayExecutor.runInSwtThread(SimpleDisplayExecutor.java:117)
-	at org.eclipse.cdt.dsf.ui.concurrent.SimpleDisplayExecutor$1.run(SimpleDisplayExecutor.java:80)
-	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
-	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
-	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3794)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3433)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
-	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:694)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:606)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:497)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
-
-!ENTRY ilg.gnuarmeclipse.debug.gdbjtag 4 0 2017-06-13 13:30:22.359
-!MESSAGE Debug session 'horno_control_p Debug' already started. Terminate the first one before restarting.
-
-!ENTRY org.eclipse.cdt.dsf 4 10005 2017-06-13 13:30:46.246
-!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.mi.service.MIRunControl$9@13572ea): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Context cannot be suspended. null' resulted in an error.
-!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2017-06-13 13:30:46.246
-!MESSAGE Context cannot be suspended.
-
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 13:30:46.558
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:28:29.939
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -3084,7 +3517,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 13:30:46.559
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:28:29.940
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -3151,7 +3584,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 13:32:45.353
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:29:12.267
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -3222,7 +3655,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 13:32:45.354
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:29:12.268
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -3293,7 +3726,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 13:32:45.883
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:29:12.773
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -3355,7 +3788,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 13:32:45.884
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:29:12.775
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -3417,13 +3850,13 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.qemu 4 1 2017-06-13 13:32:46.056
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.openocd 4 1 2017-06-13 18:29:12.780
 !MESSAGE /usr/bin/openocd -c gdb_port 3333 -c telnet_port 4444 -f example/lpc4337.cfg -c echo "Started by GNU ARM Eclipse"
 
-!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.qemu 4 1 2017-06-13 13:32:46.127
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.openocd 4 1 2017-06-13 18:29:12.822
 !MESSAGE arm-none-eabi-gdb --interpreter=mi2 --nx
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 13:32:46.235
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:29:12.886
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -3485,7 +3918,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 13:32:46.238
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:29:12.887
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -3547,7 +3980,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 13:32:46.241
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:29:12.890
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -3609,7 +4042,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 13:32:46.242
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:29:12.891
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -3671,7 +4104,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 13:32:46.308
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:29:12.999
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -3733,7 +4166,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 13:32:46.309
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:29:12.999
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -3795,7 +4228,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 13:32:46.316
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:29:13.001
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -3857,7 +4290,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 13:32:46.316
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:29:13.002
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -3919,7 +4352,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 13:32:52.290
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:29:18.639
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -3990,7 +4423,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 13:32:52.291
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:29:18.640
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -4061,7 +4494,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 13:33:43.642
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:34:39.400
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -4128,7 +4561,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 13:33:43.642
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:34:39.402
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -4195,7 +4628,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 13:33:53.982
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:34:43.983
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -4266,7 +4699,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 13:33:53.982
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:34:43.984
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -4337,7 +4770,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 13:33:54.502
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:34:44.492
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -4399,7 +4832,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 13:33:54.503
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:34:44.493
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -4461,13 +4894,13 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.qemu 4 1 2017-06-13 13:33:54.696
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.openocd 4 1 2017-06-13 18:34:44.497
 !MESSAGE /usr/bin/openocd -c gdb_port 3333 -c telnet_port 4444 -f example/lpc4337.cfg -c echo "Started by GNU ARM Eclipse"
 
-!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.qemu 4 1 2017-06-13 13:33:54.759
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.openocd 4 1 2017-06-13 18:34:44.546
 !MESSAGE arm-none-eabi-gdb --interpreter=mi2 --nx
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 13:33:54.957
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:34:44.633
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -4529,7 +4962,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 13:33:54.959
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:34:44.634
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -4591,7 +5024,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 13:33:54.962
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:34:44.643
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -4653,7 +5086,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 13:33:54.963
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:34:44.644
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -4715,7 +5148,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 13:33:54.967
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:34:44.647
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -4777,7 +5210,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 13:33:54.968
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:34:44.648
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -4839,7 +5272,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 13:33:54.972
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:34:44.651
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -4901,7 +5334,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 13:33:54.973
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:34:44.652
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -4963,7 +5396,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 13:34:00.938
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:34:50.377
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -5034,7 +5467,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 13:34:00.939
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:34:50.378
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -5105,7 +5538,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 13:34:29.110
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:35:04.481
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -5172,7 +5605,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 13:34:29.111
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:35:04.482
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -5239,7 +5672,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 13:35:06.273
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:35:06.840
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -5310,7 +5743,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 13:35:06.274
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:35:06.841
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -5381,7 +5814,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 13:35:06.813
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:35:07.336
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -5443,7 +5876,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 13:35:06.814
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:35:07.336
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -5505,13 +5938,13 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.qemu 4 1 2017-06-13 13:35:06.968
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.openocd 4 1 2017-06-13 18:35:07.341
 !MESSAGE /usr/bin/openocd -c gdb_port 3333 -c telnet_port 4444 -f example/lpc4337.cfg -c echo "Started by GNU ARM Eclipse"
 
-!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.qemu 4 1 2017-06-13 13:35:07.011
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.openocd 4 1 2017-06-13 18:35:07.391
 !MESSAGE arm-none-eabi-gdb --interpreter=mi2 --nx
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 13:35:07.170
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:35:07.467
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -5573,7 +6006,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 13:35:07.171
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:35:07.468
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -5635,7 +6068,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 13:35:07.174
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:35:07.471
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -5697,7 +6130,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 13:35:07.175
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:35:07.472
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -5759,7 +6192,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 13:35:07.178
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:35:07.491
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -5821,7 +6254,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 13:35:07.179
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:35:07.492
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -5883,7 +6316,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 13:35:07.184
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:35:07.495
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -5945,7 +6378,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 13:35:07.185
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:35:07.496
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -6007,7 +6440,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 13:35:13.178
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:35:13.254
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -6078,7 +6511,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 13:35:13.179
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:35:13.255
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -6149,7 +6582,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 13:35:38.290
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:36:22.299
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -6216,7 +6649,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 13:35:38.291
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:36:22.300
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -6283,7 +6716,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 13:40:18.504
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:36:25.391
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -6354,7 +6787,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 13:40:18.505
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:36:25.392
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -6425,7 +6858,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 13:40:19.127
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:36:25.938
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -6487,7 +6920,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 13:40:19.129
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:36:25.939
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -6549,13 +6982,13 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.qemu 4 1 2017-06-13 13:40:19.319
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.openocd 4 1 2017-06-13 18:36:25.942
 !MESSAGE /usr/bin/openocd -c gdb_port 3333 -c telnet_port 4444 -f example/lpc4337.cfg -c echo "Started by GNU ARM Eclipse"
 
-!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.qemu 4 1 2017-06-13 13:40:19.436
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.openocd 4 1 2017-06-13 18:36:25.989
 !MESSAGE arm-none-eabi-gdb --interpreter=mi2 --nx
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 13:40:19.583
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:36:26.058
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -6617,7 +7050,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 13:40:19.586
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:36:26.059
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -6679,7 +7112,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 13:40:19.591
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:36:26.064
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -6741,7 +7174,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 13:40:19.592
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:36:26.065
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -6803,7 +7236,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 13:40:19.760
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:36:26.084
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -6865,7 +7298,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 13:40:19.761
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:36:26.085
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -6927,7 +7360,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 13:40:19.764
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:36:26.093
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -6989,7 +7422,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 13:40:19.765
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:36:26.093
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -7051,7 +7484,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 13:40:25.581
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:36:31.834
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -7122,7 +7555,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 13:40:25.583
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:36:31.835
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -7193,7 +7626,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 13:40:39.111
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:37:18.643
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -7260,7 +7693,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 13:40:39.112
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:37:18.644
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -7327,7 +7760,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 13:40:40.573
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:37:51.367
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -7398,7 +7831,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 13:40:40.573
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:37:51.368
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -7469,7 +7902,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 13:40:41.122
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:37:51.956
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -7531,7 +7964,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 13:40:41.123
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:37:51.957
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -7593,13 +8026,13 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.qemu 4 1 2017-06-13 13:40:41.355
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.openocd 4 1 2017-06-13 18:37:51.967
 !MESSAGE /usr/bin/openocd -c gdb_port 3333 -c telnet_port 4444 -f example/lpc4337.cfg -c echo "Started by GNU ARM Eclipse"
 
-!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.qemu 4 1 2017-06-13 13:40:41.439
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.openocd 4 1 2017-06-13 18:37:52.018
 !MESSAGE arm-none-eabi-gdb --interpreter=mi2 --nx
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 13:40:41.555
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:37:52.113
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -7661,7 +8094,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 13:40:41.556
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:37:52.114
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -7723,7 +8156,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 13:40:41.575
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:37:52.117
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -7785,7 +8218,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 13:40:41.576
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:37:52.118
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -7847,7 +8280,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 13:40:41.592
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:37:52.123
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -7909,7 +8342,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 13:40:41.593
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:37:52.124
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -7971,7 +8404,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 13:40:41.595
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:37:52.127
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -8033,7 +8466,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 13:40:41.596
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:37:52.128
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -8095,7 +8528,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 13:40:47.535
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:37:57.856
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -8166,7 +8599,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 13:40:47.536
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:37:57.856
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -8237,7 +8670,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 14:01:33.044
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:40:05.398
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -8304,7 +8737,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 14:01:33.045
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:40:05.399
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -8371,7 +8804,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 14:01:55.681
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:40:10.470
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -8442,7 +8875,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 14:01:55.682
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:40:10.471
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -8513,7 +8946,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 14:01:56.203
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:40:11.029
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -8575,7 +9008,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 14:01:56.204
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:40:11.031
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -8637,13 +9070,13 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.qemu 4 1 2017-06-13 14:01:56.398
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.openocd 4 1 2017-06-13 18:40:11.039
 !MESSAGE /usr/bin/openocd -c gdb_port 3333 -c telnet_port 4444 -f example/lpc4337.cfg -c echo "Started by GNU ARM Eclipse"
 
-!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.qemu 4 1 2017-06-13 14:01:56.452
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.openocd 4 1 2017-06-13 18:40:11.080
 !MESSAGE arm-none-eabi-gdb --interpreter=mi2 --nx
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 14:01:56.595
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:40:11.166
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -8705,7 +9138,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 14:01:56.596
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:40:11.167
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -8767,7 +9200,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 14:01:56.602
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:40:11.170
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -8829,7 +9262,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 14:01:56.603
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:40:11.171
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -8891,7 +9324,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 14:01:56.694
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:40:11.317
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -8953,7 +9386,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 14:01:56.695
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:40:11.317
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -9015,7 +9448,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 14:01:56.699
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:40:11.320
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -9077,7 +9510,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 14:01:56.700
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:40:11.321
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -9139,7 +9572,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 14:02:02.633
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:40:16.987
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -9210,7 +9643,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 14:02:02.634
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:40:16.988
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -9281,7 +9714,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 14:04:40.842
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:40:40.851
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -9348,7 +9781,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 14:04:40.843
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:40:40.852
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -9415,7 +9848,13 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 14:04:51.890
+!ENTRY org.eclipse.ui 4 4 2017-06-13 18:46:17.613
+!MESSAGE Plugin org.eclipse.cdt.ui, extension org.eclipse.ui.decorators, id org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator: Duplicate id found: org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator
+
+!ENTRY org.eclipse.ui 4 4 2017-06-13 18:46:17.613
+!MESSAGE Plugin org.eclipse.cdt.ui, extension org.eclipse.ui.decorators, id org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator: Unknown extension tag found: decorator
+
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:48:47.673
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -9486,7 +9925,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 14:04:51.891
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:48:47.674
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -9557,7 +9996,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 14:04:52.613
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:48:48.082
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -9619,7 +10058,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 14:04:52.614
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:48:48.083
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -9681,13 +10120,13 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.qemu 4 1 2017-06-13 14:04:52.826
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.openocd 4 1 2017-06-13 18:48:48.092
 !MESSAGE /usr/bin/openocd -c gdb_port 3333 -c telnet_port 4444 -f example/lpc4337.cfg -c echo "Started by GNU ARM Eclipse"
 
-!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.qemu 4 1 2017-06-13 14:04:52.894
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.openocd 4 1 2017-06-13 18:48:48.135
 !MESSAGE arm-none-eabi-gdb --interpreter=mi2 --nx
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 14:04:53.007
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:48:48.229
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -9749,7 +10188,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 14:04:53.008
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:48:48.231
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -9811,7 +10250,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 14:04:53.010
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:48:48.234
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -9873,7 +10312,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 14:04:53.011
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:48:48.235
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -9935,7 +10374,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 14:04:53.134
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:48:48.382
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -9997,7 +10436,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 14:04:53.144
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:48:48.383
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -10059,7 +10498,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 14:04:53.148
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:48:48.388
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -10121,7 +10560,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 14:04:53.150
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:48:48.389
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -10183,7 +10622,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 14:04:59.073
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:48:54.048
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -10254,7 +10693,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 14:04:59.073
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:48:54.049
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -10325,7 +10764,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 14:17:38.296
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:49:25.698
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -10392,7 +10831,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 14:17:38.297
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:49:25.699
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -10459,7 +10898,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 14:17:50.554
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:49:27.424
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -10530,7 +10969,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 14:17:50.555
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:49:27.424
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -10601,7 +11040,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 14:17:51.114
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:49:27.928
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -10663,75 +11102,75 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 14:17:51.115
-!MESSAGE Error logged from Debug UI: 
-!STACK 0
-java.lang.NullPointerException
-	at org.yakindu.sct.simulation.ui.model.presenter.SCTSourceDisplayDispatcher.displaySource(SCTSourceDisplayDispatcher.java:51)
-	at org.eclipse.debug.internal.ui.sourcelookup.SourceLookupService.displaySource(SourceLookupService.java:96)
-	at org.eclipse.debug.internal.ui.sourcelookup.SourceLookupService.displaySource(SourceLookupService.java:77)
-	at org.eclipse.debug.internal.ui.sourcelookup.SourceLookupService.debugContextChanged(SourceLookupService.java:52)
-	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService$1.run(DebugWindowContextService.java:223)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
-	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService.notify(DebugWindowContextService.java:220)
-	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService.notify(DebugWindowContextService.java:195)
-	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService.debugContextChanged(DebugWindowContextService.java:436)
-	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider$1.run(AbstractDebugContextProvider.java:83)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
-	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider.fire(AbstractDebugContextProvider.java:80)
-	at org.eclipse.debug.internal.ui.views.launch.LaunchView$ContextProviderProxy.debugContextChanged(LaunchView.java:519)
-	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider$1.run(AbstractDebugContextProvider.java:83)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
-	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider.fire(AbstractDebugContextProvider.java:80)
-	at org.eclipse.debug.internal.ui.views.launch.LaunchView$TreeViewerContextProvider.possibleChange(LaunchView.java:405)
-	at org.eclipse.debug.internal.ui.views.launch.LaunchView$TreeViewerContextProvider$Visitor.visit(LaunchView.java:327)
-	at org.eclipse.cdt.dsf.ui.viewmodel.VMDelta.doAccept(VMDelta.java:359)
-	at org.eclipse.cdt.dsf.ui.viewmodel.VMDelta.doAccept(VMDelta.java:362)
-	at org.eclipse.cdt.dsf.ui.viewmodel.VMDelta.accept(VMDelta.java:354)
-	at org.eclipse.debug.internal.ui.views.launch.LaunchView$TreeViewerContextProvider.modelChanged(LaunchView.java:435)
-	at org.eclipse.debug.internal.ui.viewers.model.TreeModelContentProvider.doModelChanged(TreeModelContentProvider.java:432)
-	at org.eclipse.debug.internal.ui.viewers.model.TreeModelContentProvider.modelChanged(TreeModelContentProvider.java:400)
-	at org.eclipse.cdt.dsf.ui.viewmodel.DefaultVMModelProxyStrategy$1.run(DefaultVMModelProxyStrategy.java:154)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
-	at org.eclipse.cdt.dsf.ui.viewmodel.DefaultVMModelProxyStrategy.fireModelChanged(DefaultVMModelProxyStrategy.java:158)
-	at org.eclipse.cdt.dsf.ui.viewmodel.update.AbstractCachingVMProvider$6.handleSuccess(AbstractCachingVMProvider.java:900)
-	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:385)
-	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:312)
-	at org.eclipse.cdt.dsf.ui.concurrent.SimpleDisplayExecutor.runInSwtThread(SimpleDisplayExecutor.java:117)
-	at org.eclipse.cdt.dsf.ui.concurrent.SimpleDisplayExecutor$1.run(SimpleDisplayExecutor.java:80)
-	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
-	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
-	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3794)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3433)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
-	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:694)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:606)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:497)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
-
-!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.qemu 4 1 2017-06-13 14:17:51.258
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.openocd 4 1 2017-06-13 18:49:27.929
 !MESSAGE /usr/bin/openocd -c gdb_port 3333 -c telnet_port 4444 -f example/lpc4337.cfg -c echo "Started by GNU ARM Eclipse"
 
-!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.qemu 4 1 2017-06-13 14:17:51.319
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:49:27.929
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.NullPointerException
+	at org.yakindu.sct.simulation.ui.model.presenter.SCTSourceDisplayDispatcher.displaySource(SCTSourceDisplayDispatcher.java:51)
+	at org.eclipse.debug.internal.ui.sourcelookup.SourceLookupService.displaySource(SourceLookupService.java:96)
+	at org.eclipse.debug.internal.ui.sourcelookup.SourceLookupService.displaySource(SourceLookupService.java:77)
+	at org.eclipse.debug.internal.ui.sourcelookup.SourceLookupService.debugContextChanged(SourceLookupService.java:52)
+	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService$1.run(DebugWindowContextService.java:223)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService.notify(DebugWindowContextService.java:220)
+	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService.notify(DebugWindowContextService.java:195)
+	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService.debugContextChanged(DebugWindowContextService.java:436)
+	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider$1.run(AbstractDebugContextProvider.java:83)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider.fire(AbstractDebugContextProvider.java:80)
+	at org.eclipse.debug.internal.ui.views.launch.LaunchView$ContextProviderProxy.debugContextChanged(LaunchView.java:519)
+	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider$1.run(AbstractDebugContextProvider.java:83)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider.fire(AbstractDebugContextProvider.java:80)
+	at org.eclipse.debug.internal.ui.views.launch.LaunchView$TreeViewerContextProvider.possibleChange(LaunchView.java:405)
+	at org.eclipse.debug.internal.ui.views.launch.LaunchView$TreeViewerContextProvider$Visitor.visit(LaunchView.java:327)
+	at org.eclipse.cdt.dsf.ui.viewmodel.VMDelta.doAccept(VMDelta.java:359)
+	at org.eclipse.cdt.dsf.ui.viewmodel.VMDelta.doAccept(VMDelta.java:362)
+	at org.eclipse.cdt.dsf.ui.viewmodel.VMDelta.accept(VMDelta.java:354)
+	at org.eclipse.debug.internal.ui.views.launch.LaunchView$TreeViewerContextProvider.modelChanged(LaunchView.java:435)
+	at org.eclipse.debug.internal.ui.viewers.model.TreeModelContentProvider.doModelChanged(TreeModelContentProvider.java:432)
+	at org.eclipse.debug.internal.ui.viewers.model.TreeModelContentProvider.modelChanged(TreeModelContentProvider.java:400)
+	at org.eclipse.cdt.dsf.ui.viewmodel.DefaultVMModelProxyStrategy$1.run(DefaultVMModelProxyStrategy.java:154)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.cdt.dsf.ui.viewmodel.DefaultVMModelProxyStrategy.fireModelChanged(DefaultVMModelProxyStrategy.java:158)
+	at org.eclipse.cdt.dsf.ui.viewmodel.update.AbstractCachingVMProvider$6.handleSuccess(AbstractCachingVMProvider.java:900)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:385)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:312)
+	at org.eclipse.cdt.dsf.ui.concurrent.SimpleDisplayExecutor.runInSwtThread(SimpleDisplayExecutor.java:117)
+	at org.eclipse.cdt.dsf.ui.concurrent.SimpleDisplayExecutor$1.run(SimpleDisplayExecutor.java:80)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3794)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3433)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:694)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:606)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.openocd 4 1 2017-06-13 18:49:27.976
 !MESSAGE arm-none-eabi-gdb --interpreter=mi2 --nx
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 14:17:51.473
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:49:28.073
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -10793,7 +11232,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 14:17:51.474
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:49:28.074
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -10855,7 +11294,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 14:17:51.477
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:49:28.079
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -10917,7 +11356,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 14:17:51.478
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:49:28.080
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -10979,7 +11418,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 14:17:51.481
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:49:28.084
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -11041,7 +11480,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 14:17:51.482
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:49:28.085
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -11103,7 +11542,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 14:17:51.485
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:49:28.088
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -11165,7 +11604,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 14:17:51.486
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:49:28.089
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -11227,283 +11666,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 14:17:57.431
-!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
-!STACK 0
-java.lang.NullPointerException
-	at org.yakindu.sct.simulation.ui.model.presenter.SCTSourceDisplayDispatcher.displaySource(SCTSourceDisplayDispatcher.java:51)
-	at org.eclipse.debug.internal.ui.sourcelookup.SourceLookupService.displaySource(SourceLookupService.java:96)
-	at org.eclipse.debug.internal.ui.sourcelookup.SourceLookupService.displaySource(SourceLookupService.java:77)
-	at org.eclipse.debug.internal.ui.sourcelookup.SourceLookupService.debugContextChanged(SourceLookupService.java:52)
-	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService$1.run(DebugWindowContextService.java:223)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
-	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService.notify(DebugWindowContextService.java:220)
-	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService.notify(DebugWindowContextService.java:195)
-	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService.debugContextChanged(DebugWindowContextService.java:436)
-	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider$1.run(AbstractDebugContextProvider.java:83)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
-	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider.fire(AbstractDebugContextProvider.java:80)
-	at org.eclipse.debug.internal.ui.views.launch.LaunchView$ContextProviderProxy.debugContextChanged(LaunchView.java:519)
-	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider$1.run(AbstractDebugContextProvider.java:83)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
-	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider.fire(AbstractDebugContextProvider.java:80)
-	at org.eclipse.debug.internal.ui.views.launch.LaunchView$TreeViewerContextProvider.activate(LaunchView.java:379)
-	at org.eclipse.debug.internal.ui.views.launch.LaunchView$1.selectionChanged(LaunchView.java:479)
-	at org.eclipse.jface.viewers.Viewer$2.run(Viewer.java:163)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
-	at org.eclipse.ui.internal.JFaceUtil$1.run(JFaceUtil.java:50)
-	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:173)
-	at org.eclipse.jface.viewers.Viewer.fireSelectionChanged(Viewer.java:160)
-	at org.eclipse.jface.viewers.StructuredViewer.updateSelection(StructuredViewer.java:2197)
-	at org.eclipse.jface.viewers.StructuredViewer.setSelection(StructuredViewer.java:1733)
-	at org.eclipse.jface.viewers.TreeViewer.setSelection(TreeViewer.java:1093)
-	at org.eclipse.debug.internal.ui.viewers.model.InternalTreeModelViewer.trySelection(InternalTreeModelViewer.java:1066)
-	at org.eclipse.debug.internal.ui.viewers.model.TreeModelContentProvider.handleSelect(TreeModelContentProvider.java:1570)
-	at org.eclipse.debug.internal.ui.viewers.model.TreeModelContentProvider.updateNodes(TreeModelContentProvider.java:1200)
-	at org.eclipse.debug.internal.ui.viewers.model.TreeModelContentProvider.updateNodes(TreeModelContentProvider.java:1205)
-	at org.eclipse.debug.internal.ui.viewers.model.TreeModelContentProvider.updateModel(TreeModelContentProvider.java:460)
-	at org.eclipse.debug.internal.ui.viewers.model.TreeModelContentProvider.doModelChanged(TreeModelContentProvider.java:424)
-	at org.eclipse.debug.internal.ui.viewers.model.TreeModelContentProvider.modelChanged(TreeModelContentProvider.java:400)
-	at org.eclipse.cdt.dsf.ui.viewmodel.DefaultVMModelProxyStrategy$1.run(DefaultVMModelProxyStrategy.java:154)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
-	at org.eclipse.cdt.dsf.ui.viewmodel.DefaultVMModelProxyStrategy.fireModelChanged(DefaultVMModelProxyStrategy.java:158)
-	at org.eclipse.cdt.dsf.ui.viewmodel.update.AbstractCachingVMProvider$6.handleSuccess(AbstractCachingVMProvider.java:900)
-	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:385)
-	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:312)
-	at org.eclipse.cdt.dsf.ui.concurrent.SimpleDisplayExecutor.runInSwtThread(SimpleDisplayExecutor.java:117)
-	at org.eclipse.cdt.dsf.ui.concurrent.SimpleDisplayExecutor$1.run(SimpleDisplayExecutor.java:80)
-	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
-	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
-	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3794)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3433)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
-	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:694)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:606)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:497)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
-
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 14:17:57.432
-!MESSAGE Error logged from Debug UI: 
-!STACK 0
-java.lang.NullPointerException
-	at org.yakindu.sct.simulation.ui.model.presenter.SCTSourceDisplayDispatcher.displaySource(SCTSourceDisplayDispatcher.java:51)
-	at org.eclipse.debug.internal.ui.sourcelookup.SourceLookupService.displaySource(SourceLookupService.java:96)
-	at org.eclipse.debug.internal.ui.sourcelookup.SourceLookupService.displaySource(SourceLookupService.java:77)
-	at org.eclipse.debug.internal.ui.sourcelookup.SourceLookupService.debugContextChanged(SourceLookupService.java:52)
-	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService$1.run(DebugWindowContextService.java:223)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
-	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService.notify(DebugWindowContextService.java:220)
-	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService.notify(DebugWindowContextService.java:195)
-	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService.debugContextChanged(DebugWindowContextService.java:436)
-	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider$1.run(AbstractDebugContextProvider.java:83)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
-	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider.fire(AbstractDebugContextProvider.java:80)
-	at org.eclipse.debug.internal.ui.views.launch.LaunchView$ContextProviderProxy.debugContextChanged(LaunchView.java:519)
-	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider$1.run(AbstractDebugContextProvider.java:83)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
-	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider.fire(AbstractDebugContextProvider.java:80)
-	at org.eclipse.debug.internal.ui.views.launch.LaunchView$TreeViewerContextProvider.activate(LaunchView.java:379)
-	at org.eclipse.debug.internal.ui.views.launch.LaunchView$1.selectionChanged(LaunchView.java:479)
-	at org.eclipse.jface.viewers.Viewer$2.run(Viewer.java:163)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
-	at org.eclipse.ui.internal.JFaceUtil$1.run(JFaceUtil.java:50)
-	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:173)
-	at org.eclipse.jface.viewers.Viewer.fireSelectionChanged(Viewer.java:160)
-	at org.eclipse.jface.viewers.StructuredViewer.updateSelection(StructuredViewer.java:2197)
-	at org.eclipse.jface.viewers.StructuredViewer.setSelection(StructuredViewer.java:1733)
-	at org.eclipse.jface.viewers.TreeViewer.setSelection(TreeViewer.java:1093)
-	at org.eclipse.debug.internal.ui.viewers.model.InternalTreeModelViewer.trySelection(InternalTreeModelViewer.java:1066)
-	at org.eclipse.debug.internal.ui.viewers.model.TreeModelContentProvider.handleSelect(TreeModelContentProvider.java:1570)
-	at org.eclipse.debug.internal.ui.viewers.model.TreeModelContentProvider.updateNodes(TreeModelContentProvider.java:1200)
-	at org.eclipse.debug.internal.ui.viewers.model.TreeModelContentProvider.updateNodes(TreeModelContentProvider.java:1205)
-	at org.eclipse.debug.internal.ui.viewers.model.TreeModelContentProvider.updateModel(TreeModelContentProvider.java:460)
-	at org.eclipse.debug.internal.ui.viewers.model.TreeModelContentProvider.doModelChanged(TreeModelContentProvider.java:424)
-	at org.eclipse.debug.internal.ui.viewers.model.TreeModelContentProvider.modelChanged(TreeModelContentProvider.java:400)
-	at org.eclipse.cdt.dsf.ui.viewmodel.DefaultVMModelProxyStrategy$1.run(DefaultVMModelProxyStrategy.java:154)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
-	at org.eclipse.cdt.dsf.ui.viewmodel.DefaultVMModelProxyStrategy.fireModelChanged(DefaultVMModelProxyStrategy.java:158)
-	at org.eclipse.cdt.dsf.ui.viewmodel.update.AbstractCachingVMProvider$6.handleSuccess(AbstractCachingVMProvider.java:900)
-	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:385)
-	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:312)
-	at org.eclipse.cdt.dsf.ui.concurrent.SimpleDisplayExecutor.runInSwtThread(SimpleDisplayExecutor.java:117)
-	at org.eclipse.cdt.dsf.ui.concurrent.SimpleDisplayExecutor$1.run(SimpleDisplayExecutor.java:80)
-	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
-	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
-	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3794)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3433)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
-	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:694)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:606)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:497)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
-
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 14:20:14.872
-!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
-!STACK 0
-java.lang.NullPointerException
-	at org.yakindu.sct.simulation.ui.model.presenter.SCTSourceDisplayDispatcher.displaySource(SCTSourceDisplayDispatcher.java:51)
-	at org.eclipse.debug.internal.ui.sourcelookup.SourceLookupService.displaySource(SourceLookupService.java:96)
-	at org.eclipse.debug.internal.ui.sourcelookup.SourceLookupService.displaySource(SourceLookupService.java:77)
-	at org.eclipse.debug.internal.ui.sourcelookup.SourceLookupService.debugContextChanged(SourceLookupService.java:52)
-	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService$1.run(DebugWindowContextService.java:223)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
-	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService.notify(DebugWindowContextService.java:220)
-	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService.notify(DebugWindowContextService.java:195)
-	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService.debugContextChanged(DebugWindowContextService.java:436)
-	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider$1.run(AbstractDebugContextProvider.java:83)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
-	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider.fire(AbstractDebugContextProvider.java:80)
-	at org.eclipse.debug.internal.ui.views.launch.LaunchView$ContextProviderProxy.debugContextChanged(LaunchView.java:519)
-	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider$1.run(AbstractDebugContextProvider.java:83)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
-	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider.fire(AbstractDebugContextProvider.java:80)
-	at org.eclipse.debug.internal.ui.views.launch.LaunchView$TreeViewerContextProvider.activate(LaunchView.java:379)
-	at org.eclipse.debug.internal.ui.views.launch.LaunchView$1.selectionChanged(LaunchView.java:479)
-	at org.eclipse.jface.viewers.Viewer$2.run(Viewer.java:163)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
-	at org.eclipse.ui.internal.JFaceUtil$1.run(JFaceUtil.java:50)
-	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:173)
-	at org.eclipse.jface.viewers.Viewer.fireSelectionChanged(Viewer.java:160)
-	at org.eclipse.jface.viewers.StructuredViewer.updateSelection(StructuredViewer.java:2197)
-	at org.eclipse.jface.viewers.StructuredViewer.handleInvalidSelection(StructuredViewer.java:1191)
-	at org.eclipse.debug.internal.ui.viewers.model.InternalTreeModelViewer.handleInvalidSelection(InternalTreeModelViewer.java:403)
-	at org.eclipse.jface.viewers.TreeViewer.replace(TreeViewer.java:500)
-	at org.eclipse.debug.internal.ui.viewers.model.ChildrenUpdate.performUpdate(ChildrenUpdate.java:87)
-	at org.eclipse.debug.internal.ui.viewers.model.ChildrenUpdate.performUpdate(ChildrenUpdate.java:114)
-	at org.eclipse.debug.internal.ui.viewers.model.TreeModelContentProvider.performUpdates(TreeModelContentProvider.java:1742)
-	at org.eclipse.debug.internal.ui.viewers.model.TreeModelContentProvider.scheduleViewerUpdate(TreeModelContentProvider.java:1713)
-	at org.eclipse.debug.internal.ui.viewers.model.ViewerUpdateMonitor.scheduleViewerUpdate(ViewerUpdateMonitor.java:147)
-	at org.eclipse.debug.internal.ui.viewers.model.ViewerUpdateMonitor.done(ViewerUpdateMonitor.java:134)
-	at org.eclipse.cdt.dsf.ui.viewmodel.DefaultVMContentProviderStrategy$7.handleCompleted(DefaultVMContentProviderStrategy.java:305)
-	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:312)
-	at org.eclipse.cdt.dsf.ui.concurrent.SimpleDisplayExecutor.runInSwtThread(SimpleDisplayExecutor.java:117)
-	at org.eclipse.cdt.dsf.ui.concurrent.SimpleDisplayExecutor$1.run(SimpleDisplayExecutor.java:80)
-	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
-	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
-	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3794)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3433)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
-	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:694)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:606)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:497)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
-
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 14:20:14.872
-!MESSAGE Error logged from Debug UI: 
-!STACK 0
-java.lang.NullPointerException
-	at org.yakindu.sct.simulation.ui.model.presenter.SCTSourceDisplayDispatcher.displaySource(SCTSourceDisplayDispatcher.java:51)
-	at org.eclipse.debug.internal.ui.sourcelookup.SourceLookupService.displaySource(SourceLookupService.java:96)
-	at org.eclipse.debug.internal.ui.sourcelookup.SourceLookupService.displaySource(SourceLookupService.java:77)
-	at org.eclipse.debug.internal.ui.sourcelookup.SourceLookupService.debugContextChanged(SourceLookupService.java:52)
-	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService$1.run(DebugWindowContextService.java:223)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
-	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService.notify(DebugWindowContextService.java:220)
-	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService.notify(DebugWindowContextService.java:195)
-	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService.debugContextChanged(DebugWindowContextService.java:436)
-	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider$1.run(AbstractDebugContextProvider.java:83)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
-	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider.fire(AbstractDebugContextProvider.java:80)
-	at org.eclipse.debug.internal.ui.views.launch.LaunchView$ContextProviderProxy.debugContextChanged(LaunchView.java:519)
-	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider$1.run(AbstractDebugContextProvider.java:83)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
-	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider.fire(AbstractDebugContextProvider.java:80)
-	at org.eclipse.debug.internal.ui.views.launch.LaunchView$TreeViewerContextProvider.activate(LaunchView.java:379)
-	at org.eclipse.debug.internal.ui.views.launch.LaunchView$1.selectionChanged(LaunchView.java:479)
-	at org.eclipse.jface.viewers.Viewer$2.run(Viewer.java:163)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
-	at org.eclipse.ui.internal.JFaceUtil$1.run(JFaceUtil.java:50)
-	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:173)
-	at org.eclipse.jface.viewers.Viewer.fireSelectionChanged(Viewer.java:160)
-	at org.eclipse.jface.viewers.StructuredViewer.updateSelection(StructuredViewer.java:2197)
-	at org.eclipse.jface.viewers.StructuredViewer.handleInvalidSelection(StructuredViewer.java:1191)
-	at org.eclipse.debug.internal.ui.viewers.model.InternalTreeModelViewer.handleInvalidSelection(InternalTreeModelViewer.java:403)
-	at org.eclipse.jface.viewers.TreeViewer.replace(TreeViewer.java:500)
-	at org.eclipse.debug.internal.ui.viewers.model.ChildrenUpdate.performUpdate(ChildrenUpdate.java:87)
-	at org.eclipse.debug.internal.ui.viewers.model.ChildrenUpdate.performUpdate(ChildrenUpdate.java:114)
-	at org.eclipse.debug.internal.ui.viewers.model.TreeModelContentProvider.performUpdates(TreeModelContentProvider.java:1742)
-	at org.eclipse.debug.internal.ui.viewers.model.TreeModelContentProvider.scheduleViewerUpdate(TreeModelContentProvider.java:1713)
-	at org.eclipse.debug.internal.ui.viewers.model.ViewerUpdateMonitor.scheduleViewerUpdate(ViewerUpdateMonitor.java:147)
-	at org.eclipse.debug.internal.ui.viewers.model.ViewerUpdateMonitor.done(ViewerUpdateMonitor.java:134)
-	at org.eclipse.cdt.dsf.ui.viewmodel.DefaultVMContentProviderStrategy$7.handleCompleted(DefaultVMContentProviderStrategy.java:305)
-	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:312)
-	at org.eclipse.cdt.dsf.ui.concurrent.SimpleDisplayExecutor.runInSwtThread(SimpleDisplayExecutor.java:117)
-	at org.eclipse.cdt.dsf.ui.concurrent.SimpleDisplayExecutor$1.run(SimpleDisplayExecutor.java:80)
-	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
-	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
-	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3794)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3433)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
-	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:694)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:606)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:497)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
-
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 14:27:48.965
+!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 18:49:33.843
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
 !STACK 0
 java.lang.NullPointerException
@@ -11574,7 +11737,7 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 14:27:48.965
+!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 18:49:33.844
 !MESSAGE Error logged from Debug UI: 
 !STACK 0
 java.lang.NullPointerException
@@ -11610,130 +11773,6 @@ java.lang.NullPointerException
 	at org.eclipse.debug.internal.ui.viewers.model.TreeModelContentProvider.updateNodes(TreeModelContentProvider.java:1205)
 	at org.eclipse.debug.internal.ui.viewers.model.TreeModelContentProvider.updateModel(TreeModelContentProvider.java:460)
 	at org.eclipse.debug.internal.ui.viewers.model.TreeModelContentProvider.doModelChanged(TreeModelContentProvider.java:424)
-	at org.eclipse.debug.internal.ui.viewers.model.TreeModelContentProvider.modelChanged(TreeModelContentProvider.java:400)
-	at org.eclipse.cdt.dsf.ui.viewmodel.DefaultVMModelProxyStrategy$1.run(DefaultVMModelProxyStrategy.java:154)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
-	at org.eclipse.cdt.dsf.ui.viewmodel.DefaultVMModelProxyStrategy.fireModelChanged(DefaultVMModelProxyStrategy.java:158)
-	at org.eclipse.cdt.dsf.ui.viewmodel.update.AbstractCachingVMProvider$6.handleSuccess(AbstractCachingVMProvider.java:900)
-	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:385)
-	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:312)
-	at org.eclipse.cdt.dsf.ui.concurrent.SimpleDisplayExecutor.runInSwtThread(SimpleDisplayExecutor.java:117)
-	at org.eclipse.cdt.dsf.ui.concurrent.SimpleDisplayExecutor$1.run(SimpleDisplayExecutor.java:80)
-	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
-	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
-	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3794)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3433)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
-	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:694)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:606)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:497)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
-
-!ENTRY org.eclipse.debug.ui 4 2 2017-06-13 14:27:49.677
-!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.ui".
-!STACK 0
-java.lang.NullPointerException
-	at org.yakindu.sct.simulation.ui.model.presenter.SCTSourceDisplayDispatcher.displaySource(SCTSourceDisplayDispatcher.java:51)
-	at org.eclipse.debug.internal.ui.sourcelookup.SourceLookupService.displaySource(SourceLookupService.java:96)
-	at org.eclipse.debug.internal.ui.sourcelookup.SourceLookupService.displaySource(SourceLookupService.java:77)
-	at org.eclipse.debug.internal.ui.sourcelookup.SourceLookupService.debugContextChanged(SourceLookupService.java:52)
-	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService$1.run(DebugWindowContextService.java:223)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
-	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService.notify(DebugWindowContextService.java:220)
-	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService.notify(DebugWindowContextService.java:195)
-	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService.debugContextChanged(DebugWindowContextService.java:436)
-	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider$1.run(AbstractDebugContextProvider.java:83)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
-	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider.fire(AbstractDebugContextProvider.java:80)
-	at org.eclipse.debug.internal.ui.views.launch.LaunchView$ContextProviderProxy.debugContextChanged(LaunchView.java:519)
-	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider$1.run(AbstractDebugContextProvider.java:83)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
-	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider.fire(AbstractDebugContextProvider.java:80)
-	at org.eclipse.debug.internal.ui.views.launch.LaunchView$TreeViewerContextProvider.possibleChange(LaunchView.java:405)
-	at org.eclipse.debug.internal.ui.views.launch.LaunchView$TreeViewerContextProvider$Visitor.visit(LaunchView.java:327)
-	at org.eclipse.cdt.dsf.ui.viewmodel.VMDelta.doAccept(VMDelta.java:359)
-	at org.eclipse.cdt.dsf.ui.viewmodel.VMDelta.doAccept(VMDelta.java:362)
-	at org.eclipse.cdt.dsf.ui.viewmodel.VMDelta.accept(VMDelta.java:354)
-	at org.eclipse.debug.internal.ui.views.launch.LaunchView$TreeViewerContextProvider.modelChanged(LaunchView.java:435)
-	at org.eclipse.debug.internal.ui.viewers.model.TreeModelContentProvider.doModelChanged(TreeModelContentProvider.java:432)
-	at org.eclipse.debug.internal.ui.viewers.model.TreeModelContentProvider.modelChanged(TreeModelContentProvider.java:400)
-	at org.eclipse.cdt.dsf.ui.viewmodel.DefaultVMModelProxyStrategy$1.run(DefaultVMModelProxyStrategy.java:154)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
-	at org.eclipse.cdt.dsf.ui.viewmodel.DefaultVMModelProxyStrategy.fireModelChanged(DefaultVMModelProxyStrategy.java:158)
-	at org.eclipse.cdt.dsf.ui.viewmodel.update.AbstractCachingVMProvider$6.handleSuccess(AbstractCachingVMProvider.java:900)
-	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:385)
-	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:312)
-	at org.eclipse.cdt.dsf.ui.concurrent.SimpleDisplayExecutor.runInSwtThread(SimpleDisplayExecutor.java:117)
-	at org.eclipse.cdt.dsf.ui.concurrent.SimpleDisplayExecutor$1.run(SimpleDisplayExecutor.java:80)
-	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
-	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
-	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3794)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3433)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
-	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:694)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:606)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:497)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
-
-!ENTRY org.eclipse.debug.ui 4 120 2017-06-13 14:27:49.678
-!MESSAGE Error logged from Debug UI: 
-!STACK 0
-java.lang.NullPointerException
-	at org.yakindu.sct.simulation.ui.model.presenter.SCTSourceDisplayDispatcher.displaySource(SCTSourceDisplayDispatcher.java:51)
-	at org.eclipse.debug.internal.ui.sourcelookup.SourceLookupService.displaySource(SourceLookupService.java:96)
-	at org.eclipse.debug.internal.ui.sourcelookup.SourceLookupService.displaySource(SourceLookupService.java:77)
-	at org.eclipse.debug.internal.ui.sourcelookup.SourceLookupService.debugContextChanged(SourceLookupService.java:52)
-	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService$1.run(DebugWindowContextService.java:223)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
-	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService.notify(DebugWindowContextService.java:220)
-	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService.notify(DebugWindowContextService.java:195)
-	at org.eclipse.debug.internal.ui.contexts.DebugWindowContextService.debugContextChanged(DebugWindowContextService.java:436)
-	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider$1.run(AbstractDebugContextProvider.java:83)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
-	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider.fire(AbstractDebugContextProvider.java:80)
-	at org.eclipse.debug.internal.ui.views.launch.LaunchView$ContextProviderProxy.debugContextChanged(LaunchView.java:519)
-	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider$1.run(AbstractDebugContextProvider.java:83)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
-	at org.eclipse.debug.ui.contexts.AbstractDebugContextProvider.fire(AbstractDebugContextProvider.java:80)
-	at org.eclipse.debug.internal.ui.views.launch.LaunchView$TreeViewerContextProvider.possibleChange(LaunchView.java:405)
-	at org.eclipse.debug.internal.ui.views.launch.LaunchView$TreeViewerContextProvider$Visitor.visit(LaunchView.java:327)
-	at org.eclipse.cdt.dsf.ui.viewmodel.VMDelta.doAccept(VMDelta.java:359)
-	at org.eclipse.cdt.dsf.ui.viewmodel.VMDelta.doAccept(VMDelta.java:362)
-	at org.eclipse.cdt.dsf.ui.viewmodel.VMDelta.accept(VMDelta.java:354)
-	at org.eclipse.debug.internal.ui.views.launch.LaunchView$TreeViewerContextProvider.modelChanged(LaunchView.java:435)
-	at org.eclipse.debug.internal.ui.viewers.model.TreeModelContentProvider.doModelChanged(TreeModelContentProvider.java:432)
 	at org.eclipse.debug.internal.ui.viewers.model.TreeModelContentProvider.modelChanged(TreeModelContentProvider.java:400)
 	at org.eclipse.cdt.dsf.ui.viewmodel.DefaultVMModelProxyStrategy$1.run(DefaultVMModelProxyStrategy.java:154)
 	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)

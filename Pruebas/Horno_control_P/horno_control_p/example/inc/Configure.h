@@ -11,7 +11,7 @@
 #define ADC_INTERRUPT_PRIORITY	5
 ADC_CLOCK_SETUP_T ADCSetup;			//Estructura de condiguracion del ADC
 #define MAX_ADC_SAMPLES			10	//Cantidad de muestras del ADC que se promedian
-#define ADC_SAMPLES_DELAY		(10/(portTICK_RATE_MS))	//Delay entre actualizaciones de la temperatura
+#define ADC_SAMPLES_DELAY		(1/(portTICK_RATE_MS))	//Delay entre actualizaciones de la temperatura
 
 /* Pin de deteccion de fase */
 #define PHASE_SCU_INT_PORT	6			//Puerto del SCU usado para la deteccion de fase

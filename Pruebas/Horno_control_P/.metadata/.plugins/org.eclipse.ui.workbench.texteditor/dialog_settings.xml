@@ -2,12 +2,14 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="CRITICAL" key="selection"/>
+		<item value="PIN_INT2_IRQn" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="PIN_INT2_IRQn"/>
+			<item value="GPIO2_IRQHandler"/>
 			<item value="critical"/>
 			<item value="led"/>
 			<item value="set"/>

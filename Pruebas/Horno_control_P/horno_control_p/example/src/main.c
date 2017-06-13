@@ -140,7 +140,7 @@ static void vHandlerStop(void *pvParameters){
 
 	while (1) {
 		/* La tarea permanece bloqueada hasta que el semaforo se libera */
-        xSemaphoreTake(xStopSemaphore, portMAX_DELAY);
+		xSemaphoreTake(xStopSemaphore, portMAX_DELAY);
 
         /* Cuando se presiona el boton de encendido, se le da el semaforo a la tarea. */
 
@@ -166,9 +166,11 @@ static void vHandlerStop(void *pvParameters){
 
         vTaskResume( StartTaskHandle );	//Se vuelve a iniciar la tarea de encendido. Se espera que se presione el boton
 
+        vTaskSuspend( StopTaskHandle );	//Se suspende la tarea de encendido
+
         taskEXIT_CRITICAL();
 
-        vTaskSuspend( StopTaskHandle );	//Se suspende la tarea de encendido
+
     }
 }
 
@@ -190,7 +192,7 @@ static void vHandlerGetTemperature(void *pvParameters){
 			thermocouple_temp=aux/MAX_ADC_SAMPLES;	//Se guarda el promedio de las temperaturas
 			aux=0;
 			xSemaphoreGive( xControllerSemaphore );	//Se le da el semaforo a la tarea del control de encendido
-			//vTaskDelay( ADC_SAMPLES_DELAY );		//Se bloquea la tarea por un cierto tiempo
+			vTaskDelay( ADC_SAMPLES_DELAY );		//Se bloquea la tarea por un cierto tiempo
 		}
 	}
 }
@@ -241,23 +243,22 @@ static void vHandlerZeroCrossing(void *pvParameters){
 
 /* Esta tarea actualiza el valor de referencia */
 static void vHandlerUpdateTemperatureReference(void *pvParameters){
-	uint8_t i=0;
+	static uint8_t index=0;
 	portTickType xLastExecutionTime;
 
 	xLastExecutionTime = xTaskGetTickCount();
 
 	while (1) {
 
-		if( i < sizeof(temperature_profile)/sizeof(float) ){
-			reference=temperature_profile[i];
-			i++;
+		if( index < sizeof(temperature_profile)/sizeof(float) ){
+			reference=temperature_profile[index];
+			index++;
 		}
 		else{
-			xSemaphoreGive(xStopSemaphore);	//Se otorga el semaforo para apagar el horno
-			i=0;
+			index=0;
+			NVIC_SetPendingIRQ(STOP_IRQN);	//Se llama a la tarea que apaga el horno
 		}
-		vTaskDelayUntil(&xLastExecutionTime, REFERENCE_INTERVAL);
-
+		vTaskDelay(REFERENCE_INTERVAL);
     }
 }
 
