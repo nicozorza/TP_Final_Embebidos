@@ -38,6 +38,7 @@ bool trigger_state=false;		//Estado del trigger
 #define STOP_PRIORITY					4UL
 #define GET_TEMPERATURE_PRIORITY		1UL
 #define CONTROLLER_PRIORITY				1UL
+#define COOLER_PRIORITY					1UL
 #define ZERO_CROSSING_PRIORITY			2UL
 #define UPDATE_TEMPERATURE_PRIORITY		2UL
 
@@ -47,6 +48,9 @@ int cycles_count=0;					//Cantodad de ciclos de la senoidal para el control por 
 #define REFERENCE_INTERVAL (5000/(portTICK_RATE_MS))	//Intervalo de tiempo para la actualizacion de la referencia
 float reference=0;				//Temperatura de referencia
 
+#define MAX_COOLER_CYCLES	2	//Delay de encendido y apagado del cooler
+bool cool_temperature=false;					//Variable global que controla la velocidad del cooler
+int cooler_cycles=0;							//Cantidad de semiciclos contados para el cooler
 /* Curva de temperatura que se debe seguir */
 const float temperature_profile[]={25, 26 , 27, 28,
 		29.08,
@@ -106,5 +110,6 @@ static void vHandlerGetTemperature(void *pvParameters);	//Tarea que mide la temp
 static void vHandlerController(void *pvParameters);		//Tarea que controla la resistencia
 static void vHandlerZeroCrossing(void *pvParameters);	//Tarea que se ejecuta con los cruces por cero
 static void vHandlerUpdateTemperatureReference(void *pvParameters);	//Tarea que actualiza la referencia de temperatura
+static void vHandlerCooler(void *pvParameters);	//Tarea que controla el ventilador
 
 #endif

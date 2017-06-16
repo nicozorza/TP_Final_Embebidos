@@ -29,6 +29,12 @@ ADC_CLOCK_SETUP_T ADCSetup;			//Estructura de condiguracion del ADC
 #define TRIGGER_GPIO_INT_PORT	3			//Puerto del GPIO usado para el trigger del triac
 #define TRIGGER_GPIO_INT_PIN	4			//Pin del GPIO usado para el trigger del triac
 
+/* Pin del triac para el cooler */
+#define COOLER_SCU_INT_PORT		6			//Puerto del SCU usado para el cooler
+#define COOLER_SCU_INT_PIN		10			//Pin del SCU usado para el cooler
+#define COOLER_GPIO_INT_PORT	3			//Puerto del GPIO usado para el cooler
+#define COOLER_GPIO_INT_PIN		6			//Pin del GPIO usado para el cooler
+
 /* Pin de encendido */
 #define START_SCU_INT_PORT	1			//Puerto del SCU usado para el boton de encendido
 #define START_SCU_INT_PIN	0			//Pin del SCU usado para el boton de encendido
@@ -55,5 +61,6 @@ void ConfigurePhaseDetector(void);		//Configuracion del detector de cruce por ce
 void ConfigureTriggerResistor(void);	//Configuracion del trigger que controla la resistencia
 void ConfigureStartButton(void);		//Configuracion del boton de encendido
 void ConfigureStopButton(void);			//Configuracion del boton de apagado
+void ConfigureCooler( void );			//Configuración del pin de control del cooler
 
 #endif

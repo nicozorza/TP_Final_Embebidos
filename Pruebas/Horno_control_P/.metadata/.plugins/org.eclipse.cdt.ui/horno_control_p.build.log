@@ -1,6 +1,6 @@
-19:32:40 **** Incremental Build of configuration Debug for project horno_control_p ****
+14:36:28 **** Incremental Build of configuration Debug for project horno_control_p ****
 make -r all 
 make: No se hace nada para 'all'.
 
-19:32:40 Build Finished (took 57ms)
+14:36:28 Build Finished (took 69ms)
 

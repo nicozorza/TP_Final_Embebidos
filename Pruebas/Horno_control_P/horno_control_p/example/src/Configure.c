@@ -87,4 +87,11 @@ void ConfigureStopButton( void ){
 	NVIC_ClearPendingIRQ(STOP_IRQN);						//Se limpian las interrupciones pendientes
 	NVIC_EnableIRQ(STOP_IRQN);								//Se habilitan las interrupciones para el pin
 }
+
+void ConfigureCooler( void ){
+	/* Configuracion del pin del triac que controla el cooler */
+	Chip_SCU_PinMuxSet(COOLER_SCU_INT_PORT, COOLER_SCU_INT_PIN,(SCU_MODE_INBUFF_EN|SCU_MODE_INACT|SCU_MODE_FUNC0));
+	Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, COOLER_GPIO_INT_PORT, COOLER_GPIO_INT_PIN);	//Pin de salida
+	Chip_GPIO_SetPinState(LPC_GPIO_PORT, COOLER_GPIO_INT_PORT, COOLER_GPIO_INT_PIN, (bool) false);
+}
 /*****************************************************************************/

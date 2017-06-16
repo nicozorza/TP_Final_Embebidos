@@ -3246,3 +3246,924 @@ make: No se hace nada para 'all'.
 19:32:40 **** Incremental Build of configuration Debug for project horno_control_p ****
 make -r all 
 make: No se hace nada para 'all'.
+20:52:59 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+20:52:59 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+20:53:00 **** Incremental Build of configuration Debug for project horno_control_p ****
+make -r all 
+Building target: horno_control_p.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="horno_control_p.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "freertos_examples_1_to_9_Debug.ld" -o "horno_control_p.axf"  ./freertos/src/FreeRTOSCommonHooks.o ./freertos/src/croutine.o ./freertos/src/event_groups.o ./freertos/src/heap_3.o ./freertos/src/list.o ./freertos/src/port.o ./freertos/src/queue.o ./freertos/src/redlib_memfix.o ./freertos/src/tasks.o ./freertos/src/timers.o  ./example/src/Configure.o ./example/src/cr_startup_lpc43xx.o ./example/src/main.o ./example/src/sysinit.o ./example/src/utils.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: horno_control_p.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "horno_control_p.axf"; # arm-none-eabi-objcopy -v -O binary "horno_control_p.axf" "horno_control_p.bin" ; # checksum -p LPC4337 -d "horno_control_p.bin";
+   text	   data	    bss	    dec	    hex	filename
+  19152	      8	    748	  19908	   4dc4	horno_control_p.axf
+ 
+20:53:02 **** Incremental Build of configuration Debug for project horno_control_p ****
+make -r all 
+make: No se hace nada para 'all'.
+20:58:48 **** Incremental Build of configuration Debug for project horno_control_p ****
+make -r all 
+make: No se hace nada para 'all'.
+20:59:16 **** Incremental Build of configuration Debug for project horno_control_p ****
+make -r all 
+make: No se hace nada para 'all'.
+11:39:34 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+11:39:36 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+11:39:37 **** Incremental Build of configuration Debug for project horno_control_p ****
+make -r all 
+Building file: ../example/src/Configure.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/horno_control_p/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/horno_control_p/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/Configure.d" -MT"example/src/Configure.o" -MT"example/src/Configure.d" -o "example/src/Configure.o" "../example/src/Configure.c"
+Finished building: ../example/src/Configure.c
+ 
+Building file: ../example/src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/horno_control_p/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/horno_control_p/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/main.d" -MT"example/src/main.o" -MT"example/src/main.d" -o "example/src/main.o" "../example/src/main.c"
+../example/src/main.c: In function 'ADC0_IRQHandler':
+../example/src/main.c:30:50: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(ADC_TEMPERATURE, ADC_CHANNEL,&adc_data); //Se hace una nueva lectura de la temperatura
+                                                  ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+example/src/subdir.mk:30: fallo en las instrucciones para el objetivo 'example/src/main.o'
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/horno_control_p/example/inc/main.h:6,
+                 from ../example/src/main.c:1:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+../example/src/main.c: In function 'vHandlerUpdateTemperatureReference':
+../example/src/main.c:247:15: warning: variable 'xLastExecutionTime' set but not used [-Wunused-but-set-variable]
+  portTickType xLastExecutionTime;
+               ^
+../example/src/main.c: In function 'vHandlerCooler':
+../example/src/main.c:271:7: error: 'index' undeclared (first use in this function)
+   if( index < sizeof(temperature_profile)/sizeof(float) ){
+       ^
+../example/src/main.c:271:7: note: each undeclared identifier is reported only once for each function it appears in
+../example/src/main.c: At top level:
+../example/src/main.c:266:13: warning: 'vHandlerCooler' defined but not used [-Wunused-function]
+ static void vHandlerCooler(void *pvParameters){
+             ^
+make: *** [example/src/main.o] Error 1
+11:48:10 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+11:48:11 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+11:48:12 **** Incremental Build of configuration Debug for project horno_control_p ****
+make -r all 
+Building file: ../example/src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/horno_control_p/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/horno_control_p/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/main.d" -MT"example/src/main.o" -MT"example/src/main.d" -o "example/src/main.o" "../example/src/main.c"
+../example/src/main.c: In function 'ADC0_IRQHandler':
+../example/src/main.c:30:50: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(ADC_TEMPERATURE, ADC_CHANNEL,&adc_data); //Se hace una nueva lectura de la temperatura
+                                                  ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/horno_control_p/example/inc/main.h:6,
+                 from ../example/src/main.c:1:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+../example/src/main.c: In function 'vHandlerUpdateTemperatureReference':
+../example/src/main.c:247:15: warning: variable 'xLastExecutionTime' set but not used [-Wunused-but-set-variable]
+  portTickType xLastExecutionTime;
+               ^
+Finished building: ../example/src/main.c
+ 
+Building target: horno_control_p.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="horno_control_p.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "freertos_examples_1_to_9_Debug.ld" -o "horno_control_p.axf"  ./freertos/src/FreeRTOSCommonHooks.o ./freertos/src/croutine.o ./freertos/src/event_groups.o ./freertos/src/heap_3.o ./freertos/src/list.o ./freertos/src/port.o ./freertos/src/queue.o ./freertos/src/redlib_memfix.o ./freertos/src/tasks.o ./freertos/src/timers.o  ./example/src/Configure.o ./example/src/cr_startup_lpc43xx.o ./example/src/main.o ./example/src/sysinit.o ./example/src/utils.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: horno_control_p.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "horno_control_p.axf"; # arm-none-eabi-objcopy -v -O binary "horno_control_p.axf" "horno_control_p.bin" ; # checksum -p LPC4337 -d "horno_control_p.bin";
+   text	   data	    bss	    dec	    hex	filename
+  19312	      8	    748	  20068	   4e64	horno_control_p.axf
+ 
+11:52:11 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+11:52:11 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+11:52:12 **** Incremental Build of configuration Debug for project horno_control_p ****
+make -r all 
+Building file: ../example/src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/horno_control_p/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/horno_control_p/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/main.d" -MT"example/src/main.o" -MT"example/src/main.d" -o "example/src/main.o" "../example/src/main.c"
+../example/src/main.c: In function 'ADC0_IRQHandler':
+../example/src/main.c:30:50: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(ADC_TEMPERATURE, ADC_CHANNEL,&adc_data); //Se hace una nueva lectura de la temperatura
+                                                  ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/horno_control_p/example/inc/main.h:6,
+                 from ../example/src/main.c:1:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+../example/src/main.c: In function 'vHandlerUpdateTemperatureReference':
+../example/src/main.c:251:15: warning: variable 'xLastExecutionTime' set but not used [-Wunused-but-set-variable]
+  portTickType xLastExecutionTime;
+               ^
+Finished building: ../example/src/main.c
+ 
+Building target: horno_control_p.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="horno_control_p.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "freertos_examples_1_to_9_Debug.ld" -o "horno_control_p.axf"  ./freertos/src/FreeRTOSCommonHooks.o ./freertos/src/croutine.o ./freertos/src/event_groups.o ./freertos/src/heap_3.o ./freertos/src/list.o ./freertos/src/port.o ./freertos/src/queue.o ./freertos/src/redlib_memfix.o ./freertos/src/tasks.o ./freertos/src/timers.o  ./example/src/Configure.o ./example/src/cr_startup_lpc43xx.o ./example/src/main.o ./example/src/sysinit.o ./example/src/utils.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: horno_control_p.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "horno_control_p.axf"; # arm-none-eabi-objcopy -v -O binary "horno_control_p.axf" "horno_control_p.bin" ; # checksum -p LPC4337 -d "horno_control_p.bin";
+   text	   data	    bss	    dec	    hex	filename
+  19336	      8	    748	  20092	   4e7c	horno_control_p.axf
+ 
+13:34:29 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+13:34:29 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+13:34:30 **** Incremental Build of configuration Debug for project horno_control_p ****
+make -r all 
+make: No se hace nada para 'all'.
+13:34:35 **** Incremental Build of configuration Debug for project horno_control_p ****
+make -r all 
+make: No se hace nada para 'all'.
+13:37:33 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+13:37:34 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+13:37:34 **** Incremental Build of configuration Debug for project horno_control_p ****
+make -r all 
+Building file: ../example/src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/horno_control_p/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/horno_control_p/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/main.d" -MT"example/src/main.o" -MT"example/src/main.d" -o "example/src/main.o" "../example/src/main.c"
+../example/src/main.c: In function 'ADC0_IRQHandler':
+../example/src/main.c:30:50: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(ADC_TEMPERATURE, ADC_CHANNEL,&adc_data); //Se hace una nueva lectura de la temperatura
+                                                  ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/horno_control_p/example/inc/main.h:6,
+                 from ../example/src/main.c:1:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+../example/src/main.c: In function 'vHandlerUpdateTemperatureReference':
+../example/src/main.c:252:15: warning: variable 'xLastExecutionTime' set but not used [-Wunused-but-set-variable]
+  portTickType xLastExecutionTime;
+               ^
+Finished building: ../example/src/main.c
+ 
+Building target: horno_control_p.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="horno_control_p.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "freertos_examples_1_to_9_Debug.ld" -o "horno_control_p.axf"  ./freertos/src/FreeRTOSCommonHooks.o ./freertos/src/croutine.o ./freertos/src/event_groups.o ./freertos/src/heap_3.o ./freertos/src/list.o ./freertos/src/port.o ./freertos/src/queue.o ./freertos/src/redlib_memfix.o ./freertos/src/tasks.o ./freertos/src/timers.o  ./example/src/Configure.o ./example/src/cr_startup_lpc43xx.o ./example/src/main.o ./example/src/sysinit.o ./example/src/utils.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: horno_control_p.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "horno_control_p.axf"; # arm-none-eabi-objcopy -v -O binary "horno_control_p.axf" "horno_control_p.bin" ; # checksum -p LPC4337 -d "horno_control_p.bin";
+   text	   data	    bss	    dec	    hex	filename
+  19384	      8	    748	  20140	   4eac	horno_control_p.axf
+ 
+13:37:45 **** Incremental Build of configuration Debug for project horno_control_p ****
+make -r all 
+make: No se hace nada para 'all'.
+13:56:41 **** Incremental Build of configuration Debug for project horno_control_p ****
+make -r all 
+make: No se hace nada para 'all'.
+13:57:28 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+13:57:29 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+13:57:29 **** Incremental Build of configuration Debug for project horno_control_p ****
+make -r all 
+Building file: ../example/src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/horno_control_p/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/horno_control_p/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/main.d" -MT"example/src/main.o" -MT"example/src/main.d" -o "example/src/main.o" "../example/src/main.c"
+../example/src/main.c: In function 'ADC0_IRQHandler':
+../example/src/main.c:30:50: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(ADC_TEMPERATURE, ADC_CHANNEL,&adc_data); //Se hace una nueva lectura de la temperatura
+                                                  ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/horno_control_p/example/inc/main.h:6,
+                 from ../example/src/main.c:1:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+../example/src/main.c: In function 'vHandlerUpdateTemperatureReference':
+../example/src/main.c:252:15: warning: variable 'xLastExecutionTime' set but not used [-Wunused-but-set-variable]
+  portTickType xLastExecutionTime;
+               ^
+Finished building: ../example/src/main.c
+ 
+Building target: horno_control_p.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="horno_control_p.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "freertos_examples_1_to_9_Debug.ld" -o "horno_control_p.axf"  ./freertos/src/FreeRTOSCommonHooks.o ./freertos/src/croutine.o ./freertos/src/event_groups.o ./freertos/src/heap_3.o ./freertos/src/list.o ./freertos/src/port.o ./freertos/src/queue.o ./freertos/src/redlib_memfix.o ./freertos/src/tasks.o ./freertos/src/timers.o  ./example/src/Configure.o ./example/src/cr_startup_lpc43xx.o ./example/src/main.o ./example/src/sysinit.o ./example/src/utils.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: horno_control_p.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "horno_control_p.axf"; # arm-none-eabi-objcopy -v -O binary "horno_control_p.axf" "horno_control_p.bin" ; # checksum -p LPC4337 -d "horno_control_p.bin";
+   text	   data	    bss	    dec	    hex	filename
+  19384	      8	    748	  20140	   4eac	horno_control_p.axf
+ 
+13:57:31 **** Incremental Build of configuration Debug for project horno_control_p ****
+make -r all 
+make: No se hace nada para 'all'.
+13:58:26 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+13:58:26 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+13:58:27 **** Incremental Build of configuration Debug for project horno_control_p ****
+make -r all 
+Building file: ../example/src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/horno_control_p/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/horno_control_p/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/main.d" -MT"example/src/main.o" -MT"example/src/main.d" -o "example/src/main.o" "../example/src/main.c"
+../example/src/main.c: In function 'ADC0_IRQHandler':
+../example/src/main.c:30:50: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(ADC_TEMPERATURE, ADC_CHANNEL,&adc_data); //Se hace una nueva lectura de la temperatura
+                                                  ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/horno_control_p/example/inc/main.h:6,
+                 from ../example/src/main.c:1:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+../example/src/main.c: In function 'vHandlerUpdateTemperatureReference':
+../example/src/main.c:252:15: warning: variable 'xLastExecutionTime' set but not used [-Wunused-but-set-variable]
+  portTickType xLastExecutionTime;
+               ^
+Finished building: ../example/src/main.c
+ 
+Building target: horno_control_p.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="horno_control_p.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "freertos_examples_1_to_9_Debug.ld" -o "horno_control_p.axf"  ./freertos/src/FreeRTOSCommonHooks.o ./freertos/src/croutine.o ./freertos/src/event_groups.o ./freertos/src/heap_3.o ./freertos/src/list.o ./freertos/src/port.o ./freertos/src/queue.o ./freertos/src/redlib_memfix.o ./freertos/src/tasks.o ./freertos/src/timers.o  ./example/src/Configure.o ./example/src/cr_startup_lpc43xx.o ./example/src/main.o ./example/src/sysinit.o ./example/src/utils.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: horno_control_p.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "horno_control_p.axf"; # arm-none-eabi-objcopy -v -O binary "horno_control_p.axf" "horno_control_p.bin" ; # checksum -p LPC4337 -d "horno_control_p.bin";
+   text	   data	    bss	    dec	    hex	filename
+  19384	      8	    748	  20140	   4eac	horno_control_p.axf
+ 
+13:58:28 **** Incremental Build of configuration Debug for project horno_control_p ****
+make -r all 
+make: No se hace nada para 'all'.
+14:01:33 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+14:01:34 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+14:01:34 **** Incremental Build of configuration Debug for project horno_control_p ****
+make -r all 
+Building file: ../example/src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/horno_control_p/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/horno_control_p/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/main.d" -MT"example/src/main.o" -MT"example/src/main.d" -o "example/src/main.o" "../example/src/main.c"
+../example/src/main.c: In function 'ADC0_IRQHandler':
+../example/src/main.c:30:50: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(ADC_TEMPERATURE, ADC_CHANNEL,&adc_data); //Se hace una nueva lectura de la temperatura
+                                                  ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/horno_control_p/example/inc/main.h:6,
+                 from ../example/src/main.c:1:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+../example/src/main.c: In function 'vHandlerUpdateTemperatureReference':
+../example/src/main.c:252:15: warning: variable 'xLastExecutionTime' set but not used [-Wunused-but-set-variable]
+  portTickType xLastExecutionTime;
+               ^
+Finished building: ../example/src/main.c
+ 
+Building target: horno_control_p.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="horno_control_p.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "freertos_examples_1_to_9_Debug.ld" -o "horno_control_p.axf"  ./freertos/src/FreeRTOSCommonHooks.o ./freertos/src/croutine.o ./freertos/src/event_groups.o ./freertos/src/heap_3.o ./freertos/src/list.o ./freertos/src/port.o ./freertos/src/queue.o ./freertos/src/redlib_memfix.o ./freertos/src/tasks.o ./freertos/src/timers.o  ./example/src/Configure.o ./example/src/cr_startup_lpc43xx.o ./example/src/main.o ./example/src/sysinit.o ./example/src/utils.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: horno_control_p.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "horno_control_p.axf"; # arm-none-eabi-objcopy -v -O binary "horno_control_p.axf" "horno_control_p.bin" ; # checksum -p LPC4337 -d "horno_control_p.bin";
+   text	   data	    bss	    dec	    hex	filename
+  19384	      8	    748	  20140	   4eac	horno_control_p.axf
+ 
+14:01:36 **** Incremental Build of configuration Debug for project horno_control_p ****
+make -r all 
+make: No se hace nada para 'all'.
+14:02:21 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+14:02:22 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+14:02:22 **** Incremental Build of configuration Debug for project horno_control_p ****
+make -r all 
+Building file: ../example/src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/horno_control_p/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/horno_control_p/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/main.d" -MT"example/src/main.o" -MT"example/src/main.d" -o "example/src/main.o" "../example/src/main.c"
+../example/src/main.c: In function 'ADC0_IRQHandler':
+../example/src/main.c:30:50: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(ADC_TEMPERATURE, ADC_CHANNEL,&adc_data); //Se hace una nueva lectura de la temperatura
+                                                  ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/horno_control_p/example/inc/main.h:6,
+                 from ../example/src/main.c:1:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+../example/src/main.c: In function 'vHandlerUpdateTemperatureReference':
+../example/src/main.c:252:15: warning: variable 'xLastExecutionTime' set but not used [-Wunused-but-set-variable]
+  portTickType xLastExecutionTime;
+               ^
+Finished building: ../example/src/main.c
+ 
+Building target: horno_control_p.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="horno_control_p.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "freertos_examples_1_to_9_Debug.ld" -o "horno_control_p.axf"  ./freertos/src/FreeRTOSCommonHooks.o ./freertos/src/croutine.o ./freertos/src/event_groups.o ./freertos/src/heap_3.o ./freertos/src/list.o ./freertos/src/port.o ./freertos/src/queue.o ./freertos/src/redlib_memfix.o ./freertos/src/tasks.o ./freertos/src/timers.o  ./example/src/Configure.o ./example/src/cr_startup_lpc43xx.o ./example/src/main.o ./example/src/sysinit.o ./example/src/utils.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: horno_control_p.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "horno_control_p.axf"; # arm-none-eabi-objcopy -v -O binary "horno_control_p.axf" "horno_control_p.bin" ; # checksum -p LPC4337 -d "horno_control_p.bin";
+   text	   data	    bss	    dec	    hex	filename
+  19384	      8	    748	  20140	   4eac	horno_control_p.axf
+ 
+14:02:25 **** Incremental Build of configuration Debug for project horno_control_p ****
+make -r all 
+make: No se hace nada para 'all'.
+14:05:09 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+14:05:10 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+14:05:10 **** Incremental Build of configuration Debug for project horno_control_p ****
+make -r all 
+Building file: ../example/src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/horno_control_p/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/horno_control_p/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/main.d" -MT"example/src/main.o" -MT"example/src/main.d" -o "example/src/main.o" "../example/src/main.c"
+../example/src/main.c: In function 'ADC0_IRQHandler':
+../example/src/main.c:30:50: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(ADC_TEMPERATURE, ADC_CHANNEL,&adc_data); //Se hace una nueva lectura de la temperatura
+                                                  ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/horno_control_p/example/inc/main.h:6,
+                 from ../example/src/main.c:1:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+../example/src/main.c: In function 'vHandlerUpdateTemperatureReference':
+../example/src/main.c:252:15: warning: variable 'xLastExecutionTime' set but not used [-Wunused-but-set-variable]
+  portTickType xLastExecutionTime;
+               ^
+Finished building: ../example/src/main.c
+ 
+Building target: horno_control_p.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="horno_control_p.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "freertos_examples_1_to_9_Debug.ld" -o "horno_control_p.axf"  ./freertos/src/FreeRTOSCommonHooks.o ./freertos/src/croutine.o ./freertos/src/event_groups.o ./freertos/src/heap_3.o ./freertos/src/list.o ./freertos/src/port.o ./freertos/src/queue.o ./freertos/src/redlib_memfix.o ./freertos/src/tasks.o ./freertos/src/timers.o  ./example/src/Configure.o ./example/src/cr_startup_lpc43xx.o ./example/src/main.o ./example/src/sysinit.o ./example/src/utils.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: horno_control_p.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "horno_control_p.axf"; # arm-none-eabi-objcopy -v -O binary "horno_control_p.axf" "horno_control_p.bin" ; # checksum -p LPC4337 -d "horno_control_p.bin";
+   text	   data	    bss	    dec	    hex	filename
+  19384	      8	    748	  20140	   4eac	horno_control_p.axf
+ 
+14:05:12 **** Incremental Build of configuration Debug for project horno_control_p ****
+make -r all 
+make: No se hace nada para 'all'.
+14:05:56 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+14:05:57 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+14:05:57 **** Incremental Build of configuration Debug for project horno_control_p ****
+make -r all 
+Building file: ../example/src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/horno_control_p/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/horno_control_p/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/main.d" -MT"example/src/main.o" -MT"example/src/main.d" -o "example/src/main.o" "../example/src/main.c"
+../example/src/main.c: In function 'ADC0_IRQHandler':
+../example/src/main.c:30:50: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(ADC_TEMPERATURE, ADC_CHANNEL,&adc_data); //Se hace una nueva lectura de la temperatura
+                                                  ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/horno_control_p/example/inc/main.h:6,
+                 from ../example/src/main.c:1:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+../example/src/main.c: In function 'vHandlerUpdateTemperatureReference':
+../example/src/main.c:252:15: warning: variable 'xLastExecutionTime' set but not used [-Wunused-but-set-variable]
+  portTickType xLastExecutionTime;
+               ^
+Finished building: ../example/src/main.c
+ 
+Building target: horno_control_p.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="horno_control_p.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "freertos_examples_1_to_9_Debug.ld" -o "horno_control_p.axf"  ./freertos/src/FreeRTOSCommonHooks.o ./freertos/src/croutine.o ./freertos/src/event_groups.o ./freertos/src/heap_3.o ./freertos/src/list.o ./freertos/src/port.o ./freertos/src/queue.o ./freertos/src/redlib_memfix.o ./freertos/src/tasks.o ./freertos/src/timers.o  ./example/src/Configure.o ./example/src/cr_startup_lpc43xx.o ./example/src/main.o ./example/src/sysinit.o ./example/src/utils.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: horno_control_p.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "horno_control_p.axf"; # arm-none-eabi-objcopy -v -O binary "horno_control_p.axf" "horno_control_p.bin" ; # checksum -p LPC4337 -d "horno_control_p.bin";
+   text	   data	    bss	    dec	    hex	filename
+  19384	      8	    748	  20140	   4eac	horno_control_p.axf
+ 
+14:06:04 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+14:06:05 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+14:06:05 **** Incremental Build of configuration Debug for project horno_control_p ****
+make -r all 
+make: No se hace nada para 'all'.
+14:06:07 **** Incremental Build of configuration Debug for project horno_control_p ****
+make -r all 
+make: No se hace nada para 'all'.
+14:08:45 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+14:08:46 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+14:08:46 **** Incremental Build of configuration Debug for project horno_control_p ****
+make -r all 
+Building file: ../example/src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/horno_control_p/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/horno_control_p/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/main.d" -MT"example/src/main.o" -MT"example/src/main.d" -o "example/src/main.o" "../example/src/main.c"
+../example/src/main.c: In function 'ADC0_IRQHandler':
+../example/src/main.c:30:50: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(ADC_TEMPERATURE, ADC_CHANNEL,&adc_data); //Se hace una nueva lectura de la temperatura
+                                                  ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/horno_control_p/example/inc/main.h:6,
+                 from ../example/src/main.c:1:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+example/src/subdir.mk:30: fallo en las instrucciones para el objetivo 'example/src/main.o'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+../example/src/main.c: In function 'vHandlerUpdateTemperatureReference':
+../example/src/main.c:252:15: warning: variable 'xLastExecutionTime' set but not used [-Wunused-but-set-variable]
+  portTickType xLastExecutionTime;
+               ^
+../example/src/main.c: In function 'vHandlerCooler':
+../example/src/main.c:276:35: warning: statement with no effect [-Wunused-value]
+   if( cool_temperature == false ){5
+                                   ^
+../example/src/main.c:277:4: error: expected ';' before 'if'
+    if( cycles_count >= MAX_CYCLES_COOLER )
+    ^
+make: *** [example/src/main.o] Error 1
+14:09:01 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+14:09:01 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+14:09:02 **** Incremental Build of configuration Debug for project horno_control_p ****
+make -r all 
+Building file: ../example/src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/horno_control_p/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/horno_control_p/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/main.d" -MT"example/src/main.o" -MT"example/src/main.d" -o "example/src/main.o" "../example/src/main.c"
+../example/src/main.c: In function 'ADC0_IRQHandler':
+../example/src/main.c:30:50: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(ADC_TEMPERATURE, ADC_CHANNEL,&adc_data); //Se hace una nueva lectura de la temperatura
+                                                  ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/horno_control_p/example/inc/main.h:6,
+                 from ../example/src/main.c:1:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+example/src/subdir.mk:30: fallo en las instrucciones para el objetivo 'example/src/main.o'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+../example/src/main.c: In function 'vHandlerUpdateTemperatureReference':
+../example/src/main.c:252:15: warning: variable 'xLastExecutionTime' set but not used [-Wunused-but-set-variable]
+  portTickType xLastExecutionTime;
+               ^
+../example/src/main.c: In function 'vHandlerCooler':
+../example/src/main.c:277:24: error: 'MAX_CYCLES_COOLER' undeclared (first use in this function)
+    if( cycles_count >= MAX_CYCLES_COOLER )
+                        ^
+../example/src/main.c:277:24: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [example/src/main.o] Error 1
+14:09:14 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+14:09:15 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+14:09:15 **** Incremental Build of configuration Debug for project horno_control_p ****
+make -r all 
+Building file: ../example/src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/horno_control_p/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/horno_control_p/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/main.d" -MT"example/src/main.o" -MT"example/src/main.d" -o "example/src/main.o" "../example/src/main.c"
+../example/src/main.c: In function 'ADC0_IRQHandler':
+../example/src/main.c:30:50: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(ADC_TEMPERATURE, ADC_CHANNEL,&adc_data); //Se hace una nueva lectura de la temperatura
+                                                  ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/horno_control_p/example/inc/main.h:6,
+                 from ../example/src/main.c:1:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+../example/src/main.c: In function 'vHandlerUpdateTemperatureReference':
+../example/src/main.c:252:15: warning: variable 'xLastExecutionTime' set but not used [-Wunused-but-set-variable]
+  portTickType xLastExecutionTime;
+               ^
+Finished building: ../example/src/main.c
+ 
+Building target: horno_control_p.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="horno_control_p.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "freertos_examples_1_to_9_Debug.ld" -o "horno_control_p.axf"  ./freertos/src/FreeRTOSCommonHooks.o ./freertos/src/croutine.o ./freertos/src/event_groups.o ./freertos/src/heap_3.o ./freertos/src/list.o ./freertos/src/port.o ./freertos/src/queue.o ./freertos/src/redlib_memfix.o ./freertos/src/tasks.o ./freertos/src/timers.o  ./example/src/Configure.o ./example/src/cr_startup_lpc43xx.o ./example/src/main.o ./example/src/sysinit.o ./example/src/utils.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: horno_control_p.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "horno_control_p.axf"; # arm-none-eabi-objcopy -v -O binary "horno_control_p.axf" "horno_control_p.bin" ; # checksum -p LPC4337 -d "horno_control_p.bin";
+   text	   data	    bss	    dec	    hex	filename
+  19388	      8	    748	  20144	   4eb0	horno_control_p.axf
+ 
+14:09:25 **** Incremental Build of configuration Debug for project horno_control_p ****
+make -r all 
+make: No se hace nada para 'all'.
+14:14:12 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+14:14:13 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+14:14:13 **** Incremental Build of configuration Debug for project horno_control_p ****
+make -r all 
+make: No se hace nada para 'all'.
+14:14:15 **** Incremental Build of configuration Debug for project horno_control_p ****
+make -r all 
+make: No se hace nada para 'all'.
+14:15:44 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+14:15:44 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+14:15:45 **** Incremental Build of configuration Debug for project horno_control_p ****
+make -r all 
+Building file: ../example/src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/horno_control_p/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/horno_control_p/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/main.d" -MT"example/src/main.o" -MT"example/src/main.d" -o "example/src/main.o" "../example/src/main.c"
+../example/src/main.c: In function 'ADC0_IRQHandler':
+../example/src/main.c:30:50: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(ADC_TEMPERATURE, ADC_CHANNEL,&adc_data); //Se hace una nueva lectura de la temperatura
+                                                  ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/horno_control_p/example/inc/main.h:6,
+                 from ../example/src/main.c:1:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+../example/src/main.c: In function 'vHandlerUpdateTemperatureReference':
+../example/src/main.c:252:15: warning: variable 'xLastExecutionTime' set but not used [-Wunused-but-set-variable]
+  portTickType xLastExecutionTime;
+               ^
+../example/src/main.c: At top level:
+../example/src/main.c:271:13: warning: 'vHandlerCooler' defined but not used [-Wunused-function]
+ static void vHandlerCooler(void *pvParameters){
+             ^
+Finished building: ../example/src/main.c
+ 
+Building target: horno_control_p.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="horno_control_p.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "freertos_examples_1_to_9_Debug.ld" -o "horno_control_p.axf"  ./freertos/src/FreeRTOSCommonHooks.o ./freertos/src/croutine.o ./freertos/src/event_groups.o ./freertos/src/heap_3.o ./freertos/src/list.o ./freertos/src/port.o ./freertos/src/queue.o ./freertos/src/redlib_memfix.o ./freertos/src/tasks.o ./freertos/src/timers.o  ./example/src/Configure.o ./example/src/cr_startup_lpc43xx.o ./example/src/main.o ./example/src/sysinit.o ./example/src/utils.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: horno_control_p.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "horno_control_p.axf"; # arm-none-eabi-objcopy -v -O binary "horno_control_p.axf" "horno_control_p.bin" ; # checksum -p LPC4337 -d "horno_control_p.bin";
+   text	   data	    bss	    dec	    hex	filename
+  19224	      8	    748	  19980	   4e0c	horno_control_p.axf
+ 
+14:15:47 **** Incremental Build of configuration Debug for project horno_control_p ****
+make -r all 
+make: No se hace nada para 'all'.
+14:22:39 **** Incremental Build of configuration Debug for project horno_control_p ****
+make -r all 
+make: No se hace nada para 'all'.
+14:24:23 **** Incremental Build of configuration Debug for project horno_control_p ****
+make -r all 
+make: No se hace nada para 'all'.
+14:25:55 **** Incremental Build of configuration Debug for project horno_control_p ****
+make -r all 
+make: No se hace nada para 'all'.
+14:27:32 **** Incremental Build of configuration Debug for project horno_control_p ****
+make -r all 
+make: No se hace nada para 'all'.
+14:28:30 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+14:28:30 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+14:28:30 **** Incremental Build of configuration Debug for project horno_control_p ****
+make -r all 
+Building file: ../example/src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/horno_control_p/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/horno_control_p/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/main.d" -MT"example/src/main.o" -MT"example/src/main.d" -o "example/src/main.o" "../example/src/main.c"
+../example/src/main.c: In function 'ADC0_IRQHandler':
+../example/src/main.c:30:50: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(ADC_TEMPERATURE, ADC_CHANNEL,&adc_data); //Se hace una nueva lectura de la temperatura
+                                                  ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/horno_control_p/example/inc/main.h:6,
+                 from ../example/src/main.c:1:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+../example/src/main.c: In function 'vHandlerUpdateTemperatureReference':
+../example/src/main.c:252:15: warning: variable 'xLastExecutionTime' set but not used [-Wunused-but-set-variable]
+  portTickType xLastExecutionTime;
+               ^
+Finished building: ../example/src/main.c
+ 
+Building target: horno_control_p.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="horno_control_p.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "freertos_examples_1_to_9_Debug.ld" -o "horno_control_p.axf"  ./freertos/src/FreeRTOSCommonHooks.o ./freertos/src/croutine.o ./freertos/src/event_groups.o ./freertos/src/heap_3.o ./freertos/src/list.o ./freertos/src/port.o ./freertos/src/queue.o ./freertos/src/redlib_memfix.o ./freertos/src/tasks.o ./freertos/src/timers.o  ./example/src/Configure.o ./example/src/cr_startup_lpc43xx.o ./example/src/main.o ./example/src/sysinit.o ./example/src/utils.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: horno_control_p.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "horno_control_p.axf"; # arm-none-eabi-objcopy -v -O binary "horno_control_p.axf" "horno_control_p.bin" ; # checksum -p LPC4337 -d "horno_control_p.bin";
+   text	   data	    bss	    dec	    hex	filename
+  19388	      8	    748	  20144	   4eb0	horno_control_p.axf
+ 
+14:28:32 **** Incremental Build of configuration Debug for project horno_control_p ****
+make -r all 
+make: No se hace nada para 'all'.
+14:29:00 **** Incremental Build of configuration Debug for project horno_control_p ****
+make -r all 
+make: No se hace nada para 'all'.
+14:32:06 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+14:32:06 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+14:32:07 **** Incremental Build of configuration Debug for project horno_control_p ****
+make -r all 
+Building file: ../example/src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/horno_control_p/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/horno_control_p/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/main.d" -MT"example/src/main.o" -MT"example/src/main.d" -o "example/src/main.o" "../example/src/main.c"
+../example/src/main.c: In function 'ADC0_IRQHandler':
+../example/src/main.c:30:50: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(ADC_TEMPERATURE, ADC_CHANNEL,&adc_data); //Se hace una nueva lectura de la temperatura
+                                                  ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/horno_control_p/example/inc/main.h:6,
+                 from ../example/src/main.c:1:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+../example/src/main.c: In function 'vHandlerUpdateTemperatureReference':
+../example/src/main.c:252:15: warning: variable 'xLastExecutionTime' set but not used [-Wunused-but-set-variable]
+  portTickType xLastExecutionTime;
+               ^
+Finished building: ../example/src/main.c
+ 
+Building target: horno_control_p.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="horno_control_p.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "freertos_examples_1_to_9_Debug.ld" -o "horno_control_p.axf"  ./freertos/src/FreeRTOSCommonHooks.o ./freertos/src/croutine.o ./freertos/src/event_groups.o ./freertos/src/heap_3.o ./freertos/src/list.o ./freertos/src/port.o ./freertos/src/queue.o ./freertos/src/redlib_memfix.o ./freertos/src/tasks.o ./freertos/src/timers.o  ./example/src/Configure.o ./example/src/cr_startup_lpc43xx.o ./example/src/main.o ./example/src/sysinit.o ./example/src/utils.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: horno_control_p.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "horno_control_p.axf"; # arm-none-eabi-objcopy -v -O binary "horno_control_p.axf" "horno_control_p.bin" ; # checksum -p LPC4337 -d "horno_control_p.bin";
+   text	   data	    bss	    dec	    hex	filename
+  19396	      8	    756	  20160	   4ec0	horno_control_p.axf
+ 
+14:32:08 **** Incremental Build of configuration Debug for project horno_control_p ****
+make -r all 
+make: No se hace nada para 'all'.
+14:33:00 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+14:33:01 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+14:33:01 **** Incremental Build of configuration Debug for project horno_control_p ****
+make -r all 
+Building file: ../example/src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/horno_control_p/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/horno_control_p/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/main.d" -MT"example/src/main.o" -MT"example/src/main.d" -o "example/src/main.o" "../example/src/main.c"
+../example/src/main.c: In function 'ADC0_IRQHandler':
+../example/src/main.c:30:50: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(ADC_TEMPERATURE, ADC_CHANNEL,&adc_data); //Se hace una nueva lectura de la temperatura
+                                                  ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/horno_control_p/example/inc/main.h:6,
+                 from ../example/src/main.c:1:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+../example/src/main.c: In function 'vHandlerUpdateTemperatureReference':
+../example/src/main.c:253:15: warning: variable 'xLastExecutionTime' set but not used [-Wunused-but-set-variable]
+  portTickType xLastExecutionTime;
+               ^
+Finished building: ../example/src/main.c
+ 
+Building target: horno_control_p.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="horno_control_p.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "freertos_examples_1_to_9_Debug.ld" -o "horno_control_p.axf"  ./freertos/src/FreeRTOSCommonHooks.o ./freertos/src/croutine.o ./freertos/src/event_groups.o ./freertos/src/heap_3.o ./freertos/src/list.o ./freertos/src/port.o ./freertos/src/queue.o ./freertos/src/redlib_memfix.o ./freertos/src/tasks.o ./freertos/src/timers.o  ./example/src/Configure.o ./example/src/cr_startup_lpc43xx.o ./example/src/main.o ./example/src/sysinit.o ./example/src/utils.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: horno_control_p.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "horno_control_p.axf"; # arm-none-eabi-objcopy -v -O binary "horno_control_p.axf" "horno_control_p.bin" ; # checksum -p LPC4337 -d "horno_control_p.bin";
+   text	   data	    bss	    dec	    hex	filename
+  19408	      8	    756	  20172	   4ecc	horno_control_p.axf
+ 
+14:33:12 **** Incremental Build of configuration Debug for project horno_control_p ****
+make -r all 
+make: No se hace nada para 'all'.
+14:34:04 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+14:34:04 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+14:34:05 **** Incremental Build of configuration Debug for project horno_control_p ****
+make -r all 
+Building file: ../example/src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/horno_control_p/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/horno_control_p/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/main.d" -MT"example/src/main.o" -MT"example/src/main.d" -o "example/src/main.o" "../example/src/main.c"
+../example/src/main.c: In function 'ADC0_IRQHandler':
+../example/src/main.c:30:50: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(ADC_TEMPERATURE, ADC_CHANNEL,&adc_data); //Se hace una nueva lectura de la temperatura
+                                                  ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/horno_control_p/example/inc/main.h:6,
+                 from ../example/src/main.c:1:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+../example/src/main.c: In function 'vHandlerUpdateTemperatureReference':
+../example/src/main.c:253:15: warning: variable 'xLastExecutionTime' set but not used [-Wunused-but-set-variable]
+  portTickType xLastExecutionTime;
+               ^
+Finished building: ../example/src/main.c
+ 
+Building target: horno_control_p.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="horno_control_p.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "freertos_examples_1_to_9_Debug.ld" -o "horno_control_p.axf"  ./freertos/src/FreeRTOSCommonHooks.o ./freertos/src/croutine.o ./freertos/src/event_groups.o ./freertos/src/heap_3.o ./freertos/src/list.o ./freertos/src/port.o ./freertos/src/queue.o ./freertos/src/redlib_memfix.o ./freertos/src/tasks.o ./freertos/src/timers.o  ./example/src/Configure.o ./example/src/cr_startup_lpc43xx.o ./example/src/main.o ./example/src/sysinit.o ./example/src/utils.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: horno_control_p.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "horno_control_p.axf"; # arm-none-eabi-objcopy -v -O binary "horno_control_p.axf" "horno_control_p.bin" ; # checksum -p LPC4337 -d "horno_control_p.bin";
+   text	   data	    bss	    dec	    hex	filename
+  19408	      8	    756	  20172	   4ecc	horno_control_p.axf
+ 
+14:34:06 **** Incremental Build of configuration Debug for project horno_control_p ****
+make -r all 
+make: No se hace nada para 'all'.
+14:36:01 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+14:36:01 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+14:36:02 **** Incremental Build of configuration Debug for project horno_control_p ****
+make -r all 
+Building file: ../example/src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/horno_control_p/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/horno_control_p/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/main.d" -MT"example/src/main.o" -MT"example/src/main.d" -o "example/src/main.o" "../example/src/main.c"
+../example/src/main.c: In function 'ADC0_IRQHandler':
+../example/src/main.c:30:50: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(ADC_TEMPERATURE, ADC_CHANNEL,&adc_data); //Se hace una nueva lectura de la temperatura
+                                                  ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/horno_control_p/example/inc/main.h:6,
+                 from ../example/src/main.c:1:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+../example/src/main.c: In function 'vHandlerUpdateTemperatureReference':
+../example/src/main.c:253:15: warning: variable 'xLastExecutionTime' set but not used [-Wunused-but-set-variable]
+  portTickType xLastExecutionTime;
+               ^
+Finished building: ../example/src/main.c
+ 
+Building target: horno_control_p.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="horno_control_p.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "freertos_examples_1_to_9_Debug.ld" -o "horno_control_p.axf"  ./freertos/src/FreeRTOSCommonHooks.o ./freertos/src/croutine.o ./freertos/src/event_groups.o ./freertos/src/heap_3.o ./freertos/src/list.o ./freertos/src/port.o ./freertos/src/queue.o ./freertos/src/redlib_memfix.o ./freertos/src/tasks.o ./freertos/src/timers.o  ./example/src/Configure.o ./example/src/cr_startup_lpc43xx.o ./example/src/main.o ./example/src/sysinit.o ./example/src/utils.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: horno_control_p.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "horno_control_p.axf"; # arm-none-eabi-objcopy -v -O binary "horno_control_p.axf" "horno_control_p.bin" ; # checksum -p LPC4337 -d "horno_control_p.bin";
+   text	   data	    bss	    dec	    hex	filename
+  19408	      8	    756	  20172	   4ecc	horno_control_p.axf
+ 
+14:36:05 **** Incremental Build of configuration Debug for project horno_control_p ****
+make -r all 
+make: No se hace nada para 'all'.
+14:36:25 **** Incremental Build of configuration Debug for project lpc_board_nxp_lpcxpresso_4337 ****
+make -r all 
+make: No se hace nada para 'all'.
+14:36:26 **** Incremental Build of configuration Debug for project lpc_chip_43xx ****
+make -r all 
+make: No se hace nada para 'all'.
+14:36:26 **** Incremental Build of configuration Debug for project horno_control_p ****
+make -r all 
+Building file: ../example/src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__MULTICORE_NONE -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__REDLIB__ -DCORE_M4 -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_board_nxp_lpcxpresso_4337/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/horno_control_p/example/inc" -I"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/horno_control_p/freertos/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fsingle-precision-constant -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/main.d" -MT"example/src/main.o" -MT"example/src/main.d" -o "example/src/main.o" "../example/src/main.c"
+../example/src/main.c: In function 'ADC0_IRQHandler':
+../example/src/main.c:30:50: warning: passing argument 3 of 'Chip_ADC_ReadValue' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  Chip_ADC_ReadValue(ADC_TEMPERATURE, ADC_CHANNEL,&adc_data); //Se hace una nueva lectura de la temperatura
+                                                  ^
+In file included from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/inc/chip_lpc43xx.h:176:0,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/inc/chip.h:39,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_board_nxp_lpcxpresso_4337/inc/board.h:35,
+                 from /home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/horno_control_p/example/inc/main.h:6,
+                 from ../example/src/main.c:1:
+/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/inc/adc_18xx_43xx.h:163:8: note: expected 'uint16_t * {aka short unsigned int *}' but argument is of type 'volatile uint16_t * {aka volatile short unsigned int *}'
+ Status Chip_ADC_ReadValue(LPC_ADC_T *pADC, uint8_t channel, uint16_t *data);
+        ^
+../example/src/main.c: In function 'vHandlerUpdateTemperatureReference':
+../example/src/main.c:253:15: warning: variable 'xLastExecutionTime' set but not used [-Wunused-but-set-variable]
+  portTickType xLastExecutionTime;
+               ^
+Finished building: ../example/src/main.c
+ 
+Building target: horno_control_p.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_chip_43xx/Debug" -L"/home/nicozorza/LPCXpresso/TP_Final/Pruebas/Horno_control_P/lpc_board_nxp_lpcxpresso_4337/Debug" -Xlinker -Map="horno_control_p.map" -Xlinker --gc-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -T "freertos_examples_1_to_9_Debug.ld" -o "horno_control_p.axf"  ./freertos/src/FreeRTOSCommonHooks.o ./freertos/src/croutine.o ./freertos/src/event_groups.o ./freertos/src/heap_3.o ./freertos/src/list.o ./freertos/src/port.o ./freertos/src/queue.o ./freertos/src/redlib_memfix.o ./freertos/src/tasks.o ./freertos/src/timers.o  ./example/src/Configure.o ./example/src/cr_startup_lpc43xx.o ./example/src/main.o ./example/src/sysinit.o ./example/src/utils.o   -llpc_board_nxp_lpcxpresso_4337 -llpc_chip_43xx
+Finished building target: horno_control_p.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "horno_control_p.axf"; # arm-none-eabi-objcopy -v -O binary "horno_control_p.axf" "horno_control_p.bin" ; # checksum -p LPC4337 -d "horno_control_p.bin";
+   text	   data	    bss	    dec	    hex	filename
+  19408	      8	    756	  20172	   4ecc	horno_control_p.axf
+ 
+14:36:28 **** Incremental Build of configuration Debug for project horno_control_p ****
+make -r all 
+make: No se hace nada para 'all'.

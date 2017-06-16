@@ -72,6 +72,7 @@ static void vHandlerStart(void *pvParameters){
 	ConfigureADC();				//Configuracion del ADC
 	ConfigurePhaseDetector();	//Configuracion del detector de cruce por cero
 	ConfigureTriggerResistor();	//Configuracion del trigger que controla la resistencia
+	ConfigureCooler();			//Configuracion del pin de control del cooler
 
 	vSemaphoreCreateBinary(xStopSemaphore);		//Se crea el semaforo para el boton de apagado
 	vSemaphoreCreateBinary(xADCSemaphore);		//Se crea el semaforo de la tarea que mide la temperatura
@@ -109,6 +110,8 @@ static void vHandlerStart(void *pvParameters){
 
 			taskENTER_CRITICAL();
 
+			cool_temperature=false;			//Se enciende el ventilador a una velocidad baja
+
 			Board_LED_Set(4, true);			//Se enciende un led para indicar que esta encendido
 			Board_LED_Set(5, false);		//Se apaga el led de apagado
 
@@ -145,6 +148,8 @@ static void vHandlerStop(void *pvParameters){
         /* Cuando se presiona el boton de encendido, se le da el semaforo a la tarea. */
 
         taskENTER_CRITICAL();
+
+        cool_temperature=true;	//Se enciende el ventilador a maxima velocidad
 
         Board_LED_Set(4, false);	//Se apaga el led de encendido
         Board_LED_Set(5, true);		//Se enciende el led de apagado
@@ -232,6 +237,7 @@ static void vHandlerZeroCrossing(void *pvParameters){
 		/* La tarea permanece bloqueada hasta que el semaforo se libera */
         xSemaphoreTake(xPhaseSemaphore, portMAX_DELAY);
 
+        cooler_cycles++;
         cycles_count++;		//Se cuenta un nuevo ciclo
         if( cycles_count>MAX_CYCLES_COUNT )
         	cycles_count=0;	//Si se llegó al maximo, se resetea el contador
@@ -262,6 +268,23 @@ static void vHandlerUpdateTemperatureReference(void *pvParameters){
     }
 }
 
+/* Esta tarea controla la velocidad del cooler */
+static void vHandlerCooler(void *pvParameters){
+
+
+	while (1) {
+
+		if( cool_temperature == false ){
+			if( cooler_cycles >= MAX_COOLER_CYCLES ){
+				Chip_GPIO_SetPinToggle(LPC_GPIO_PORT,  COOLER_GPIO_INT_PORT, COOLER_GPIO_INT_PIN);
+				cooler_cycles=0;
+			}
+		}
+		else
+			Chip_GPIO_SetPinState(LPC_GPIO_PORT, COOLER_GPIO_INT_PORT, COOLER_GPIO_INT_PIN, (bool) true);
+    }
+}
+
 /*****************************************************************************
  * Funcion main
  ****************************************************************************/
@@ -276,6 +299,9 @@ int main(void){
 		/* Se crea la tarea de encendido */
 		xTaskCreate(vHandlerStart, (char *) "Start", configMINIMAL_STACK_SIZE,
 							(void *) 0, (tskIDLE_PRIORITY + START_PRIORITY), &StartTaskHandle );
+		/* Se crea la tarea de encendido */
+		xTaskCreate(vHandlerCooler, (char *) "Cooler", configMINIMAL_STACK_SIZE,
+							(void *) 0, (tskIDLE_PRIORITY + COOLER_PRIORITY), (xTaskHandle *) NULL);
 
 		vTaskStartScheduler(); /* Se comienzan a ejecutar las tareas. */
 	}
