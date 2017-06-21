@@ -250,9 +250,6 @@ static void vHandlerZeroCrossing(void *pvParameters){
 /* Esta tarea actualiza el valor de referencia */
 static void vHandlerUpdateTemperatureReference(void *pvParameters){
 	static uint8_t index=0;
-	portTickType xLastExecutionTime;
-
-	xLastExecutionTime = xTaskGetTickCount();
 
 	while (1) {
 
@@ -262,7 +259,7 @@ static void vHandlerUpdateTemperatureReference(void *pvParameters){
 		}
 		else{
 			index=0;	//Si se recorrio toda la curva, se apaga el horno
-			xSemaphoreGive(xStopSemaphore);
+			NVIC_SetPendingIRQ(STOP_IRQN);
 		}
 		vTaskDelay(REFERENCE_INTERVAL);
     }

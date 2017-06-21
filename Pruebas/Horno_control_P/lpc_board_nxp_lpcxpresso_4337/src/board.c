@@ -225,7 +225,7 @@ void Board_Init(void)
 	/* Initialize LEDs */
 	Board_LED_Init();
 	Board_Buttons_Init();
-	Chip_ENET_RMIIEnable(LPC_ETHERNET);
+	//Chip_ENET_RMIIEnable(LPC_ETHERNET);
 }
 
 void Board_I2C_Init(I2C_ID_T id)

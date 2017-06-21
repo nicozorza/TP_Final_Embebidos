@@ -13,7 +13,7 @@ int controller( float temperature, float reference );	//Funcion que aplica el co
 
 #define MAX_CYCLES_COUNT	10		//Cantidad maxima de ciclos para el control por ciclos enteros
 
-#define OPAMP_GAIN	234		//Ganancia del circuito amplificador de la termocupla
+#define OPAMP_GAIN	156		//Ganancia del circuito amplificador de la termocupla
 
 #define KP	1/5				//Inversa de la ganancia del control proporcional
 
