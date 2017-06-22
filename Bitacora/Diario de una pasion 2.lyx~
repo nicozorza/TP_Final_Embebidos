@@ -2619,7 +2619,63 @@ Parece que todo viene encaminado, pero se entrega pasado mañana, así que
 Ayer me levanté temprano y arreglé todos los problemas que teníamos con
  la interconexión entre la placa de Lio y la mía, y quedó todo andando.
  Presentamos el TP y pudimos aprobarlo.
- Por lo tanto, ya puedo despedirme de este trabajo, donde pude aprendí muchas
+ Algo que había faltado era una foto de la aplicación de celular que hizo
+ el amigo de Lio, lo cual está en la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:foto app"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imagenes/foto app.png
+	width 40page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:foto app"
+
+\end_inset
+
+Foto de la aplicación de celular.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por lo tanto, ya puedo despedirme de este trabajo, donde pude aprendí muchas
  cosas y me entretuve un buen rato.
 \end_layout
 
