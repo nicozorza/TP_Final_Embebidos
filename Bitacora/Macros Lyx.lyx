@@ -1,0 +1,993 @@
+#LyX file created by tex2lyx 2.1
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\use_default_options false
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding utf8
+\fontencoding T1
+\font_roman charter
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_author "Nicolás Zorzano"
+\pdf_bookmarks 1
+\pdf_bookmarksnumbered 1
+\pdf_bookmarksopen 1
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks 0
+\pdf_pdfborder 0
+\pdf_colorlinks 0
+\pdf_backref section
+\pdf_pdfusetitle 0
+\papersize default
+\use_geometry true
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 2
+\use_package esint 2
+\use_package mathdots 2
+\use_package mathtools 0
+\use_package mhchem 2
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 1.5cm
+\rightmargin 1cm
+\bottommargin 1.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language french
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+
+\lang spanish
+
+\begin_inset FormulaMacro
+\def\CANCEL #1{\cancel{#1}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+
+\begin_inset FormulaMacro
+\def\BCANCEL #1{\bcancel{#1}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+
+\begin_inset FormulaMacro
+\def\XCANCEL #1{\xcancel{#1}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+
+\begin_inset FormulaMacro
+\def\CANCELTO #1#2{\cancelto{{\scriptscriptstyle #2}}{#1}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+
+\begin_inset FormulaMacro
+\def\CHEK {\checkmark}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+
+\begin_inset FormulaMacro
+\def\UNCHEK {\BCANCEL{\CHEK}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+
+\begin_inset FormulaMacro
+\def\INDICADORA #1{\mathbf{1}\left\{  #1\right\}  }
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+
+\begin_inset FormulaMacro
+\def\HEAVISIDE #1{u\left(#1\right) }
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+
+\begin_inset FormulaMacro
+\def\DHEAVISIDE #1{u\left[#1\right] }
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+
+\begin_inset FormulaMacro
+\def\MODULO #1{\left|#1\right|}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+
+\begin_inset FormulaMacro
+\def\NORMA #1{\left|\left|#1\right|\right|}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+
+\begin_inset FormulaMacro
+\def\PARENTESIS #1{\left(#1\right)}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+
+\begin_inset FormulaMacro
+\def\CORCHETES #1{\left[#1\right]}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+
+\begin_inset FormulaMacro
+\def\LLAVES #1{\left\{  #1\right\}  }
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+
+\begin_inset FormulaMacro
+\def\LKEY #1{\left\{  #1\right.}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+
+\begin_inset FormulaMacro
+\def\RKEY #1{\left.#1\right\}  }
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+
+\begin_inset FormulaMacro
+\def\RBAR #1{\left.#1\right|}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+
+\begin_inset FormulaMacro
+\def\DEF {\overset{{\scriptscriptstyle \text{def}}}{=}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+
+\begin_inset FormulaMacro
+\def\LLAVEARRIBA #1#2{\overset{{\scriptstyle #2}}{\overbrace{#1}}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+
+\begin_inset FormulaMacro
+\def\LLAVEABAJO #1#2{\underset{{\scriptstyle #2}}{\underbrace{#1}}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+
+\begin_inset FormulaMacro
+\def\REALES {\mathbb{R}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+
+\begin_inset FormulaMacro
+\def\IMAGINARIOS {\mathbb{I}_{m}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+
+\begin_inset FormulaMacro
+\def\NATURALES {\mathbb{N}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+
+\begin_inset FormulaMacro
+\def\ENTEROS {\mathbb{Z}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+
+\begin_inset FormulaMacro
+\def\COMPLEJOS {\mathbb{C}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+
+\begin_inset FormulaMacro
+\def\ESIMO #1{#1\text{-ésimo}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+
+\begin_inset FormulaMacro
+\def\Y {\wedge}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+
+\begin_inset FormulaMacro
+\def\DIRACDELTA #1{\delta_{\text{Dirac}}\PARENTESIS{#1}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+
+\begin_inset FormulaMacro
+\def\KRONEDELTA #1{\delta_{#1}^{\text{Kron}}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+
+\begin_inset FormulaMacro
+\def\CONVOLUCION #1#2{\left(#1\star#2\right)}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+
+\begin_inset FormulaMacro
+\def\CIRCCONVOLUCION #1#2{\left(#1\odot#2\right)}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+
+\begin_inset FormulaMacro
+\def\CONVOLTRIPLE #1#2#3{\PARENTESIS{#1\star#2\star#3}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+
+\begin_inset FormulaMacro
+\def\FOURIERTRANSFORM #1{\mathcal{F}\left\{  #1\right\}  }
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+
+\begin_inset FormulaMacro
+\def\INVFOURIERTRANSFORM #1{\mathcal{F}^{-1}\left\{  #1\right\}  }
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+
+\begin_inset FormulaMacro
+\def\COEFFOURIER #1#2{#1\stackrel{\mathcal{FS}}{\longleftrightarrow}#2}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+
+\begin_inset FormulaMacro
+\def\DFT #1#2{#1\stackrel{\mathcal{DFT}}{\longleftrightarrow}#2}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+
+\begin_inset FormulaMacro
+\def\DFS #1#2{#1\stackrel{\mathcal{DFS}}{\longleftrightarrow}#2}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+
+\begin_inset FormulaMacro
+\def\TFOURIER #1#2{#1\stackrel{\mathcal{F}}{\longleftrightarrow}#2}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+
+\begin_inset FormulaMacro
+\def\TLAPLACE #1#2{#1\stackrel{\mathcal{L}}{\longleftrightarrow}#2}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+
+\begin_inset FormulaMacro
+\def\TZETA #1#2{#1\stackrel{\mathcal{Z}}{\longleftrightarrow}#2}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+
+\begin_inset FormulaMacro
+\def\LAPLACETRANSFORM #1{\mathcal{L}\left\{  #1\right\}  }
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+
+\begin_inset FormulaMacro
+\def\ZTRANSFORM #1{\mathcal{Z}\left\{  #1\right\}  }
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+
+\begin_inset FormulaMacro
+\def\INVZTRANSFORM #1{\mathcal{Z}^{-1}\left\{  #1\right\}  }
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+
+\begin_inset FormulaMacro
+\def\INVLAPLACETRANSFORM #1{\mathcal{L}^{-1}\left\{  #1\right\}  }
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+
+\begin_inset FormulaMacro
+\def\REALPART #1{\text{Re}\left(#1\right)}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+
+\begin_inset FormulaMacro
+\def\IMAGPART #1{\text{Im}\left(#1\right)}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+
+\begin_inset FormulaMacro
+\def\TIENDEA #1{\underset{{\scriptscriptstyle #1}}{\longrightarrow}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+
+\begin_inset FormulaMacro
+\def\COMBINATORIO #1#2{\left(\begin{array}{c}
+ #1\\
+ #2 
+\end{array}\right)}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+
+\begin_inset FormulaMacro
+\def\EVALUADOEN #1#2#3{\left.#1\right\rfloor _{#2}^{#3}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+
+\begin_inset FormulaMacro
+\def\SINC {\text{sinc}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+
+\begin_inset FormulaMacro
+\def\VALORMEDIO #1{\langle#1\rangle}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+
+\begin_inset FormulaMacro
+\def\VECDOS #1#2{\left[\begin{array}{c}
+ #1\\
+ #2 
+\end{array}\right]}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+
+\begin_inset FormulaMacro
+\def\VECTRES #1#2#3{\left[\begin{array}{c}
+ #1\\
+ #2 \\
+ #3 
+\end{array}\right]}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+
+\begin_inset FormulaMacro
+\def\VECN #1{\left[\begin{array}{c}
+ #1_{1}\\
+ \vdots\\
+ #1_{n} 
+\end{array}\right]}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+
+\begin_inset FormulaMacro
+\def\MATRIZDOSPORDOS #1#2#3#4{\left[\begin{array}{cc}
+ #1  &  #3\\
+ #2  &  #4 
+\end{array}\right]}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+
+\begin_inset FormulaMacro
+\def\MATRIZTRESPORTRES #1#2#3#4#5#6#7#8#9{\left[\begin{array}{ccc}
+ #1  &  #4  &  #7\\
+ #2  &  #5  &  #8\\
+ #3  &  #6  &  #9 
+\end{array}\right]}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+
+\begin_inset FormulaMacro
+\def\MATRIZNPORN #1#2#3#4#5#6#7#8#9{\left[\begin{array}{cccc}
+ #1  &  #3  &  \cdots &  #7\\
+ #2  &  #4  &  \cdots &  #8\\
+ \vdots &  \vdots &  \ddots &  \vdots\\
+ #5  &  #6  &  \cdots &  #9 
+\end{array}\right]}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+
+\begin_inset FormulaMacro
+\def\GIGA #1{\text{ G}\unit{#1}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+
+\begin_inset FormulaMacro
+\def\MEGA #1{\text{ M}\unit{#1}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+
+\begin_inset FormulaMacro
+\def\KILO #1{\text{ k}\unit{#1}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+
+\begin_inset FormulaMacro
+\def\UNIT #1{\text{ }\unit{#1}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+
+\begin_inset FormulaMacro
+\def\CENTI #1{\text{ c}\unit{#1}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+
+\begin_inset FormulaMacro
+\def\MILI #1{\text{ m}\unit{#1}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+
+\begin_inset FormulaMacro
+\def\MICRO #1{\text{ }\mu\unit{#1}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+
+\begin_inset FormulaMacro
+\def\NANO #1{\text{ n}\unit{#1}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+
+\begin_inset FormulaMacro
+\def\PICO #1{\text{ p}\unit{#1}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+
+\begin_inset FormulaMacro
+\def\PORDIEZALA #1{\times10^{#1}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+
+\begin_inset FormulaMacro
+\def\ELECTRONVOLT {\,\unit{eV}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+
+\begin_inset FormulaMacro
+\def\NORMAL #1#2{\mathcal{N}\left[#1,#2\right]}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+
+\begin_inset FormulaMacro
+\def\BINOMIAL #1#2{\text{Binomial}\left[#1,#2\right]}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+
+\begin_inset FormulaMacro
+\def\BERNOULLI #1{\text{Bernoulli}\left(#1\right)}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+
+\begin_inset FormulaMacro
+\def\UNIFORME #1#2{\mathcal{U}\left[#1,#2\right]}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+
+\begin_inset FormulaMacro
+\def\EXPONENCIAL #1{\text{Exponencial}\left(#1\right)}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+
+\begin_inset FormulaMacro
+\def\RAYLEIGH #1{\text{Rayleigh}\left(#1\right)}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+
+\begin_inset FormulaMacro
+\def\POISSON #1{\text{Poisson}\left(#1\right)}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+
+\begin_inset FormulaMacro
+\def\GAMMA #1#2{\Gamma\left(#1,#2\right)}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+
+\begin_inset FormulaMacro
+\def\PROBABILIDAD #1{\mathbb{P}\left(#1\right)}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+
+\begin_inset FormulaMacro
+\def\ESPERANZA #1{\mathbb{E}\left[#1\right]}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+
+\begin_inset FormulaMacro
+\def\VARIANZA #1{\mathbb{V}\left[#1\right]}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+
+\begin_inset FormulaMacro
+\def\COV #1{\text{cov}\left(#1\right)}
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

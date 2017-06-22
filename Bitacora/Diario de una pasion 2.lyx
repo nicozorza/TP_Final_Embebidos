@@ -1,0 +1,2765 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\date{}
+\usepackage{float}
+\usepackage{units}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{esint}
+\numberwithin{figure}{section}
+\numberwithin{table}{section}
+\numberwithin{equation}{section}
+\usepackage[T1]{fontenc}
+\usepackage{charter}
+\usepackage{xcolor}
+%-------------------------------------------------------------------------------
+%Modificaciones de leyendas en figuras
+%\usepackage[footnotesize, labelsep=quad]{caption}
+%\captionsetup{width=0.8\textwidth }
+\usepackage{caption}
+\captionsetup[figure]{margin=40pt,font=normalsize,labelfont=bf}
+\captionsetup[table]{margin=40pt,font=normalsize,labelfont=bf} 
+%-------------------------------------------------------------------------------
+
+\definecolor{my_gray}{RGB}{200, 200, 200}
+\definecolor{comentarios_color}{RGB}{190, 190, 190}
+\definecolor{cadenas_color}{RGB}{57, 167, 157}
+\definecolor{keyword_color}{RGB}{205, 83, 33}
+\definecolor{fondocodigo_color}{RGB}{253, 246, 227}
+\definecolor{identifier_color}{RGB}{187,146,17}
+\end_preamble
+\use_default_options true
+\begin_modules
+customHeadersFooters
+\end_modules
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter cmtt
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement H
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_author "Nicolás Zorzano"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen true
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref section
+\pdf_pdfusetitle true
+\papersize default
+\use_geometry true
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 2
+\use_package esint 2
+\use_package mathdots 2
+\use_package mathtools 1
+\use_package mhchem 2
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 1.5cm
+\rightmargin 1cm
+\bottommargin 1.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\listings_params "language={C++},keywordstyle={\color{keyword_color}\bf},commentstyle={\color{comentarios_color}\itshape},emphstyle={\color{red}},breaklines=true,basicstyle={\ttfamily},stringstyle={\color{cadenas_color}},identifierstyle={\color{identifier_color}},backgroundcolor={\color{fondocodigo_color}},tabsize=4"
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "Macros Lyx.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+Avances del horno SMD
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+17-05-17
+\end_layout
+
+\begin_layout Standard
+Hoy estuve probando el control de tensión sobre la carga.
+ El circuito que voy a utilizar es el de la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:1 circuito triac"
+
+\end_inset
+
+.
+ Luego de estar un rato teniendo problemas para que funcione, llegué a la
+ conclusión de que el triac no es simétrico, y por ende el nodo donde se
+ conecte el trigger es importante (ver figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:semiconductor triac"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imagenes/triac semiconductor.jpg
+	width 25page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:semiconductor triac"
+
+\end_inset
+
+Construcción de un triac.
+ Se puede ver que no es simétrico, y por ende importa el nodo donde se conecte
+ el trigger.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:1 circuito triac"
+
+\end_inset
+
+ están anotados los pines del triac, ya que si se conecta de forma diferente
+ no anda.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imagenes/1 circuito triac.svg
+	width 40page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:1 circuito triac"
+
+\end_inset
+
+Circuito para controlar el triac.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Los valores de resistencias me parece que no importan demasiado, siempre
+ y cuando no se supere las corrientes.
+ Puse valores medio así nomas y siguió andando (en el que tengo armado ahora
+ tengo una de 
+\begin_inset Formula $680\Omega$
+\end_inset
+
+ en la entrada del optotriac, dos de 
+\begin_inset Formula $100\Omega$
+\end_inset
+
+ en la salida del opto, y la carga es de aproximadamente 
+\begin_inset Formula $50\Omega$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+Estuve también probando un circuito detector de fase, ya que es necesario
+ saber cuándo se cruza por cero para poder disparar el trigger correctamente.
+ Senger me sugirió utilizar el circuito de la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:2 detector de fase de senger"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imagenes/2 detector de fase senger.jpg
+	width 60page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:2 detector de fase de senger"
+
+\end_inset
+
+Circuito detector de cruce por cero propuesto por Senger.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El problema con el detector de cruce por cero de la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:2 detector de fase de senger"
+
+\end_inset
+
+ es que la senoidal de entrada no necesariamente está centrada en cero,
+ ya que por ahora estoy probando con un trafo de 
+\begin_inset Formula $12\unit{v}$
+\end_inset
+
+ para no morir mientras pruebo, y la lógica la alimento desde mi nueva fuente
+ de tensión.
+ Por lo tanto, el único resultado que logré fue quemar un operacional cuando
+ me equivoqué al conectar los cables.
+ Mañana voy a probar otro circuito con un opto que debería funcionar.
+\end_layout
+
+\begin_layout Section
+18-05-17
+\end_layout
+
+\begin_layout Standard
+El circuito que voy a probar para detectar los cruces por cero es el de
+ la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:3 detector de fase nuevo"
+
+\end_inset
+
+.
+ El opto que voy a usar es el FOD3180, ya que me sobraron un par del TP
+ de circuitos 2 (siempre se quemaban de la nada, espero que no me pase lo
+ mismo).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imagenes/3 detector de fase nuevo.jpg
+	width 40page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:3 detector de fase nuevo"
+
+\end_inset
+
+Circuito detector de cruce por cero.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Luego de quemar dos FODs (uno se quemo magicamente, y el otro porque no
+ se banco la tensión inversa), logré armar el circuito de la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:4 detector de fase que anduvo"
+
+\end_inset
+
+.
+ Se puede ver que fue necesario agregar una resistencia de 
+\begin_inset Formula $100\KILO{\Omega}$
+\end_inset
+
+ en paralelo con la entrada del opto, ya que de forma contraria cae la mitad
+ de la tensión en inversa en el semiciclo negativo (lo que quemó uno de
+ los FODs).
+ Con esta resistencia el diodo 1N4007 se banca toda la tensión en inversa.
+\end_layout
+
+\begin_layout Standard
+A la salida del circuito de la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:4 detector de fase que anduvo"
+
+\end_inset
+
+ lo alimenté con 
+\begin_inset Formula $12\unit{V}$
+\end_inset
+
+ (con menos de eso no andaba), y conecté una carga de 
+\begin_inset Formula $2\KILO{\Omega}$
+\end_inset
+
+ a masa (la salida del FOD es CMOS, no es open collector).
+ Al medir con el tester la salida, pude ver que la tensión era de 
+\begin_inset Formula $6\unit{V}$
+\end_inset
+
+, lo cual en teoría me indica que está la mitad del tiempo encendido y la
+ otra apagado.
+ Esto no lo pude verificar, porque cuando quise medir frecuencia con el
+ tester no lo pude hacer.
+ Lo ideal sería usar un osciloscopio para ver que onda.
+ Usé un Arduino para medir unos y ceros pero no tuve resultados muy informativos
+, y creo que es porque la salida no es tan digital como me gustaría (no
+ lo probé demasiado porque al arduino no le gustaba demasiado estar conectado
+ a la masa de la compu y la del circuito, y cada tanto se reseteaba).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imagenes/4 detector de fase que anduvo.svg
+	width 25page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:4 detector de fase que anduvo"
+
+\end_inset
+
+Circuito detector de cruce por cero que funcionó.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Hoy si no me da paja voy a ver de llevar las cosas y medir en la facu con
+ el osciloscopio, y voy a pasar por microelectrónica a comprar optoacopladores
+ que no sean tan maricones como los FODs.
+\end_layout
+
+\begin_layout Section
+19-05-17
+\end_layout
+
+\begin_layout Standard
+Hoy me vine a lo de Senger a medir con el osciloscopio.
+ Ayer compré los PC817, que son unos optos mas baratos y menos quemables
+ que los FOD, pero tienen salida open collector, así que a la salida tuve
+ que conectar una resistencia de pull-up.
+\end_layout
+
+\begin_layout Standard
+En la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:5 resultados con el osciloscopio"
+
+\end_inset
+
+ tengo los resultados de las mediciones con el osciloscopio.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imagenes/5 salida detector de fase.jpg
+	width 40page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Salida del detector de cruce por cero.
+ No es del todo simétrico porque estoy usando un trafo de 
+\begin_inset Formula $12\unit{v}$
+\end_inset
+
+, pero asumo que cuando lo mande a 
+\begin_inset Formula $220\unit{v}$
+\end_inset
+
+ va a mejorar.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imagenes/6 salida triac.jpg
+	width 40page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Salida del triac, el cual se encuentra siempre disparado.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:5 resultados con el osciloscopio"
+
+\end_inset
+
+Mediciones con el osciloscopio de Senger.
+ Las señales son muy lentas y por ende no pude sacar fotos muy copadas,
+ pero alcanzan para afirmar que funciona.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:7 circuitos completos"
+
+\end_inset
+
+ están los circuitos completos.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imagenes/7 circuitos completos.svg
+	width 80page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:7 circuitos completos"
+
+\end_inset
+
+Circuito de control del triac y de detección de cruce por cero.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ahora debería escribir un programita que me permita disparar el triac en
+ distintos instantes para probar eso.
+\end_layout
+
+\begin_layout Standard
+Escribí un programita re cabeza que salta con interrupciones de flancos
+ ascendentes y descendentes en un pin, y lo que hace luego de eso es esperar
+ un cierto tiempo y luego disparar el gate del triac.
+ En la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:8 salida del triac disparado con el micro"
+
+\end_inset
+
+ tengo el resultado.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imagenes/8 salida del triac disparada con el micro.jpg
+	width 40page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:8 salida del triac disparado con el micro"
+
+\end_inset
+
+Salida del triac, el cual está siendo disparado por el micro, que a su vez
+ utiliza la referencia de cruces por cero para sincronizarse con la senoidal.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El resultado obtenido era el esperado, incluso teniendo en cuenta que el
+ delay para el disparo fue puesto a ojo.
+ El siguiente paso es empezar a ver si se puede aplicar un PID que module
+ la tensión de salida a partir de un pote por ejemplo.
+ Además debería empezar a ver el tema de FreeRTOS, porque los delays debería
+ ser lo más exactos posibles así evito pasarme de semiciclo y me quede el
+ triac encendido.
+\end_layout
+
+\begin_layout Standard
+Las cosas que debería encarar son:
+\end_layout
+
+\begin_layout Itemize
+Ver el tema del firmware de la EDU-CIAA, que parece que es más copado.
+\end_layout
+
+\begin_layout Itemize
+Analizar si conviene empezar a hacer un PCB, porque tengo todo en un proto
+ re cabeza.
+\end_layout
+
+\begin_layout Itemize
+Habría que hacer alguna prueba en 
+\begin_inset Formula $220\unit{V}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Empezar a armar algo en FreeRTOS porque se nos viene la noche.
+\end_layout
+
+\begin_layout Itemize
+Probar de nuevo la termocupla porque la probó Lio, y yo ni idea.
+\end_layout
+
+\begin_layout Itemize
+Ya no se me ocurre mas nada, pero no tengo que colgar mas...
+\end_layout
+
+\begin_layout Section
+21-05-17
+\end_layout
+
+\begin_layout Standard
+Ahora que pude disparar el triac para recortar la senoidal, tengo que encontrar
+ la relación entre el instante de disparo y la tensión eficaz de salida,
+ ya que eso es lo que me va a permitir controlar la temperatura.
+ 
+\end_layout
+
+\begin_layout Standard
+La señal que quiero analizar es:
+\begin_inset Formula 
+\[
+v\PARENTESIS t=v_{0}\sin\PARENTESIS{wt}\rightarrow\begin{cases}
+w=2\pi50\unit{Hz}\\
+v_{0}=311\unit{v}
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:9 señal recortada"
+
+\end_inset
+
+ esta la representación de lo que quiero hacer.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imagenes/9 dibujo de la señal recortada.svg
+	width 30page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:9 señal recortada"
+
+\end_inset
+
+Representación de la señal recortada.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El valor eficaz se calcula como:
+\begin_inset Formula 
+\[
+V_{ef}=\sqrt{\frac{1}{T}\int_{t_{0}}^{t_{0}+T}v\PARENTESIS t^{2}dt}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Como yo voy a disparar el triac en cada semiciclo, en realidad tengo que
+ integrar la mitad del período de la senoidal.
+ Por lo tanto, integrando entre el instante en que disparo el triac y la
+ mitad del período se tiene:
+\begin_inset Formula 
+\[
+V_{ef}=\sqrt{\frac{1}{T}\int_{t_{1}}^{\frac{T}{2}}v\PARENTESIS t^{2}dt}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por lo tanto, puedo calcular
+\begin_inset Formula 
+\begin{align*}
+\int_{t_{1}}^{\frac{T}{2}}v\PARENTESIS t^{2}dt & =v_{0}^{2}\int_{t_{1}}^{\frac{T}{2}}\sin\PARENTESIS{wt}^{2}dt=\EVALUADOEN{v_{0}^{2}\PARENTESIS{\frac{t}{2}-\frac{\sin\PARENTESIS{2tw}}{4w}}}{t_{1}}{\frac{T}{2}}\\
+ & =v_{0}^{2}\PARENTESIS{\frac{1}{2}\PARENTESIS{\frac{T}{2}-t_{1}}-\frac{1}{4w}\PARENTESIS{\CANCEL{\sin\PARENTESIS{Tw}}-\sin\PARENTESIS{2t_{1}w}}}\\
+ & =v_{0}^{2}\PARENTESIS{\frac{1}{2}\PARENTESIS{\frac{T}{2}-t_{1}}+\frac{1}{4w}\sin\PARENTESIS{2t_{1}w}}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El valor eficaz entonces es:
+\begin_inset Formula 
+\[
+\boxed{V_{ef}=v_{0}\sqrt{\PARENTESIS{\frac{1}{4}-\frac{t_{1}}{2T}+\frac{\sin\PARENTESIS{2t_{1}w}}{8\pi}}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para 
+\begin_inset Formula $t_{1}=0$
+\end_inset
+
+ el valor eficaz es:
+\begin_inset Formula 
+\[
+V_{ef}\PARENTESIS{t_{1}=0}=v_{0}\sqrt{\frac{1}{4}}=\frac{v_{0}}{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por lo tanto, el porcentaje entre la señal recortada y la señal completa
+ es:
+\begin_inset Formula 
+\[
+\frac{V_{ef}\PARENTESIS{t_{1}}}{V_{ef}\PARENTESIS{t_{1}=0}}=\frac{v_{0}\sqrt{\PARENTESIS{\frac{1}{4}-\frac{t_{1}}{2T}+\frac{\sin\PARENTESIS{2t_{1}w}}{8\pi}}}}{\frac{v_{0}}{2}}=\sqrt{1-2\frac{t_{1}}{T}+\frac{\sin\PARENTESIS{2t_{1}w}}{2\pi}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ahora tendría que despejar 
+\begin_inset Formula $t_{1}$
+\end_inset
+
+ de esta expresión, ya que a mi lo que me interesa es saber en qué instante
+ tengo que disparar el triac para tener un cierto porcentaje del valor eficaz
+ máximo.
+ Esto me parece que es imposible de hacer, así que voy a aproximar una relación
+ lineal y chau.
+ Una mejor forma sería armando una tabla de valores, pero eso lo voy a ver
+ de hacer cuando ya tenga todo mas encaminado.
+\end_layout
+
+\begin_layout Standard
+Usando una transformación lineal para sacar el valor del timer, y usando
+ el ADC para medir un pote, logre modificar la tensión eficaz del triac
+ moviendo el pote.
+ La respuesta claramente no fue lineal, pero funciono bastante bien.
+ Hay algunas fallas que no pude arreglar, pero creo que sin osciloscopio
+ no voy a poder:
+\end_layout
+
+\begin_layout Itemize
+El detector de fase se apaga antes de que la senoidal cruce por cero, ya
+ que deja de polarizarse el opto.
+ El problema con esto es que si el valor del timer es muy pequeño, puede
+ que se dispare la señal de trigger antes de que se produzca el cruce por
+ cero, y por ende en lugar de tener el 
+\begin_inset Formula $100\%$
+\end_inset
+
+ del valor eficaz, se tiene casi un valor nulo (se prende con el timer y
+ se apaga en el cruce por cero).
+\end_layout
+
+\begin_layout Itemize
+El ancho del pulso lo meti a ojo, pero estaría bueno ver en el osciloscopio
+ un valor más exacto.
+\end_layout
+
+\begin_layout Itemize
+Si el valor del timer es muy grande, puede que el ancho del pulso haga que
+ se solape con el siguiente cruce por cero.
+ Ahora tengo puestos a ojo tanto un máximo como un mínimo del timer, pero
+ tendría que medir para ver que sale.
+\end_layout
+
+\begin_layout Itemize
+Estoy teniendo algunos líos con las interrupciones, porque si el timer lo
+ configuro con un valor muy pequeño, creo que no me está dejando acceder
+ al ADC, porque a veces queda como colgado y sin darle bola a las modificaciones
+ en el ADC.
+ Tendría que hacer un código mas presentable, o en lo posible empezar con
+ FreeRTOS para gestionar bien las prioridades.
+\end_layout
+
+\begin_layout Section
+23-05-17
+\end_layout
+
+\begin_layout Standard
+Ayer estuve codeando todo en FreeRTOS, y recién hoy lo pude probar.
+ Algo que me dí cuenta ayer, fue que la frecuencia del clock del micro estaba
+ dividida por 4 (las librerías que había importado estaban así...), lo cual
+ ahora se lo saqué para poder laburar sin estar justo de tiempos.
+\end_layout
+
+\begin_layout Standard
+El código está disponible en mi repositorio de Github.
+ No tengo un osciloscopio para ver lo que pasa, pero midiendo el valor eficaz
+ de la salida me pareció que estaba andando todo bien: Usando un pote lograba
+ regular la tensión eficaz de salida.
+\end_layout
+
+\begin_layout Standard
+El problema que no pude solucionar todavía es el disparo del trigger: Para
+ que el triac logre activarse, el trigger debe estar encendido un determinado
+ tiempo.
+ Lo que yo hice en un principio fue usar las funciones bloqueantes de FreeRTOS
+ (vTaskDelay y vTaskDelayUntil) para hacer el delay, pero me parece que
+ esto no funciona del todo bien porque explotaba (la salida quedaba en cero
+ siempre).
+ Reemplazando esto por un 
+\family typewriter
+while(i--)
+\family default
+ bien cabeza para hacer el delay, funcionó todo perfectamente.
+\end_layout
+
+\begin_layout Standard
+Otro problema que estuve viendo es que el micro se está colgando de la nada.
+ Sin que se ejecute ninguna de las funciones de configuración, el micro
+ salta a un default handler de la nada.
+ Creo que tiene que ver con las interrupciones del micro, que tal vez cuando
+ lo reseteo queda en un estado medio extraño, y el hecho de tener conectada
+ la lógica para la detección del cruce por cero, hace que salte la interrupción
+ externa, que como no se encuentra configurada hace cualquier cosa.
+ Esto lo voy a revisar bien después, pero esto se podría solucionar simplemente
+ haciendo que el detector de cruce por cero no funcione hasta que yo lo
+ requiera, o simplemente desactivando las interrupciones en el primer paso
+ del código (si es que el problema es ese...).
+\end_layout
+
+\begin_layout Standard
+Otra cosa que hice hoy fue desarmar una fuente de 
+\begin_inset Formula $5\unit{v}$
+\end_inset
+
+ y 
+\begin_inset Formula $700\MILI A$
+\end_inset
+
+ de un celular.
+ Tenía todos los cables al aire, y por eso no la pude probar con los circuitos
+ andando (no me daban las manos para sostener tantos cables).
+ Mañana le voy a poner un cable mas copado, y así enchufarla a la pared.
+ Igualmente medí que mis circuitos tienen un consumo de aproximadamente
+ 
+\begin_inset Formula $250\MILI A$
+\end_inset
+
+, así que le puse una resistencia bien cabeza y medí que la fuente siguiera
+ funcionando bien.
+ Dado que la fuente pudo seguir regulando su tensión cuando le sacaba dicha
+ corriente, asumo que la fuente está en buen estado y cuando la logre conectar
+ bien, va a andar sin problema.
+\end_layout
+
+\begin_layout Standard
+Por último, ayer empecé a hacer un esquemático para ver que onda el PCB.
+ No estoy seguro si conviene hacer un poncho o una placa aparte, porque
+ no me gusta la idea de tener la potencia cerca del micro.
+\end_layout
+
+\begin_layout Standard
+Me voy a estudiar un poco de señales que la rindo la semana que viene, y
+ ni empecé....
+\end_layout
+
+\begin_layout Section
+24-05-17
+\end_layout
+
+\begin_layout Standard
+Hoy decidí empezar a laburar un poco con el sensor de temperatura.
+ Mañana capaz vaya a lo de Senger a laburar con el osciloscopio, así que
+ voy a poder calibrar mejor lo del triac, y si termino lo del sensor de
+ temperatura puedo empezar a ver de armar un PID.
+\end_layout
+
+\begin_layout Standard
+El circuito que armó Lio, y que según él funcionó perfectamente, es el de
+ la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:10 circuito termocupla lio"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imagenes/10 plano sensor de temperatura de lio.svg
+	width 50page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:10 circuito termocupla lio"
+
+\end_inset
+
+Circuito para medir la temperatura.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Acabo de probar el circuito de Lio con mi Arduino (Lio también había hecho
+ un script para medir la temperatura con Arduino), y comparando los valores
+ que me tira con los valores de la termocupla de mi tester, parece que todo
+ funciona bien.
+ Ahora voy a ver de pasar el código a la EDU-CIAA, pero seguro que eso funciona
+ bien de una también (Grande Lio que lo dejó andando
+\begin_inset Formula $\heartsuit$
+\end_inset
+
+).
+ El único problema que encontré con el circuito de Lio es que no tiene una
+ temperatura de referencia, y por lo tanto los valores que se miden se mueven
+ bastante (el tester queda hiper clavado, porque seguro que tiene adentro
+ algún sensorcito de referencia).
+ Aprovechando que compramos un PT100, habría que ver cómo usarlo de temperatura
+ de referencia para tener mediciones más precisas.
+\end_layout
+
+\begin_layout Subsubsection*
+Termocuplas
+\end_layout
+
+\begin_layout Standard
+Una termocupla se hace con dos alambres de distinto material unidos en un
+ extremo, al aplicar temperatura en la unión de los metales se genera un
+ voltaje muy pequeño, del orden de los milivolts el cual aumenta con la
+ temperatura.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename imagenes/11 termocupla.jpg
+	width 40page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Midiendo la diferencia de potencial entre los bornes de la termocupla, se
+ puede entonces conocer la temeratura.
+\end_layout
+
+\begin_layout Standard
+El problema con este método, es que al conectar la termocupla a los terminales
+ del circuito de medición, que son de cobre, se generan nuevas termocuplas.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename imagenes/12 termocupla.png
+	width 40page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La tensión que se mide a la salida de la termocupla entonces es:
+\begin_inset Formula 
+\[
+v_{medida}=v_{T}-v_{Ta}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde 
+\begin_inset Formula $v_{T}$
+\end_inset
+
+ es la tensión de la termocupla, y 
+\begin_inset Formula $v_{Ta}$
+\end_inset
+
+ es la temperatura ambiente.
+ Dado que lo que interesa es la tensión en la termocupla se tiene que despejar:
+\begin_inset Formula 
+\[
+\boxed{v_{T}=v_{medida}+v_{Ta}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por lo tanto, midiendo la diferencia de potencial generada por la temperatura
+ ambiente, es posible corregir la medición.
+ Dado que la medición de la temperatura ambiente en este caso se va a hacer
+ un un PT100, que no tiene relación con la termocupla, es conveniente aproximar
+ todo de otra forma.
+ En lugar de hacer la corrección con la diferencia de potencial, se puede
+ hacer la corrección con las temperaturas:
+\begin_inset Formula 
+\[
+\boxed{T_{termocupla}=T_{medida}+T_{ambiente}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+De esta forma, si se mide la temperatura ambiente con el PT100, y se le
+ suma la temperatura medida con la termocupla, se va a poder obtener una
+ medición de la temperatura bastante correcta.
+\end_layout
+
+\begin_layout Standard
+Para conocer el mapeo de temperaturas de la termocupla se utilizó la tabla
+ de 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://www.arian.cl/downloads/nt-002.pdf
+\end_layout
+
+\end_inset
+
+.
+ Usando la tabla de dicho documento y la función 
+\family typewriter
+polyfit
+\family default
+ en Octave, se llegó a que:
+\begin_inset Formula 
+\[
+\boxed{T_{termocupla}\PARENTESIS v=24599.766\cdot v-0.213}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El PT100 es un sensor de temperatura que consiste en un alambre de platino
+ que a 
+\begin_inset Formula $0°C$
+\end_inset
+
+ tiene 
+\begin_inset Formula $100\Omega$
+\end_inset
+
+ y que al aumentar la temperatura aumenta su resistencia eléctrica.
+ El incremento de la resistencia no es lineal pero si creciente y característico
+ del platino de tal forma que mediante tablas es posible encontrar la temperatur
+a exacta a la que corresponde (ver 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://www.arian.cl/downloads/nt-004.pdf
+\end_layout
+
+\end_inset
+
+).
+ Haciendo el mismo procedimiento que antes, es decir usando la tablita de
+ valores para aproximar una recta, se obtuvo:
+\begin_inset Formula 
+\[
+\boxed{T_{PT100}\PARENTESIS R=2.577\cdot R-257.774}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La temperatura real entonces es:
+\begin_inset Formula 
+\[
+T\PARENTESIS{v,R}=T_{termoculpa}\PARENTESIS v+T_{PT100}\PARENTESIS R
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Voy a escribir un pequeño código en el micro para probar esto.
+\end_layout
+
+\begin_layout Standard
+Bueno, después de estar probando un par de cosas sin éxito, decidí ponerme
+ a calibrar yo mismo los sensores.
+ Los valores de la tabla esa que había encontrado no se ajustaban mucho
+ con la realidad, y seguro que es porque incluyen los cambios por la temperatura
+ ambiente, cosa que no puedo reproducir exactamente.
+ Por lo tanto, empecé a tomar mediciones comparando con el termómetro de
+ mi tester, y obtuve que:
+\begin_inset Formula 
+\[
+\begin{cases}
+T_{termocupla}\PARENTESIS v=23376.525\cdot v-1.574\\
+T_{PT100}\PARENTESIS R=2.857\cdot R-239.178
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El tema con esta calibración, es que implícitamente estoy calibrando la
+ termocupla para la temperatura ambiente actual, y por ende cuando mueva
+ el sistema a otro lugar, la calibración va a dejar de servir.
+ La solución sería usar el PT100 como referencia, pero dado que ambos sensores
+ me miden siempre lo mismo, si sumo las mediciones me pasa a dar cualquier
+ cosa.
+ Por esta razón creo que voy a usar simplemente la termocupla, y jugarmela
+ a tener un poco de error en la medición.
+ Si después veo que se hace necesaria una medición mejor, veré de incluirlo
+ (no es mucho laburo tampoco).
+\end_layout
+
+\begin_layout Standard
+Mañana me voy a lo de Senger a medir el tema del triac.
+ Tal vez aproveche y lo mande a 
+\begin_inset Formula $220\unit{V}$
+\end_inset
+
+ para ver que onda.
+ Ahora me voy a tomar un cafecito, descansar un ratito, y ponerme con señales
+ que ayer pude aprender unas cuantas cosas (o tal vez me juege un Age...).
+\end_layout
+
+\begin_layout Section
+25-05-17
+\end_layout
+
+\begin_layout Standard
+Hoy vine a lo de Senger a laburar con el osciloscopio, pero lamentablemente
+ no pude avanzar nada, ya que me convencieron para jugar una partida de
+ Age de como tres horas...
+\end_layout
+
+\begin_layout Standard
+Estuve viendo de generar el ancho del pulso de trigger mediante una interrupción
+ del timer, para sacar el 
+\family typewriter
+while()
+\family default
+ cabeza que tenía.
+ Esto no lo pude lograr por los siguientes motivos:
+\end_layout
+
+\begin_layout Itemize
+En la tarea que dispara el trigger, para evitar que me saquen la CPU durante
+ el disparo (y así evitar que quede encendido demasiado tiempo), tuve que
+ entrar en modo crítico, es decir que el scheduler queda desactivado.
+ El problema es que esto también me deshabilita las interrupciones para
+ el TIMER, y por lo tanto no puedo controlar el delay de esta forma.
+\end_layout
+
+\begin_layout Itemize
+Si yo decido sacar la parte del modo crítico, me sacan la CPU en la mitad
+ del proceso, y hace que no funcione del todo bien.
+ Esto tal vez lo pueda mejorar agrandando el time slice, pero eso va a provocar
+ que haya mas demoras en otras tareas (actualmente esta el time slice en
+ 
+\begin_inset Formula $1\MILI s$
+\end_inset
+
+ supuestamente).
+\end_layout
+
+\begin_layout Standard
+Dados estos inconvenientes, creo que voy a dejar el 
+\family typewriter
+while() 
+\family default
+como retardo para el trigger y voy a seguir avanzando con las demás cosas,
+ total no es algo demasiado esencial.
+ 
+\end_layout
+
+\begin_layout Standard
+Algo que no llegué a probar, fue de conectar a 
+\begin_inset Formula $200\unit{v}$
+\end_inset
+
+ para ver como funciona todo (tendría que cambiar todas las resistencias
+ de mis circuitos), y además creo que eso va a mejorar el funcionamiento
+ del detector de cruce por cero, ya que van a ser mas despreciables los
+ delays de encendido y apagado del detector.
+\end_layout
+
+\begin_layout Standard
+El próximo paso creo que va a ser conectar todo a 
+\begin_inset Formula $220\unit{v}$
+\end_inset
+
+ y ver cómo funciona, y después conectarle una resistencia para empezar
+ a calentar cosas.
+\end_layout
+
+\begin_layout Section
+26-05-17
+\end_layout
+
+\begin_layout Standard
+Hoy intenté de nuevo hacer el delay que mantiene encendido el trigger con
+ un timer, y esta vez sí funcó.
+ Lo hice bien de a poco, probando cada modificación, y lo dejé funcionando
+ perfectamente.
+ Para que funcione tuve que eliminar la parte que entra en modo crítico,
+ porque sino las interrupciones no se atienden hasta que se sale de la tarea.
+ No sé qué es lo que estaba haciendo mal ayer, pero lo importante es que
+ anda.
+\end_layout
+
+\begin_layout Standard
+También modifiqué la frecuencia de muestreo del ADC.
+ Como las variaciones de temperatura son lentas, puse una variable que simplemen
+te cuenta los cruces por cero, y cuando se llega a un valor máximo se actualiza
+ el valor del ADC.
+ El valor máximo lo voy a tener que definir cuando empiece a sensar temperatura,
+ así que por ahora lo dejé en un valor cualquiera.
+\end_layout
+
+\begin_layout Standard
+También estuve modificando algunas cosas del esquemático del PCB.
+ Agregué una bornera para el PT100, por si decido usarlo, cambié todas las
+ resistencias y capacitores a SMD, y definí algunos valores de componentes.
+ Nada importante.
+\end_layout
+
+\begin_layout Standard
+Ahora voy a mirar si la resistencia que tengo para calentar está quemada,
+ y ver si cuando mando todo a 
+\begin_inset Formula $220\unit{v}$
+\end_inset
+
+ sigue andando bien.
+\end_layout
+
+\begin_layout Subsubsection*
+Primera conexión a 220
+\end_layout
+
+\begin_layout Standard
+Para poder hacer esto, tuve que cambiar los valores de resistencias para
+ evitar que se me quemen los optos.
+ Sin embargo, tenía mal rotuladas unas resistencias de 
+\begin_inset Formula $47\Omega$
+\end_inset
+
+ como de 
+\begin_inset Formula $47\KILO{\Omega}$
+\end_inset
+
+, y por ende voló el opto del detector de fase.
+ Una vez corregido esto volví a conectar a todo, pero lamentablemente me
+ dí cuenta tarde que no había cambiado las resistencias que funcionaban
+ como carga.
+ El resultado: Un fogonazo como jamás pensé que podían tirar las resistencias
+ de carbón.
+\end_layout
+
+\begin_layout Standard
+Finalmente, luego de tener un par de caídos en el camino, pude conectar
+ a 
+\begin_inset Formula $220\unit{v}$
+\end_inset
+
+ una carga de 
+\begin_inset Formula $100\KILO{\Omega}$
+\end_inset
+
+.
+ Moviendo el potenciómetro pude regular bastante la tensión sobre la carga,
+ pero tuve problemas con los extremos del pote, ya que tenía hardcodeados
+ los límites del timer para 
+\begin_inset Formula $12\unit{v}$
+\end_inset
+
+, pero seguro que ajustándolos para los que yo quiero hacer ya va a andar
+ todo bien.
+ 
+\end_layout
+
+\begin_layout Standard
+El próximo paso va a ser conectar todo a la resistencia calentadora y empezar
+ a medir su cambio de temperatura.
+ Tal vez me convenga ir haciendo el PCB para evitar estar tan expuesto a
+ los 
+\begin_inset Formula $220\unit{v}$
+\end_inset
+
+, pero lo voy a ver en otro momento.
+ Ahora me tengo que preparar para dar una presentación de intro a proyectos,
+ la mejor materia del planeta.
+\end_layout
+
+\begin_layout Section
+27-05-17
+\end_layout
+
+\begin_layout Standard
+Hoy empecé a calentar cosas de una vez por todas.
+ Quise calibrar un poco mejor el tema del timer, porque lo tenía calibrado
+ para los 
+\begin_inset Formula $220\unit{v}$
+\end_inset
+
+, pero no tuve buenos resultados.
+ Creo que esto va a ser mejor hacerlo con el osciloscopio.
+\end_layout
+
+\begin_layout Standard
+Hoy vino Male 
+\begin_inset Formula $\heartsuit$
+\end_inset
+
+ y me estuvo dando una mano.
+ Lo que hicimos fue meter el calentador de agua en un frasco, y medir la
+ respuesta al escalón.
+ No fue una medición muy precisa, pero creo que sirve para estimar los parámetro
+s del PID.
+ Después de estimarlos voy a ver si puedo cerrar el lazo.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imagenes/13 ziegler nichols.png
+	width 40page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Curva para estimar los parámetros del PID mediante Ziegler-Nichols.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Los parámetros estimados de la resistencia a lazo abierto son:
+\begin_inset Formula 
+\[
+\begin{cases}
+K=72\text{°}C\\
+L=1\unit{s}\\
+T=250\unit{s}
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Con estos parámetros, las constantes del PID son:
+\begin_inset Formula 
+\[
+\begin{cases}
+k_{p}=1.2\cdot\frac{T}{L}=300\\
+T_{i}=2L=2\\
+T_{d}=\frac{L}{2}=\frac{1}{2}
+\end{cases}\rightarrow C\PARENTESIS s=k_{p}\PARENTESIS{1+\frac{1}{T_{i}s}+T_{d}s}=300+\frac{150}{s}+150s
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por lo tanto, calculando la diferencia entre la salida real y la deseada,
+ se debe hacer:
+\begin_inset Formula 
+\[
+y_{ref}-y\PARENTESIS t=e\PARENTESIS t\rightarrow u\PARENTESIS t=200e\PARENTESIS t+150\int e\PARENTESIS tdt+150\dot{e}\PARENTESIS t
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Aplique todas estas cosas al código de prueba de FreeRTOS, donde agregué
+ una nueva tarea que aplica el PID cada vez que se le entrega un semáforo
+ (el ADC se lo otorga), y creo que tuve buenos resultados.
+ Le estuve harcodeando una temperatura de referencia, y cuando se llegaba
+ a una temperatura similar el circuito se apagaba (lo medi con mi tester,
+ pero no siempre miden lo mismo las termocuplas).
+\end_layout
+
+\begin_layout Standard
+El problema que estoy teniendo es el siguiente: Con la termocupla mido temperatu
+ra, y la comparo con la temperatura de referencia.
+ Sin embargo, una vez que aplico el PID, tengo que mapear esa salida con
+ el delay del timer que dispara el trigger.
+ Lo que hice básicamente fue mapear de forma medio lineal entre los valores
+ extremos que puede tomar el delay, pero no se si es la mejor forma porque
+ no alcance la temperatura de referencia de forma exacta.
+ En estos días voy a ver de solucionarlo, pero ahora estoy muy cansado.
+ Lo bueno es que ya estoy calentando agua, y es probable que ajustando un
+ poco el controlador ya tenga la parte mas importante del tp andando.
+\end_layout
+
+\begin_layout Section
+28-05-17
+\end_layout
+
+\begin_layout Standard
+Hoy seguí viendo el tema del controlador.
+ Descubrí que por la termocupla me está entrando ruido de baja frecuencia
+ proveniente de los 
+\begin_inset Formula $220\unit{v}$
+\end_inset
+
+.
+ Senger me recomendó que pusiera un pasabajos en el circuito que acondiciona
+ la señal de la termocupla, así que puse un par de capacitores en la primer
+ etapa del circuito de la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:10 circuito termocupla lio"
+
+\end_inset
+
+, en paralelo con la resistencia de 
+\begin_inset Formula $250\KILO{\Omega}$
+\end_inset
+
+.
+ Esto hizo que anduviera mejor, pero sigue habiendo muchas oscilaciones
+ en la medición de la termocupla.
+ Supongo que por culpa de estas oscilaciones el PID no termina de funcionar
+ correctamente, pero todavía no pude comprobar nada de forma concluyente.
+ Mañana voy a seguir viendo que onda, pero me parece que me conviene hablar
+ con algún profesor para ver si lo estoy encarando bien.
+\end_layout
+
+\begin_layout Section
+10-06-17
+\end_layout
+
+\begin_layout Standard
+Todos estos días estuve laburando medio por arriba porque tenía que rendir
+ señales.
+ La otra vez había hecho el PCB, pero las pistas me quedaron muy finitas,
+ y por eso andaba medio rancio.
+ Así que tuve que volver a hacer el PCB, y ahora está andando bien.
+ En el repositorio de Github está todo.
+\end_layout
+
+\begin_layout Standard
+Lo que tengo que hacer ahora, es muestrear la curva de temperatura, y así
+ ir siguiéndola.
+\end_layout
+
+\begin_layout Standard
+En la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:14 perfil de temperatura obtenido"
+
+\end_inset
+
+ tengo el resultado obtenido.
+ Lo que hice fue escalar el perfil para poder seguirlo con la resistencia
+ que tengo, y actualice la temperatura cada 30 segundos.
+ En el gráfico se muestran mediciones de la temperatura cada 3 segundos.
+ Se puede ver que los resultados son parecidos a los deseados, con la diferencia
+ de que no es posible reducir la temperatura ya que es imposible enfriar
+ el agua.
+ Se supone que en el horno se va a poder hacer sin problemas.
+ Falta calibrar la termocupla, porque al parecer cuando la atornillo a la
+ placa, se forma una termocupla diferente a la que tenía antes, entonces
+ la calibración de antes ya no sirve.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imagenes/14 perfil de temperatura obtenido.png
+	width 50page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:14 perfil de temperatura obtenido"
+
+\end_inset
+
+Perfil de temperatura obtenido.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+12-06-17
+\end_layout
+
+\begin_layout Standard
+Ayer desarmé el horno y encontré que de las 4 resistencias que tiene sólo
+ estaban quemadas dos.
+ El problema es que están conectadas de a dos en serie y después en paralelo,
+ entonces se habían quemado justo dos de distintas ramas y había dejado
+ de andar.
+ Simplemente puse en serie las dos resistencias que andaban y saqué afuera
+ del horno los cables de alterna, y dos cables para la resistencia.
+ 
+\end_layout
+
+\begin_layout Standard
+En la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:15 resultados con el horno"
+
+\end_inset
+
+ están los resultados obtenidos con el horno.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imagenes/15 curva obtenida con el horno.png
+	width 40page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:15 resultados con el horno"
+
+\end_inset
+
+Resultados obtenidos con el horno.
+ La caída abrupta en la temperatura al final de la curva se debe a que abrí
+ la puerta.
+ Dado que no puse el ventilador, no es posible bajar la temperatura rápidamente.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El problema con el resultado obtenido es que la inercia térmica del horno
+ es gigante.
+ Por lo tanto cuando apago la potencia la temperatura sigue subiendo, de
+ forma tal que se superan los valores de referencia que le siguen, y por
+ lo tanto la potencia permanece apagada mucho tiempo, provocando que no
+ se pueda seguir de forma precisa la temperatura deseada.
+\end_layout
+
+\begin_layout Standard
+Tendría que ver de armar de nuevo el código con el PID, y ver si con eso
+ mejora, pero va a ser complicado meter todo eso dentro del código de ahora.
+\end_layout
+
+\begin_layout Standard
+Seguí probando algunas cosas, y obtuve los resultados de la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:16 resultados con el horno"
+
+\end_inset
+
+.
+ Lo que hice fue aumentar la temperatura, bajar el tiempo de actualización
+ entre muestras, y acerqué la termocupla a las resistencias para reducir
+ la deriva térmica.
+ Si bien mejoró un poco el tema de la inercia térmica, es mucho mas apreciable
+ el ripple de la respuesta.
+ Tengo que ver como sigo, pero me parece que el PID que había diseñado antes
+ tampoco me va a servir, porque el sistema respondía tan lento que el error
+ acumulado hacía que se disparara el trigger, por lo que terminaba siendo
+ casi igual a un controlador on-off.
+ Voy a ver de meter el ventilador dentro del horno, y así ver si se homogeniza
+ la temperatura, y se puede reducir un poco la inercia.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imagenes/16 curva obtenida con el horno.jpg
+	width 40page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:16 resultados con el horno"
+
+\end_inset
+
+Resultados obtenidos con el horno.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:17 fotos placa"
+
+\end_inset
+
+ están unas fotos de la placa que armé.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imagenes/17 foto placa 1.jpg
+	width 30page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imagenes/17 foto placa 2.jpg
+	width 30page%
+	rotateAngle 90
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:17 fotos placa"
+
+\end_inset
+
+Fotos de la placa armada.
+ La fuente de 
+\begin_inset Formula $220-5\unit{V}$
+\end_inset
+
+ de celular de la placa no está actualmente conectada.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+13-06-17
+\end_layout
+
+\begin_layout Standard
+Hoy cambié el código para usar un controlador proporcional que controla
+ la cantidad de semiciclos enteros que permanece encendida la potencia.
+ Definí una macro que dice la cantidad máxima de ciclos a contar (en este
+ caso puse 10), y en función del valor que tira el controlador se enciende
+ la potencia una determinada cantidad de ciclos, que se obtiene como porcentaje
+ del máximo.
+ Ésto permitió tener una respuesta mucho más suave y precisa.
+ En la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:18 resultados horno control proporcional"
+
+\end_inset
+
+ están los resultados.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imagenes/18 foto del perfil obtenido con el horno.png
+	width 40page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:18 resultados horno control proporcional"
+
+\end_inset
+
+Control proporcional por ciclos enteros aplicado en el horno.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Faltaría el tema de bajar la temperatura, para lo cual se hace necesaria
+ la utilización del ventilador.
+ El problema es que tengo dudas de que el ventilador esté aislado, entonces
+ si lo meto en el horno puede ser peligroso.
+\end_layout
+
+\begin_layout Standard
+Después de muchos días de no saber cuál era el problema, logré solucionar
+ el tema con los botones de encendido y apagado (por alguna razón sólo podía
+ prender y apagar un par de veces, y después se colgaba).
+ El problema era que la tarea que actualizaba la referencia de temperatura
+ usaba la función 
+\family typewriter
+vTaskDelayUntil
+\family default
+, la cual recibe como argumento el último tiempo de encendido, se volvía
+ loca cuando apagaba la placa.
+ La cambié por la función 
+\family typewriter
+vTaskDelay
+\family default
+ que no requiere dicho argumento, y no tuve mas el problema.
+ La desventaja es que las actualizaciones no son tan precisas, pero no vi
+ que se afectaran los resultados.
+ 
+\end_layout
+
+\begin_layout Standard
+Recién soldé la fuentecita de celular a la placa, cosa de alimentar todo
+ directamente de la alterna.
+ El problema que tuve es que la temperatura la estoy midiendo con un Arduino,
+ y entonces se rompe todo cuando uno la masa de la compu con la masa del
+ circuito.
+ Ahora volví a desoldar la fuente, y lo voy a dejar así estos días, total
+ no cambia demasiado.
+ Además se supone que Lío va a medir la curva y mandarla por Bluetooth,
+ así que si lo termina no va a hacer falta el Arduino.
+\end_layout
+
+\begin_layout Section
+16-06-17
+\end_layout
+
+\begin_layout Standard
+Vinieron Lio y Senger y estuvimos avanzando.
+ Lio arrancó con su parte, y yo estuve instalando el ventilador en el horno.
+ El ventilador simplemente funciona a una velocidad baja durante la etapa
+ de calentamiento, y se enciende a máxima velocidad cuando se terminó con
+ el ciclo de temperatura.
+ En la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:19 resultados con el ventilador"
+
+\end_inset
+
+ está el resultado obtenido.
+ El resultado es un poco más ruidoso (el Arduino muestrea más rápido y sin
+ promediar que la EDU-CIAA, por lo que es más ruidoso que lo que ve el controlad
+or) pero se sigue bien la curva.
+ El sensor lo puse bastante cerca de las resistencias, pero tal vez midiendo
+ más en el centro del horno se ve algo más suave.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imagenes/19 resultados con el ventilador.jpg
+	width 50page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:19 resultados con el ventilador"
+
+\end_inset
+
+Resultados obtenidos con el ventilador.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Compramos 4 resistencias para el horno, así que mañana las voy a colocar
+ y ver si logro llegar a la temperatura necesaria para hacer soldaduras.
+\end_layout
+
+\begin_layout Section
+18-06-17
+\end_layout
+
+\begin_layout Standard
+Hay buenas y malas noticias.
+ Ayer puse las 4 resistencias nuevas, poniendo 2 en serie en paralelo con
+ otras dos en serie.
+ El problema con estas resistencias es que son de una potencia mucho mayor
+ que las viejas, y entonces el triac no es capaz de manejar tanta corriente.
+ El primer parche fue poner otro triac en paralelo y ver si mejoraba, pero
+ al aumentar más la temperatura seguía explotando todo (cuando aumenta la
+ temperatura, el valor de las resistencias se reduce y aumenta más la corriente.
+ Si la corriente es superior a la que el triac puede manejar, parece que
+ queda siempre en conducción, lo que provoca mayor corriente y mayor temperatura
+).
+ Intenté poniendo un tercer triac en paralelo pero la corriente de trigger
+ es muy pequeña para encender los tres, así que le dejé únicamente dos en
+ paralelo.
+\end_layout
+
+\begin_layout Standard
+También probé distintas combinaciones con las resistencias: las 4 en serie,
+ 3 en serie, dos en serie, 2 en paralelo en serie con otra, etc.
+ Si bien estas combinaciones funcionaban, no permitían subir la temperatura
+ hasta los 
+\begin_inset Formula $250\text{°C}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Actualmente estoy usando el BT137, que tiene una corriente de operación
+ de 6A, lo cual está medio al límite.
+ Mañana (Lunes) voy a ir a comprar el BT139 o alguno similar, que se banca
+ como 10A o 12A.
+ 
+\end_layout
+
+\begin_layout Standard
+Algo que acabo de probar, fue de poner dos resistencias nuevas en serie
+ con las dos viejas que andaban, y obtuve los resultados de la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:20 resultados 200 grados"
+
+\end_inset
+
+.
+ Se puede ver que pude llegar hasta los 
+\begin_inset Formula $200\text{°C}$
+\end_inset
+
+ (en realidad hasta los 
+\begin_inset Formula $216\text{°C}$
+\end_inset
+
+, ya que el Arduino tiene una diferencia con la medida real).
+ Sin embargo para poder hacer esto tuve que duplicar el tiempo de establecimient
+o entre muestra y muestra, es decir que toda esta curva duró el doble que
+ la curva deseada (en lugar de durar dos minutos y medio, duro cinco).
+ El otro inconveniente fue que cuando el micro cortó la potencia al finalizar
+ el recorrido de toda la curva, sobre la resistencia seguía habiendo tensión,
+ lo cual indica que el triac quedó clavado en conducción.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imagenes/20 resultados 200 grados.jpg
+	width 50page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:20 resultados 200 grados"
+
+\end_inset
+
+Resultados obtenidos combinando las resistencias viejas con las nuevas.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Creo que no queda otra que esperar hasta mañana y comprar triacs mas pulentas,
+ porque con los que tengo dudo que pueda lograr resultados mejores.
+ Lo bueno de todo esto es que el control de temperatura funciona muy bien,
+ y que solucionando el tema del control de potencia, ya estaría andando
+ todo bien.
+\end_layout
+
+\begin_layout Standard
+En la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:21 villadas con triacs en paralelo"
+
+\end_inset
+
+ están las fotos de las villadas que tuve que hacer por no tener triacs
+ mas grosos.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imagenes/21 villada 1 dos triacs en paralelo.jpg
+	width 40page%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename imagenes/21 villada 2 tres triacs en paralelo.jpg
+	width 40page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:21 villadas con triacs en paralelo"
+
+\end_inset
+
+Fotos de los triacs en paralelo.
+ A la izquierda se tienen 2 triacs en paralelo, y a la derecha se tienen
+ 3.
+ El caso con 3 triacs en paralelo no funcionó ya que la corriente de trigger
+ era pequeña.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+19-06-17
+\end_layout
+
+\begin_layout Standard
+Hoy compré el BTA24, que es un triac de 
+\begin_inset Formula $25\unit{A}$
+\end_inset
+
+, para reemplazar el BT137.
+ Puse las 4 resistencias nuevas, y salió andando todo como piña.
+ Una vez armado todo, se procedió a soldar.
+ Pusimos el estaño en pasta que me habían regalado en la CNEA, y lo mandamos
+ al horno.
+ En la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:22 resultados obtenidos primer soldadura"
+
+\end_inset
+
+ están los resultados del día de hoy.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imagenes/22 primer soldadura 1.jpg
+	width 40page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Primer soldadura realizada.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imagenes/22 primer soldadura 2.jpg
+	width 20page%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename imagenes/22 primer soldadura 3.jpg
+	width 20page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Segunda soldadura realizada.
+ Se puso estaño en pasta sobre el nombre en cobre para rellenarlo.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:22 resultados obtenidos primer soldadura"
+
+\end_inset
+
+Resultados logrados con la primer soldadura.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Al parecer el horno ya está funcionando bien como para un primer prototipo.
+ El único problema que tuvimos fue que las placas se tostaron un poco, pero
+ el estaño se derritió bien.
+\end_layout
+
+\begin_layout Standard
+Hoy también probamos al aplicación de celular que hizo el amigo de Lío,
+ y mañana va a volver para probar todo junto.
+ 
+\end_layout
+
+\begin_layout Standard
+Parece que todo viene encaminado, pero se entrega pasado mañana, así que
+ mejor meterle pata.
+\end_layout
+
+\begin_layout Section
+22-07-17
+\end_layout
+
+\begin_layout Standard
+Ayer me levanté temprano y arreglé todos los problemas que teníamos con
+ la interconexión entre la placa de Lio y la mía, y quedó todo andando.
+ Presentamos el TP y pudimos aprobarlo.
+ Algo que había faltado era una foto de la aplicación de celular que hizo
+ el amigo de Lio, lo cual está en la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:foto app"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imagenes/foto app.png
+	width 40page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:foto app"
+
+\end_inset
+
+Foto de la aplicación de celular.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por lo tanto, ya puedo despedirme de este trabajo, donde pude aprendí muchas
+ cosas y me entretuve un buen rato.
+\end_layout
+
+\begin_layout Standard
+Saludos cordiales,
+\end_layout
+
+\begin_layout Standard
+Nicolás Zorzano.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+FIN DE TRANSMISIÓN.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename imagenes/soldadura final.png
+	width 30page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-1"
+
+\end_inset
+
+Link de Github al proyecto: 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://github.com/nicozorza/TP_Final_Embebidos
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-2"
+
+\end_inset
+
+
+\begin_inset CommandInset href
+LatexCommand href
+target "http://www.e-ika.com/control-de-potencia-con-arduino"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-3"
+
+\end_inset
+
+
+\begin_inset CommandInset href
+LatexCommand href
+target "http://voltiosybytes.blogspot.com.ar/2014/02/control-de-potencia-en-ac-con-triac-y.html"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

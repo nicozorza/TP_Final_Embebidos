@@ -1,0 +1,122 @@
+#ifndef _MAIN_H_
+#define _MAIN_H_
+
+#define BOARD_EDU_CIAA_NXP
+
+#include "board.h"
+#include "FreeRTOS.h"
+#include "task.h"
+#include "semphr.h"
+#include <stdlib.h>
+
+#include "Configure.h"
+#include "utils.h"
+
+xSemaphoreHandle xStartSemaphore;	//Semaforo para el encendido del horno
+TaskHandle_t StartTaskHandle;		//Handler de la tarea de encendido
+
+xSemaphoreHandle xStopSemaphore;	//Semaforo para el apagado del horno
+TaskHandle_t StopTaskHandle;		//Handler de la tarea de apagado
+
+xSemaphoreHandle xADCSemaphore;	//Semaforo para el ADC
+TaskHandle_t ADCTaskHandle;		//Handler de la tarea del ADC
+volatile uint16_t adc_data=0;	//Variable global donde se almacenan las mediciones del ADC
+
+xSemaphoreHandle xControllerSemaphore;	//Semaforo para el controlador
+TaskHandle_t ControllerTaskHandle;		//Handler de la tarea del controlador
+
+xSemaphoreHandle xPhaseSemaphore;		//Semaforo para la deteccion de cruces por cero
+TaskHandle_t PhaseTaskHandle;			//Handler de la tarea del detector de fase
+
+TaskHandle_t UpdateReferenceTaskHandle; //Handler de la tarea que actualiza la referencia de temperatura
+
+float thermocouple_temp=0;		//Temperatura de la termocupla
+bool trigger_state=false;		//Estado del trigger
+
+/* Prioridades de las distintas tareas */
+#define START_PRIORITY					4UL
+#define STOP_PRIORITY					4UL
+#define GET_TEMPERATURE_PRIORITY		1UL
+#define CONTROLLER_PRIORITY				1UL
+#define COOLER_PRIORITY					1UL
+#define ZERO_CROSSING_PRIORITY			2UL
+#define UPDATE_TEMPERATURE_PRIORITY		4UL
+
+int cycles_count=0;					//Cantodad de ciclos de la senoidal para el control por ciclos enteros
+
+#define REFERENCE_INTERVAL (5000/(portTICK_RATE_MS))	//Intervalo de tiempo para la actualizacion de la referencia
+float reference=0;				//Temperatura de referencia
+
+#define MAX_COOLER_CYCLES	50	//Delay de encendido y apagado del cooler
+bool cool_temperature=false;					//Variable global que controla la velocidad del cooler
+int cooler_cycles=0;							//Cantidad de semiciclos contados para el cooler
+/* Curva de temperatura que se debe seguir */
+const float temperature_profile[]={80,80,80,80,80,80,80,80,
+		160.62,
+		160.62,
+		160.62,
+		 160.62,
+		 160.62,
+		 160.62,
+		 160.62,
+		 160.62,
+		 161.59,
+		 162.05,
+		 162.06,
+		 162.06,
+		 162.06,
+		 162.06,
+		 162.06,
+		 162.06,
+		 162.06,
+		 162.06,
+		 162.06,
+		 162.06,
+		 162.06,
+		 162.06,
+		 162.06,
+		 162.06,
+		 162.06,
+		 162.06,
+		 162.06,
+		 162.06,
+		 162.06,
+		 162.06,
+		 162.06,
+		 162.06,
+		 162.06,
+		 164.37,
+		 167.65,
+		 171.45,
+		 175.75,
+		 180.53,
+		 185.72,
+		 191.26,
+		 197.08,
+		 203.07,
+		 203.07,
+		 209.12,
+		 209.12,
+		 215.10,
+		 215.10,
+		 220.86,
+		 220.86,
+		 226.22,
+		 226.22,
+		 230.99,
+		 230.99,
+		 227.03,
+		 217.41,
+		 204.40,
+		 187.56
+};
+
+static void vHandlerStart(void *pvParameters);	//Tarea donde se espera que se presione el boton de encendido
+static void vHandlerStop(void *pvParameters);	//Tarea donde se espera que se presione el boton de apagado
+static void vHandlerGetTemperature(void *pvParameters);	//Tarea que mide la temperatura
+static void vHandlerController(void *pvParameters);		//Tarea que controla la resistencia
+static void vHandlerZeroCrossing(void *pvParameters);	//Tarea que se ejecuta con los cruces por cero
+static void vHandlerUpdateTemperatureReference(void *pvParameters);	//Tarea que actualiza la referencia de temperatura
+static void vHandlerCooler(void *pvParameters);	//Tarea que controla el ventilador
+
+#endif
